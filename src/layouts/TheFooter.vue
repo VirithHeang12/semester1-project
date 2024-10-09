@@ -1,5 +1,11 @@
 <template>
     <v-footer>
-        <span>&copy; 2021</span>
+        <slot v-bind:text="text"></slot>
     </v-footer>
 </template>
+
+<script setup>
+import { ref } from 'vue';
+
+const text = ref('Hello, World!');
+</script>

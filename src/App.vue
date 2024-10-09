@@ -12,7 +12,11 @@ import TheFooter from './layouts/TheFooter.vue'
       <v-main>
         <RouterView />
       </v-main>
-      <TheFooter />
+      <TheFooter>
+        <template v-slot="slotProps">
+          <v-btn>{{ slotProps.text }}</v-btn>
+        </template>
+      </TheFooter>
     </v-app>
   </v-responsive>
 </template>
