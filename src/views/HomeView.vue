@@ -1,10 +1,9 @@
 <template>
   <v-container class="">
     <v-responsive>
-      <v-row class="d-flex justify-center">
-        <v-col cols="12" sm="6" md="4" lg="3">
-        </v-col>
-      </v-row>
+
+      <h1 class="text-slate-400">Hello</h1>
+
     </v-responsive>
   </v-container>
 </template>
