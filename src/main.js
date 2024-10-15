@@ -12,7 +12,6 @@ import { aliases, mdi } from 'vuetify/iconsets/mdi'
 import '@mdi/font/css/materialdesignicons.css'
 
 import App from './App.vue'
-import Card from './components/TheCard.vue'
 import router from './router'
 
 const vuetify = createVuetify({
@@ -29,7 +28,6 @@ const vuetify = createVuetify({
 
 const app = createApp(App)
 
-app.component('TheCard', Card)
 app.use(createPinia())
 app.use(router)
 app.use(vuetify)

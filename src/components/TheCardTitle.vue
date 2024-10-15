@@ -1,7 +1,7 @@
 <template>
-    <v-footer>
-    </v-footer>
+    <h1>Hello</h1>
 </template>
 
 <script setup>
+
 </script>
