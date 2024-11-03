@@ -1,82 +1,86 @@
 <template>
-    <v-app-bar elevation="0" absolute class="bg-white">
-        <v-toolbar class="flex align-middle dark:!bg-black dark:!text-white">
-            <v-btn icon=" mdi-home" class="mx-6 block">
-                <v-icon size="50">mdi-home</v-icon>
-            </v-btn>
-            <v-spacer></v-spacer>
-            <v-toolbar-items>
-                <v-menu transition="scale-transition" open-on-hover>
-                    <template v-slot:activator="{ props }">
-                        <v-btn color="primary" v-bind="props">
-                            Home
-                            <v-icon>mdi-chevron-down</v-icon>
-                        </v-btn>
-                    </template>
-
-                    <v-list elevation="0">
-                        <v-list-item v-for="(item, i) in items" :key="i">
-                            <v-list-item-title>{{ item.title }}</v-list-item-title>
-                        </v-list-item>
-                    </v-list>
-                </v-menu>
-
-                <v-btn class="hover:bg-inherit">
-                    Shop
-                </v-btn>
-                <v-btn>
-                    About
-                </v-btn>
-                <v-btn>
-                    Blog
-                </v-btn>
-                <v-btn>
-                    Page
-                </v-btn>
-                <v-btn>
-                    Contact
-                </v-btn>
-            </v-toolbar-items>
-            <v-spacer></v-spacer>
-            <v-toolbar-items class="extended">
-                <v-btn icon @click="toggleDarkMode" :ripple="false" class="custom-hover-btn">
-                    <svg class="hidden dark:block" width="22" height="22" viewBox="0 0 22 22" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M19.3655 1.12433C19.0384 0.29189 17.8624 0.29189 17.5353 1.12433L17.1073 2.21354L16.0227 2.6429C15.1933 2.97121 15.1933 4.14713 16.0227 4.47544L17.1073 4.90481L17.5353 5.99401C17.8624 6.82645 19.0384 6.82646 19.3655 5.99402L19.7935 4.90481L20.8781 4.47544C21.7075 4.14714 21.7075 2.97121 20.8781 2.6429L19.7935 2.21354L19.3655 1.12433ZM18.4504 1.52989L18.8651 2.58533C18.9648 2.83891 19.165 3.04027 19.4188 3.14073L20.4759 3.55917L19.4188 3.97762C19.165 4.07808 18.9648 4.27943 18.8651 4.53301L18.4504 5.58846L18.0357 4.53301C17.936 4.27943 17.7358 4.07808 17.482 3.97762L16.4249 3.55917L17.482 3.14073C17.7358 3.04027 17.936 2.83891 18.0357 2.58533L18.4504 1.52989ZM15.4981 6.94681C15.171 6.11437 13.9951 6.11437 13.668 6.94681L13.5134 7.34008L13.1222 7.49497C12.2928 7.82328 12.2928 8.9992 13.1222 9.3275L13.5134 9.4824L13.668 9.8757C13.9951 10.7081 15.171 10.7081 15.4981 9.8757L15.6526 9.4824L16.0439 9.3275C16.8733 8.9992 16.8733 7.82328 16.0439 7.49497L15.6526 7.34008L15.4981 6.94681ZM14.583 7.35237L14.7243 7.71188C14.824 7.96545 15.0242 8.16681 15.278 8.26727L15.6417 8.41124L15.278 8.55521C15.0242 8.65567 14.824 8.85703 14.7243 9.1106L14.583 9.4701L14.4418 9.1106C14.3421 8.85703 14.1419 8.65567 13.8881 8.55521L13.5244 8.41124L13.8881 8.26727C14.1419 8.16681 14.3421 7.96545 14.4418 7.71188L14.583 7.35237Z"
-                            fill="#FFFFFF" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M10.0174 1.80157C5.37072 2.29221 1.75 6.22328 1.75 11C1.75 16.1086 5.89137 20.25 11 20.25C15.7767 20.25 19.7078 16.6293 20.1984 11.9826C18.8717 13.6669 16.8126 14.75 14.5 14.75C10.4959 14.75 7.25 11.5041 7.25 7.5C7.25 5.18738 8.33315 3.1283 10.0174 1.80157ZM0.25 11C0.25 5.06294 5.06294 0.25 11 0.25C11.7166 0.25 12.0754 0.82126 12.1368 1.27627C12.196 1.71398 12.0342 2.27065 11.531 2.57467C9.8627 3.5828 8.75 5.41182 8.75 7.5C8.75 10.6756 11.3244 13.25 14.5 13.25C16.5882 13.25 18.4172 12.1373 19.4253 10.469C19.7293 9.9658 20.286 9.804 20.7237 9.8632C21.1787 9.9246 21.75 10.2834 21.75 11C21.75 16.9371 16.9371 21.75 11 21.75C5.06294 21.75 0.25 16.9371 0.25 11Z"
-                            fill="#FFFFFF" />
-                    </svg>
-                    <svg class="block dark:hidden" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
+    <v-card elevation="0" absolute class="flex justify-center">
+        <v-card-text class="flex justify-center dark:!bg-black dark:!text-white">
+            <div class="flex justify-center gap-x-52 p-2 rounded-lg bg-gray-100">
+                <a href="#" class="mx-6 block bg-gray-50" elevation="0">
+                    <svg width="25" height="45" viewBox="0 0 25 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
-                            d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z"
-                            stroke="#3D3D3D" stroke-width="1.5" />
-                        <path d="M12 0V2.4" stroke="#3D3D3D" stroke-width="1.5" stroke-linecap="round" />
-                        <path d="M12 21.6V24" stroke="#3D3D3D" stroke-width="1.5" stroke-linecap="round" />
-                        <path d="M2.4 12H0" stroke="#3D3D3D" stroke-width="1.5" stroke-linecap="round" />
-                        <path d="M24 12H21.6" stroke="#3D3D3D" stroke-width="1.5" stroke-linecap="round" />
-                        <path opacity="0.5" d="M21.3334 2.66719L18.667 5.10509" stroke="#3D3D3D" stroke-width="1.5"
-                            stroke-linecap="round" />
-                        <path opacity="0.5" d="M2.66663 2.66719L5.33304 5.10509" stroke="#3D3D3D" stroke-width="1.5"
-                            stroke-linecap="round" />
-                        <path opacity="0.5" d="M5.33318 18.6668L2.6665 21.3335" stroke="#3D3D3D" stroke-width="1.5"
-                            stroke-linecap="round" />
-                        <path opacity="0.5" d="M21.3334 21.3328L18.667 18.6661" stroke="#3D3D3D" stroke-width="1.5"
-                            stroke-linecap="round" />
+                            d="M0.465843 10.3828H0V18.7188H9.16149C10.0155 18.7188 10.3261 20.0078 9.54969 20.4375L7.76398 21.3828C5.35715 22.6719 2.95032 23.3594 0.465843 23.3594H0V31.6953H8.92858C9.78261 31.6953 10.0932 32.9844 9.31678 33.4141L7.45342 34.3594C5.20187 35.5625 2.79504 36.1641 0.465843 36.1641H0V44.5H8.92858L9.93788 43.125C14.2857 37.5391 19.3323 34.6172 24.6118 34.6172H25V26.2812H16.0714C15.2174 26.2812 14.9068 24.9922 15.6832 24.5625L17.5466 23.6172C19.7982 22.4141 22.205 21.8125 24.5342 21.8125H24.9224V13.4766H15.8385C14.9845 13.4766 14.6739 12.1875 15.4503 11.7578L17.236 10.8125C19.6429 9.52343 22.0497 8.83595 24.5342 8.83595H24.9224V0.5H15.9938L14.9845 1.875C10.7919 7.46094 5.66771 10.3828 0.465843 10.3828Z"
+                            fill="#505050" />
                     </svg>
-                </v-btn>
-                <v-btn>
-                    <v-icon icon="mdi-account"></v-icon>
-                </v-btn>
-                <v-btn>
-                    <v-icon icon="mdi-cart"></v-icon>
-                </v-btn>
-            </v-toolbar-items>
-        </v-toolbar>
-    </v-app-bar>
+                </a>
+                <v-toolbar-items>
+                    <v-menu transition="scale-transition" open-on-hover>
+                        <template v-slot:activator="{ props }">
+                            <v-btn color="primary" v-bind="props">
+                                Home
+                                <v-icon>mdi-chevron-down</v-icon>
+                            </v-btn>
+                        </template>
+
+                        <v-list elevation="0">
+                            <v-list-item v-for="(item, i) in items" :key="i">
+                                <v-list-item-title>{{ item.title }}</v-list-item-title>
+                            </v-list-item>
+                        </v-list>
+                    </v-menu>
+
+                    <v-btn class="hover:bg-inherit">
+                        Shop
+                    </v-btn>
+                    <v-btn>
+                        About
+                    </v-btn>
+                    <v-btn>
+                        Blog
+                    </v-btn>
+                    <v-btn>
+                        Page
+                    </v-btn>
+                    <v-btn>
+                        Contact
+                    </v-btn>
+                </v-toolbar-items>
+                <v-toolbar-items class="extended">
+                    <v-btn icon @click="toggleDarkMode" :ripple="false" class="custom-hover-btn">
+                        <svg class="hidden dark:block" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M19.3655 1.12433C19.0384 0.29189 17.8624 0.29189 17.5353 1.12433L17.1073 2.21354L16.0227 2.6429C15.1933 2.97121 15.1933 4.14713 16.0227 4.47544L17.1073 4.90481L17.5353 5.99401C17.8624 6.82645 19.0384 6.82646 19.3655 5.99402L19.7935 4.90481L20.8781 4.47544C21.7075 4.14714 21.7075 2.97121 20.8781 2.6429L19.7935 2.21354L19.3655 1.12433ZM18.4504 1.52989L18.8651 2.58533C18.9648 2.83891 19.165 3.04027 19.4188 3.14073L20.4759 3.55917L19.4188 3.97762C19.165 4.07808 18.9648 4.27943 18.8651 4.53301L18.4504 5.58846L18.0357 4.53301C17.936 4.27943 17.7358 4.07808 17.482 3.97762L16.4249 3.55917L17.482 3.14073C17.7358 3.04027 17.936 2.83891 18.0357 2.58533L18.4504 1.52989ZM15.4981 6.94681C15.171 6.11437 13.9951 6.11437 13.668 6.94681L13.5134 7.34008L13.1222 7.49497C12.2928 7.82328 12.2928 8.9992 13.1222 9.3275L13.5134 9.4824L13.668 9.8757C13.9951 10.7081 15.171 10.7081 15.4981 9.8757L15.6526 9.4824L16.0439 9.3275C16.8733 8.9992 16.8733 7.82328 16.0439 7.49497L15.6526 7.34008L15.4981 6.94681ZM14.583 7.35237L14.7243 7.71188C14.824 7.96545 15.0242 8.16681 15.278 8.26727L15.6417 8.41124L15.278 8.55521C15.0242 8.65567 14.824 8.85703 14.7243 9.1106L14.583 9.4701L14.4418 9.1106C14.3421 8.85703 14.1419 8.65567 13.8881 8.55521L13.5244 8.41124L13.8881 8.26727C14.1419 8.16681 14.3421 7.96545 14.4418 7.71188L14.583 7.35237Z"
+                                fill="#FFFFFF" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M10.0174 1.80157C5.37072 2.29221 1.75 6.22328 1.75 11C1.75 16.1086 5.89137 20.25 11 20.25C15.7767 20.25 19.7078 16.6293 20.1984 11.9826C18.8717 13.6669 16.8126 14.75 14.5 14.75C10.4959 14.75 7.25 11.5041 7.25 7.5C7.25 5.18738 8.33315 3.1283 10.0174 1.80157ZM0.25 11C0.25 5.06294 5.06294 0.25 11 0.25C11.7166 0.25 12.0754 0.82126 12.1368 1.27627C12.196 1.71398 12.0342 2.27065 11.531 2.57467C9.8627 3.5828 8.75 5.41182 8.75 7.5C8.75 10.6756 11.3244 13.25 14.5 13.25C16.5882 13.25 18.4172 12.1373 19.4253 10.469C19.7293 9.9658 20.286 9.804 20.7237 9.8632C21.1787 9.9246 21.75 10.2834 21.75 11C21.75 16.9371 16.9371 21.75 11 21.75C5.06294 21.75 0.25 16.9371 0.25 11Z"
+                                fill="#FFFFFF" />
+                        </svg>
+                        <svg class="block dark:hidden" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z"
+                                stroke="#3D3D3D" stroke-width="1.5" />
+                            <path d="M12 0V2.4" stroke="#3D3D3D" stroke-width="1.5" stroke-linecap="round" />
+                            <path d="M12 21.6V24" stroke="#3D3D3D" stroke-width="1.5" stroke-linecap="round" />
+                            <path d="M2.4 12H0" stroke="#3D3D3D" stroke-width="1.5" stroke-linecap="round" />
+                            <path d="M24 12H21.6" stroke="#3D3D3D" stroke-width="1.5" stroke-linecap="round" />
+                            <path opacity="0.5" d="M21.3334 2.66719L18.667 5.10509" stroke="#3D3D3D" stroke-width="1.5"
+                                stroke-linecap="round" />
+                            <path opacity="0.5" d="M2.66663 2.66719L5.33304 5.10509" stroke="#3D3D3D" stroke-width="1.5"
+                                stroke-linecap="round" />
+                            <path opacity="0.5" d="M5.33318 18.6668L2.6665 21.3335" stroke="#3D3D3D" stroke-width="1.5"
+                                stroke-linecap="round" />
+                            <path opacity="0.5" d="M21.3334 21.3328L18.667 18.6661" stroke="#3D3D3D" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </v-btn>
+                    <v-btn>
+                        <v-icon icon="mdi-account"></v-icon>
+                    </v-btn>
+                    <v-btn>
+                        <v-icon icon="mdi-cart"></v-icon>
+                    </v-btn>
+                </v-toolbar-items>
+            </div>
+        </v-card-text>
+    </v-card>
 </template>
 
 <script setup>
