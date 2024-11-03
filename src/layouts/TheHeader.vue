@@ -9,12 +9,14 @@
                             fill="#505050" />
                     </svg>
                 </a>
-                <v-toolbar-items>
-                    <v-menu transition="scale-transition" open-on-hover>
+                <v-toolbar-items class="flex gap-x-1">
+                    <v-btn class="rounded-lg">
+                        ទំព័រដើម
+                    </v-btn>
+                    <v-menu open-on-hover>
                         <template v-slot:activator="{ props }">
-                            <v-btn color="primary" v-bind="props">
-                                Home
-                                <v-icon>mdi-chevron-down</v-icon>
+                            <v-btn v-bind="props" class="rounded-lg">
+                                ប្រភេទសម្ភារៈ
                             </v-btn>
                         </template>
 
@@ -24,21 +26,11 @@
                             </v-list-item>
                         </v-list>
                     </v-menu>
-
-                    <v-btn class="hover:bg-inherit">
-                        Shop
+                    <v-btn class="rounded-lg">
+                        អំពីយើង
                     </v-btn>
-                    <v-btn>
-                        About
-                    </v-btn>
-                    <v-btn>
-                        Blog
-                    </v-btn>
-                    <v-btn>
-                        Page
-                    </v-btn>
-                    <v-btn>
-                        Contact
+                    <v-btn class="rounded-lg">
+                        ទំនាក់ទំនង
                     </v-btn>
                 </v-toolbar-items>
                 <v-toolbar-items class="extended">
