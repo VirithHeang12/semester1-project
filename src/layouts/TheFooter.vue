@@ -91,7 +91,7 @@
 </template>
 
 <script setup>
-import TheSocialContact from '@/components/cards/TheSocialContact.vue';
+import TheSocialContact from '@/components/TheSocialContact.vue';
 
 </script>
 

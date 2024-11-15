@@ -32,7 +32,7 @@ defineProps({
     },
     href: {
         type: String,
-        default: 'https://www.interior-essentials.com/wp-content/uploads/2021/07/InteriorEssentialsRoleOfFurnitureInteriorDesign.jpg',
+        default: 'living_room_big.png',
     },
     title: {
         type: String,

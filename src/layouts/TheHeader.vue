@@ -10,13 +10,13 @@
                     </svg>
                 </a>
                 <v-toolbar-items class="flex gap-x-1">
-                    <v-btn class="rounded-lg" variant="text">
+                    <v-btn class="rounded-lg" variant="text" to="/" :ripple="false">
                         <span class="font-bold tracking-tighter">ទំព័រដើម</span>
                     </v-btn>
                     <v-menu open-on-hover>
                         <template v-slot:activator="{ props }">
                             <v-btn v-bind="props" class="rounded-lg hover:bg-white">
-                                <span class="tracking-tighter">ប្រភេទសម្ភារៈ</span>
+                                <span class="font-bold tracking-tighter">ប្រភេទសម្ភារៈ</span>
                             </v-btn>
                         </template>
 
@@ -26,15 +26,15 @@
                             </v-list-item>
                         </v-list>
                     </v-menu>
-                    <v-btn class="rounded-lg">
-                        អំពីយើង
+                    <v-btn class="rounded-lg" variant="text" to="/about">
+                        <span class="font-bold tracking-tighter">អំពីយើង</span>
                     </v-btn>
-                    <v-btn class="rounded-lg">
-                        ទំនាក់ទំនង
+                    <v-btn class="rounded-lg" variant="text" to="/contact">
+                        <span class="font-bold tracking-tighter">ទំនាក់ទំនង</span>
                     </v-btn>
                 </v-toolbar-items>
                 <v-toolbar-items class="extended">
-                    <v-btn>
+                    <v-btn variant="plain" :ripple="false">
                         <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M1.01585 7.37281L2.08545 19.9728C2.17687 21.3881 3.33727 22.4974 4.75524 22.525H16.8554C18.2729 22.4967 19.4325 21.3875 19.5238 19.9728L20.5934 7.37281C20.6759 6.60767 20.4344 5.84295 19.9274 5.26394C19.4205 4.68492 18.6943 4.34446 17.925 4.32501H3.68424C2.91492 4.34446 2.18884 4.68492 1.6819 5.26394C1.17495 5.84295 0.933441 6.60767 1.01585 7.37281Z"
@@ -44,7 +44,7 @@
                                 fill="#3D3D3D" />
                         </svg>
                     </v-btn>
-                    <v-btn @click="toggleDarkMode" :ripple="false" class="custom-hover-btn" variant="plain">
+                    <v-btn @click="toggleDarkMode" :ripple="false" variant="plain">
                         <svg class="hidden dark:block" width="22" height="22" viewBox="0 0 22 22" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -73,9 +73,28 @@
                                 stroke-linecap="round" />
                         </svg>
                     </v-btn>
-                    <v-btn>
-                        <v-icon icon="mdi-cart"></v-icon>
-                    </v-btn>
+                    <v-menu open-on-hover transition="slide-x-transition" :offset="[5, 50]">
+                        <template v-slot:activator="{ props }">
+                            <v-btn variant="plain" v-bind="props" :ripple="false">
+                                <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="16.5" cy="16.5" r="16.5" fill="#D9D9D9" fill-opacity="0.62" />
+                                    <circle cx="16.5" cy="16.5" r="16.25" stroke="#B0B0B0" stroke-opacity="0.1"
+                                        stroke-width="0.5" />
+                                    <path
+                                        d="M9.8961 25.4088C9.8961 25.4088 8.48584 25.4088 8.48584 23.9985C8.48584 22.5883 9.8961 18.3575 16.9474 18.3575C23.9987 18.3575 25.4089 22.5883 25.4089 23.9985C25.4089 25.4088 23.9987 25.4088 23.9987 25.4088H9.8961ZM16.9474 16.9473C18.0694 16.9473 19.1456 16.5015 19.939 15.7081C20.7324 14.9147 21.1781 13.8386 21.1781 12.7165C21.1781 11.5944 20.7324 10.5183 19.939 9.72488C19.1456 8.93146 18.0694 8.48572 16.9474 8.48572C15.8253 8.48572 14.7492 8.93146 13.9558 9.72488C13.1623 10.5183 12.7166 11.5944 12.7166 12.7165C12.7166 13.8386 13.1623 14.9147 13.9558 15.7081C14.7492 16.5015 15.8253 16.9473 16.9474 16.9473Z"
+                                        fill="#3D3D3D" />
+                                </svg>
+                            </v-btn>
+                        </template>
+
+                        <v-list elevation="3" class="rounded-lg flex flex-col py-0" variant="plain">
+                            <v-list-item v-for="(item, i) in accountItems" :key="i" class="px-7 py-1 hover:bg-gray-100">
+                                <v-list-item-title>{{ item.title }}</v-list-item-title>
+                            </v-list-item>
+                        </v-list>
+                    </v-menu>
+
                 </v-toolbar-items>
             </div>
         </v-card-text>
@@ -87,12 +106,20 @@ import { watch } from 'vue';
 import { ref } from 'vue';
 
 const items = [
-    { title: 'Home' },
-    { title: 'Shop' },
-    { title: 'About' },
-    { title: 'Blog' },
-    { title: 'Page' },
-    { title: 'Contact' },
+    { title: 'បន្ទប់គេង' },
+    { title: 'បន្ទប់ទទួលភ្ញៀវ' },
+    { title: 'បន្ទប់សម្ភារៈសម្រាប់ក្រុមហ៊ុន' },
+    { title: 'បន្ទប់សម្ភារៈសម្រាប់អ្នកប្រើប្រាស់' },
+    { title: 'បន្ទប់សម្ភារៈសម្រាប់អ្នកប្រើប្រាស់ក្រុមហ៊ុន' },
+    { title: 'បន្ទប់សម្ភារៈសម្រាប់អ្នកប្រើប្រាស់ក្រុមហ៊ុន' },
+    { title: 'បន្ទប់សម្ភារៈសម្រាប់អ្នកប្រើប្រាស់ក្រុមហ៊ុន' },
+    { title: 'បន្ទប់សម្ភារៈសម្រាប់អ្នកប្រើប្រាស់ក្រុមហ៊ុន' },
+    { title: 'បន្ទប់សម្ភារៈសម្រាប់អ្នកប្រើប្រាស់ក្រុមហ៊ុន' }
+];
+
+const accountItems = [
+    { title: 'ចូលគណនី' },
+    { title: 'ចំណូលចិត្ត' },
 ];
 
 const model = ref(false);
