@@ -22,7 +22,11 @@
 
                         <v-list elevation="0">
                             <v-list-item v-for="(item, i) in items" :key="i">
-                                <v-list-item-title>{{ item.title }}</v-list-item-title>
+                                <v-btn :to="item.to" elevation="0" class="w-full flex justify-start">
+                                    <v-list-item-title class="flex justify-start text-left">
+                                        <span class="tracking-tighter">{{ item.title }}</span>
+                                    </v-list-item-title>
+                                </v-btn>
                             </v-list-item>
                         </v-list>
                     </v-menu>
@@ -106,15 +110,14 @@ import { watch } from 'vue';
 import { ref } from 'vue';
 
 const items = [
-    { title: 'បន្ទប់គេង' },
-    { title: 'បន្ទប់ទទួលភ្ញៀវ' },
-    { title: 'បន្ទប់សម្ភារៈសម្រាប់ក្រុមហ៊ុន' },
-    { title: 'បន្ទប់សម្ភារៈសម្រាប់អ្នកប្រើប្រាស់' },
-    { title: 'បន្ទប់សម្ភារៈសម្រាប់អ្នកប្រើប្រាស់ក្រុមហ៊ុន' },
-    { title: 'បន្ទប់សម្ភារៈសម្រាប់អ្នកប្រើប្រាស់ក្រុមហ៊ុន' },
-    { title: 'បន្ទប់សម្ភារៈសម្រាប់អ្នកប្រើប្រាស់ក្រុមហ៊ុន' },
-    { title: 'បន្ទប់សម្ភារៈសម្រាប់អ្នកប្រើប្រាស់ក្រុមហ៊ុន' },
-    { title: 'បន្ទប់សម្ភារៈសម្រាប់អ្នកប្រើប្រាស់ក្រុមហ៊ុន' }
+    { 
+        title: 'បន្ទប់គេង',
+        to: "/categories/bedroom"
+    },
+    { 
+        title: 'បន្ទប់ទទួលភ្ញៀវ',
+        to: "/categories/livingroom"
+    },
 ];
 
 const accountItems = [

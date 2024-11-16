@@ -19,6 +19,27 @@ const router = createRouter({
 		name: 'contact',
 		component: () => import('../views/page/contact/ContactView.vue')
 	},
+    {
+        path: '/categories',
+        name: 'categories',
+        children: [
+            {
+                path: 'kitchen',
+                name: 'kitchen',
+                component: () => import('../views/page/kitchen/KitchenView.vue')
+            },
+            {
+                path: 'livingroom',
+                name: 'livingroom',
+                component: () => import('../views/page/livingroom/LivingRoomView.vue')
+            },
+            {
+                path: 'bedroom',
+                name: 'bedroom',
+                component: () => import('../views/page/bedroom/BedroomView.vue')
+            }
+        ],
+    },
 	{
 		path: '/auth',
 		component: { 
