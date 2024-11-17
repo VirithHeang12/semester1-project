@@ -32,6 +32,17 @@
                         <v-row>
                             <v-col cols="12" md="4">
                                 <a href="#">
+                                    <the-category-card href="lamp.png" :price="49.99"
+                                    title="Lamps"></the-category-card>
+                                </a>
+                            </v-col>
+                            <v-col cols="12" md="4">
+                                <a href="#">
+                                    <the-category-card></the-category-card>
+                                </a>
+                            </v-col>
+                            <v-col cols="12" md="4">
+                                <a href="#">
                                     <the-category-card></the-category-card>
                                 </a>
                             </v-col>
@@ -44,7 +55,6 @@
 </template>
 
 <script setup>
-import TheShortBottomRightInvertedCard from "@/components/cards/TheShortBottomRightInvertedCard.vue";
 import TheCategoryCard from "@/components/cards/TheCategoryCard.vue";
 
 import { ref } from "vue";
