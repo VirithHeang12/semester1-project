@@ -110,14 +110,22 @@ import { watch } from 'vue';
 import { ref } from 'vue';
 
 const items = [
-    { 
+    {
         title: 'បន្ទប់គេង',
         to: "/categories/bedroom"
     },
-    { 
+    {
         title: 'បន្ទប់ទទួលភ្ញៀវ',
         to: "/categories/livingroom"
     },
+    {
+        title: 'ការិយាល័យ',
+        to: "/categories/office"
+    },
+    {
+        title: 'ផ្នែកខាងក្រៅ',
+        to: "/categories/outdoor"
+    }
 ];
 
 const accountItems = [

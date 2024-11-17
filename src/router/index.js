@@ -37,6 +37,16 @@ const router = createRouter({
                 path: 'bedroom',
                 name: 'bedroom',
                 component: () => import('../views/page/bedroom/BedroomView.vue')
+            },
+            {
+                path: 'office',
+                name: 'office',
+                component: () => import('../views/page/office/OfficeView.vue')
+            },
+            {
+                path: 'outdoor',
+                name: 'outdoor',
+                component: () => import('../views/page/outdoor/OutdoorView.vue')
             }
         ],
     },
