@@ -1,5 +1,5 @@
 <template>
-    <v-container>
+    <v-container class="px-0 py-0">
         <div class="bg-white">
             <v-container>
                 <v-row class="mb-16">
@@ -8,39 +8,49 @@
                     </v-col>
                 </v-row>
                 <v-row>
+                    <v-col cols="12">
+                        <the-slide-group></the-slide-group>
+                    </v-col>
+                </v-row>
+                <v-row>
                     <v-container>
                         <h2 class="text-center font-bold text-gray-700 text-[2rem] mb-10">ប្រភេទគ្រឿងសង្ហារឹម</h2>
                         <v-row>
                             <v-col cols="12" md="4">
-                                <a href="#">
-                                    <the-long-top-left-inverted-card></the-long-top-left-inverted-card>
-                                </a>
+                                <v-card elevation="0" class="mb-5">
+                                    <a href="#">
+                                        <the-long-top-left-inverted-card></the-long-top-left-inverted-card>
+                                    </a>
+                                </v-card>
+                                <v-card elevation="0">
+                                    <a href="#">
+                                        <the-long-bottom-right-inverted-card></the-long-bottom-right-inverted-card>
+                                    </a>
+                                </v-card>
                             </v-col>
                             <v-col cols="12" md="4">
-                                <a href="#">
-                                    <the-top-left-bottom-right-inverted-card></the-top-left-bottom-right-inverted-card>
-                                </a>
+                                <v-card elevation="0" class="-mb-16 bg-transparent">
+                                    <a href="#">
+                                        <the-top-left-bottom-right-inverted-card></the-top-left-bottom-right-inverted-card>
+                                    </a>
+                                </v-card>
+                                <v-card elevation="0" class="bg-transparent">
+                                    <a href="#">
+                                        <the-top-right-bottom-left-inverted-card></the-top-right-bottom-left-inverted-card>
+                                    </a>
+                                </v-card>
                             </v-col>
                             <v-col cols="12" md="4">
-                                <a href="#">
-                                    <the-short-top-left-inverted-card></the-short-top-left-inverted-card>
-                                </a>
-                            </v-col>
-                            <v-col cols="12" md="4">
-                                <a href="#">
-                                    <the-long-bottom-right-inverted-card></the-long-bottom-right-inverted-card>
-                                </a>
-                            </v-col>
-                            <v-col cols="12" md="4">
-                                <a href="#">
-                                    <the-top-right-bottom-left-inverted-card></the-top-right-bottom-left-inverted-card>
-                                </a>
-                            </v-col>
-
-                            <v-col cols="12" md="4">
-                                <a href="#">
-                                    <the-short-bottom-left-inverted-card></the-short-bottom-left-inverted-card>
-                                </a>
+                                <v-card elevation="0" class="mb-5">
+                                    <a href="#">
+                                        <the-short-top-left-inverted-card></the-short-top-left-inverted-card>
+                                    </a>
+                                </v-card>
+                                <v-card elevation="0">
+                                    <a href="#">
+                                        <the-short-bottom-left-inverted-card></the-short-bottom-left-inverted-card>
+                                    </a>
+                                </v-card>
                             </v-col>
                         </v-row>
                     </v-container>
@@ -115,6 +125,7 @@ import TheTopRightBottomLeftInvertedCard from '@/components/cards/TheTopRightBot
 import TheShortBottomLeftInvertedCard from '@/components/cards/TheShortBottomLeftInvertedCard.vue';
 import TheShortBottomRightInvertedCard from '@/components/cards/TheShortBottomRightInvertedCard.vue';
 import TheMiddleTopInvertedCard from '@/components/cards/TheMiddleTopInvertedCard.vue';
+import TheSlideGroup from '@/components/slide-groups/TheSlideGroup.vue';
 
 const expansionItems = [
     {

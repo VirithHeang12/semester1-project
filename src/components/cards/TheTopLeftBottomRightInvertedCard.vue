@@ -1,6 +1,6 @@
 <template>
     <figure class="relative flex align-center justify-center">
-        <svg width="450" height="292" viewBox="0 0 410 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="419" height="292" viewBox="0 0 419 292" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Define a clipPath that uses the existing path shape -->
             <defs>
                 <clipPath id="office">
@@ -13,7 +13,7 @@
             <image :href="href" width="419" height="292" clip-path="url(#office)"
                 preserveAspectRatio="xMidYMid slice" />
         </svg>
-        <figcaption class="absolute left-5 top-0 flex items-center justify-center">
+        <figcaption class="absolute left-3 top-5 flex items-center justify-center">
             <h2 class="text-gray-700 text-xl font-bold">{{ title }}</h2>
         </figcaption>
     </figure>

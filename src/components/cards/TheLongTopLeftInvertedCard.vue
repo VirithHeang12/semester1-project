@@ -11,13 +11,15 @@
             </defs>
 
             <!-- Image element with the clipPath applied -->
-            <image :href="href" width="363" height="236" clip-path="url(#diningRoom)"
+            <image class="relative" :href="href" width="363" height="236" clip-path="url(#diningRoom)"
                 preserveAspectRatio="xMidYMid slice" />
         </svg>
 
         <figcaption class="absolute left-5 top-0 flex items-center justify-center">
             <h2 class="text-gray-700 text-xl font-bold">{{ title }}</h2>
         </figcaption>
+
+        <the-detail-link class="absolute top-2 right-2 md:top-10 md:right-2"></the-detail-link>
     </figure>
 </template>
 
