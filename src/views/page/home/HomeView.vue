@@ -89,7 +89,7 @@
                 </v-row>
                 <v-row>
                     <v-container>
-                        <v-row>
+                        <v-row class="flex">
                             <v-col cols="12" md="6">
                                 <v-expansion-panels>
                                     <v-expansion-panel v-for="(expansionItem, i) in expansionItems" :key="i"
@@ -103,8 +103,7 @@
                                     </v-expansion-panel>
                                 </v-expansion-panels>
                             </v-col>
-                            <v-spacer></v-spacer>
-                            <v-col cols="12" md="6">
+                            <v-col cols="12" md="6" class="align-self-start">
                                 <v-img class="w-full h-full" src="desk.png" alt="Desk" />
                             </v-col>
                         </v-row>
