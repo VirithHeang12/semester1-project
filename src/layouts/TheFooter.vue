@@ -1,7 +1,7 @@
 <template>
     <footer class="bg-gray-50">
         <v-container>
-            <div class="grid grid-cols-3 gap-x-44">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-44">
                 <v-col class="flex flex-col gap-y-3">
                     <svg width="25" height="45" viewBox="0 0 25 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -17,30 +17,21 @@
                     <h6 class="font-bold">គ្រឿងសង្ហារឹមរបស់យើង</h6>
                     <ul class="list-none text-sm font-semibold grid grid-cols-2 gap-y-3 gap-x-4">
                         <li>
-                            <a href="#">បន្ទប់ទទួលភ្ញៀវ</a>
-                        </li>
-                        <li>
                             <a href="#">បន្ទប់គេង</a>
                         </li>
                         <li>
-                            <a href="#">បន្ទប់ទទួលទានអាហារ</a>
+                            <a href="#">បន្ទប់ទទួលភ្ញៀវ</a>
                         </li>
                         <li>
-                            <a href="#">បន្ទប់ការិយាល័យ</a>
+                            <a href="#">ផ្ទះបាយ</a>
                         </li>
                         <li>
-                            <a href="#">បន្ទប់ការិយាល័យ</a>
-                        </li>
-                        <li>
-                            <a href="#">បន្ទប់ការិយាល័យ</a>
-                        </li>
-                        <li>
-                            <a href="#">បន្ទប់ការិយាល័យ</a>
-                        </li>
-                        <li>
-                            <a href="#">បន្ទប់ការិយាល័យ</a>
+                            <a href="#">អំពូលភ្លើង</a>
                         </li>
 
+                        <li>
+                            <a href="#">បន្ទប់ការិយាល័យ</a>
+                        </li>
                     </ul>
                 </v-col>
                 <v-col class="flex flex-col gap-y-8">
