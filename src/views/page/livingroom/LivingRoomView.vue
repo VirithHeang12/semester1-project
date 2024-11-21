@@ -70,7 +70,7 @@
             <h2 class="font-bold text-lg">អ្នកប្រហែលជាចូលចិត្ត</h2>
             <v-slide-group class="pa-4" selected-class="bg-success" show-arrows>
                 <v-slide-group-item v-for="n in 15" :key="n">
-                    <the-category-card></the-category-card>
+                    <the-recommendation-card></the-recommendation-card>
                 </v-slide-group-item>
             </v-slide-group>
         </v-sheet>
@@ -79,6 +79,7 @@
 
 <script setup>
 import TheCategoryCard from "@/components/cards/TheCategoryCard.vue";
+import TheRecommendationCard from "@/components/cards/TheRecommendationCard.vue";
 
 import { ref } from "vue";
 
