@@ -82,7 +82,6 @@ import TheCategoryCard from "@/components/cards/TheCategoryCard.vue";
 
 import { ref } from "vue";
 
-
 const carouselItems = ref([
     {
         src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',

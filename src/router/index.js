@@ -47,6 +47,11 @@ const router = createRouter({
                 path: 'outdoor',
                 name: 'outdoor',
                 component: () => import('../views/page/outdoor/OutdoorView.vue')
+            },
+            {
+                path: 'soriya',
+                name: 'outdoor',
+                component: () => import('../views/page/soriya/SoriyaView.vue')
             }
         ],
     },

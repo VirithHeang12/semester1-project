@@ -1,15 +1,17 @@
 <template>
-    <v-card elevation="0" absolute class="flex justify-center">
-        <v-card-text class="flex justify-center">
-            <div class="flex justify-center gap-x-64 p-2 rounded-lg bg-gray-100">
-                <a href="#" class="mx-6 block bg-gray-50" elevation="0">
-                    <svg width="25" height="45" viewBox="0 0 25 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M0.465843 10.3828H0V18.7188H9.16149C10.0155 18.7188 10.3261 20.0078 9.54969 20.4375L7.76398 21.3828C5.35715 22.6719 2.95032 23.3594 0.465843 23.3594H0V31.6953H8.92858C9.78261 31.6953 10.0932 32.9844 9.31678 33.4141L7.45342 34.3594C5.20187 35.5625 2.79504 36.1641 0.465843 36.1641H0V44.5H8.92858L9.93788 43.125C14.2857 37.5391 19.3323 34.6172 24.6118 34.6172H25V26.2812H16.0714C15.2174 26.2812 14.9068 24.9922 15.6832 24.5625L17.5466 23.6172C19.7982 22.4141 22.205 21.8125 24.5342 21.8125H24.9224V13.4766H15.8385C14.9845 13.4766 14.6739 12.1875 15.4503 11.7578L17.236 10.8125C19.6429 9.52343 22.0497 8.83595 24.5342 8.83595H24.9224V0.5H15.9938L14.9845 1.875C10.7919 7.46094 5.66771 10.3828 0.465843 10.3828Z"
-                            fill="#505050" />
-                    </svg>
-                </a>
-                <v-toolbar-items class="flex gap-x-1">
+    <v-app-bar elevation="0" absolute class="flex justify-center">
+        <v-app-bar-nav-icon :ripple="false">
+            <router-link :to="{ name: 'home' }" class="bg-gray-50 w-fit h-fit">
+                <svg width="25" height="45" viewBox="0 0 25 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.465843 10.3828H0V18.7188H9.16149C10.0155 18.7188 10.3261 20.0078 9.54969 20.4375L7.76398 21.3828C5.35715 22.6719 2.95032 23.3594 0.465843 23.3594H0V31.6953H8.92858C9.78261 31.6953 10.0932 32.9844 9.31678 33.4141L7.45342 34.3594C5.20187 35.5625 2.79504 36.1641 0.465843 36.1641H0V44.5H8.92858L9.93788 43.125C14.2857 37.5391 19.3323 34.6172 24.6118 34.6172H25V26.2812H16.0714C15.2174 26.2812 14.9068 24.9922 15.6832 24.5625L17.5466 23.6172C19.7982 22.4141 22.205 21.8125 24.5342 21.8125H24.9224V13.4766H15.8385C14.9845 13.4766 14.6739 12.1875 15.4503 11.7578L17.236 10.8125C19.6429 9.52343 22.0497 8.83595 24.5342 8.83595H24.9224V0.5H15.9938L14.9845 1.875C10.7919 7.46094 5.66771 10.3828 0.465843 10.3828Z"
+                        fill="#505050" />
+                </svg>
+            </router-link>
+        </v-app-bar-nav-icon>
+        <v-app-bar-title>
+            <v-container class="flex mr-0">
+                <v-toolbar-items class="pl-60">
                     <v-btn class="rounded-lg" variant="text" to="/" :ripple="false">
                         <span class="font-bold tracking-tighter">ទំព័រដើម</span>
                     </v-btn>
@@ -37,7 +39,8 @@
                         <span class="font-bold tracking-tighter">ទំនាក់ទំនង</span>
                     </v-btn>
                 </v-toolbar-items>
-                <v-toolbar-items class="extended">
+                <v-divider></v-divider>
+                <v-toolbar-items class="extended hidden">
                     <v-btn variant="plain" :ripple="false">
                         <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -98,16 +101,17 @@
                             </v-list-item>
                         </v-list>
                     </v-menu>
-
                 </v-toolbar-items>
-            </div>
-        </v-card-text>
-    </v-card>
+            </v-container>
+
+        </v-app-bar-title>
+    </v-app-bar>
 </template>
 
 <script setup>
-import { watch } from 'vue';
-import { ref } from 'vue';
+import { useThemeStore } from '@/stores/theme';
+
+const themeStore = useThemeStore();
 
 const items = [
     {
@@ -125,6 +129,10 @@ const items = [
     {
         title: 'ផ្នែកខាងក្រៅ',
         to: "/categories/outdoor"
+    },
+    {
+        title: 'សូរិយា',
+        to: "/categories/soriya"
     }
 ];
 
@@ -133,20 +141,9 @@ const accountItems = [
     { title: 'ចំណូលចិត្ត' },
 ];
 
-const model = ref(false);
-
 const toggleDarkMode = () => {
-    model.value = !model.value;
+    themeStore.toggleTheme()
 }
-
-watch(model, () => {
-    if (model.value) {
-        document.documentElement.classList.add('dark')
-    } else {
-        document.documentElement.classList.remove('dark')
-    }
-});
-
 
 </script>
 
