@@ -115,43 +115,43 @@
 </template>
 
 <script setup>
-import TheInvertedCard from '@/components/cards/TheInvertedCard.vue';
-import TheTopLeftBottomRightInvertedCard from '@/components/cards/TheTopLeftBottomRightInvertedCard.vue';
-import TheLongTopLeftInvertedCard from '@/components/cards/TheLongTopLeftInvertedCard.vue';
-import TheShortTopLeftInvertedCard from '@/components/cards/TheShortTopLeftInvertedCard.vue';
-import TheLongBottomRightInvertedCard from '@/components/cards/TheLongBottomRightInvertedCard.vue';
-import TheTopRightBottomLeftInvertedCard from '@/components/cards/TheTopRightBottomLeftInvertedCard.vue';
-import TheShortBottomLeftInvertedCard from '@/components/cards/TheShortBottomLeftInvertedCard.vue';
-import TheShortBottomRightInvertedCard from '@/components/cards/TheShortBottomRightInvertedCard.vue';
-import TheMiddleTopInvertedCard from '@/components/cards/TheMiddleTopInvertedCard.vue';
-import TheSlideGroup from '@/components/slide-groups/TheSlideGroup.vue';
+    import TheInvertedCard from '@/components/cards/TheInvertedCard.vue';
+    import TheTopLeftBottomRightInvertedCard from '@/components/cards/TheTopLeftBottomRightInvertedCard.vue';
+    import TheLongTopLeftInvertedCard from '@/components/cards/TheLongTopLeftInvertedCard.vue';
+    import TheShortTopLeftInvertedCard from '@/components/cards/TheShortTopLeftInvertedCard.vue';
+    import TheLongBottomRightInvertedCard from '@/components/cards/TheLongBottomRightInvertedCard.vue';
+    import TheTopRightBottomLeftInvertedCard from '@/components/cards/TheTopRightBottomLeftInvertedCard.vue';
+    import TheShortBottomLeftInvertedCard from '@/components/cards/TheShortBottomLeftInvertedCard.vue';
+    import TheShortBottomRightInvertedCard from '@/components/cards/TheShortBottomRightInvertedCard.vue';
+    import TheMiddleTopInvertedCard from '@/components/cards/TheMiddleTopInvertedCard.vue';
+    import TheSlideGroup from '@/components/slide-groups/TheSlideGroup.vue';
 
-const expansionItems = [
-    {
-        title: 'តើគ្រឿងសង្ហារឹមរបស់អ្នកនាំចូលពីប្រទេសណាខ្លះ?',
-        text: 'បាទ បងអាចអញ្ជើញមកហាងពួកយើងផ្ទាល់បាន ទីតាំងរបស់ពួកយើងគឺស្ថិតនៅលើផ្លូវ ២០០៤ រាជធានីភ្នំពេញ'
-    },
-    {
-        title: 'តើខ្ញុំអាចទៅមើលផ្ទាល់នៅហាងបានឬទេ?',
-        text: 'បាទ បងអាចអញ្ជើញមកហាងពួកយើងផ្ទាល់បាន ទីតាំងរបស់ពួកយើងគឺស្ថិតនៅលើផ្លូវ ២០០៤ រាជធានីភ្នំពេញ'
-    },
-    {
-        title: 'តើខ្ញុំអាចទៅមើលផ្ទាល់នៅហាងបានឬទេ?',
-        text: 'បាទ បងអាចអញ្ជើញមកហាងពួកយើងផ្ទាល់បាន ទីតាំងរបស់ពួកយើងគឺស្ថិតនៅលើផ្លូវ ២០០៤ រាជធានីភ្នំពេញ'
-    },
-    {
-        title: 'តើខ្ញុំអាចទៅមើលផ្ទាល់នៅហាងបានឬទេ?',
-        text: 'បាទ បងអាចអញ្ជើញមកហាងពួកយើងផ្ទាល់បាន ទីតាំងរបស់ពួកយើងគឺស្ថិតនៅលើផ្លូវ ២០០៤ រាជធានីភ្នំពេញ'
-    },
-    {
-        title: 'តើខ្ញុំអាចទៅមើលផ្ទាល់នៅហាងបានឬទេ?',
-        text: 'បាទ បងអាចអញ្ជើញមកហាងពួកយើងផ្ទាល់បាន ទីតាំងរបស់ពួកយើងគឺស្ថិតនៅលើផ្លូវ ២០០៤ រាជធានីភ្នំពេញ'
-    },
-    {
-        title: 'តើខ្ញុំអាចទៅមើលផ្ទាល់នៅហាងបានឬទេ?',
-        text: 'បាទ បងអាចអញ្ជើញមកហាងពួកយើងផ្ទាល់បាន ទីតាំងរបស់ពួកយើងគឺស្ថិតនៅលើផ្លូវ ២០០៤ រាជធានីភ្នំពេញ'
-    },
-];
+    const expansionItems = [
+        {
+            title: 'តើគ្រឿងសង្ហារឹមរបស់អ្នកនាំចូលពីប្រទេសណាខ្លះ?',
+            text: 'បាទ បងអាចអញ្ជើញមកហាងពួកយើងផ្ទាល់បាន ទីតាំងរបស់ពួកយើងគឺស្ថិតនៅលើផ្លូវ ២០០៤ រាជធានីភ្នំពេញ'
+        },
+        {
+            title: 'តើខ្ញុំអាចទៅមើលផ្ទាល់នៅហាងបានឬទេ?',
+            text: 'បាទ បងអាចអញ្ជើញមកហាងពួកយើងផ្ទាល់បាន ទីតាំងរបស់ពួកយើងគឺស្ថិតនៅលើផ្លូវ ២០០៤ រាជធានីភ្នំពេញ'
+        },
+        {
+            title: 'តើខ្ញុំអាចទៅមើលផ្ទាល់នៅហាងបានឬទេ?',
+            text: 'បាទ បងអាចអញ្ជើញមកហាងពួកយើងផ្ទាល់បាន ទីតាំងរបស់ពួកយើងគឺស្ថិតនៅលើផ្លូវ ២០០៤ រាជធានីភ្នំពេញ'
+        },
+        {
+            title: 'តើខ្ញុំអាចទៅមើលផ្ទាល់នៅហាងបានឬទេ?',
+            text: 'បាទ បងអាចអញ្ជើញមកហាងពួកយើងផ្ទាល់បាន ទីតាំងរបស់ពួកយើងគឺស្ថិតនៅលើផ្លូវ ២០០៤ រាជធានីភ្នំពេញ'
+        },
+        {
+            title: 'តើខ្ញុំអាចទៅមើលផ្ទាល់នៅហាងបានឬទេ?',
+            text: 'បាទ បងអាចអញ្ជើញមកហាងពួកយើងផ្ទាល់បាន ទីតាំងរបស់ពួកយើងគឺស្ថិតនៅលើផ្លូវ ២០០៤ រាជធានីភ្នំពេញ'
+        },
+        {
+            title: 'តើខ្ញុំអាចទៅមើលផ្ទាល់នៅហាងបានឬទេ?',
+            text: 'បាទ បងអាចអញ្ជើញមកហាងពួកយើងផ្ទាល់បាន ទីតាំងរបស់ពួកយើងគឺស្ថិតនៅលើផ្លូវ ២០០៤ រាជធានីភ្នំពេញ'
+        },
+    ];
 
 </script>
 
