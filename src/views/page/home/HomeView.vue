@@ -7,9 +7,10 @@
                         <the-inverted-card></the-inverted-card>
                     </v-col>
                 </v-row>
-                <v-row>
+                <v-row class="mb-16">
                     <v-col cols="12">
-                        <the-slide-group></the-slide-group>
+                        <h2 class="font-bold text-gray-700 text-[2rem] mb-10">ផលិតផលប្រចាំខែ</h2>
+                        <the-slide-group :tab-items="tabItems"></the-slide-group>
                     </v-col>
                 </v-row>
                 <v-row>
@@ -152,6 +153,94 @@
             text: 'បាទ បងអាចអញ្ជើញមកហាងពួកយើងផ្ទាល់បាន ទីតាំងរបស់ពួកយើងគឺស្ថិតនៅលើផ្លូវ ២០០៤ រាជធានីភ្នំពេញ'
         },
     ];
+
+    const tabItems = [
+        {
+            title: 'បន្ទប់ទទួលភ្ញៀវ',
+            value: 'livingroom',
+            icon: 'mdi-sofa',
+            images: [
+                'slide-groups/livingrooms/livingroom-1.jpg',
+                'slide-groups/livingrooms/livingroom-2.jpg',
+                'slide-groups/livingrooms/livingroom-3.jpg',
+                'slide-groups/livingrooms/livingroom-4.jpg',
+                'slide-groups/livingrooms/livingroom-5.jpg',
+                'slide-groups/livingrooms/livingroom-6.jpg',
+                'slide-groups/livingrooms/livingroom-7.jpg',
+            ]
+        },
+        {
+            title: 'បន្ទប់ទទួលទានអាហារ',
+            value: 'diningroom',
+            icon: 'mdi-silverware-fork-knife',
+            images: [
+                'slide-groups/diningrooms/diningroom-1.jpg',
+                'slide-groups/diningrooms/diningroom-2.jpg',
+                'slide-groups/diningrooms/diningroom-3.jpg',
+                'slide-groups/diningrooms/diningroom-4.jpg',
+                'slide-groups/diningrooms/diningroom-5.jpg',
+                'slide-groups/diningrooms/diningroom-6.jpg',
+                'slide-groups/diningrooms/diningroom-7.jpg',
+            ]
+        },
+        {
+            title: 'បន្ទប់ការិយាល័យ',
+            value: 'office',
+            icon: 'mdi-chair-rolling',
+            images: [
+                'slide-groups/offices/office-1.jpg',
+                'slide-groups/offices/office-2.jpg',
+                'slide-groups/offices/office-3.jpg',
+                'slide-groups/offices/office-4.jpg',
+                'slide-groups/offices/office-5.jpg',
+                'slide-groups/offices/office-6.jpg',
+                'slide-groups/offices/office-7.jpg',
+            ]
+        },
+        {
+            title: 'គ្រឿងតុបតែងខាងក្រៅ',
+            value: 'outdoor',
+            icon: 'mdi-bench',
+            images: [
+                'slide-groups/outdoors/outdoor-1.jpg',
+                'slide-groups/outdoors/outdoor-2.jpg',
+                'slide-groups/outdoors/outdoor-3.jpg',
+                'slide-groups/outdoors/outdoor-4.jpg',
+                'slide-groups/outdoors/outdoor-5.jpg',
+                'slide-groups/outdoors/outdoor-6.jpg',
+                'slide-groups/outdoors/outdoor-7.jpg',
+            ]
+        },
+        {
+            title: 'អំពូលភ្លើង',
+            value: 'lamp',
+            icon: 'mdi-lamp',
+            images: [
+                'slide-groups/lightings/lighting-1.jpg',
+                'slide-groups/lightings/lighting-2.jpg',
+                'slide-groups/lightings/lighting-3.jpg',
+                'slide-groups/lightings/lighting-4.jpg',
+                'slide-groups/lightings/lighting-5.jpg',
+                'slide-groups/lightings/lighting-6.jpg',
+                'slide-groups/lightings/lighting-7.jpg',
+                'slide-groups/lightings/lighting-8.jpg',
+            ]
+        },
+        {
+            title: 'បន្ទប់គេង',
+            value: 'bedroom',
+            icon: 'mdi-bed',
+            images: [
+                'slide-groups/bedrooms/bedroom-1.jpg',
+                'slide-groups/bedrooms/bedroom-2.jpg',
+                'slide-groups/bedrooms/bedroom-3.jpg',
+                'slide-groups/bedrooms/bedroom-4.jpg',
+                'slide-groups/bedrooms/bedroom-5.jpg',
+                'slide-groups/bedrooms/bedroom-6.jpg',
+                'slide-groups/bedrooms/bedroom-7.jpg',
+            ]
+        }
+    ]
 
 </script>
 
