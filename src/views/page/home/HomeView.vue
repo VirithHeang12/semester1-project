@@ -1,5 +1,5 @@
 <template>
-    <v-container class="px-0 py-0" :max-height="1200">
+    <v-container class="px-0 py-0" :max-width="1200">
         <div class="bg-white">
             <v-container>
                 <v-row class="mb-16">
