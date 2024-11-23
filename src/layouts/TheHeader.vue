@@ -13,12 +13,12 @@
             <v-container class="flex mr-0">
                 <v-toolbar-items class="pl-60">
                     <v-btn class="rounded-lg" variant="text" to="/" :ripple="false">
-                        <span class="font-bold tracking-tighter">ទំព័រដើម</span>
+                        <span class="font-lg tracking-tight text-[1.2rem]">ទំព័រដើម</span>
                     </v-btn>
                     <v-menu open-on-hover>
                         <template v-slot:activator="{ props }">
                             <v-btn v-bind="props" class="rounded-lg hover:bg-white">
-                                <span class="font-bold tracking-tighter">ប្រភេទសម្ភារៈ</span>
+                                <span class="font-lg tracking-tight text-[1.2rem]">ប្រភេទសម្ភារៈ</span>
                             </v-btn>
                         </template>
 
@@ -33,10 +33,10 @@
                         </v-list>
                     </v-menu>
                     <v-btn class="rounded-lg" variant="text" to="/about">
-                        <span class="font-bold tracking-tighter">អំពីយើង</span>
+                        <span class="font-lg tracking-tight text-[1.2rem]">អំពីយើង</span>
                     </v-btn>
                     <v-btn class="rounded-lg" variant="text" to="/contact">
-                        <span class="font-bold tracking-tighter">ទំនាក់ទំនង</span>
+                        <span class="font-lg tracking-tight text-[1.2rem]">ទំនាក់ទំនង</span>
                     </v-btn>
                 </v-toolbar-items>
                 <v-divider></v-divider>
@@ -109,41 +109,41 @@
 </template>
 
 <script setup>
-import { useThemeStore } from '@/stores/theme';
+    import { useThemeStore } from '@/stores/theme';
 
-const themeStore = useThemeStore();
+    const themeStore = useThemeStore();
 
-const items = [
-    {
-        title: 'បន្ទប់គេង',
-        to: "/categories/bedroom"
-    },
-    {
-        title: 'បន្ទប់ទទួលភ្ញៀវ',
-        to: "/categories/livingroom"
-    },
-    {
-        title: 'ការិយាល័យ',
-        to: "/categories/office"
-    },
-    {
-        title: 'ផ្នែកខាងក្រៅ',
-        to: "/categories/outdoor"
-    },
-    {
-        title: 'សូរិយា',
-        to: "/categories/soriya"
+    const items = [
+        {
+            title: 'បន្ទប់គេង',
+            to: "/categories/bedroom"
+        },
+        {
+            title: 'បន្ទប់ទទួលភ្ញៀវ',
+            to: "/categories/livingroom"
+        },
+        {
+            title: 'ការិយាល័យ',
+            to: "/categories/office"
+        },
+        {
+            title: 'ផ្នែកខាងក្រៅ',
+            to: "/categories/outdoor"
+        },
+        {
+            title: 'សូរិយា',
+            to: "/categories/soriya"
+        }
+    ];
+
+    const accountItems = [
+        { title: 'ចូលគណនី' },
+        { title: 'ចំណូលចិត្ត' },
+    ];
+
+    const toggleDarkMode = () => {
+        themeStore.toggleTheme()
     }
-];
-
-const accountItems = [
-    { title: 'ចូលគណនី' },
-    { title: 'ចំណូលចិត្ត' },
-];
-
-const toggleDarkMode = () => {
-    themeStore.toggleTheme()
-}
 
 </script>
 

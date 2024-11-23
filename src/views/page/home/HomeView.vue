@@ -1,5 +1,5 @@
 <template>
-    <v-container class="px-0 py-0">
+    <v-container class="px-0 py-0" :max-height="1200">
         <div class="bg-white">
             <v-container>
                 <v-row class="mb-16">
@@ -209,6 +209,7 @@
                 'slide-groups/outdoors/outdoor-5.jpg',
                 'slide-groups/outdoors/outdoor-6.jpg',
                 'slide-groups/outdoors/outdoor-7.jpg',
+                'slide-groups/outdoors/outdoor-8.jpg',
             ]
         },
         {
