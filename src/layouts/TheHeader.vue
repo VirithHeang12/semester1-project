@@ -1,5 +1,5 @@
 <template>
-    <v-app-bar elevation="0" absolute class="flex justify-center">
+    <v-app-bar elevation="0" absolute class="lg:flex lg:justify-center xl:flex xl:justify-center">
         <v-app-bar-nav-icon :ripple="false">
             <router-link :to="{ name: 'home' }" class="bg-gray-50 w-fit h-fit">
                 <svg width="25" height="45" viewBox="0 0 25 45" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -11,7 +11,7 @@
         </v-app-bar-nav-icon>
         <v-app-bar-title>
             <v-container class="flex mr-0">
-                <v-toolbar-items class="pl-60">
+                <v-toolbar-items class="md:pl-32 lg:pl-24 xl:pl-64">
                     <v-btn class="rounded-lg" variant="text" to="/" :ripple="false">
                         <span class="font-lg tracking-tight text-[1.2rem]">ទំព័រដើម</span>
                     </v-btn>
