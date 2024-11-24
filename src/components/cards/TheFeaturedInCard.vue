@@ -12,8 +12,8 @@
             </svg>
         </slot>
         <figcaption>
-            <p class="text-sm text-center text-gray-600 mt-4">Featured in</p>
-            <p class="text-sm text-center text-gray-600">The New York Times</p>
+            <p class="text-sm text-center text-gray-600 mt-4">{{ title }}</p>
+            <p class="text-sm text-center text-gray-600">{{ description }}</p>
         </figcaption>
     </figure>
 </template>
