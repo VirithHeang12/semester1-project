@@ -1,5 +1,5 @@
 <template>
-    <figure class="relative flex align-center justify-center">
+    <figure class="flex align-center justify-center">
         <svg width="367" height="236" viewBox="0 0 367 236" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <clipPath id="lighting">
@@ -9,38 +9,21 @@
                 </clipPath>
             </defs>
 
-            <!-- Image element with the clipPath applied and border-radius for rounded corners -->
             <image :href="href" width="363" height="306" clip-path="url(#lighting)"
                 preserveAspectRatio="xMidYMid slice" />
         </svg>
-
-        <figcaption class="absolute left-5 bottom-2 flex items-center justify-center">
-            <h2 class="text-gray-700 text-xl font-bold">{{ title }}</h2>
-        </figcaption>
     </figure>
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+    import { defineProps } from 'vue';
 
-defineProps({
-    width: {
-        type: Number,
-        default: 1362,
-    },
-    height: {
-        type: Number,
-        default: 628,
-    },
-    href: {
-        type: String,
-        default: 'lighting.png',
-    },
-    title: {
-        type: String,
-        default: 'អំពូលភ្លើង',
-    },
-});
+    defineProps({
+        href: {
+            type: String,
+            default: 'lighting.png',
+        },
+    });
 </script>
 
 <style scoped></style>

@@ -1,7 +1,6 @@
 <template>
-    <figure class="relative flex align-center justify-center">
+    <figure class="flex align-center justify-center">
         <svg width="363" height="306" viewBox="0 0 363 306" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Define a clipPath using the path from the mask -->
             <defs>
                 <clipPath id="livingRoom">
                     <path
@@ -9,37 +8,21 @@
                 </clipPath>
             </defs>
 
-            <!-- Image element with the clipPath applied -->
             <image :href="href" width="363" height="306" clip-path="url(#livingRoom)"
                 preserveAspectRatio="xMidYMid slice" />
         </svg>
-        <figcaption class="absolute left-5 bottom-2 flex items-center justify-center">
-            <h2 class="text-gray-700 text-xl font-bold">{{ title }}</h2>
-        </figcaption>
     </figure>
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+    import { defineProps } from 'vue';
 
-defineProps({
-    width: {
-        type: Number,
-        default: 1362,
-    },
-    height: {
-        type: Number,
-        default: 628,
-    },
-    href: {
-        type: String,
-        default: 'living_room.png',
-    },
-    title: {
-        type: String,
-        default: 'បន្ទប់ទទួលភ្ញៀវ'
-    },
-});
+    defineProps({
+        href: {
+            type: String,
+            default: 'living_room.png',
+        },
+    });
 </script>
 
 <style scoped></style>

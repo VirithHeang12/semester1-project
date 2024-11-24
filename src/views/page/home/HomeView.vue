@@ -2,10 +2,73 @@
     <v-container class="px-0 py-0" :max-width="1200">
         <div class="bg-white">
             <v-container>
-                <v-row class="mb-16">
+                <v-row class="mb-16" v-motion-slide-visible-top>
                     <v-col cols="12">
                         <the-inverted-card></the-inverted-card>
                     </v-col>
+                </v-row>
+                <v-row class="mb-16">
+                    <v-container>
+                        <h2 v-motion-slide-visible-once-top
+                            class="text-center font-bold text-gray-700 text-[2.5rem] mb-10">
+                            ប្រភេទគ្រឿងសង្ហារឹម</h2>
+                        <v-row>
+                            <v-col cols="12" md="4">
+                                <v-card elevation="0" class="mb-5" v-motion-slide-visible-left>
+                                    <router-link to="#" class="relative">
+                                        <p class="absolute top-1 left-2 text-gray-700 text-[1.5rem] font-bold">
+                                            បន្ទប់ទទួលទានអាហារ</p>
+                                        <the-long-top-left-inverted-card></the-long-top-left-inverted-card>
+                                        <the-detail-link class="absolute top-2 right-2"></the-detail-link>
+                                    </router-link>
+                                </v-card>
+                                <v-card elevation="0" v-motion-slide-visible-left>
+                                    <router-link to="#" class="relative">
+                                        <p class="absolute bottom-2 left-2 text-gray-700 text-[1.5rem] font-bold">
+                                            បន្ទប់ទទួលភ្ញៀវ</p>
+                                        <the-long-bottom-right-inverted-card></the-long-bottom-right-inverted-card>
+                                        <the-detail-link class="absolute top-2 right-2"></the-detail-link>
+                                    </router-link>
+                                </v-card>
+                            </v-col>
+                            <v-col cols="12" md="4">
+                                <v-card elevation="0" class="-mb-16 bg-transparent" v-motion-slide-visible-top>
+                                    <router-link to="#" class="relative">
+                                        <p class="absolute top-5 left-2 text-gray-700 text-[1.4rem] font-bold">
+                                            ការិយាល័យ</p>
+                                        <the-top-left-bottom-right-inverted-card></the-top-left-bottom-right-inverted-card>
+                                        <the-detail-link class="absolute top-6 right-2"></the-detail-link>
+                                    </router-link>
+                                </v-card>
+                                <v-card elevation="0" class="bg-transparent" v-motion-slide-visible-bottom>
+                                    <router-link to="#" class="relative">
+                                        <p class="absolute bottom-5 left-2 text-gray-700 text-[1.4rem] font-bold">
+                                            បន្ទប់គេង</p>
+                                        <the-top-right-bottom-left-inverted-card></the-top-right-bottom-left-inverted-card>
+                                        <the-detail-link class="absolute top-6 right-2"></the-detail-link>
+                                    </router-link>
+                                </v-card>
+                            </v-col>
+                            <v-col cols="12" md="4">
+                                <v-card elevation="0" class="mb-5" v-motion-slide-visible-right>
+                                    <router-link to="#" class="relative">
+                                        <p class="absolute top-2 left-2 text-gray-700 text-[1.4rem] font-bold">
+                                            ផ្ទះបាយ</p>
+                                        <the-short-top-left-inverted-card></the-short-top-left-inverted-card>
+                                        <the-detail-link class="absolute bottom-3 left-3"></the-detail-link>
+                                    </router-link>
+                                </v-card>
+                                <v-card elevation="0" v-motion-slide-visible-right>
+                                    <router-link to="#" class="relative">
+                                        <p class="absolute bottom-2 left-4 text-gray-700 text-[1.4rem] font-bold">
+                                            អំពូលភ្លើង</p>
+                                        <the-short-bottom-left-inverted-card></the-short-bottom-left-inverted-card>
+                                        <the-detail-link class="absolute top-3 right-3"></the-detail-link>
+                                    </router-link>
+                                </v-card>
+                            </v-col>
+                        </v-row>
+                    </v-container>
                 </v-row>
                 <v-row class="mb-16">
                     <v-col cols="12">
@@ -13,49 +76,7 @@
                         <the-slide-group :tab-items="tabItems"></the-slide-group>
                     </v-col>
                 </v-row>
-                <v-row>
-                    <v-container>
-                        <h2 class="text-center font-bold text-gray-700 text-[2rem] mb-10">ប្រភេទគ្រឿងសង្ហារឹម</h2>
-                        <v-row>
-                            <v-col cols="12" md="4">
-                                <v-card elevation="0" class="mb-5">
-                                    <a href="#">
-                                        <the-long-top-left-inverted-card></the-long-top-left-inverted-card>
-                                    </a>
-                                </v-card>
-                                <v-card elevation="0">
-                                    <a href="#">
-                                        <the-long-bottom-right-inverted-card></the-long-bottom-right-inverted-card>
-                                    </a>
-                                </v-card>
-                            </v-col>
-                            <v-col cols="12" md="4">
-                                <v-card elevation="0" class="-mb-16 bg-transparent">
-                                    <a href="#">
-                                        <the-top-left-bottom-right-inverted-card></the-top-left-bottom-right-inverted-card>
-                                    </a>
-                                </v-card>
-                                <v-card elevation="0" class="bg-transparent">
-                                    <a href="#">
-                                        <the-top-right-bottom-left-inverted-card></the-top-right-bottom-left-inverted-card>
-                                    </a>
-                                </v-card>
-                            </v-col>
-                            <v-col cols="12" md="4">
-                                <v-card elevation="0" class="mb-5">
-                                    <a href="#">
-                                        <the-short-top-left-inverted-card></the-short-top-left-inverted-card>
-                                    </a>
-                                </v-card>
-                                <v-card elevation="0">
-                                    <a href="#">
-                                        <the-short-bottom-left-inverted-card></the-short-bottom-left-inverted-card>
-                                    </a>
-                                </v-card>
-                            </v-col>
-                        </v-row>
-                    </v-container>
-                </v-row>
+
                 <v-row class="mb-16">
                     <v-container>
                         <h2 class="text-center font-bold text-gray-700 text-[2rem] mb-10">សម្ភារៈពេញនិយម</h2>

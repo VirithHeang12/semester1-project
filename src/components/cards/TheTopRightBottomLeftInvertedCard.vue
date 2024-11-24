@@ -1,8 +1,8 @@
 <template>
-    <figure class="relative flex align-center justify-center">
+    <figure class="flex align-center justify-center">
         <svg width="419" height="302" viewBox="0 0 419 302" fill="none" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink">
-            <!-- Define a clipPath that uses the existing path shape -->
+
             <defs>
                 <clipPath id="bedroom">
                     <path
@@ -10,37 +10,21 @@
                 </clipPath>
             </defs>
 
-            <!-- Image element with the clipPath applied -->
             <image :href="href" width="419" height="302" clip-path="url(#bedroom)"
                 preserveAspectRatio="xMidYMid slice" />
         </svg>
-        <figcaption class="absolute left-3 bottom-5 flex items-center justify-center">
-            <h2 class="text-gray-700 text-xl font-bold">{{ title }}</h2>
-        </figcaption>
     </figure>
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+    import { defineProps } from 'vue';
 
-defineProps({
-    width: {
-        type: Number,
-        default: 1362,
-    },
-    height: {
-        type: Number,
-        default: 628,
-    },
-    href: {
-        type: String,
-        default: 'bedroom.png',
-    },
-    title: {
-        type: String,
-        default: 'បន្ទប់គេង'
-    },
-});
+    defineProps({
+        href: {
+            type: String,
+            default: 'bedroom.png',
+        },
+    });
 </script>
 
 <style scoped></style>

@@ -11,9 +11,11 @@ import * as directives from 'vuetify/directives'
 import { aliases, mdi } from 'vuetify/iconsets/mdi'
 import '@mdi/font/css/materialdesignicons.css'
 
+
 import App from './App.vue'
 import router from './router'
 import TheDetailLink from './components/links/TheDetailLink.vue'
+import { MotionPlugin } from '@vueuse/motion'
 
 const vuetify = createVuetify({
   components,
@@ -30,8 +32,10 @@ const vuetify = createVuetify({
 const app = createApp(App)
 
 app.component('TheDetailLink', TheDetailLink)
+
 app.use(createPinia())
 app.use(router)
 app.use(vuetify)
+app.use(MotionPlugin)
 
 app.mount('#app')

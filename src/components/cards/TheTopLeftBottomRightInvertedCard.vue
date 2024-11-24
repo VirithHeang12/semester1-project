@@ -1,7 +1,7 @@
 <template>
-    <figure class="relative flex align-center justify-center">
+    <figure class="flex align-center justify-center">
         <svg width="419" height="292" viewBox="0 0 419 292" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Define a clipPath that uses the existing path shape -->
+
             <defs>
                 <clipPath id="office">
                     <path
@@ -9,37 +9,21 @@
                 </clipPath>
             </defs>
 
-            <!-- Image element with the clipPath applied -->
             <image :href="href" width="419" height="292" clip-path="url(#office)"
                 preserveAspectRatio="xMidYMid slice" />
         </svg>
-        <figcaption class="absolute left-3 top-5 flex items-center justify-center">
-            <h2 class="text-gray-700 text-xl font-bold">{{ title }}</h2>
-        </figcaption>
     </figure>
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+    import { defineProps } from 'vue';
 
-defineProps({
-    width: {
-        type: Number,
-        default: 1362,
-    },
-    height: {
-        type: Number,
-        default: 628,
-    },
-    href: {
-        type: String,
-        default: 'office.png',
-    },
-    title: {
-        type: String,
-        default: 'ការិយាល័យ'
-    },
-});
+    defineProps({
+        href: {
+            type: String,
+            default: 'office.png',
+        },
+    });
 </script>
 
 <style scoped></style>

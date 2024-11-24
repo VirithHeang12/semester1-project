@@ -1,8 +1,7 @@
 <template>
-    <figure class="relative flex align-center justify-center">
-        <svg width="363" height="236" :viewBox="`0 0 ${width} ${height}`" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <!-- Define a clipPath that uses the existing path shape -->
+    <figure class="flex align-center justify-center">
+        <svg width="363" height="236" viewBox="0 0 363 236" fill="none" xmlns="http://www.w3.org/2000/svg">
+
             <defs>
                 <clipPath id="diningRoom">
                     <path
@@ -10,40 +9,21 @@
                 </clipPath>
             </defs>
 
-            <!-- Image element with the clipPath applied -->
-            <image class="relative" :href="href" width="363" height="236" clip-path="url(#diningRoom)"
+            <image :href="href" width="363" height="236" clip-path="url(#diningRoom)"
                 preserveAspectRatio="xMidYMid slice" />
         </svg>
-
-        <figcaption class="absolute left-5 top-0 flex items-center justify-center">
-            <h2 class="text-gray-700 text-xl font-bold">{{ title }}</h2>
-        </figcaption>
-
-        <the-detail-link class="absolute top-2 right-2 md:top-10 md:right-2"></the-detail-link>
     </figure>
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+    import { defineProps } from 'vue';
 
-defineProps({
-    width: {
-        type: Number,
-        default: 363,
-    },
-    height: {
-        type: Number,
-        default: 236,
-    },
-    href: {
-        type: String,
-        default: 'dining_room.png',
-    },
-    title: {
-        type: String,
-        default: 'បន្ទប់ទទួលទានអាហារ'
-    },
-});
+    defineProps({
+        href: {
+            type: String,
+            default: 'dining_room.png',
+        },
+    });
 </script>
 
 <style scoped></style>
