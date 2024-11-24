@@ -40,7 +40,7 @@
                                         <the-detail-link class="absolute top-6 right-2"></the-detail-link>
                                     </router-link>
                                 </v-card>
-                                <v-card elevation="0" class="bg-transparent" v-motion-slide-visible-bottom>
+                                <v-card elevation="0" class="bg-transparent" v-motion-slide-visible-top>
                                     <router-link to="#" class="relative">
                                         <p class="absolute bottom-5 left-2 text-gray-700 text-[1.4rem] font-bold">
                                             បន្ទប់គេង</p>
@@ -70,44 +70,100 @@
                         </v-row>
                     </v-container>
                 </v-row>
-                <v-row class="mb-16 mt-40 bg-gray-100">
+                <v-row class="mb-16 mt-40">
                     <v-col cols="12" class="flex justify-between" v-motion-slide-visible-top>
-                        <the-featured-in-card v-for="featuredInItem in featuredInItems" :key="featuredInItem.title"
-                            :title="featuredInItem.title" :description="featuredInItem.description">
+                        <the-featured-in-card class="bg-gray-100" v-for="featuredInItem in featuredInItems"
+                            :key="featuredInItem.title" :title="featuredInItem.title"
+                            :description="featuredInItem.description">
                             <template v-slot:default>
-                                <v-icon :size="50" class="text-[6rem]">{{ featuredInItem.icon }}</v-icon>
+                                <v-btn :size="75" :ripple="false" :elevation="0" :rounded="true">
+                                    <v-icon size="50">{{ featuredInItem.icon }}</v-icon>
+                                </v-btn>
                             </template>
                         </the-featured-in-card>
                     </v-col>
                 </v-row>
-                <v-row class="mb-16">
+                <v-row class="mb-16 mt-40">
                     <v-col cols="12">
-                        <h2 class="font-bold text-gray-700 text-[2rem] mb-10">ផលិតផលប្រចាំខែ</h2>
+                        <h2 v-motion-slide-visible-top class="font-bold text-gray-700 text-[2.5rem] mb-20">
+                            ផលិតផលប្រចាំខែ</h2>
                         <the-slide-group :tab-items="tabItems"></the-slide-group>
                     </v-col>
                 </v-row>
 
                 <v-row class="mb-16">
                     <v-container>
-                        <h2 class="text-center font-bold text-gray-700 text-[2rem] mb-10">សម្ភារៈពេញនិយម</h2>
+                        <h2 v-motion-slide-visible-top class="text-center font-bold text-gray-700 text-[2.5rem] mb-10">
+                            សម្ភារៈពេញនិយម</h2>
                         <v-row>
-                            <v-col cols="12" md="4">
-                                <a href="#">
-                                    <the-short-bottom-right-inverted-card
-                                        :price="79.99"></the-short-bottom-right-inverted-card>
-                                </a>
+                            <v-col cols="12" md="4" v-motion-slide-visible-left>
+                                <router-link to="#" class="relative">
+                                    <the-short-bottom-right-inverted-card href="chair.png">
+                                    </the-short-bottom-right-inverted-card>
+                                    <heart-svg class="absolute top-3 right-5"></heart-svg>
+                                    <p
+                                        class="w-16 h-16 absolute bottom-[3.8rem] right-3 bg-stone-600 rounded-[1.2rem] flex justify-center align-center">
+                                        <cart-svg></cart-svg>
+                                    </p>
+                                    <v-card class="flex justify-between px-5" :elevation="0">
+                                        <v-row class="flex items-center justify-between bg-gray-100 p-2 rounded-3xl">
+                                            <v-col cols="6">
+                                                <h3 class="text-center font-medium text-gray-700 text-[1.2rem]">កៅអី
+                                                    Tottori</h3>
+                                            </v-col>
+                                            <v-col cols="6">
+                                                <h4 class="text-right font-medium text-gray-700 text-[1.2rem]">$79.99
+                                                </h4>
+                                            </v-col>
+                                        </v-row>
+                                    </v-card>
+                                </router-link>
                             </v-col>
-                            <v-col cols="12" md="4">
-                                <a href="#">
-                                    <the-short-bottom-right-inverted-card href="lamp.png" :price="49.99"
-                                        title="Edysse Lamps"></the-short-bottom-right-inverted-card>
-                                </a>
+                            <v-col cols="12" md="4" v-motion-slide-visible-top>
+                                <router-link to="#" class="relative">
+                                    <the-short-bottom-right-inverted-card href="lamp.png">
+                                    </the-short-bottom-right-inverted-card>
+                                    <heart-svg class="absolute top-3 right-5"></heart-svg>
+                                    <p
+                                        class="w-16 h-16 absolute bottom-[3.8rem] right-3 bg-stone-600 rounded-[1.2rem] flex justify-center align-center">
+                                        <cart-svg></cart-svg>
+                                    </p>
+                                    <v-card class="flex justify-between px-5" :elevation="0">
+                                        <v-row class="flex items-center justify-between bg-gray-100 p-2 rounded-3xl">
+                                            <v-col cols="6">
+                                                <h3 class="text-center font-medium text-gray-700 text-[1.2rem]">អំពូល
+                                                    Edysse</h3>
+                                            </v-col>
+                                            <v-col cols="6">
+                                                <h4 class="text-right font-medium text-gray-700 text-[1.2rem]">$49.99
+                                                </h4>
+                                            </v-col>
+                                        </v-row>
+                                    </v-card>
+                                </router-link>
                             </v-col>
-                            <v-col cols="12" md="4">
-                                <a href="#">
-                                    <the-short-bottom-right-inverted-card href="small_chair.png" :price="89.99"
-                                        title="ឈុតតុកៅអីក្មេង"></the-short-bottom-right-inverted-card>
-                                </a>
+                            <v-col cols="12" md="4" v-motion-slide-visible-right>
+                                <router-link to="#" class="relative">
+                                    <the-short-bottom-right-inverted-card href="small_chair.png">
+                                    </the-short-bottom-right-inverted-card>
+                                    <heart-svg class="absolute top-3 right-5"></heart-svg>
+                                    <p
+                                        class="w-16 h-16 absolute bottom-[3.8rem] right-3 bg-stone-600 rounded-[1.2rem] flex justify-center align-center">
+                                        <cart-svg></cart-svg>
+                                    </p>
+                                    <v-card class="flex justify-between px-5" :elevation="0">
+                                        <v-row class="flex items-center justify-between bg-gray-100 p-2 rounded-3xl">
+                                            <v-col cols="6">
+                                                <h3 class="text-center font-medium text-gray-700 text-[1.2rem]">
+                                                    ឈុតតុកៅអីក្មេង</h3>
+                                            </v-col>
+                                            <v-col cols="6">
+                                                <h4 class="text-right font-medium text-gray-700 text-[1.2rem]">$89.99
+                                                </h4>
+                                            </v-col>
+                                        </v-row>
+                                    </v-card>
+                                </router-link>
                             </v-col>
                         </v-row>
                     </v-container>
@@ -160,6 +216,8 @@
     import TheFeaturedInCard from '@/components/cards/TheFeaturedInCard.vue';
 
 
+    import HeartSvg from '@/assets/svgs/general/heart.svg';
+    import CartSvg from '@/assets/svgs/general/cart.svg';
 
     const expansionItems = [
         {
@@ -194,13 +252,34 @@
             value: 'livingroom',
             icon: 'mdi-sofa',
             images: [
-                'slide-groups/livingrooms/livingroom-1.jpg',
-                'slide-groups/livingrooms/livingroom-2.jpg',
-                'slide-groups/livingrooms/livingroom-3.jpg',
-                'slide-groups/livingrooms/livingroom-4.jpg',
-                'slide-groups/livingrooms/livingroom-5.jpg',
-                'slide-groups/livingrooms/livingroom-6.jpg',
-                'slide-groups/livingrooms/livingroom-7.jpg',
+                {
+                    url: 'slide-groups/livingrooms/livingroom-1.jpg',
+                    price: 79.99
+                },
+                {
+                    url: 'slide-groups/livingrooms/livingroom-2.jpg',
+                    price: 89.99
+                },
+                {
+                    url: 'slide-groups/livingrooms/livingroom-3.jpg',
+                    price: 99.99
+                },
+                {
+                    url: 'slide-groups/livingrooms/livingroom-4.jpg',
+                    price: 109.99
+                },
+                {
+                    url: 'slide-groups/livingrooms/livingroom-5.jpg',
+                    price: 119.99
+                },
+                {
+                    url: 'slide-groups/livingrooms/livingroom-6.jpg',
+                    price: 129.99
+                },
+                {
+                    url: 'slide-groups/livingrooms/livingroom-7.jpg',
+                    price: 139.99
+                },
             ]
         },
         {
@@ -208,13 +287,34 @@
             value: 'diningroom',
             icon: 'mdi-silverware-fork-knife',
             images: [
-                'slide-groups/diningrooms/diningroom-1.jpg',
-                'slide-groups/diningrooms/diningroom-2.jpg',
-                'slide-groups/diningrooms/diningroom-3.jpg',
-                'slide-groups/diningrooms/diningroom-4.jpg',
-                'slide-groups/diningrooms/diningroom-5.jpg',
-                'slide-groups/diningrooms/diningroom-6.jpg',
-                'slide-groups/diningrooms/diningroom-7.jpg',
+                {
+                    url: 'slide-groups/diningrooms/diningroom-1.jpg',
+                    price: 79.99
+                },
+                {
+                    url: 'slide-groups/diningrooms/diningroom-2.jpg',
+                    price: 89.99
+                },
+                {
+                    url: 'slide-groups/diningrooms/diningroom-3.jpg',
+                    price: 99.99
+                },
+                {
+                    url: 'slide-groups/diningrooms/diningroom-4.jpg',
+                    price: 109.99
+                },
+                {
+                    url: 'slide-groups/diningrooms/diningroom-5.jpg',
+                    price: 119.99
+                },
+                {
+                    url: 'slide-groups/diningrooms/diningroom-6.jpg',
+                    price: 129.99
+                },
+                {
+                    url: 'slide-groups/diningrooms/diningroom-7.jpg',
+                    price: 139.99
+                },
             ]
         },
         {
@@ -222,13 +322,34 @@
             value: 'office',
             icon: 'mdi-chair-rolling',
             images: [
-                'slide-groups/offices/office-1.jpg',
-                'slide-groups/offices/office-2.jpg',
-                'slide-groups/offices/office-3.jpg',
-                'slide-groups/offices/office-4.jpg',
-                'slide-groups/offices/office-5.jpg',
-                'slide-groups/offices/office-6.jpg',
-                'slide-groups/offices/office-7.jpg',
+                {
+                    url: 'slide-groups/offices/office-1.jpg',
+                    price: 79.99
+                },
+                {
+                    url: 'slide-groups/offices/office-2.jpg',
+                    price: 89.99
+                },
+                {
+                    url: 'slide-groups/offices/office-3.jpg',
+                    price: 99.99
+                },
+                {
+                    url: 'slide-groups/offices/office-4.jpg',
+                    price: 109.99
+                },
+                {
+                    url: 'slide-groups/offices/office-5.jpg',
+                    price: 119.99
+                },
+                {
+                    url: 'slide-groups/offices/office-6.jpg',
+                    price: 129.99
+                },
+                {
+                    url: 'slide-groups/offices/office-7.jpg',
+                    price: 139.99
+                }
             ]
         },
         {
@@ -236,14 +357,38 @@
             value: 'outdoor',
             icon: 'mdi-bench',
             images: [
-                'slide-groups/outdoors/outdoor-1.jpg',
-                'slide-groups/outdoors/outdoor-2.jpg',
-                'slide-groups/outdoors/outdoor-3.jpg',
-                'slide-groups/outdoors/outdoor-4.jpg',
-                'slide-groups/outdoors/outdoor-5.jpg',
-                'slide-groups/outdoors/outdoor-6.jpg',
-                'slide-groups/outdoors/outdoor-7.jpg',
-                'slide-groups/outdoors/outdoor-8.jpg',
+                {
+                    url: 'slide-groups/outdoors/outdoor-1.jpg',
+                    price: 79.99
+                },
+                {
+                    url: 'slide-groups/outdoors/outdoor-2.jpg',
+                    price: 89.99
+                },
+                {
+                    url: 'slide-groups/outdoors/outdoor-3.jpg',
+                    price: 99.99
+                },
+                {
+                    url: 'slide-groups/outdoors/outdoor-4.jpg',
+                    price: 109.99
+                },
+                {
+                    url: 'slide-groups/outdoors/outdoor-5.jpg',
+                    price: 119.99
+                },
+                {
+                    url: 'slide-groups/outdoors/outdoor-6.jpg',
+                    price: 129.99
+                },
+                {
+                    url: 'slide-groups/outdoors/outdoor-7.jpg',
+                    price: 139.99
+                },
+                {
+                    url: 'slide-groups/outdoors/outdoor-8.jpg',
+                    price: 149.99
+                }
             ]
         },
         {
@@ -251,14 +396,38 @@
             value: 'lamp',
             icon: 'mdi-lamp',
             images: [
-                'slide-groups/lightings/lighting-1.jpg',
-                'slide-groups/lightings/lighting-2.jpg',
-                'slide-groups/lightings/lighting-3.jpg',
-                'slide-groups/lightings/lighting-4.jpg',
-                'slide-groups/lightings/lighting-5.jpg',
-                'slide-groups/lightings/lighting-6.jpg',
-                'slide-groups/lightings/lighting-7.jpg',
-                'slide-groups/lightings/lighting-8.jpg',
+                {
+                    url: 'slide-groups/lightings/lighting-1.jpg',
+                    price: 79.99
+                },
+                {
+                    url: 'slide-groups/lightings/lighting-2.jpg',
+                    price: 89.99
+                },
+                {
+                    url: 'slide-groups/lightings/lighting-3.jpg',
+                    price: 99.99
+                },
+                {
+                    url: 'slide-groups/lightings/lighting-4.jpg',
+                    price: 109.99
+                },
+                {
+                    url: 'slide-groups/lightings/lighting-5.jpg',
+                    price: 119.99
+                },
+                {
+                    url: 'slide-groups/lightings/lighting-6.jpg',
+                    price: 129.99
+                },
+                {
+                    url: 'slide-groups/lightings/lighting-7.jpg',
+                    price: 139.99
+                },
+                {
+                    url: 'slide-groups/lightings/lighting-8.jpg',
+                    price: 149.99
+                }
             ]
         },
         {
@@ -266,13 +435,30 @@
             value: 'bedroom',
             icon: 'mdi-bed',
             images: [
-                'slide-groups/bedrooms/bedroom-1.jpg',
-                'slide-groups/bedrooms/bedroom-2.jpg',
-                'slide-groups/bedrooms/bedroom-3.jpg',
-                'slide-groups/bedrooms/bedroom-4.jpg',
-                'slide-groups/bedrooms/bedroom-5.jpg',
-                'slide-groups/bedrooms/bedroom-6.jpg',
-                'slide-groups/bedrooms/bedroom-7.jpg',
+                {
+                    url: 'slide-groups/bedrooms/bedroom-1.jpg',
+                    price: 79.99
+                },
+                {
+                    url: 'slide-groups/bedrooms/bedroom-2.jpg',
+                    price: 89.99
+                },
+                {
+                    url: 'slide-groups/bedrooms/bedroom-3.jpg',
+                    price: 99.99
+                },
+                {
+                    url: 'slide-groups/bedrooms/bedroom-4.jpg',
+                    price: 109.99
+                },
+                {
+                    url: 'slide-groups/bedrooms/bedroom-5.jpg',
+                    price: 119.99
+                },
+                {
+                    url: 'slide-groups/bedrooms/bedroom-6.jpg',
+                    price: 129.99
+                },
             ]
         }
     ]
