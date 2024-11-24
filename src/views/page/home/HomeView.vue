@@ -70,6 +70,16 @@
                         </v-row>
                     </v-container>
                 </v-row>
+                <v-row class="mb-16 mt-40 bg-gray-100">
+                    <v-col cols="12" class="flex justify-between" v-motion-slide-visible-top>
+                        <the-featured-in-card v-for="featuredInItem in featuredInItems" :key="featuredInItem.title"
+                            :title="featuredInItem.title" :description="featuredInItem.description">
+                            <template v-slot:default>
+                                <v-icon :size="50" class="text-[6rem]">{{ featuredInItem.icon }}</v-icon>
+                            </template>
+                        </the-featured-in-card>
+                    </v-col>
+                </v-row>
                 <v-row class="mb-16">
                     <v-col cols="12">
                         <h2 class="font-bold text-gray-700 text-[2rem] mb-10">ផលិតផលប្រចាំខែ</h2>
@@ -147,6 +157,9 @@
     import TheShortBottomRightInvertedCard from '@/components/cards/TheShortBottomRightInvertedCard.vue';
     import TheMiddleTopInvertedCard from '@/components/cards/TheMiddleTopInvertedCard.vue';
     import TheSlideGroup from '@/components/slide-groups/TheSlideGroup.vue';
+    import TheFeaturedInCard from '@/components/cards/TheFeaturedInCard.vue';
+
+
 
     const expansionItems = [
         {
@@ -261,6 +274,24 @@
                 'slide-groups/bedrooms/bedroom-6.jpg',
                 'slide-groups/bedrooms/bedroom-7.jpg',
             ]
+        }
+    ]
+
+    const featuredInItems = [
+        {
+            title: 'រចនាស្របតាមតម្រូវការ',
+            description: 'គ្រឿងសង្ហារឹមដែលស្របតាមតម្រូវការរបស់អ្នក',
+            icon: 'mdi-table-furniture'
+        },
+        {
+            title: 'ប្រើប្រាស់បានរយៈពេលយូរ',
+            description: 'គ្រឿងសង្ហារឹមដែលមានវត្ថុធាតុដើមគុណភាពខ្ពស់',
+            icon: 'mdi-all-inclusive'
+        },
+        {
+            title: 'ស្នាដែកូនខ្មែរ',
+            description: 'គ្រឿងសង្ហារឹមដែលកើតចេញពីស្នាដែកូនខ្មែរ១០០%',
+            icon: 'mdi-account-group'
         }
     ]
 
