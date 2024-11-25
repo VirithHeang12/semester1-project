@@ -42,7 +42,6 @@
                 <a href="#">
                   <the-category-card
                     href="/public/slide-groups/bedrooms/bedroom-1.jpg"
-                    title="B sl o"
                   ></the-category-card>
                 </a>
               </v-col>
@@ -81,6 +80,13 @@
                   ></the-category-card>
                 </a>
               </v-col>
+              <v-col cols="12" md="4">
+                <a href="#">
+                  <the-category-card
+                    href="/public/bedrooms/"
+                  ></the-category-card>
+                </a>
+              </v-col>
             </v-row>
           </v-col>
         </v-row>
@@ -89,8 +95,12 @@
     <v-sheet class="mx-auto" elevation="0">
       <h2 class="text-lg font-bold">អ្នកប្រហែលជាចូលចិត្ត</h2>
       <v-slide-group class="pa-4" selected-class="bg-success" show-arrows>
-        <v-slide-group-item v-for="n in 15" :key="n">
-          <the-recommendation-card></the-recommendation-card>
+        <v-slide-group-item v-for="(cartrecom, n) in cartRecom" :key="n">
+          <the-recommendation-card
+            :src="cartrecom['src']"
+            :title="cartrecom['title']"
+          >
+          </the-recommendation-card>
         </v-slide-group-item>
       </v-slide-group>
     </v-sheet>
@@ -102,7 +112,20 @@ import TheCategoryCard from "@/components/cards/TheCategoryCard.vue";
 import TheRecommendationCard from "@/components/cards/TheRecommendationCard.vue";
 
 import { ref } from "vue";
-
+const cartRecom = ref([
+  {
+    src: "/public/bedrooms/Headborad.jpg",
+    title: "Headbord",
+  },
+  {
+    src: "/public/slide-groups/bedrooms/bedroom-3.jpg",
+    title: "Mattresses",
+  },
+  {
+    src: "/public/",
+    title: "Bedside Tables",
+  },
+]);
 const carouselItems = ref([
   {
     src: "/slide-groups/bedrooms/bedroom-1.jpg",
@@ -132,37 +155,17 @@ const sidebarItems = ref([
   },
   {
     id: 2,
-    title: "Chairs",
+    title: "Mattresses",
     checked: false,
   },
   {
     id: 3,
-    title: "Crouch",
+    title: "Bedside Tables",
     checked: false,
   },
   {
     id: 4,
-    title: "Sofa",
-    checked: false,
-  },
-  {
-    id: 5,
-    title: "Table",
-    checked: false,
-  },
-  {
-    id: 6,
-    title: "TV",
-    checked: false,
-  },
-  {
-    id: 7,
-    title: "Wardrobe",
-    checked: false,
-  },
-  {
-    id: 8,
-    title: "Window",
+    title: "Headboards",
     checked: false,
   },
 ]);
