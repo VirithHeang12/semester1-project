@@ -42,6 +42,8 @@
                 <a href="#">
                   <the-category-card
                     href="/slide-groups/bedrooms/bedroom-1.jpg"
+                    title="បន្ទប់គេង"
+                    price="109.99$"
                   ></the-category-card>
                 </a>
               </v-col>
@@ -49,6 +51,8 @@
                 <a href="#">
                   <the-category-card
                     href="/slide-groups/bedrooms/bedroom-2.jpg"
+                    title="បន្ទប់គេង"
+                    price="119.99$"
                   ></the-category-card>
                 </a>
               </v-col>
@@ -56,6 +60,17 @@
                 <a href="#">
                   <the-category-card
                     href="/slide-groups/bedrooms/bedroom-3.jpg"
+                    title="បន្ទប់គេង"
+                    price="999.99$"
+                  ></the-category-card>
+                </a>
+              </v-col>
+              <v-col cols="12" md="4">
+                <a href="#">
+                  <the-category-card
+                    href="/bedrooms/badside table.jpg"
+                    price="25.99$"
+                    title="តុក្បែក្រេ"
                   ></the-category-card>
                 </a>
               </v-col>
@@ -63,6 +78,8 @@
                 <a href="#">
                   <the-category-card
                     href="/slide-groups/bedrooms/bedroom-4.jpg"
+                    title="បន្ទប់គេង"
+                    price="599.99$"
                   ></the-category-card>
                 </a>
               </v-col>
@@ -70,6 +87,17 @@
                 <a href="#">
                   <the-category-card
                     href="/slide-groups/bedrooms/bedroom-5.jpg"
+                    title="បន្ទប់គេង"
+                    price="9999.99$"
+                  ></the-category-card>
+                </a>
+              </v-col>
+              <v-col cols="12" md="4">
+                <a href="#">
+                  <the-category-card
+                    href="/bedrooms/bedside table1.jpg"
+                    price="30.99$"
+                    title="តុក្បែក្រេ"
                   ></the-category-card>
                 </a>
               </v-col>
@@ -77,16 +105,20 @@
                 <a href="#">
                   <the-category-card
                     href="/slide-groups/bedrooms/bedroom-6.jpg"
+                    price="229.99$"
+                    title="បន្ទប់គេង"
                   ></the-category-card>
                 </a>
               </v-col>
-              <!-- <v-col cols="12" md="4">
+              <v-col cols="12" md="4">
                 <a href="#">
                   <the-category-card
-                    href="/public/bedrooms/badside table.jpg"
+                    href="/bedrooms/badside table.jpg"
+                    price="30.99$"
+                    title="តុក្បែក្រេ"
                   ></the-category-card>
                 </a>
-              </v-col> -->
+              </v-col>
             </v-row>
           </v-col>
         </v-row>
