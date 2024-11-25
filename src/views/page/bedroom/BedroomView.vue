@@ -41,21 +41,36 @@
               <v-col cols="12" md="4">
                 <a href="#">
                   <the-category-card
-                    href="../small_chair_mini.png"
+                    href="/public/slide-groups/bedrooms/bedroom-1.jpg"
+                    title="B sl o"
                   ></the-category-card>
                 </a>
               </v-col>
               <v-col cols="12" md="4">
                 <a href="#">
                   <the-category-card
-                    href="../small_chair_mini.png"
+                    href="/public/slide-groups/bedrooms/bedroom-2.jpg"
                   ></the-category-card>
                 </a>
               </v-col>
               <v-col cols="12" md="4">
                 <a href="#">
                   <the-category-card
-                    href="../small_chair_mini.png"
+                    href="/public/slide-groups/bedrooms/bedroom-3.jpg"
+                  ></the-category-card>
+                </a>
+              </v-col>
+              <v-col cols="12" md="4">
+                <a href="#">
+                  <the-category-card
+                    href="/public/slide-groups/bedrooms/bedroom-4.jpg"
+                  ></the-category-card>
+                </a>
+              </v-col>
+              <v-col cols="12" md="4">
+                <a href="#">
+                  <the-category-card
+                    href="/public/slide-groups/bedrooms/bedroom-5.jpg"
                   ></the-category-card>
                 </a>
               </v-col>
@@ -63,20 +78,6 @@
                 <a href="#">
                   <the-category-card
                     href="/public/slide-groups/bedrooms/bedroom-6.jpg"
-                  ></the-category-card>
-                </a>
-              </v-col>
-              <v-col cols="12" md="4">
-                <a href="#">
-                  <the-category-card
-                    href="/public/bedroom.png"
-                  ></the-category-card>
-                </a>
-              </v-col>
-              <v-col cols="12" md="4">
-                <a href="#">
-                  <the-category-card
-                    href="/public/bedroom.png"
                   ></the-category-card>
                 </a>
               </v-col>
