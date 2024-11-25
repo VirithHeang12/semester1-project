@@ -41,42 +41,42 @@
               <v-col cols="12" md="4">
                 <a href="#">
                   <the-category-card
-                    href="/public/slide-groups/bedrooms/bedroom-1.jpg"
+                    href="/slide-groups/bedrooms/bedroom-1.jpg"
                   ></the-category-card>
                 </a>
               </v-col>
               <v-col cols="12" md="4">
                 <a href="#">
                   <the-category-card
-                    href="/public/slide-groups/bedrooms/bedroom-2.jpg"
+                    href="/slide-groups/bedrooms/bedroom-2.jpg"
                   ></the-category-card>
                 </a>
               </v-col>
               <v-col cols="12" md="4">
                 <a href="#">
                   <the-category-card
-                    href="/public/slide-groups/bedrooms/bedroom-3.jpg"
+                    href="/slide-groups/bedrooms/bedroom-3.jpg"
                   ></the-category-card>
                 </a>
               </v-col>
               <v-col cols="12" md="4">
                 <a href="#">
                   <the-category-card
-                    href="/public/slide-groups/bedrooms/bedroom-4.jpg"
+                    href="/slide-groups/bedrooms/bedroom-4.jpg"
                   ></the-category-card>
                 </a>
               </v-col>
               <v-col cols="12" md="4">
                 <a href="#">
                   <the-category-card
-                    href="/public/slide-groups/bedrooms/bedroom-5.jpg"
+                    href="/slide-groups/bedrooms/bedroom-5.jpg"
                   ></the-category-card>
                 </a>
               </v-col>
               <v-col cols="12" md="4">
                 <a href="#">
                   <the-category-card
-                    href="/public/slide-groups/bedrooms/bedroom-6.jpg"
+                    href="/slide-groups/bedrooms/bedroom-6.jpg"
                   ></the-category-card>
                 </a>
               </v-col>
@@ -114,15 +114,15 @@ import TheRecommendationCard from "@/components/cards/TheRecommendationCard.vue"
 import { ref } from "vue";
 const cartRecom = ref([
   {
-    src: "/public/bedrooms/Headborad.jpg",
+    src: "/bedrooms/Headborad.jpg",
     title: "Headbord",
   },
   {
-    src: "/public/slide-groups/bedrooms/bedroom-3.jpg",
+    src: "/slide-groups/bedrooms/bedroom-3.jpg",
     title: "Mattresses",
   },
   {
-    src: "/public/",
+    src: "/slide-groups/bedrooms/bedroom-4.jpg",
     title: "Bedside Tables",
   },
 ]);
@@ -134,16 +134,16 @@ const carouselItems = ref([
     src: "/public/slide-groups/bedrooms/bedroom-6.jpg",
   },
   {
-    src: "/public/slide-groups/bedrooms/bedroom-2.jpg",
+    src: "/slide-groups/bedrooms/bedroom-2.jpg",
   },
   {
-    src: "/public/slide-groups/bedrooms/bedroom-3.jpg",
+    src: "/slide-groups/bedrooms/bedroom-3.jpg",
   },
   {
-    src: "/public/slide-groups/bedrooms/bedroom-4.jpg",
+    src: "/slide-groups/bedrooms/bedroom-4.jpg",
   },
   {
-    src: "/public/slide-groups/bedrooms/bedroom-5.jpg",
+    src: "/slide-groups/bedrooms/bedroom-5.jpg",
   },
 ]);
 
