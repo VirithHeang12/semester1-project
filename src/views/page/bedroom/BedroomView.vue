@@ -125,13 +125,49 @@ const cartRecom = ref([
     src: "/slide-groups/bedrooms/bedroom-4.jpg",
     title: "Bedside Tables",
   },
+  {
+    src: "/bedrooms/Headborad.jpg",
+    title: "Headbord",
+  },
+  {
+    src: "/slide-groups/bedrooms/bedroom-3.jpg",
+    title: "Mattresses",
+  },
+  {
+    src: "/slide-groups/bedrooms/bedroom-4.jpg",
+    title: "Bedside Tables",
+  },
+  {
+    src: "/bedrooms/Headborad.jpg",
+    title: "Headbord",
+  },
+  {
+    src: "/slide-groups/bedrooms/bedroom-3.jpg",
+    title: "Mattresses",
+  },
+  {
+    src: "/slide-groups/bedrooms/bedroom-4.jpg",
+    title: "Bedside Tables",
+  },
+  {
+    src: "/bedrooms/Headborad.jpg",
+    title: "Headbord",
+  },
+  {
+    src: "/slide-groups/bedrooms/bedroom-3.jpg",
+    title: "Mattresses",
+  },
+  {
+    src: "/slide-groups/bedrooms/bedroom-4.jpg",
+    title: "Bedside Tables",
+  },
 ]);
 const carouselItems = ref([
   {
     src: "/slide-groups/bedrooms/bedroom-1.jpg",
   },
   {
-    src: "/public/slide-groups/bedrooms/bedroom-6.jpg",
+    src: "/slide-groups/bedrooms/bedroom-6.jpg",
   },
   {
     src: "/slide-groups/bedrooms/bedroom-2.jpg",
