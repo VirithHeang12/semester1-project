@@ -80,13 +80,13 @@
                   ></the-category-card>
                 </a>
               </v-col>
-              <v-col cols="12" md="4">
+              <!-- <v-col cols="12" md="4">
                 <a href="#">
                   <the-category-card
-                    href="/public/bedrooms/"
+                    href="/public/bedrooms/badside table.jpg"
                   ></the-category-card>
                 </a>
-              </v-col>
+              </v-col> -->
             </v-row>
           </v-col>
         </v-row>
