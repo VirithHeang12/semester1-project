@@ -18,18 +18,27 @@ import '@mdi/font/css/materialdesignicons.css'
 import App from './App.vue'
 import router from './router'
 import TheDetailLink from './components/links/TheDetailLink.vue'
+
+// @vueuse/motion
 import { MotionPlugin } from '@vueuse/motion'
 
+// AOS (Animate on Scroll)
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+// init AOS
+AOS.init();
+
 const vuetify = createVuetify({
-  components,
-  directives,
-  icons: {
-    defaultSet: 'mdi',
-    aliases,
-    sets: {
-      mdi,
+    components,
+    directives,
+    icons: {
+        defaultSet: 'mdi',
+        aliases,
+        sets: {
+        mdi,
+        },
     },
-  },
 })
 
 const app = createApp(App)
