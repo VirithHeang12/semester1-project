@@ -1,14 +1,12 @@
 <template>
     <v-app-bar :rounded="true" elevation="0" color="grey-lighten-3" absolute
         class="mt-4 rounded-lg lg:flex lg:justify-center xl:flex xl:justify-center">
-        <v-app-bar-nav-icon :ripple="false" variant="plain">
-            <router-link :to="{ name: 'home' }" class="w-fit h-fit">
-                <svg width="25" height="45" viewBox="0 0 25 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M0.465843 10.3828H0V18.7188H9.16149C10.0155 18.7188 10.3261 20.0078 9.54969 20.4375L7.76398 21.3828C5.35715 22.6719 2.95032 23.3594 0.465843 23.3594H0V31.6953H8.92858C9.78261 31.6953 10.0932 32.9844 9.31678 33.4141L7.45342 34.3594C5.20187 35.5625 2.79504 36.1641 0.465843 36.1641H0V44.5H8.92858L9.93788 43.125C14.2857 37.5391 19.3323 34.6172 24.6118 34.6172H25V26.2812H16.0714C15.2174 26.2812 14.9068 24.9922 15.6832 24.5625L17.5466 23.6172C19.7982 22.4141 22.205 21.8125 24.5342 21.8125H24.9224V13.4766H15.8385C14.9845 13.4766 14.6739 12.1875 15.4503 11.7578L17.236 10.8125C19.6429 9.52343 22.0497 8.83595 24.5342 8.83595H24.9224V0.5H15.9938L14.9845 1.875C10.7919 7.46094 5.66771 10.3828 0.465843 10.3828Z"
-                        fill="#505050" />
-                </svg>
-            </router-link>
+        <v-app-bar-nav-icon :ripple="false" variant="plain" @click="clickCallback('home')">
+            <svg width="25" height="45" viewBox="0 0 25 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0.465843 10.3828H0V18.7188H9.16149C10.0155 18.7188 10.3261 20.0078 9.54969 20.4375L7.76398 21.3828C5.35715 22.6719 2.95032 23.3594 0.465843 23.3594H0V31.6953H8.92858C9.78261 31.6953 10.0932 32.9844 9.31678 33.4141L7.45342 34.3594C5.20187 35.5625 2.79504 36.1641 0.465843 36.1641H0V44.5H8.92858L9.93788 43.125C14.2857 37.5391 19.3323 34.6172 24.6118 34.6172H25V26.2812H16.0714C15.2174 26.2812 14.9068 24.9922 15.6832 24.5625L17.5466 23.6172C19.7982 22.4141 22.205 21.8125 24.5342 21.8125H24.9224V13.4766H15.8385C14.9845 13.4766 14.6739 12.1875 15.4503 11.7578L17.236 10.8125C19.6429 9.52343 22.0497 8.83595 24.5342 8.83595H24.9224V0.5H15.9938L14.9845 1.875C10.7919 7.46094 5.66771 10.3828 0.465843 10.3828Z"
+                    fill="#505050" />
+            </svg>
         </v-app-bar-nav-icon>
         <v-app-bar-title v-if="!isMobile">
             <v-container class="flex mr-0 justify-between">
@@ -25,7 +23,7 @@
 
                         <v-list elevation="0">
                             <v-list-item v-for="(item, i) in items" :key="i">
-                                <v-btn :to="item.to" elevation="0" class="w-full flex justify-start">
+                                <v-btn @click="clickCallback(item.to)" elevation="0" class="w-full flex justify-start">
                                     <v-list-item-title class="flex justify-start text-left">
                                         <span class="tracking-tighter">{{ item.title }}</span>
                                     </v-list-item-title>
@@ -96,7 +94,8 @@
                         </template>
 
                         <v-list elevation="3" class="rounded-lg flex flex-col py-0" variant="plain">
-                            <v-list-item v-for="(item, i) in accountItems" :key="i" class="px-7 py-1 hover:bg-gray-100">
+                            <v-list-item v-for="(item, i) in accountItems" :key="i" class="px-7 py-1 hover:bg-gray-100"
+                                @click="clickCallback(item.to)">
                                 <v-list-item-title>{{ item.title }}</v-list-item-title>
                             </v-list-item>
                         </v-list>
@@ -122,7 +121,7 @@
                 <v-card-text>
                     <v-list>
                         <v-list-item v-for="(item, i) in items" :key="i">
-                            <v-btn :to="item.to" elevation="0" class="w-full flex justify-start">
+                            <v-btn @click="clickCallback(item.to)" elevation="0" class="w-full flex justify-start">
                                 <v-list-item-title class="flex justify-start text-left">
                                     <span class="tracking-tighter">{{ item.title }}</span>
                                 </v-list-item-title>
@@ -139,10 +138,12 @@
 <script setup>
     import { useThemeStore } from '@/stores/theme';
     import { computed, ref } from 'vue';
+    import { useRouter } from 'vue-router';
     import { useDisplay } from 'vuetify/lib/framework.mjs';
 
     const dialog = ref(false);
 
+    const router = useRouter();
     const display = useDisplay();
 
     const isMobile = computed(() => display.xs.value);
@@ -152,37 +153,48 @@
     const items = [
         {
             title: 'បន្ទប់គេង',
-            to: "/categories/bedroom"
+            to: "bedroom"
         },
         {
             title: 'បន្ទប់ទទួលភ្ញៀវ',
-            to: "/categories/livingroom"
+            to: "livingroom"
         },
         {
             title: 'ការិយាល័យ',
-            to: "/categories/office"
+            to: "office"
         },
         {
             title: 'ផ្នែកខាងក្រៅ',
-            to: "/categories/outdoor"
+            to: "outdoor"
         },
         {
             title: 'សូរិយា',
-            to: "/categories/soriya"
+            to: "soriya"
         },
         {
             title: 'ផ្ទះបាយ',
-            to: "/categories/kitchen"
+            to: "kitchen"
         }
     ];
 
     const accountItems = [
-        { title: 'ចូលគណនី' },
-        { title: 'ចំណូលចិត្ត' },
+        {
+            title: 'ចូលគណនី',
+            to: 'login'
+        },
+        {
+            title: 'ចំណូលចិត្ត',
+            to: 'register'
+        },
     ];
 
     const toggleDarkMode = () => {
         themeStore.toggleTheme()
+    }
+
+    const clickCallback = async (name) => {
+        await router.push({ name });
+        dialog.value = false;
     }
 
 </script>

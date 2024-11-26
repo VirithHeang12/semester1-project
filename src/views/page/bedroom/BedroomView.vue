@@ -46,7 +46,7 @@
         <v-sheet class="mx-auto" elevation="0" data-aos="fade-in">
             <h2 class="text-lg font-bold">អ្នកប្រហែលជាចូលចិត្ត</h2>
             <v-slide-group class="pa-4" selected-class="bg-success" show-arrows>
-                <v-slide-group-item v-for="(cartrecom, n) in cartRecom" :key="`cart-recom-${n}`" data-aos="zoom-in">
+                <v-slide-group-item v-for="(cartrecom, n) in cartRecom" :key="`cart-recom-${n}`">
                     <the-recommendation-card :src="cartrecom.src" :title="cartrecom.title"></the-recommendation-card>
                 </v-slide-group-item>
             </v-slide-group>
@@ -90,32 +90,32 @@
         {
             href: "/slide-groups/bedrooms/bedroom-1.jpg",
             title: "បន្ទប់គេង",
-            price: "109.99$",
+            price: 109.99,
         },
         {
             href: "/slide-groups/bedrooms/bedroom-2.jpg",
             title: "បន្ទប់គេង",
-            price: "119.99$",
+            price: 119.99,
         },
         {
             href: "/bedrooms/badside table.jpg",
-            price: "30.99$",
+            price: 30.99,
             title: "តុក្បែក្រេ",
         },
         {
             href: "/slide-groups/bedrooms/bedroom-3.jpg",
             title: "បន្ទប់គេង",
-            price: "999.99$",
+            price: 999.99,
         },
         {
             href: "/bedrooms/badside table.jpg",
-            price: "25.99$",
+            price: 25.99,
             title: "តុក្បែក្រេ",
         },
         {
             href: "/slide-groups/bedrooms/bedroom-5.jpg",
             title: "បន្ទប់គេង",
-            price: "999.99$",
+            price: 999.99,
         },
     ]);
 
