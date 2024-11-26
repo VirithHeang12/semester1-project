@@ -133,6 +133,10 @@
         {
             title: 'សូរិយា',
             to: "/categories/soriya"
+        },
+        {
+            title: 'ផ្ទះបាយ',
+            to: "/categories/kitchen"
         }
     ];
 
