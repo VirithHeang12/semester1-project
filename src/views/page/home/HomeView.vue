@@ -1,5 +1,5 @@
 <template>
-    <v-container class="px-0 py-0" :max-width="1200">
+    <v-container class="mt-5 px-0 py-0" :max-width="1200">
         <div class="bg-white">
             <v-container>
                 <v-row class="mb-16" v-motion-slide-visible-top>
@@ -7,10 +7,10 @@
                         <the-inverted-card></the-inverted-card>
                     </v-col>
                 </v-row>
-                <v-row class="mb-16">
+                <v-row style="margin-bottom: 8rem;">
                     <v-container>
-                        <h2 v-motion-slide-visible-once-top
-                            class="text-center font-bold text-gray-700 text-[2.5rem] mb-10">
+                        <h2 v-motion-slide-visible-top
+                            class="text-center font-bold text-gray-700 text-[2.5rem] mb-16 mt-24">
                             ប្រភេទគ្រឿងសង្ហារឹម</h2>
                         <v-row>
                             <v-col cols="12" md="4">
@@ -70,7 +70,7 @@
                         </v-row>
                     </v-container>
                 </v-row>
-                <v-row class="mb-16 mt-40">
+                <v-row class="mb-16">
                     <v-col cols="12" class="flex justify-between" v-motion-slide-visible-top>
                         <the-featured-in-card class="bg-gray-100" v-for="featuredInItem in featuredInItems"
                             :key="featuredInItem.title" :title="featuredInItem.title"
@@ -91,7 +91,7 @@
                     </v-col>
                 </v-row>
 
-                <v-row class="mb-16">
+                <v-row style="margin-bottom: 8rem;">
                     <v-container>
                         <h2 v-motion-slide-visible-top class="text-center font-bold text-gray-700 text-[2.5rem] mb-10">
                             សម្ភារៈពេញនិយម</h2>
@@ -170,16 +170,19 @@
                 </v-row>
                 <v-row class="mb-12">
                     <v-container>
-                        <v-row>
-                            <the-middle-top-inverted-card></the-middle-top-inverted-card>
+                        <v-row class="relative">
+                            <p v-motion-slide-visible-top
+                                class="absolute top-2 left-[27.5rem] text-gray-700 text-[2.5rem] font-bold">
+                                Timeless Design</p>
+                            <the-middle-top-inverted-card v-motion-slide-visible-bottom></the-middle-top-inverted-card>
                         </v-row>
                     </v-container>
                 </v-row>
-                <v-row>
+                <v-row style="margin-bottom: 6rem;">
                     <v-container>
                         <v-row class="flex">
-                            <v-col cols="12" md="6">
-                                <v-expansion-panels>
+                            <v-col cols="12" md="6" class="relative">
+                                <v-expansion-panels class="absolute top-0">
                                     <v-expansion-panel v-for="(expansionItem, i) in expansionItems" :key="i"
                                         class="text-[2rem]">
                                         <v-expansion-panel-title class="px-6 py-6" :style="{ fontSize: '1.2rem' }">

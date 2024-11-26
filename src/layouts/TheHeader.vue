@@ -1,5 +1,6 @@
 <template>
-    <v-app-bar elevation="0" absolute class="lg:flex lg:justify-center xl:flex xl:justify-center">
+    <v-app-bar :rounded="true" elevation="0" color="grey-lighten-3" absolute
+        class="mt-4 rounded-lg lg:flex lg:justify-center xl:flex xl:justify-center">
         <v-app-bar-nav-icon :ripple="false">
             <router-link :to="{ name: 'home' }" class="bg-gray-50 w-fit h-fit">
                 <svg width="25" height="45" viewBox="0 0 25 45" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -10,8 +11,8 @@
             </router-link>
         </v-app-bar-nav-icon>
         <v-app-bar-title>
-            <v-container class="flex mr-0">
-                <v-toolbar-items class="md:pl-32 lg:pl-24 xl:pl-64">
+            <v-container class="flex mr-0 justify-between">
+                <v-toolbar-items class="md:pl-32 lg:pl-24 xl:pl-72 min-[1450px]:pl-52">
                     <v-btn class="rounded-lg" variant="text" to="/" :ripple="false">
                         <span class="font-lg tracking-tight text-[1.2rem]">ទំព័រដើម</span>
                     </v-btn>
@@ -39,7 +40,6 @@
                         <span class="font-lg tracking-tight text-[1.2rem]">ទំនាក់ទំនង</span>
                     </v-btn>
                 </v-toolbar-items>
-                <v-divider></v-divider>
                 <v-toolbar-items class="extended hidden">
                     <v-btn variant="plain" :ripple="false">
                         <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
