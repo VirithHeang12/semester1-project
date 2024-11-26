@@ -1,26 +1,27 @@
 <template>
   <v-container>
-    <div class="bg-white">
+    <div class="bg-white" data-aos="fade-up">
       <v-container>
-        <v-row class="mb-16">
+        <v-row class="mb-16" data-aos="fade-up">
           <v-col cols="12">
-            <v-carousel hide-delimiters class="rounded-[1.2rem]">
+            <v-carousel hide-delimiters class="rounded-lg">
               <v-carousel-item
                 v-for="(item, i) in carouselItems"
-                :key="i"
+                :key="`carousel-item-${i}`"
                 :src="item.src"
+                :lazy-src="item.lazySrc"
                 cover
               ></v-carousel-item>
             </v-carousel>
           </v-col>
         </v-row>
         <v-row>
-          <v-col cols="12" md="3">
+          <v-col cols="12" md="3" data-aos="fade-right">
             <v-list lines="one" select-strategy="leaf">
               <v-list-subheader>Product Category</v-list-subheader>
               <v-list-item
                 v-for="item in sidebarItems"
-                :key="item.id"
+                :key="`sidebar-item-${item.id}`"
                 :title="item.title"
               >
                 <template v-slot:prepend="{ isSelected }">
@@ -32,90 +33,25 @@
             </v-list>
             <v-container>
               <p class="mb-5">Filter By Price</p>
-              <v-range-slider :width="100"></v-range-slider>
+              <v-range-slider class="w-full"></v-range-slider>
             </v-container>
           </v-col>
 
           <v-col cols="12" md="9">
             <v-row>
-              <v-col cols="12" md="4">
+              <v-col
+                cols="12"
+                md="4"
+                v-for="(card, index) in productCards"
+                :key="`product-card-${index}`"
+                data-aos="fade-up"
+                :data-aos-delay="index * 100"
+              >
                 <a href="#">
                   <the-category-card
-                    href="/slide-groups/bedrooms/bedroom-1.jpg"
-                    title="បន្ទប់គេង"
-                    price="109.99$"
-                  ></the-category-card>
-                </a>
-              </v-col>
-              <v-col cols="12" md="4">
-                <a href="#">
-                  <the-category-card
-                    href="/slide-groups/bedrooms/bedroom-2.jpg"
-                    title="បន្ទប់គេង"
-                    price="119.99$"
-                  ></the-category-card>
-                </a>
-              </v-col>
-              <v-col cols="12" md="4">
-                <a href="#">
-                  <the-category-card
-                    href="/slide-groups/bedrooms/bedroom-3.jpg"
-                    title="បន្ទប់គេង"
-                    price="999.99$"
-                  ></the-category-card>
-                </a>
-              </v-col>
-              <v-col cols="12" md="4">
-                <a href="#">
-                  <the-category-card
-                    href="/bedrooms/badside table.jpg"
-                    price="25.99$"
-                    title="តុក្បែក្រេ"
-                  ></the-category-card>
-                </a>
-              </v-col>
-              <v-col cols="12" md="4">
-                <a href="#">
-                  <the-category-card
-                    href="/slide-groups/bedrooms/bedroom-4.jpg"
-                    title="បន្ទប់គេង"
-                    price="599.99$"
-                  ></the-category-card>
-                </a>
-              </v-col>
-              <v-col cols="12" md="4">
-                <a href="#">
-                  <the-category-card
-                    href="/slide-groups/bedrooms/bedroom-5.jpg"
-                    title="បន្ទប់គេង"
-                    price="9999.99$"
-                  ></the-category-card>
-                </a>
-              </v-col>
-              <v-col cols="12" md="4">
-                <a href="#">
-                  <the-category-card
-                    href="/bedrooms/bedside table1.jpg"
-                    price="30.99$"
-                    title="តុក្បែក្រេ"
-                  ></the-category-card>
-                </a>
-              </v-col>
-              <v-col cols="12" md="4">
-                <a href="#">
-                  <the-category-card
-                    href="/slide-groups/bedrooms/bedroom-6.jpg"
-                    price="229.99$"
-                    title="បន្ទប់គេង"
-                  ></the-category-card>
-                </a>
-              </v-col>
-              <v-col cols="12" md="4">
-                <a href="#">
-                  <the-category-card
-                    href="/bedrooms/badside table.jpg"
-                    price="30.99$"
-                    title="តុក្បែក្រេ"
+                    :title="card.title"
+                    :price="card.price"
+                    :href="card.href"
                   ></the-category-card>
                 </a>
               </v-col>
@@ -124,15 +60,18 @@
         </v-row>
       </v-container>
     </div>
-    <v-sheet class="mx-auto" elevation="0">
+    <v-sheet class="mx-auto" elevation="0" data-aos="fade-in">
       <h2 class="text-lg font-bold">អ្នកប្រហែលជាចូលចិត្ត</h2>
       <v-slide-group class="pa-4" selected-class="bg-success" show-arrows>
-        <v-slide-group-item v-for="(cartrecom, n) in cartRecom" :key="n">
+        <v-slide-group-item
+          v-for="(cartrecom, n) in cartRecom"
+          :key="`cart-recom-${n}`"
+          data-aos="zoom-in"
+        >
           <the-recommendation-card
-            :src="cartrecom['src']"
-            :title="cartrecom['title']"
-          >
-          </the-recommendation-card>
+            :src="cartrecom.src"
+            :title="cartrecom.title"
+          ></the-recommendation-card>
         </v-slide-group-item>
       </v-slide-group>
     </v-sheet>
@@ -143,7 +82,79 @@
 import TheCategoryCard from "@/components/cards/TheCategoryCard.vue";
 import TheRecommendationCard from "@/components/cards/TheRecommendationCard.vue";
 
-import { ref } from "vue";
+import { ref, onMounted, nextTick } from "vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+// Initialize AOS animations
+onMounted(() => {
+  AOS.init({ duration: 1000 });
+});
+
+// Refresh AOS on DOM updates
+nextTick(() => {
+  AOS.refresh();
+});
+
+// Data for carousel
+const carouselItems = ref([
+  {
+    src: "/slide-groups/bedrooms/bedroom-1.jpg",
+    lazySrc: "/thumbnails/bedroom-1.jpg",
+  },
+  {
+    src: "/slide-groups/bedrooms/bedroom-6.jpg",
+    lazySrc: "/thumbnails/bedroom-6.jpg",
+  },
+  {
+    src: "/slide-groups/bedrooms/bedroom-2.jpg",
+    lazySrc: "/thumbnails/bedroom-2.jpg",
+  },
+]);
+
+// Sidebar filter items
+const sidebarItems = ref([
+  { id: 1, title: "All", checked: false },
+  { id: 2, title: "Mattresses", checked: false },
+  { id: 3, title: "Bedside Tables", checked: false },
+  { id: 3, title: "Headbord", checked: false },
+]);
+
+// Product cards
+const productCards = ref([
+  {
+    href: "/slide-groups/bedrooms/bedroom-1.jpg",
+    title: "បន្ទប់គេង",
+    price: "109.99$",
+  },
+  {
+    href: "/slide-groups/bedrooms/bedroom-2.jpg",
+    title: "បន្ទប់គេង",
+    price: "119.99$",
+  },
+  {
+    href: "/bedrooms/badside table.jpg",
+    price: "30.99$",
+    title: "តុក្បែក្រេ",
+  },
+  {
+    href: "/slide-groups/bedrooms/bedroom-3.jpg",
+    title: "បន្ទប់គេង",
+    price: "999.99$",
+  },
+  {
+    href: "/bedrooms/badside table.jpg",
+    price: "25.99$",
+    title: "តុក្បែក្រេ",
+  },
+  {
+    href: "/slide-groups/bedrooms/bedroom-5.jpg",
+    title: "បន្ទប់គេង",
+    price: "999.99$",
+  },
+]);
+
+// Recommendations
 const cartRecom = ref([
   {
     src: "/bedrooms/Headborad.jpg",
@@ -194,49 +205,14 @@ const cartRecom = ref([
     title: "Bedside Tables",
   },
 ]);
-const carouselItems = ref([
-  {
-    src: "/slide-groups/bedrooms/bedroom-1.jpg",
-  },
-  {
-    src: "/slide-groups/bedrooms/bedroom-6.jpg",
-  },
-  {
-    src: "/slide-groups/bedrooms/bedroom-2.jpg",
-  },
-  {
-    src: "/slide-groups/bedrooms/bedroom-3.jpg",
-  },
-  {
-    src: "/slide-groups/bedrooms/bedroom-4.jpg",
-  },
-  {
-    src: "/slide-groups/bedrooms/bedroom-5.jpg",
-  },
-]);
-
-const sidebarItems = ref([
-  {
-    id: 1,
-    title: "All",
-    checked: false,
-  },
-  {
-    id: 2,
-    title: "Mattresses",
-    checked: false,
-  },
-  {
-    id: 3,
-    title: "Bedside Tables",
-    checked: false,
-  },
-  {
-    id: 4,
-    title: "Headboards",
-    checked: false,
-  },
-]);
 </script>
 
-<style scoped></style>
+<style scoped>
+.bg-white {
+  background-color: white;
+}
+
+.rounded-lg {
+  border-radius: 1.2rem;
+}
+</style>
