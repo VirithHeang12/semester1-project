@@ -1,6 +1,6 @@
 <template>
     <v-row class="flex justify-between">
-        <v-card cols="12" md="3" elevation="0" v-motion-slide-visible-left>
+        <v-card cols="12" md="3" elevation="0" data-aos="fade-right">
             <v-tabs v-model="tab" color="black" direction="vertical">
                 <v-tab v-for="tab in tabItems" :prepend-icon="tab.icon" :value="tab.value" :key="tab.value"
                     :selected-class="'bg-grey-darken-1 text-white'">
@@ -8,7 +8,7 @@
                 </v-tab>
             </v-tabs>
         </v-card>
-        <v-card cols="12" md="9" elevation="0" class="flex-grow-1" :max-width="950" v-motion-slide-visible-right>
+        <v-card cols="12" md="9" elevation="0" class="flex-grow-1" :max-width="950" data-aos="fade-left">
             <v-tabs-window v-model="tab" class="h-full w-full">
                 <v-tabs-window-item class="h-full" v-for="tabItem in tabItems" :value="tabItem.value"
                     :key="tabItem.value">
@@ -24,7 +24,7 @@
                                                 <p class="pl-2">
                                                     <span class="text-gray-600 rounded-lg bg-gray-200 p-1">${{
                                                         tabItemImage.price
-                                                    }}</span>
+                                                        }}</span>
                                                 </p>
                                             </div>
                                             <v-btn :color="'grey-darken-3'" :size="25" :ripple="false"

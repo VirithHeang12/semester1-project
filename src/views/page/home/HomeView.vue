@@ -2,19 +2,19 @@
     <v-container class="mt-5 px-0 py-0" :max-width="1200">
         <div class="bg-white">
             <v-container>
-                <v-row class="mb-16" v-motion-slide-visible-top>
+                <v-row class="mb-16" data-aos="fade-down">
                     <v-col cols="12">
                         <the-inverted-card></the-inverted-card>
                     </v-col>
                 </v-row>
                 <v-row style="margin-bottom: 8rem;">
                     <v-container>
-                        <h2 v-motion-slide-visible-top
+                        <h2 data-aos="fade-down" data-aos-delay="300"
                             class="text-center font-bold text-gray-700 text-[2.5rem] mb-16 mt-24">
                             ប្រភេទគ្រឿងសង្ហារឹម</h2>
                         <v-row>
                             <v-col cols="12" md="4">
-                                <v-card elevation="0" class="mb-5" v-motion-slide-visible-left>
+                                <v-card elevation="0" class="mb-5" data-aos="fade-right">
                                     <router-link to="#" class="relative">
                                         <p class="absolute top-1 left-2 text-gray-700 text-[1.5rem] font-bold">
                                             បន្ទប់ទទួលទានអាហារ</p>
@@ -22,7 +22,7 @@
                                         <the-detail-link class="absolute top-2 right-2"></the-detail-link>
                                     </router-link>
                                 </v-card>
-                                <v-card elevation="0" v-motion-slide-visible-left>
+                                <v-card elevation="0" data-aos="fade-right">
                                     <router-link to="#" class="relative">
                                         <p class="absolute bottom-2 left-2 text-gray-700 text-[1.5rem] font-bold">
                                             បន្ទប់ទទួលភ្ញៀវ</p>
@@ -32,7 +32,7 @@
                                 </v-card>
                             </v-col>
                             <v-col cols="12" md="4">
-                                <v-card elevation="0" class="-mb-16 bg-transparent" v-motion-slide-visible-top>
+                                <v-card elevation="0" class="-mb-16 bg-transparent" data-aos="fade-down">
                                     <router-link to="#" class="relative">
                                         <p class="absolute top-5 left-2 text-gray-700 text-[1.4rem] font-bold">
                                             ការិយាល័យ</p>
@@ -40,7 +40,7 @@
                                         <the-detail-link class="absolute top-6 right-2"></the-detail-link>
                                     </router-link>
                                 </v-card>
-                                <v-card elevation="0" class="bg-transparent" v-motion-slide-visible-top>
+                                <v-card elevation="0" class="bg-transparent" data-aos="fade-up">
                                     <router-link to="#" class="relative">
                                         <p class="absolute bottom-5 left-2 text-gray-700 text-[1.4rem] font-bold">
                                             បន្ទប់គេង</p>
@@ -50,7 +50,7 @@
                                 </v-card>
                             </v-col>
                             <v-col cols="12" md="4">
-                                <v-card elevation="0" class="mb-5" v-motion-slide-visible-right>
+                                <v-card elevation="0" class="mb-5" data-aos="fade-left">
                                     <router-link to="#" class="relative">
                                         <p class="absolute top-2 left-2 text-gray-700 text-[1.4rem] font-bold">
                                             ផ្ទះបាយ</p>
@@ -58,7 +58,7 @@
                                         <the-detail-link class="absolute bottom-3 left-3"></the-detail-link>
                                     </router-link>
                                 </v-card>
-                                <v-card elevation="0" v-motion-slide-visible-right>
+                                <v-card elevation="0" data-aos="fade-left">
                                     <router-link to="#" class="relative">
                                         <p class="absolute bottom-2 left-4 text-gray-700 text-[1.4rem] font-bold">
                                             អំពូលភ្លើង</p>
@@ -71,7 +71,7 @@
                     </v-container>
                 </v-row>
                 <v-row class="mb-16">
-                    <v-col cols="12" class="flex justify-between" v-motion-slide-visible-top>
+                    <v-col cols="12" class="flex justify-between" data-aos="fade-down">
                         <the-featured-in-card class="bg-gray-100" v-for="featuredInItem in featuredInItems"
                             :key="featuredInItem.title" :title="featuredInItem.title"
                             :description="featuredInItem.description">
@@ -85,7 +85,7 @@
                 </v-row>
                 <v-row class="mb-16 mt-40">
                     <v-col cols="12">
-                        <h2 v-motion-slide-visible-top class="font-bold text-gray-700 text-[2.5rem] mb-20">
+                        <h2 data-aos="fade-down" class="font-bold text-gray-700 text-[2.5rem] mb-20">
                             ផលិតផលប្រចាំខែ</h2>
                         <the-slide-group :tab-items="tabItems"></the-slide-group>
                     </v-col>
@@ -93,10 +93,11 @@
 
                 <v-row style="margin-bottom: 8rem;">
                     <v-container>
-                        <h2 v-motion-slide-visible-top class="text-center font-bold text-gray-700 text-[2.5rem] mb-10">
+                        <h2 data-aos="fade-down" data-aos-delay="300"
+                            class="text-center font-bold text-gray-700 text-[2.5rem] mb-10">
                             សម្ភារៈពេញនិយម</h2>
                         <v-row>
-                            <v-col cols="12" md="4" v-motion-slide-visible-left>
+                            <v-col cols="12" md="4" data-aos="fade-right">
                                 <router-link to="#" class="relative">
                                     <the-short-bottom-right-inverted-card href="chair.png">
                                     </the-short-bottom-right-inverted-card>
@@ -119,7 +120,7 @@
                                     </v-card>
                                 </router-link>
                             </v-col>
-                            <v-col cols="12" md="4" v-motion-slide-visible-top>
+                            <v-col cols="12" md="4" data-aos="fade-down">
                                 <router-link to="#" class="relative">
                                     <the-short-bottom-right-inverted-card href="lamp.png">
                                     </the-short-bottom-right-inverted-card>
@@ -142,7 +143,7 @@
                                     </v-card>
                                 </router-link>
                             </v-col>
-                            <v-col cols="12" md="4" v-motion-slide-visible-right>
+                            <v-col cols="12" md="4" data-aos="fade-left">
                                 <router-link to="#" class="relative">
                                     <the-short-bottom-right-inverted-card href="small_chair.png">
                                     </the-short-bottom-right-inverted-card>
@@ -171,18 +172,18 @@
                 <v-row style="margin-bottom: 12rem;">
                     <v-container>
                         <v-row class="relative">
-                            <p v-motion-slide-visible-top
+                            <p data-aos="fade-down"
                                 class="absolute top-2 left-[27.5rem] text-gray-700 text-[2.5rem] font-bold">
                                 Timeless Design</p>
-                            <the-middle-top-inverted-card v-motion-slide-visible-bottom></the-middle-top-inverted-card>
+                            <the-middle-top-inverted-card data-aos="fade-up"></the-middle-top-inverted-card>
                         </v-row>
                     </v-container>
                 </v-row>
                 <v-row style="margin-bottom: 6rem;">
                     <v-container>
                         <v-row class="flex">
-                            <v-col cols="12" md="6" class="relative">
-                                <v-expansion-panels class="absolute top-0">
+                            <v-col cols="12" md="6" class="relative" data-aos="fade-right">
+                                <v-expansion-panels class="absolute top-0" :elevation="0">
                                     <v-expansion-panel v-for="(expansionItem, i) in expansionItems" :key="i"
                                         class="text-[2rem]">
                                         <v-expansion-panel-title class="px-6 py-6" :style="{ fontSize: '1.2rem' }">
@@ -194,7 +195,7 @@
                                     </v-expansion-panel>
                                 </v-expansion-panels>
                             </v-col>
-                            <v-col cols="12" md="6" class="align-self-start">
+                            <v-col cols="12" md="6" class="align-self-start" data-aos="fade-left">
                                 <v-img class="w-full h-full" src="desk.png" alt="Desk" />
                             </v-col>
                         </v-row>
@@ -224,28 +225,28 @@
 
     const expansionItems = [
         {
-            title: 'តើគ្រឿងសង្ហារឹមរបស់អ្នកនាំចូលពីប្រទេសណាខ្លះ?',
-            text: 'បាទ បងអាចអញ្ជើញមកហាងពួកយើងផ្ទាល់បាន ទីតាំងរបស់ពួកយើងគឺស្ថិតនៅលើផ្លូវ ២០០៤ រាជធានីភ្នំពេញ'
+            title: 'តើគ្រឿងសង្ហារឹមរបស់អ្នកត្រូវបាននាំចូលពីប្រទេសណាខ្លះ?',
+            text: 'ភាគច្រើនជាផលិតផលក្នុងស្រុក និងមួយចំនួនជាគ្រឿងមកពីប្រទេសផ្សេងៗដែលមានជាងជំនាញខាងផលិតគ្រឿងសង្ហារឹមដោយដៃ។'
         },
         {
-            title: 'តើខ្ញុំអាចទៅមើលផ្ទាល់នៅហាងបានឬទេ?',
-            text: 'បាទ បងអាចអញ្ជើញមកហាងពួកយើងផ្ទាល់បាន ទីតាំងរបស់ពួកយើងគឺស្ថិតនៅលើផ្លូវ ២០០៤ រាជធានីភ្នំពេញ'
+            title: 'តើខ្ញុំអាចទៅមើលគ្រឿងសង្ហារឹមដោយផ្ទាល់នៅហាងបានឬទេ?',
+            text: 'បាទ! បងអាចអញ្ជើញមកហាងរបស់ពួកយើងផ្ទាល់នៅផ្ទះលេខ៨២ ផ្លូវលេខ២០០៤ ក្រុមទី១ សង្កាត់កាកាប​ ខណ្ឌពោធិសែនជ័យ​ រាជធានីភ្នំពេញ។'
         },
         {
-            title: 'តើខ្ញុំអាចទៅមើលផ្ទាល់នៅហាងបានឬទេ?',
-            text: 'បាទ បងអាចអញ្ជើញមកហាងពួកយើងផ្ទាល់បាន ទីតាំងរបស់ពួកយើងគឺស្ថិតនៅលើផ្លូវ ២០០៤ រាជធានីភ្នំពេញ'
+            title: 'តើមានសេវាដឹកជញ្ជូនដែរឬទេ?',
+            text: 'បាទ! ពួកយើងផ្ដល់សេវាដឹកជញ្ជូនឥតគិតថ្លៃទៅគ្រប់២៥ខេត្ត/ក្រុង។'
         },
         {
-            title: 'តើខ្ញុំអាចទៅមើលផ្ទាល់នៅហាងបានឬទេ?',
-            text: 'បាទ បងអាចអញ្ជើញមកហាងពួកយើងផ្ទាល់បាន ទីតាំងរបស់ពួកយើងគឺស្ថិតនៅលើផ្លូវ ២០០៤ រាជធានីភ្នំពេញ'
+            title: 'ក្នុងករណីមិនពេញចិត្ត តើអាចប្ដូរយកប្រាក់វិញបានទេ?',
+            text: 'បាទ! ពួកយើងនឹងប្ដូរប្រាក់ជូនបងវិញក្នុងកំឡុងពេល១ខែ ក្នុងករណីដែលគ្រឿងសង្ហារឹមនៅសភាពល្អដូចដើម'
         },
         {
-            title: 'តើខ្ញុំអាចទៅមើលផ្ទាល់នៅហាងបានឬទេ?',
-            text: 'បាទ បងអាចអញ្ជើញមកហាងពួកយើងផ្ទាល់បាន ទីតាំងរបស់ពួកយើងគឺស្ថិតនៅលើផ្លូវ ២០០៤ រាជធានីភ្នំពេញ'
+            title: 'តើមានសេវាកម្មតំឡើងដែរឬទេ?',
+            text: 'បាទ! ពួកយើងផ្តល់សេវាកម្មតំឡើងទៅគ្រប់ខេត្ត/ក្រុង។ សេវាកម្មតំឡើងអាស្រ័យលើប្រភេទគ្រឿងសង្ហារឹមដែលអ្នកបានទិញ។'
         },
         {
-            title: 'តើខ្ញុំអាចទៅមើលផ្ទាល់នៅហាងបានឬទេ?',
-            text: 'បាទ បងអាចអញ្ជើញមកហាងពួកយើងផ្ទាល់បាន ទីតាំងរបស់ពួកយើងគឺស្ថិតនៅលើផ្លូវ ២០០៤ រាជធានីភ្នំពេញ'
+            title: 'តើមានសេវាធានាគុណភាពគ្រឿងសង្ហារឹមដែរឬទេ?',
+            text: 'បាទ! ពួកយើងផ្តល់សេវាធានាគុណភាពគ្រឿងសង្ហារឹមទៅទៅតាមប្រភេទនីមួយៗ ចាប់ពី២ឆ្នាំឡើងទៅ។'
         },
     ];
 
