@@ -168,7 +168,7 @@
                         </v-row>
                     </v-container>
                 </v-row>
-                <v-row class="mb-12">
+                <v-row style="margin-bottom: 12rem;">
                     <v-container>
                         <v-row class="relative">
                             <p v-motion-slide-visible-top
