@@ -158,44 +158,40 @@
   // Recommendations
   const cartRecom = ref([
     {
-      src: "/bedrooms/Headborad.jpg",
-      title: "Headbord",
+      src: "/slide-groups/kitchens/show/Cozinha.jpg",
+      title: "Cozinha",
     },
     {
-      src: "/slide-groups/bedrooms/bedroom-3.jpg",
+      src: "/slide-groups/kitchens/show/diskrake.jpg",
+      title: "Disk Rake",
+    },
+    {
+      src: "/slide-groups/kitchens/show/fridege.jpg",
+      title: "Fridege",
+    },
+    {
+      src: "/slide-groups/kitchens/show/Fryer.jpg",
+      title: "Fryer",
+    },
+    {
+      src: "/slide-groups/kitchens/show/kitchensink.jpg",
+      title: "Kitchen Sink",
+    },
+    {
+      src: "/slide-groups/kitchens/show/knifeset.jpg",
+      title: "Knife Set",
+    },
+    {
+      src: "/slide-groups/kitchens/show/microwave.jpg",
+      title: "Microwave",
+    },
+    {
+      src: "/slide-groups/kitchens/show/mixer.jpg",
       title: "Mattresses",
     },
     {
-      src: "/slide-groups/bedrooms/bedroom-4.jpg",
-      title: "Bedside Tables",
-    },
-    {
-      src: "/bedrooms/Headborad.jpg",
-      title: "Headbord",
-    },
-    {
-      src: "/slide-groups/bedrooms/bedroom-3.jpg",
-      title: "Mattresses",
-    },
-    {
-      src: "/slide-groups/bedrooms/bedroom-4.jpg",
-      title: "Bedside Tables",
-    },
-    {
-      src: "/bedrooms/Headborad.jpg",
-      title: "Headbord",
-    },
-    {
-      src: "/slide-groups/bedrooms/bedroom-3.jpg",
-      title: "Mattresses",
-    },
-    {
-      src: "/slide-groups/bedrooms/bedroom-4.jpg",
-      title: "Bedside Tables",
-    },
-    {
-      src: "/bedrooms/Headborad.jpg",
-      title: "Headbord",
+      src: "/slide-groups/kitchens/show/Stove.jpg",
+      title: "Stove",
     },
   ]);
   </script>
