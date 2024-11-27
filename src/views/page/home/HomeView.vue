@@ -99,116 +99,134 @@
                         </the-featured-in-card>
                     </v-col>
                 </div>
-                <div class="mb-28">
+                <div class="mb-12">
                     <v-col cols="12">
-                        <h2 data-aos="fade-down" class="mb-10 font-bold text-gray-700 text-[2.5rem]">
+                        <h2 data-aos="fade-down"
+                            class="mb-4 font-bold text-center min-[600px]:text-left text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
                             ផលិតផលប្រចាំខែ</h2>
                         <the-slide-group :tab-items="tabItems"></the-slide-group>
                     </v-col>
                 </div>
 
-                <div style="margin-bottom: 8rem;">
-                    <v-container>
+                <div class="-mb-4">
+                    <v-container fluid>
                         <h2 data-aos="fade-down" data-aos-delay="300"
-                            class="text-center font-bold text-gray-700 text-[2.5rem] mb-10">
+                            class="text-center  text-gray-700 mb-2 font-bold text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
                             សម្ភារៈពេញនិយម</h2>
                         <v-row>
-                            <v-col cols="12" md="4" data-aos="fade-right">
-                                <router-link :to="{ name: 'details' }" class="relative">
-                                    <the-short-bottom-right-inverted-card href="chair.png">
-                                    </the-short-bottom-right-inverted-card>
-                                    <heart-svg class="absolute top-3 right-5"></heart-svg>
-                                    <p
-                                        class="w-16 h-16 absolute bottom-[3.8rem] right-3 bg-stone-600 rounded-[1.2rem] flex justify-center align-center">
-                                        <cart-svg></cart-svg>
-                                    </p>
-                                    <v-card class="flex justify-between px-5" :elevation="0">
-                                        <v-row class="flex items-center justify-between bg-gray-100 p-2 rounded-3xl">
-                                            <v-col cols="6">
-                                                <h3 class="text-center font-medium text-gray-700 text-[1.2rem]">កៅអី
-                                                    Tottori</h3>
-                                            </v-col>
-                                            <v-col cols="6">
-                                                <h4 class="text-right font-medium text-gray-700 text-[1.2rem]">$79.99
-                                                </h4>
-                                            </v-col>
-                                        </v-row>
-                                    </v-card>
-                                </router-link>
+                            <v-col cols="12" md="4" data-aos="fade-right" class="-mb-10">
+                                <v-card :elevation="0">
+                                    <router-link :to="{ name: 'details' }" class="relative">
+                                        <the-short-bottom-right-inverted-card href="chair.png">
+                                        </the-short-bottom-right-inverted-card>
+                                        <heart-svg class="absolute top-10 right-2"></heart-svg>
+                                        <p
+                                            class="w-[2.8rem] h-[2.8rem] absolute bottom-[5.8rem] right-0 bg-stone-600 rounded-[1rem] flex justify-center align-center">
+                                            <cart-svg></cart-svg>
+                                        </p>
+                                        <v-card class="absolute bottom-8 flex justify-between px-3" :elevation="0">
+                                            <v-row
+                                                class="flex items-center justify-between bg-gray-100 p-2 rounded-3xl">
+                                                <v-col cols="6">
+                                                    <h3 class="text-center font-medium text-gray-700 text-[0.9rem]">កៅអី
+                                                        Tottori</h3>
+                                                </v-col>
+                                                <v-col cols="6">
+                                                    <h4 class="text-right font-medium text-gray-700 text-[0.9rem]">
+                                                        $79.99
+                                                    </h4>
+                                                </v-col>
+                                            </v-row>
+                                        </v-card>
+                                    </router-link>
+                                </v-card>
                             </v-col>
-                            <v-col cols="12" md="4" data-aos="fade-down">
-                                <router-link to="#" class="relative">
-                                    <the-short-bottom-right-inverted-card href="lamp.png">
-                                    </the-short-bottom-right-inverted-card>
-                                    <heart-svg class="absolute top-3 right-5"></heart-svg>
-                                    <p
-                                        class="w-16 h-16 absolute bottom-[3.8rem] right-3 bg-stone-600 rounded-[1.2rem] flex justify-center align-center">
-                                        <cart-svg></cart-svg>
-                                    </p>
-                                    <v-card class="flex justify-between px-5" :elevation="0">
-                                        <v-row class="flex items-center justify-between bg-gray-100 p-2 rounded-3xl">
-                                            <v-col cols="6">
-                                                <h3 class="text-center font-medium text-gray-700 text-[1.2rem]">អំពូល
-                                                    Edysse</h3>
-                                            </v-col>
-                                            <v-col cols="6">
-                                                <h4 class="text-right font-medium text-gray-700 text-[1.2rem]">$49.99
-                                                </h4>
-                                            </v-col>
-                                        </v-row>
-                                    </v-card>
-                                </router-link>
+                            <v-col cols="12" md="4" data-aos="fade-down" class="-mb-10">
+                                <v-card :elevation="0">
+                                    <router-link to="#" class="relative">
+                                        <the-short-bottom-right-inverted-card href="lamp.png">
+                                        </the-short-bottom-right-inverted-card>
+                                        <heart-svg class="absolute top-10 right-2"></heart-svg>
+                                        <p
+                                            class="w-[2.8rem] h-[2.8rem] absolute bottom-[5.7rem] right-0 bg-stone-600 rounded-[1rem] flex justify-center align-center">
+                                            <cart-svg></cart-svg>
+                                        </p>
+                                        <v-card class="absolute bottom-8 flex justify-between px-3" :elevation="0">
+                                            <v-row
+                                                class="flex items-center justify-between bg-gray-100 p-2 rounded-3xl">
+                                                <v-col cols="6">
+                                                    <h3 class="text-center font-medium text-gray-700 text-[0.9rem]">
+                                                        អំពូល Edysse
+                                                    </h3>
+                                                </v-col>
+                                                <v-col cols="6">
+                                                    <h4 class="text-right font-medium text-gray-700 text-[0.9rem]">
+                                                        $49.99
+                                                    </h4>
+                                                </v-col>
+                                            </v-row>
+                                        </v-card>
+                                    </router-link>
+                                </v-card>
                             </v-col>
                             <v-col cols="12" md="4" data-aos="fade-left">
-                                <router-link to="#" class="relative">
-                                    <the-short-bottom-right-inverted-card href="small_chair.png">
-                                    </the-short-bottom-right-inverted-card>
-                                    <heart-svg class="absolute top-3 right-5"></heart-svg>
-                                    <p
-                                        class="w-16 h-16 absolute bottom-[3.8rem] right-3 bg-stone-600 rounded-[1.2rem] flex justify-center align-center">
-                                        <cart-svg></cart-svg>
-                                    </p>
-                                    <v-card class="flex justify-between px-5" :elevation="0">
-                                        <v-row class="flex items-center justify-between bg-gray-100 p-2 rounded-3xl">
-                                            <v-col cols="6">
-                                                <h3 class="text-center font-medium text-gray-700 text-[1.2rem]">
-                                                    ឈុតតុកៅអីក្មេង</h3>
-                                            </v-col>
-                                            <v-col cols="6">
-                                                <h4 class="text-right font-medium text-gray-700 text-[1.2rem]">$89.99
-                                                </h4>
-                                            </v-col>
-                                        </v-row>
-                                    </v-card>
-                                </router-link>
+                                <v-card :elevation="0">
+                                    <router-link to="#" class="relative">
+                                        <the-short-bottom-right-inverted-card href="small_chair.png">
+                                        </the-short-bottom-right-inverted-card>
+                                        <heart-svg class="absolute top-10 right-2"></heart-svg>
+                                        <p
+                                            class="w-[2.8rem] h-[2.8rem] absolute bottom-[5.7rem] right-0 bg-stone-600 rounded-[1rem] flex justify-center align-center">
+                                            <cart-svg></cart-svg>
+                                        </p>
+                                        <v-card class="absolute bottom-8 flex justify-between px-3" :elevation="0">
+                                            <v-row
+                                                class="flex items-center justify-between bg-gray-100 p-2 rounded-3xl">
+                                                <v-col cols="6">
+                                                    <h3 class="text-center font-medium text-gray-700 text-[0.9rem]">
+                                                        ឈុតតុកៅអីក្មេង
+                                                    </h3>
+                                                </v-col>
+                                                <v-col cols="6">
+                                                    <h4 class="text-right font-medium text-gray-700 text-[0.9rem]">
+                                                        $89.99
+                                                    </h4>
+                                                </v-col>
+                                            </v-row>
+                                        </v-card>
+                                    </router-link>
+                                </v-card>
                             </v-col>
                         </v-row>
                     </v-container>
                 </div>
-                <div class="mb-28">
-                    <v-container>
-                        <v-row class="relative">
-                            <p data-aos="fade-down"
-                                class="absolute top-2 left-[27.5rem] text-gray-700 text-[2.5rem] font-bold">
-                                Timeless Design</p>
-                            <the-middle-top-inverted-card data-aos="fade-up"></the-middle-top-inverted-card>
+                <div class="-mb-10">
+                    <v-container fluid>
+                        <v-row>
+                            <v-col cols="12" md="12">
+                                <v-card :elevation="0" class="-mt-10">
+                                    <p data-aos="fade-down"
+                                        class="absolute top-32 left-[4rem] text-gray-700 text-[1rem] font-bold">
+                                        Timeless Design</p>
+                                    <the-middle-top-inverted-card data-aos="fade-up"></the-middle-top-inverted-card>
+                                </v-card>
+                            </v-col>
                         </v-row>
                     </v-container>
                 </div>
-                <div class="mb-28">
+                <div class="mb-0">
                     <v-container>
                         <h2 data-aos="fade-down" data-aos-delay="300"
-                            class="text-center font-bold text-gray-700 text-[2.5rem] mb-10">
+                            class="text-center font-bold text-gray-700 text-[1rem] mb-10">
                             សំណួរតែងត្រូវបានសួរ</h2>
                         <v-row class="flex">
                             <v-col cols="12" md="6" class="flex flex-col justify-center" data-aos="fade-right">
                                 <v-expansion-panels :elevation="0">
-                                    <v-expansion-panel v-for="(expansionItem, i) in expansionItems" :key="i"
-                                        class="text-[2rem]">
-                                        <v-expansion-panel-title class="py-4" :style="{ fontSize: '1.2rem' }">
+                                    <v-expansion-panel v-for="(expansionItem, i) in expansionItems" :key="i">
+                                        <v-expansion-panel-title class="py-4" :style="{ fontSize: '0.9rem' }">
                                             {{ expansionItem.title }}
                                         </v-expansion-panel-title>
-                                        <v-expansion-panel-text class="text-[1rem]">
+                                        <v-expansion-panel-text class="text-[0.8rem]">
                                             {{ expansionItem.text }}
                                         </v-expansion-panel-text>
                                     </v-expansion-panel>
