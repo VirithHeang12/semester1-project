@@ -1,6 +1,6 @@
 <template>
     <figure class="flex flex-col align-center justify-center mb-5">
-        <svg width="347" height="310" viewBox="0 0 347 310" fill="none" xmlns="http://www.w3.org/2000/svg"
+        <svg width="270" height="310" viewBox="0 0 347 310" fill="none" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>
                 <clipPath id="chair">
