@@ -52,6 +52,11 @@ const router = createRouter({
                 path: 'soriya',
                 name: 'soriya',
                 component: () => import('../views/page/soriya/SoriyaView.vue')
+            },
+            {
+                path: 'add-to-cart',
+                name: 'add to cart',
+                component: () => import('../views/page/addToCart/AddToCartView.vue')
             }
         ],
     },
