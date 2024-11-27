@@ -7,76 +7,77 @@
                         <the-inverted-card></the-inverted-card>
                     </v-col>
                 </div>
-                <div class="xl:mb-28">
+                <div class="mb-10 xl:mb-28">
                     <v-container fluid>
                         <h2 data-aos="fade-down" data-aos-delay="300"
-                            class="text-center mb-6 font-bold  text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem] lg:mb-8 xl:mb-16 lg:mt-20 xl:mt-24">
+                            class="text-center mb-0 font-bold  text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem] lg:mb-8 xl:mb-16 lg:mt-20 xl:mt-24">
                             ប្រភេទគ្រឿងសង្ហារឹម</h2>
                         <v-row>
-                            <v-col cols="12" md="4" class="-mb-10">
-                                <v-card elevation="0" class="lg:-mb-6 min-[1180px]:mb-2 xl:mb-5" data-aos="fade-right">
+                            <v-col cols="12" md="4" class="-mb-20">
+                                <v-card elevation="0" class="-mb-8 lg:-mb-6 min-[1180px]:mb-2 xl:mb-5"
+                                    data-aos="fade-right">
                                     <router-link to="#" class="relative">
                                         <p
-                                            class="absolute text-[1.2rem] top-4 left-4 lg:top-6 lg:left-1 min-[1100px]:top-5 min-[1100px]:left-1 min-[1180px]:top-3 xl:top-2 xl:left-2 text-gray-700 lg:text-[1.3rem] min-[1180px]:text-[1.5rem] xl:text-[1.5rem] font-bold">
+                                            class="absolute text-[1rem] top-9 left-3 lg:top-6 lg:left-1 min-[1100px]:top-5 min-[1100px]:left-1 min-[1180px]:top-3 xl:top-2 xl:left-2 text-gray-700 lg:text-[1.3rem] min-[1180px]:text-[1.5rem] xl:text-[1.5rem] font-bold">
                                             បន្ទប់ទទួលទានអាហារ</p>
                                         <the-long-top-left-inverted-card></the-long-top-left-inverted-card>
                                         <the-detail-link
-                                            class="absolute top-5 right-2 lg:top-7 lg:right-2 min-[1100px]:top-5 min-[1100px]:right-2 min-[1180px]:top-3 xl:top-2 xl:right-2"></the-detail-link>
+                                            class="absolute top-10 right-2 lg:top-7 lg:right-2 min-[1100px]:top-5 min-[1100px]:right-2 min-[1180px]:top-3 xl:top-2 xl:right-2"></the-detail-link>
                                     </router-link>
                                 </v-card>
                                 <v-card elevation="0" data-aos="fade-right">
                                     <router-link to="#" class="relative">
                                         <p
-                                            class="absolute text-[1.2rem] bottom-6 left-3 lg:bottom-8 lg:left-1 min-[1100px]:bottom-6 min-[1100px]:left-2 min-[1180px]:bottom-3 xl:bottom-3 xl:left-2 text-gray-700 lg:text-[1.3rem] min-[1180px]:text-[1.4rem] xl:text-[1.5rem] font-bold">
+                                            class="absolute text-[1rem] bottom-12 left-3 lg:bottom-8 lg:left-1 min-[1100px]:bottom-6 min-[1100px]:left-2 min-[1180px]:bottom-3 xl:bottom-3 xl:left-2 text-gray-700 lg:text-[1.3rem] min-[1180px]:text-[1.4rem] xl:text-[1.5rem] font-bold">
                                             បន្ទប់ទទួលភ្ញៀវ</p>
                                         <the-long-bottom-right-inverted-card></the-long-bottom-right-inverted-card>
                                         <the-detail-link
-                                            class="absolute text-[1.2rem] top-6 right-2 lg:top-8 lg:right-2 min-[1100px]:top-6 min-[1100px]:right-2 xl:top-2 xl:right-2"></the-detail-link>
+                                            class="absolute top-14 right-2 lg:top-8 lg:right-2 min-[1100px]:top-6 min-[1100px]:right-2 xl:top-2 xl:right-2"></the-detail-link>
                                     </router-link>
                                 </v-card>
                             </v-col>
-                            <v-col cols="12" md="4" class="-mb-10">
-                                <v-card elevation="0" class="-mb-16 lg:-mb-24 xl:-mb-16 bg-transparent"
+                            <v-col cols="12" md="4" class="-mb-20">
+                                <v-card elevation="0" class="-mb-24 lg:-mb-24 xl:-mb-16 bg-transparent"
                                     data-aos="fade-down">
                                     <router-link to="#" class="relative">
                                         <p
-                                            class="absolute text-[1.2rem] top-9 left-2 lg:top-11 lg:left-1 min-[1100px]:top-9 min-[1100px]:left-1 xl:top-7 xl:left-1 text-gray-700 lg:text-[1.2rem] xl:text-[1.4rem] font-bold">
+                                            class="absolute text-[1rem] top-14 left-1 lg:top-11 lg:left-1 min-[1100px]:top-9 min-[1100px]:left-1 xl:top-7 xl:left-1 text-gray-700 lg:text-[1.2rem] xl:text-[1.4rem] font-bold">
                                             ការិយាល័យ</p>
                                         <the-top-left-bottom-right-inverted-card></the-top-left-bottom-right-inverted-card>
                                         <the-detail-link
-                                            class="absolute top-10 right-2 lg:top-12 lg:right-2 min-[1100px]:top-10 min-[1100px]:right-2 xl:top-7 xl:right-2"></the-detail-link>
+                                            class="absolute top-16 right-2 lg:top-12 lg:right-2 min-[1100px]:top-10 min-[1100px]:right-2 xl:top-7 xl:right-2"></the-detail-link>
                                     </router-link>
                                 </v-card>
                                 <v-card elevation="0" class="bg-transparent" data-aos="fade-up">
                                     <router-link to="#" class="relative">
                                         <p
-                                            class="absolute text-[1.2rem] bottom-9 left-2 lg:bottom-11 lg:left-1 min-[1100px]:bottom-9 min-[1100px]:left-1 xl:bottom-6 xl:left-2 text-gray-700 lg:text-[1.2rem] xl:text-[1.4rem] font-bold">
+                                            class="absolute text-[1rem] bottom-14 left-1 lg:bottom-11 lg:left-1 min-[1100px]:bottom-9 min-[1100px]:left-1 xl:bottom-6 xl:left-2 text-gray-700 lg:text-[1.2rem] xl:text-[1.4rem] font-bold">
                                             បន្ទប់គេង</p>
                                         <the-top-right-bottom-left-inverted-card></the-top-right-bottom-left-inverted-card>
                                         <the-detail-link
-                                            class="absolute top-10 right-2 lg:top-12 lg:right-2 min-[1100px]:top-11 min-[1100px]:right-2 xl:top-7 xl:right-2"></the-detail-link>
+                                            class="absolute top-16 right-2 lg:top-12 lg:right-2 min-[1100px]:top-11 min-[1100px]:right-2 xl:top-7 xl:right-2"></the-detail-link>
                                     </router-link>
                                 </v-card>
                             </v-col>
                             <v-col cols="12" md="4">
-                                <v-card elevation="0" class="lg:-mb-6 xl:mb-5" data-aos="fade-left">
+                                <v-card elevation="0" class="-mb-8 lg:-mb-6 xl:mb-5" data-aos="fade-left">
                                     <router-link to="#" class="relative">
                                         <p
-                                            class="absolute text-[1.3rem] top-6 left-3 lg:top-8 lg:left-2 min-[1100px]:top-6 min-[1100px]:left-2 xl:top-3 xl:left-4 text-gray-700 lg:text-[1.3rem] xl:text-[1.4rem] font-bold">
+                                            class="absolute text-[1.1rem] top-12 left-2 lg:top-8 lg:left-2 min-[1100px]:top-6 min-[1100px]:left-2 xl:top-3 xl:left-4 text-gray-700 lg:text-[1.3rem] xl:text-[1.4rem] font-bold">
                                             ផ្ទះបាយ</p>
                                         <the-short-top-left-inverted-card></the-short-top-left-inverted-card>
                                         <the-detail-link
-                                            class="absolute top-7 right-2 lg:top-9 lg:right-2 min-[1100px]:top-7 min-[1100px]:right-2 xl:top-3 xl:right-3"></the-detail-link>
+                                            class="absolute top-14 right-2 lg:top-9 lg:right-2 min-[1100px]:top-7 min-[1100px]:right-2 xl:top-3 xl:right-3"></the-detail-link>
                                     </router-link>
                                 </v-card>
                                 <v-card elevation="0" data-aos="fade-left">
                                     <router-link to="#" class="relative">
                                         <p
-                                            class="absolute text-[1.2rem] bottom-5 left-3 lg:bottom-6 lg:left-1 xl:bottom-3 xl:left-3 text-gray-700 lg:text-[1.3rem] xl:text-[1.4rem] font-bold">
+                                            class="absolute text-[1.1rem] bottom-10 left-1 lg:bottom-6 lg:left-1 xl:bottom-3 xl:left-3 text-gray-700 lg:text-[1.3rem] xl:text-[1.4rem] font-bold">
                                             អំពូលភ្លើង</p>
                                         <the-short-bottom-left-inverted-card></the-short-bottom-left-inverted-card>
                                         <the-detail-link
-                                            class="absolute top-6 right-3 lg:top-8 lg:right-3 min-[1100px]:top-6 min-[1100px]:right-3 xl:top-3 xl:right-3"></the-detail-link>
+                                            class="absolute top-12 right-3 lg:top-8 lg:right-3 min-[1100px]:top-6 min-[1100px]:right-3 xl:top-3 xl:right-3"></the-detail-link>
                                     </router-link>
                                 </v-card>
                             </v-col>
@@ -84,7 +85,9 @@
                     </v-container>
                 </div>
                 <div class="mb-28">
-                    <v-col cols="12" class="flex justify-between" data-aos="fade-down">
+                    <v-col cols="12"
+                        class="flex flex-col align-center gap-y-6 min-[600px]:flex min-[600px]:justify-between"
+                        data-aos="fade-down">
                         <the-featured-in-card class="bg-gray-100" v-for="featuredInItem in featuredInItems"
                             :key="featuredInItem.title" :title="featuredInItem.title"
                             :description="featuredInItem.description">
