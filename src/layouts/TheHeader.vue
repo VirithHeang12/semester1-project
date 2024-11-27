@@ -106,7 +106,7 @@
 
         <v-divider v-if="isMobile" :opacity="0"></v-divider>
 
-        <v-btn v-if="isMobile" @click="dialog = true" class="rounded-lg" variant="plain">
+        <v-btn v-if="isMobile" @click="dialog = true" class="rounded-lg" variant="plain" :ripple="false">
             <v-icon :size="36">mdi-menu</v-icon>
         </v-btn>
 
