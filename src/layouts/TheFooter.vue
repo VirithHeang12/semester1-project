@@ -82,7 +82,15 @@
 </template>
 
 <script setup>
-import TheSocialContact from '@/components/TheSocialContact.vue';
+    import { computed } from 'vue';
+    import TheSocialContact from '@/components/TheSocialContact.vue';
+
+    import { useThemeStore } from '@/stores/theme';
+
+    const themeStore = useThemeStore();
+
+    const theme = computed(() => themeStore.theme);
+
 
 </script>
 
