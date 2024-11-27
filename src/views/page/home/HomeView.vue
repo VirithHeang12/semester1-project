@@ -114,7 +114,7 @@
                             សម្ភារៈពេញនិយម</h2>
                         <v-row>
                             <v-col cols="12" md="4" data-aos="fade-right">
-                                <router-link to="#" class="relative">
+                                <router-link :to="{ name: 'details' }" class="relative">
                                     <the-short-bottom-right-inverted-card href="chair.png">
                                     </the-short-bottom-right-inverted-card>
                                     <heart-svg class="absolute top-3 right-5"></heart-svg>
@@ -268,7 +268,6 @@
             text: 'បាទ! ពួកយើងផ្តល់សេវាធានាគុណភាពគ្រឿងសង្ហារឹមទៅទៅតាមប្រភេទនីមួយៗ ចាប់ពី២ឆ្នាំឡើងទៅ។'
         },
     ];
-
     const tabItems = [
         {
             title: 'បន្ទប់ទទួលភ្ញៀវ',
