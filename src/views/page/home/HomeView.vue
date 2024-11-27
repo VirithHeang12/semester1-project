@@ -84,9 +84,9 @@
                         </v-row>
                     </v-container>
                 </div>
-                <div class="mb-28">
+                <div class="mb-16">
                     <v-col cols="12"
-                        class="flex flex-col align-center gap-y-6 min-[600px]:flex min-[600px]:justify-between"
+                        class="flex flex-col align-center gap-y-6 min-[600px]:flex min-[600px]:flex-row min-[600px]:justify-between"
                         data-aos="fade-down">
                         <the-featured-in-card class="bg-gray-100" v-for="featuredInItem in featuredInItems"
                             :key="featuredInItem.title" :title="featuredInItem.title"
@@ -101,7 +101,7 @@
                 </div>
                 <div class="mb-28">
                     <v-col cols="12">
-                        <h2 data-aos="fade-down" class="font-bold text-gray-700 text-[2.5rem] mb-20">
+                        <h2 data-aos="fade-down" class="mb-10 font-bold text-gray-700 text-[2.5rem]">
                             ផលិតផលប្រចាំខែ</h2>
                         <the-slide-group :tab-items="tabItems"></the-slide-group>
                     </v-col>
