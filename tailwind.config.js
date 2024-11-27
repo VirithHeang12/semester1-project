@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import flowbite from 'flowbite/plugin';
 export default {
   darkMode: 'selector',
   content: {
@@ -6,6 +7,7 @@ export default {
     files: [
       './index.html',
       './src/**/*.{vue,js,ts}',
+      './node_modules/flowbite/**/*.js',
     ],
   },
   theme: {
@@ -43,7 +45,9 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    flowbite
+  ],
   important: false,
 }
 

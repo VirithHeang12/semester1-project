@@ -97,7 +97,7 @@
                             សម្ភារៈពេញនិយម</h2>
                         <v-row>
                             <v-col cols="12" md="4" v-motion-slide-visible-left>
-                                <router-link to="#" class="relative">
+                                <router-link :to="{ name: 'details' }" class="relative">
                                     <the-short-bottom-right-inverted-card href="chair.png">
                                     </the-short-bottom-right-inverted-card>
                                     <heart-svg class="absolute top-3 right-5"></heart-svg>
@@ -245,7 +245,6 @@
             text: 'បាទ បងអាចអញ្ជើញមកហាងពួកយើងផ្ទាល់បាន ទីតាំងរបស់ពួកយើងគឺស្ថិតនៅលើផ្លូវ ២០០៤ រាជធានីភ្នំពេញ'
         },
     ];
-
     const tabItems = [
         {
             title: 'បន្ទប់ទទួលភ្ញៀវ',
