@@ -1,5 +1,5 @@
 <template>
-    <figure class="flex align-center justify-center">
+    <figure class="flex align-center max-w-fit max-h-fit justify-center relative">
         <svg width="363" height="306" viewBox="0 0 363 306" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <clipPath id="livingRoom">
@@ -11,6 +11,17 @@
             <image :href="href" width="363" height="306" clip-path="url(#livingRoom)"
                 preserveAspectRatio="xMidYMid slice" />
         </svg>
+
+        <slot name="bottom-left">
+            <p
+                class="absolute text-[1rem] bottom-12 left-3 min-[350px]:bottom-8 min-[380px]:bottom-4 min-[380px]:text-[1.2rem] min-[350px]:left-4 lg:bottom-6 lg:left-1 min-[1100px]:bottom-5 min-[1100px]:left-1 min-[1180px]:bottom-3 xl:bottom-2 xl:left-2 text-gray-700 lg:text-[1.3rem] min-[1180px]:text-[1.5rem] xl:text-[1.5rem] font-bold">
+                {{ title }}</p>
+        </slot>
+
+        <slot name="top-right">
+            <the-detail-link
+                class="absolute top-14 right-2 min-[350px]:top-11 min-[380px]:top-4 lg:top-8 lg:right-2 min-[1100px]:top-6 min-[1100px]:right-2 xl:top-2 xl:right-2"></the-detail-link>
+        </slot>
     </figure>
 </template>
 
@@ -21,6 +32,10 @@
         href: {
             type: String,
             default: 'living_room.png',
+        },
+        title: {
+            type: String,
+            default: 'បន្ទប់ទទួលភ្ញៀវ',
         },
     });
 </script>

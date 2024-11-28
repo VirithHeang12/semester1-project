@@ -1,5 +1,5 @@
 <template>
-    <figure class="flex align-center justify-center">
+    <figure class="flex align-center max-w-fit max-h-fit justify-center relative">
         <svg width="419" height="292" viewBox="0 0 419 292" fill="none" xmlns="http://www.w3.org/2000/svg">
 
             <defs>
@@ -12,6 +12,18 @@
             <image :href="href" width="419" height="292" clip-path="url(#office)"
                 preserveAspectRatio="xMidYMid slice" />
         </svg>
+
+
+        <slot name="top-left">
+            <p
+                class="absolute text-[1rem] top-14 left-1 min-[350px]:top-12 min-[350px]:left-2 lg:top-11 lg:left-1 min-[1100px]:top-9 min-[1100px]:left-1 xl:top-7 xl:left-1 text-gray-700 lg:text-[1.2rem] xl:text-[1.4rem] font-bold">
+                {{ title }}</p>
+        </slot>
+
+        <slot name="top-right">
+            <the-detail-link
+                class="absolute top-16 right-2 min-[350px]:top-14 lg:top-12 lg:right-2 min-[1100px]:top-10 min-[1100px]:right-2 xl:top-7 xl:right-2"></the-detail-link>
+        </slot>
     </figure>
 </template>
 
@@ -22,6 +34,10 @@
         href: {
             type: String,
             default: 'office.png',
+        },
+        title: {
+            type: String,
+            default: 'ការិយាល័យ',
         },
     });
 </script>

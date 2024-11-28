@@ -16,68 +16,38 @@
                             <v-col cols="12" md="4" class="-mb-20">
                                 <v-card elevation="0" class="-mb-8 lg:-mb-6 min-[1180px]:mb-2 xl:mb-5"
                                     data-aos="fade-right">
-                                    <router-link to="#" class="relative">
-                                        <p
-                                            class="absolute text-[1rem] top-9 left-3 lg:top-6 lg:left-1 min-[1100px]:top-5 min-[1100px]:left-1 min-[1180px]:top-3 xl:top-2 xl:left-2 text-gray-700 lg:text-[1.3rem] min-[1180px]:text-[1.5rem] xl:text-[1.5rem] font-bold">
-                                            បន្ទប់ទទួលទានអាហារ</p>
+                                    <router-link to="#">
                                         <the-long-top-left-inverted-card></the-long-top-left-inverted-card>
-                                        <the-detail-link
-                                            class="absolute top-10 right-2 lg:top-7 lg:right-2 min-[1100px]:top-5 min-[1100px]:right-2 min-[1180px]:top-3 xl:top-2 xl:right-2"></the-detail-link>
                                     </router-link>
                                 </v-card>
                                 <v-card elevation="0" data-aos="fade-right">
-                                    <router-link to="#" class="relative">
-                                        <p
-                                            class="absolute text-[1rem] bottom-12 left-3 lg:bottom-8 lg:left-1 min-[1100px]:bottom-6 min-[1100px]:left-2 min-[1180px]:bottom-3 xl:bottom-3 xl:left-2 text-gray-700 lg:text-[1.3rem] min-[1180px]:text-[1.4rem] xl:text-[1.5rem] font-bold">
-                                            បន្ទប់ទទួលភ្ញៀវ</p>
+                                    <router-link to="#">
                                         <the-long-bottom-right-inverted-card></the-long-bottom-right-inverted-card>
-                                        <the-detail-link
-                                            class="absolute top-14 right-2 lg:top-8 lg:right-2 min-[1100px]:top-6 min-[1100px]:right-2 xl:top-2 xl:right-2"></the-detail-link>
                                     </router-link>
                                 </v-card>
                             </v-col>
-                            <v-col cols="12" md="4" class="-mb-20">
+                            <v-col cols="12" md="4" class="-mb-20 min-[350px]:-mb-16">
                                 <v-card elevation="0" class="-mb-24 lg:-mb-24 xl:-mb-16 bg-transparent"
                                     data-aos="fade-down">
-                                    <router-link to="#" class="relative">
-                                        <p
-                                            class="absolute text-[1rem] top-14 left-1 lg:top-11 lg:left-1 min-[1100px]:top-9 min-[1100px]:left-1 xl:top-7 xl:left-1 text-gray-700 lg:text-[1.2rem] xl:text-[1.4rem] font-bold">
-                                            ការិយាល័យ</p>
+                                    <router-link to="#">
                                         <the-top-left-bottom-right-inverted-card></the-top-left-bottom-right-inverted-card>
-                                        <the-detail-link
-                                            class="absolute top-16 right-2 lg:top-12 lg:right-2 min-[1100px]:top-10 min-[1100px]:right-2 xl:top-7 xl:right-2"></the-detail-link>
                                     </router-link>
                                 </v-card>
                                 <v-card elevation="0" class="bg-transparent" data-aos="fade-up">
-                                    <router-link to="#" class="relative">
-                                        <p
-                                            class="absolute text-[1rem] bottom-14 left-1 lg:bottom-11 lg:left-1 min-[1100px]:bottom-9 min-[1100px]:left-1 xl:bottom-6 xl:left-2 text-gray-700 lg:text-[1.2rem] xl:text-[1.4rem] font-bold">
-                                            បន្ទប់គេង</p>
+                                    <router-link to="#">
                                         <the-top-right-bottom-left-inverted-card></the-top-right-bottom-left-inverted-card>
-                                        <the-detail-link
-                                            class="absolute top-16 right-2 lg:top-12 lg:right-2 min-[1100px]:top-11 min-[1100px]:right-2 xl:top-7 xl:right-2"></the-detail-link>
                                     </router-link>
                                 </v-card>
                             </v-col>
                             <v-col cols="12" md="4">
                                 <v-card elevation="0" class="-mb-8 lg:-mb-6 xl:mb-5" data-aos="fade-left">
-                                    <router-link to="#" class="relative">
-                                        <p
-                                            class="absolute text-[1.1rem] top-12 left-2 lg:top-8 lg:left-2 min-[1100px]:top-6 min-[1100px]:left-2 xl:top-3 xl:left-4 text-gray-700 lg:text-[1.3rem] xl:text-[1.4rem] font-bold">
-                                            ផ្ទះបាយ</p>
+                                    <router-link to="#">
                                         <the-short-top-left-inverted-card></the-short-top-left-inverted-card>
-                                        <the-detail-link
-                                            class="absolute top-14 right-2 lg:top-9 lg:right-2 min-[1100px]:top-7 min-[1100px]:right-2 xl:top-3 xl:right-3"></the-detail-link>
                                     </router-link>
                                 </v-card>
                                 <v-card elevation="0" data-aos="fade-left">
-                                    <router-link to="#" class="relative">
-                                        <p
-                                            class="absolute text-[1.1rem] bottom-10 left-1 lg:bottom-6 lg:left-1 xl:bottom-3 xl:left-3 text-gray-700 lg:text-[1.3rem] xl:text-[1.4rem] font-bold">
-                                            អំពូលភ្លើង</p>
+                                    <router-link to="#">
                                         <the-short-bottom-left-inverted-card></the-short-bottom-left-inverted-card>
-                                        <the-detail-link
-                                            class="absolute top-12 right-3 lg:top-8 lg:right-3 min-[1100px]:top-6 min-[1100px]:right-3 xl:top-3 xl:right-3"></the-detail-link>
                                     </router-link>
                                 </v-card>
                             </v-col>
@@ -116,84 +86,49 @@
                         <v-row>
                             <v-col cols="12" md="4" data-aos="fade-right" class="-mb-10">
                                 <v-card :elevation="0">
-                                    <router-link :to="{ name: 'details' }" class="relative">
-                                        <the-short-bottom-right-inverted-card href="chair.png">
+                                    <router-link :to="{ name: 'details' }">
+                                        <the-short-bottom-right-inverted-card href="chair.png" title="Tottori"
+                                            :price="79.99">
+                                            <template #top-right>
+                                                <heart-svg class="absolute top-10 right-2"></heart-svg>
+                                            </template>
+
+                                            <template #bottom-right>
+                                                <cart-svg></cart-svg>
+                                            </template>
                                         </the-short-bottom-right-inverted-card>
-                                        <heart-svg class="absolute top-10 right-2"></heart-svg>
-                                        <p
-                                            class="w-[2.8rem] h-[2.8rem] absolute bottom-[5.8rem] right-0 bg-stone-600 rounded-[1rem] flex justify-center align-center">
-                                            <cart-svg></cart-svg>
-                                        </p>
-                                        <v-card class="absolute bottom-8 flex justify-between px-3" :elevation="0">
-                                            <v-row
-                                                class="flex items-center justify-between bg-gray-100 p-2 rounded-3xl">
-                                                <v-col cols="6">
-                                                    <h3 class="text-center font-medium text-gray-700 text-[0.9rem]">កៅអី
-                                                        Tottori</h3>
-                                                </v-col>
-                                                <v-col cols="6">
-                                                    <h4 class="text-right font-medium text-gray-700 text-[0.9rem]">
-                                                        $79.99
-                                                    </h4>
-                                                </v-col>
-                                            </v-row>
-                                        </v-card>
                                     </router-link>
                                 </v-card>
                             </v-col>
                             <v-col cols="12" md="4" data-aos="fade-down" class="-mb-10">
                                 <v-card :elevation="0">
-                                    <router-link to="#" class="relative">
-                                        <the-short-bottom-right-inverted-card href="lamp.png">
+                                    <router-link to="#">
+                                        <the-short-bottom-right-inverted-card href="lamp.png" title="អំពូល Edysse"
+                                            :price="49.99">
+                                            <template #top-right>
+                                                <heart-svg class="absolute top-10 right-2"></heart-svg>
+                                            </template>
+
+                                            <template #bottom-right>
+                                                <cart-svg></cart-svg>
+                                            </template>
                                         </the-short-bottom-right-inverted-card>
-                                        <heart-svg class="absolute top-10 right-2"></heart-svg>
-                                        <p
-                                            class="w-[2.8rem] h-[2.8rem] absolute bottom-[5.7rem] right-0 bg-stone-600 rounded-[1rem] flex justify-center align-center">
-                                            <cart-svg></cart-svg>
-                                        </p>
-                                        <v-card class="absolute bottom-8 flex justify-between px-3" :elevation="0">
-                                            <v-row
-                                                class="flex items-center justify-between bg-gray-100 p-2 rounded-3xl">
-                                                <v-col cols="6">
-                                                    <h3 class="text-center font-medium text-gray-700 text-[0.9rem]">
-                                                        អំពូល Edysse
-                                                    </h3>
-                                                </v-col>
-                                                <v-col cols="6">
-                                                    <h4 class="text-right font-medium text-gray-700 text-[0.9rem]">
-                                                        $49.99
-                                                    </h4>
-                                                </v-col>
-                                            </v-row>
-                                        </v-card>
                                     </router-link>
                                 </v-card>
                             </v-col>
                             <v-col cols="12" md="4" data-aos="fade-left">
                                 <v-card :elevation="0">
                                     <router-link to="#" class="relative">
-                                        <the-short-bottom-right-inverted-card href="small_chair.png">
+                                        <the-short-bottom-right-inverted-card href="small_chair.png"
+                                            title="ឈុតតុកៅអីក្មេង" :price="89.99">
+                                            <template #top-right>
+                                                <heart-svg class="absolute top-10 right-2"></heart-svg>
+                                            </template>
+
+                                            <template #bottom-right>
+                                                <cart-svg></cart-svg>
+                                            </template>
                                         </the-short-bottom-right-inverted-card>
-                                        <heart-svg class="absolute top-10 right-2"></heart-svg>
-                                        <p
-                                            class="w-[2.8rem] h-[2.8rem] absolute bottom-[5.7rem] right-0 bg-stone-600 rounded-[1rem] flex justify-center align-center">
-                                            <cart-svg></cart-svg>
-                                        </p>
-                                        <v-card class="absolute bottom-8 flex justify-between px-3" :elevation="0">
-                                            <v-row
-                                                class="flex items-center justify-between bg-gray-100 p-2 rounded-3xl">
-                                                <v-col cols="6">
-                                                    <h3 class="text-center font-medium text-gray-700 text-[0.9rem]">
-                                                        ឈុតតុកៅអីក្មេង
-                                                    </h3>
-                                                </v-col>
-                                                <v-col cols="6">
-                                                    <h4 class="text-right font-medium text-gray-700 text-[0.9rem]">
-                                                        $89.99
-                                                    </h4>
-                                                </v-col>
-                                            </v-row>
-                                        </v-card>
                                     </router-link>
                                 </v-card>
                             </v-col>

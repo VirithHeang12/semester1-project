@@ -1,7 +1,7 @@
 <template>
-    <figure class="flex align-center justify-center">
-        <svg width="363" height="236" viewBox="0 0 363 236" fill="none" xmlns="http://www.w3.org/2000/svg">
-
+    <figure class="flex align-center max-w-fit max-h-fit justify-center relative">
+        <svg class="relative" width="363" height="236" viewBox="0 0 363 236" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <clipPath id="diningRoom">
                     <path
@@ -12,6 +12,17 @@
             <image :href="href" width="363" height="236" clip-path="url(#diningRoom)"
                 preserveAspectRatio="xMidYMid slice" />
         </svg>
+
+        <slot name="top-left">
+            <p
+                class="absolute text-[1rem] top-9 left-3 min-[350px]:top-8 min-[380px]:top-4 min-[380px]:text-[1.2rem] min-[350px]:left-4 lg:top-6 lg:left-1 min-[1100px]:top-5 min-[1100px]:left-1 min-[1180px]:top-3 xl:top-2 xl:left-2 text-gray-700 lg:text-[1.3rem] min-[1180px]:text-[1.5rem] xl:text-[1.5rem] font-bold">
+                {{ title }}</p>
+        </slot>
+
+        <slot name="top-right">
+            <the-detail-link
+                class="absolute top-11 right-2 min-[350px]:top-11 min-[380px]:top-4 lg:top-8 lg:right-2 min-[1100px]:top-6 min-[1100px]:right-2 xl:top-2 xl:right-2"></the-detail-link>
+        </slot>
     </figure>
 </template>
 
@@ -22,6 +33,11 @@
         href: {
             type: String,
             default: 'dining_room.png',
+        },
+
+        title: {
+            type: String,
+            default: 'បន្ទប់ទទួលទានអាហារ',
         },
     });
 </script>

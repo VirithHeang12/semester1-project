@@ -1,5 +1,5 @@
 <template>
-    <figure class="flex align-center justify-center">
+    <figure class="flex align-center max-w-fit max-h-fit justify-center relative">
         <svg width="368" height="306" viewBox="0 0 368 306" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <clipPath id="kitchen">
@@ -11,6 +11,17 @@
             <image :href="href" width="368" height="306" clip-path="url(#kitchen)"
                 preserveAspectRatio="xMidYMid slice" />
         </svg>
+
+        <slot name="top-left">
+            <p
+                class="absolute text-[1.1rem] top-12 left-2 min-[350px]:top-10 min-[350px]:left-3 lg:top-8 lg:left-2 min-[1100px]:top-6 min-[1100px]:left-2 xl:top-3 xl:left-4 text-gray-700 lg:text-[1.3rem] xl:text-[1.4rem] font-bold">
+                {{ title }}</p>
+        </slot>
+
+        <slot name="top-right">
+            <the-detail-link
+                class="absolute top-14 right-2 min-[350px]:top-11 lg:top-9 lg:right-2 min-[1100px]:top-7 min-[1100px]:right-2 xl:top-3 xl:right-3"></the-detail-link>
+        </slot>
     </figure>
 </template>
 
@@ -21,6 +32,10 @@
         href: {
             type: String,
             default: 'kitchen.png',
+        },
+        title: {
+            type: String,
+            default: 'ផ្ទះបាយ',
         },
     });
 </script>
