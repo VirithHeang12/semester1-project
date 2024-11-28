@@ -78,7 +78,7 @@
                     </v-col>
                 </div>
 
-                <div class="-mb-4">
+                <div class="mb-24">
                     <v-container fluid>
                         <h2 data-aos="fade-down" data-aos-delay="300"
                             class="text-center  text-gray-700 mb-2 font-bold text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
@@ -135,13 +135,13 @@
                         </v-row>
                     </v-container>
                 </div>
-                <div class="-mb-10">
+                <div class="-mb-32">
                     <v-container fluid>
                         <v-row>
                             <v-col cols="12" md="12">
-                                <v-card :elevation="0" class="-mt-10">
+                                <v-card :elevation="0" class="-mt-20">
                                     <p data-aos="fade-down"
-                                        class="absolute top-32 left-[4rem] text-gray-700 text-[1rem] font-bold">
+                                        class="flex justify-center -mb-36 text-gray-700 text-[1rem] font-bold">
                                         Timeless Design</p>
                                     <the-middle-top-inverted-card data-aos="fade-up"></the-middle-top-inverted-card>
                                 </v-card>
