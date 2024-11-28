@@ -17,7 +17,7 @@
         </slot>
 
         <p
-            class="w-[2.8rem] h-[2.8rem] absolute bottom-[4.6rem] right-0 bg-stone-600 rounded-[1rem] flex justify-center align-center">
+            class="w-[2.8rem] h-[2.8rem] absolute bottom-[4.6rem] right-2 bg-stone-600 rounded-[1rem] flex justify-center align-center">
             <slot name="bottom-right">
                 <cart-svg></cart-svg>
             </slot>

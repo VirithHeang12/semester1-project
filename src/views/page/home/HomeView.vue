@@ -7,47 +7,57 @@
                         <the-inverted-card></the-inverted-card>
                     </v-col>
                 </div>
-                <div class="mb-10 xl:mb-28">
+                <div class="mb-24 min-[350px]:mb-32 xl:mb-28">
+                    <h2 data-aos="fade-down" data-aos-delay="300"
+                        class="text-center mb-0 font-bold  text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem] min-[380px]:mb-20 lg:mb-8 xl:mb-16 lg:mt-20 xl:mt-24">
+                        ប្រភេទគ្រឿងសង្ហារឹម</h2>
                     <v-container fluid>
-                        <h2 data-aos="fade-down" data-aos-delay="300"
-                            class="text-center mb-0 font-bold  text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem] lg:mb-8 xl:mb-16 lg:mt-20 xl:mt-24">
-                            ប្រភេទគ្រឿងសង្ហារឹម</h2>
                         <v-row>
-                            <v-col cols="12" md="4" class="-mb-20">
-                                <v-card elevation="0" class="-mb-8 lg:-mb-6 min-[1180px]:mb-2 xl:mb-5"
+                            <v-col cols="12" md="4"
+                                class="-mb-20 min-[350px]:-mb-10 min-[380px]:-mb-6 flex flex-col min-[350px]:gap-y-1 min-[380px]:gap-y-10">
+                                <v-card :elevation="0" class="bg-transparent -mb-8 min-[350px]:-mb-4"
                                     data-aos="fade-right">
                                     <router-link to="#">
-                                        <the-long-top-left-inverted-card></the-long-top-left-inverted-card>
+                                        <the-long-top-left-inverted-card
+                                            class="mx-auto"></the-long-top-left-inverted-card>
                                     </router-link>
                                 </v-card>
-                                <v-card elevation="0" data-aos="fade-right">
+
+                                <v-card elevation="0" class="bg-transparent" data-aos="fade-right">
                                     <router-link to="#">
-                                        <the-long-bottom-right-inverted-card></the-long-bottom-right-inverted-card>
+                                        <the-long-bottom-right-inverted-card
+                                            class="mx-auto"></the-long-bottom-right-inverted-card>
                                     </router-link>
                                 </v-card>
                             </v-col>
-                            <v-col cols="12" md="4" class="-mb-20 min-[350px]:-mb-16">
-                                <v-card elevation="0" class="-mb-24 lg:-mb-24 xl:-mb-16 bg-transparent"
+                            <v-col cols="12" md="4" class="-mb-20 flex flex-col min-[350px]:-mb-16 min-[380px]:-mb-6">
+                                <v-card elevation="0"
+                                    class="bg-transparent -mb-24 min-[350px]:-mb-20 min-[380px]:-mb-12"
                                     data-aos="fade-down">
                                     <router-link to="#">
-                                        <the-top-left-bottom-right-inverted-card></the-top-left-bottom-right-inverted-card>
+                                        <the-top-left-bottom-right-inverted-card
+                                            class="mx-auto"></the-top-left-bottom-right-inverted-card>
                                     </router-link>
                                 </v-card>
                                 <v-card elevation="0" class="bg-transparent" data-aos="fade-up">
                                     <router-link to="#">
-                                        <the-top-right-bottom-left-inverted-card></the-top-right-bottom-left-inverted-card>
+                                        <the-top-right-bottom-left-inverted-card
+                                            class="mx-auto"></the-top-right-bottom-left-inverted-card>
                                     </router-link>
                                 </v-card>
                             </v-col>
-                            <v-col cols="12" md="4">
-                                <v-card elevation="0" class="-mb-8 lg:-mb-6 xl:mb-5" data-aos="fade-left">
+                            <v-col cols="12" md="4" class="-mb-20 flex flex-col">
+                                <v-card elevation="0" class="bg-transparent -mb-8 min-[380px]:mb-6"
+                                    data-aos="fade-left">
                                     <router-link to="#">
-                                        <the-short-top-left-inverted-card></the-short-top-left-inverted-card>
+                                        <the-short-top-left-inverted-card
+                                            class="mx-auto"></the-short-top-left-inverted-card>
                                     </router-link>
                                 </v-card>
-                                <v-card elevation="0" data-aos="fade-left">
+                                <v-card elevation="0" class="bg-transparent" data-aos="fade-left">
                                     <router-link to="#">
-                                        <the-short-bottom-left-inverted-card></the-short-bottom-left-inverted-card>
+                                        <the-short-bottom-left-inverted-card
+                                            class="mx-auto"></the-short-bottom-left-inverted-card>
                                     </router-link>
                                 </v-card>
                             </v-col>
@@ -87,49 +97,56 @@
                             <v-col cols="12" md="4" data-aos="fade-right" class="-mb-10">
                                 <v-card :elevation="0">
                                     <router-link :to="{ name: 'details' }">
-                                        <the-short-bottom-right-inverted-card href="chair.png" title="Tottori"
-                                            :price="79.99">
-                                            <template #top-right>
-                                                <heart-svg class="absolute top-10 right-2"></heart-svg>
-                                            </template>
+                                        <div class="flex justify-center">
+                                            <the-short-bottom-right-inverted-card href="chair.png" title="Tottori"
+                                                :price="79.99">
+                                                <template #top-right>
+                                                    <heart-svg class="absolute top-10 right-2"></heart-svg>
+                                                </template>
 
-                                            <template #bottom-right>
-                                                <cart-svg></cart-svg>
-                                            </template>
-                                        </the-short-bottom-right-inverted-card>
+                                                <template #bottom-right>
+                                                    <cart-svg></cart-svg>
+                                                </template>
+                                            </the-short-bottom-right-inverted-card>
+                                        </div>
+
                                     </router-link>
                                 </v-card>
                             </v-col>
                             <v-col cols="12" md="4" data-aos="fade-down" class="-mb-10">
                                 <v-card :elevation="0">
-                                    <router-link to="#">
-                                        <the-short-bottom-right-inverted-card href="lamp.png" title="អំពូល Edysse"
-                                            :price="49.99">
-                                            <template #top-right>
-                                                <heart-svg class="absolute top-10 right-2"></heart-svg>
-                                            </template>
+                                    <div class="flex justify-center">
+                                        <router-link to="#">
+                                            <the-short-bottom-right-inverted-card href="lamp.png" title="អំពូល Edysse"
+                                                :price="49.99">
+                                                <template #top-right>
+                                                    <heart-svg class="absolute top-10 right-2"></heart-svg>
+                                                </template>
 
-                                            <template #bottom-right>
-                                                <cart-svg></cart-svg>
-                                            </template>
-                                        </the-short-bottom-right-inverted-card>
-                                    </router-link>
+                                                <template #bottom-right>
+                                                    <cart-svg></cart-svg>
+                                                </template>
+                                            </the-short-bottom-right-inverted-card>
+                                        </router-link>
+                                    </div>
                                 </v-card>
                             </v-col>
                             <v-col cols="12" md="4" data-aos="fade-left">
                                 <v-card :elevation="0">
-                                    <router-link to="#" class="relative">
-                                        <the-short-bottom-right-inverted-card href="small_chair.png"
-                                            title="ឈុតតុកៅអីក្មេង" :price="89.99">
-                                            <template #top-right>
-                                                <heart-svg class="absolute top-10 right-2"></heart-svg>
-                                            </template>
+                                    <div class="flex justify-center">
+                                        <router-link to="#" class="relative">
+                                            <the-short-bottom-right-inverted-card href="small_chair.png"
+                                                title="ឈុតតុកៅអីក្មេង" :price="89.99">
+                                                <template #top-right>
+                                                    <heart-svg class="absolute top-10 right-2"></heart-svg>
+                                                </template>
 
-                                            <template #bottom-right>
-                                                <cart-svg></cart-svg>
-                                            </template>
-                                        </the-short-bottom-right-inverted-card>
-                                    </router-link>
+                                                <template #bottom-right>
+                                                    <cart-svg></cart-svg>
+                                                </template>
+                                            </the-short-bottom-right-inverted-card>
+                                        </router-link>
+                                    </div>
                                 </v-card>
                             </v-col>
                         </v-row>
