@@ -1,8 +1,8 @@
 <template>
     <v-responsive>
         <v-app :theme="theme">
-            <TheHeader />
-            <v-main class="container">
+            <TheHeader class="m-3" style="width: calc(98%)" />
+            <v-main class="mt-4">
                 <router-view v-slot="{ Component, route }">
                     <transition name="slide" mode="out-in">
                         <component :is="Component" :key="route.path" />
