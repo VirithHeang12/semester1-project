@@ -1,208 +1,212 @@
 <template>
     <v-container fluid>
-        <div class="row">
-            <div class="col-12">
-                <the-inverted-card></the-inverted-card>
+        <v-container fluid>
+            <div class="row">
+                <div class="col-12">
+                    <the-inverted-card></the-inverted-card>
+                </div>
             </div>
-        </div>
-    </v-container>
+        </v-container>
 
-    <v-container class="mt-5 px-0 py-0" :max-width="1200">
+        <v-container class="mt-5 px-0 py-0" :max-width="1200">
 
-        <div class="mb-24 min-[350px]:mb-32 xl:mb-28">
-            <h2 data-aos="fade-down" data-aos-delay="300"
-                class="text-center mb-0 font-bold  text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem] min-[380px]:mb-20 lg:mb-8 xl:mb-16 lg:mt-20 xl:mt-24">
-                ប្រភេទគ្រឿងសង្ហារឹម</h2>
-            <v-container fluid>
-                <v-row>
-                    <v-col cols="12" md="4"
-                        class="-mb-20 min-[350px]:-mb-10 min-[380px]:-mb-6 flex flex-col min-[350px]:gap-y-1 min-[380px]:gap-y-10">
-                        <v-card :elevation="0" class="bg-transparent -mb-8 min-[350px]:-mb-4" data-aos="fade-right">
-                            <router-link to="#">
-                                <the-long-top-left-inverted-card class="mx-auto"></the-long-top-left-inverted-card>
-                            </router-link>
-                        </v-card>
-
-                        <v-card elevation="0" class="bg-transparent" data-aos="fade-right">
-                            <router-link to="#">
-                                <the-long-bottom-right-inverted-card
-                                    class="mx-auto"></the-long-bottom-right-inverted-card>
-                            </router-link>
-                        </v-card>
-                    </v-col>
-                    <v-col cols="12" md="4" class="-mb-20 flex flex-col min-[350px]:-mb-16 min-[380px]:-mb-6">
-                        <v-card elevation="0" class="bg-transparent -mb-24 min-[350px]:-mb-20 min-[380px]:-mb-12"
-                            data-aos="fade-down">
-                            <router-link to="#">
-                                <the-top-left-bottom-right-inverted-card
-                                    class="mx-auto"></the-top-left-bottom-right-inverted-card>
-                            </router-link>
-                        </v-card>
-                        <v-card elevation="0" class="bg-transparent" data-aos="fade-up">
-                            <router-link to="#">
-                                <the-top-right-bottom-left-inverted-card
-                                    class="mx-auto"></the-top-right-bottom-left-inverted-card>
-                            </router-link>
-                        </v-card>
-                    </v-col>
-                    <v-col cols="12" md="4" class="-mb-20 flex flex-col">
-                        <v-card elevation="0" class="bg-transparent -mb-8 min-[380px]:mb-6" data-aos="fade-left">
-                            <router-link to="#">
-                                <the-short-top-left-inverted-card class="mx-auto"></the-short-top-left-inverted-card>
-                            </router-link>
-                        </v-card>
-                        <v-card elevation="0" class="bg-transparent" data-aos="fade-left">
-                            <router-link to="#">
-                                <the-short-bottom-left-inverted-card
-                                    class="mx-auto"></the-short-bottom-left-inverted-card>
-                            </router-link>
-                        </v-card>
-                    </v-col>
-                </v-row>
-            </v-container>
-        </div>
-
-        <div class="mb-16">
-            <v-col cols="12"
-                class="flex flex-col align-center gap-y-6 min-[600px]:flex min-[600px]:flex-row min-[600px]:justify-between"
-                data-aos="fade-down">
-                <the-featured-in-card class="bg-gray-100" v-for="featuredInItem in featuredInItems"
-                    :key="featuredInItem.title" :title="featuredInItem.title" :description="featuredInItem.description">
-                    <template v-slot:default>
-                        <v-btn :size="75" :ripple="false" :elevation="0" :rounded="true">
-                            <v-icon size="50">{{ featuredInItem.icon }}</v-icon>
-                        </v-btn>
-                    </template>
-                </the-featured-in-card>
-            </v-col>
-        </div>
-
-        <div class="mb-12">
-            <v-col cols="12">
-                <h2 data-aos="fade-down"
-                    class="mb-4 font-bold text-center min-[600px]:text-left text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
-                    ផលិតផលប្រចាំខែ</h2>
-                <the-slide-group :tab-items="tabItems"></the-slide-group>
-            </v-col>
-        </div>
-
-
-        <div class="mb-24">
-            <v-container fluid>
+            <div class="mb-24 min-[350px]:mb-32 xl:mb-28">
                 <h2 data-aos="fade-down" data-aos-delay="300"
-                    class="text-center  text-gray-700 mb-2 font-bold text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
-                    សម្ភារៈពេញនិយម</h2>
-                <v-row>
-                    <v-col cols="12" md="4" data-aos="fade-right" class="-mb-10">
-                        <v-card :elevation="0">
-                            <router-link :to="{ name: 'details' }">
-                                <div class="flex justify-center">
-                                    <the-short-bottom-right-inverted-card href="chair.png" title="Tottori"
-                                        :price="79.99">
-                                        <template #top-right>
-                                            <heart-svg class="absolute top-12 right-2"></heart-svg>
-                                        </template>
-
-                                        <template #bottom-right>
-                                            <cart-svg></cart-svg>
-                                        </template>
-                                    </the-short-bottom-right-inverted-card>
-                                </div>
-
-                            </router-link>
-                        </v-card>
-                    </v-col>
-                    <v-col cols="12" md="4" data-aos="fade-down" class="-mb-10">
-                        <v-card :elevation="0">
-                            <div class="flex justify-center">
+                    class="text-center mb-0 font-bold  text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem] min-[380px]:mb-20 lg:mb-8 xl:mb-16 lg:mt-20 xl:mt-24">
+                    ប្រភេទគ្រឿងសង្ហារឹម</h2>
+                <v-container fluid>
+                    <v-row>
+                        <v-col cols="12" md="4"
+                            class="-mb-20 min-[350px]:-mb-10 min-[380px]:-mb-6 flex flex-col min-[350px]:gap-y-1 min-[380px]:gap-y-10">
+                            <v-card :elevation="0" class="bg-transparent -mb-8 min-[350px]:-mb-4" data-aos="fade-right">
                                 <router-link to="#">
-                                    <the-short-bottom-right-inverted-card href="lamp.png" title="អំពូល Edysse"
-                                        :price="49.99">
-                                        <template #top-right>
-                                            <heart-svg class="absolute top-12 right-2"></heart-svg>
-                                        </template>
-
-                                        <template #bottom-right>
-                                            <cart-svg></cart-svg>
-                                        </template>
-                                    </the-short-bottom-right-inverted-card>
+                                    <the-long-top-left-inverted-card class="mx-auto"></the-long-top-left-inverted-card>
                                 </router-link>
-                            </div>
-                        </v-card>
-                    </v-col>
-                    <v-col cols="12" md="4" data-aos="fade-left">
-                        <v-card :elevation="0">
-                            <div class="flex justify-center">
-                                <router-link to="#" class="relative">
-                                    <the-short-bottom-right-inverted-card href="small_chair.png" title="ឈុតតុកៅអីក្មេង"
-                                        :price="89.99">
-                                        <template #top-right>
-                                            <heart-svg class="absolute top-12 right-2"></heart-svg>
-                                        </template>
+                            </v-card>
 
-                                        <template #bottom-right>
-                                            <cart-svg></cart-svg>
-                                        </template>
-                                    </the-short-bottom-right-inverted-card>
+                            <v-card elevation="0" class="bg-transparent" data-aos="fade-right">
+                                <router-link to="#">
+                                    <the-long-bottom-right-inverted-card
+                                        class="mx-auto"></the-long-bottom-right-inverted-card>
                                 </router-link>
-                            </div>
-                        </v-card>
-                    </v-col>
-                </v-row>
-            </v-container>
-        </div>
-        <div class="-mb-32">
-            <v-container fluid>
-                <v-row>
-                    <v-col cols="12" md="12">
-                        <v-card :elevation="0" class="-mt-20">
-                            <p data-aos="fade-down"
-                                class="flex justify-center -mb-36 text-gray-700 text-[1rem] font-bold">
-                                Timeless Design</p>
-                            <the-middle-top-inverted-card data-aos="fade-up"></the-middle-top-inverted-card>
-                        </v-card>
-                    </v-col>
-                </v-row>
-            </v-container>
-        </div>
-        <div>
-            <v-container fluid>
-                <v-row>
-                    <v-col cols="12" md="12">
-                        <v-card :elevation="0">
-                            <div class="flex flex-col align-center">
-                                <the-small-slide-group></the-small-slide-group>
-                                <v-img class="w-80 h-80" src="lamp_with_flower.png" alt="Lamp with flower"></v-img>
-                            </div>
-                        </v-card>
-                    </v-col>
-                </v-row>
-            </v-container>
-        </div>
-        <div class="mb-0">
-            <v-container>
-                <h2 data-aos="fade-down" data-aos-delay="300"
-                    class="text-center font-bold text-gray-700 text-[1rem] mb-10">
-                    សំណួរតែងត្រូវបានសួរ</h2>
-                <v-row class="flex">
-                    <v-col cols="12" md="6" class="flex flex-col justify-center" data-aos="fade-right">
-                        <v-expansion-panels :elevation="0">
-                            <v-expansion-panel v-for="(expansionItem, i) in expansionItems" :key="i">
-                                <v-expansion-panel-title class="py-4" :style="{ fontSize: '0.9rem' }">
-                                    {{ expansionItem.title }}
-                                </v-expansion-panel-title>
-                                <v-expansion-panel-text class="text-[0.8rem]">
-                                    {{ expansionItem.text }}
-                                </v-expansion-panel-text>
-                            </v-expansion-panel>
-                        </v-expansion-panels>
-                    </v-col>
-                    <v-col cols="12" md="6" class="align-self-start" data-aos="fade-left">
-                        <v-img class="w-full h-full" src="desk.png" alt="Desk" />
-                    </v-col>
-                </v-row>
-            </v-container>
-        </div>
+                            </v-card>
+                        </v-col>
+                        <v-col cols="12" md="4" class="-mb-20 flex flex-col min-[350px]:-mb-16 min-[380px]:-mb-6">
+                            <v-card elevation="0" class="bg-transparent -mb-24 min-[350px]:-mb-20 min-[380px]:-mb-12"
+                                data-aos="fade-down">
+                                <router-link to="#">
+                                    <the-top-left-bottom-right-inverted-card
+                                        class="mx-auto"></the-top-left-bottom-right-inverted-card>
+                                </router-link>
+                            </v-card>
+                            <v-card elevation="0" class="bg-transparent" data-aos="fade-up">
+                                <router-link to="#">
+                                    <the-top-right-bottom-left-inverted-card
+                                        class="mx-auto"></the-top-right-bottom-left-inverted-card>
+                                </router-link>
+                            </v-card>
+                        </v-col>
+                        <v-col cols="12" md="4" class="-mb-20 flex flex-col">
+                            <v-card elevation="0" class="bg-transparent -mb-8 min-[380px]:mb-6" data-aos="fade-left">
+                                <router-link to="#">
+                                    <the-short-top-left-inverted-card
+                                        class="mx-auto"></the-short-top-left-inverted-card>
+                                </router-link>
+                            </v-card>
+                            <v-card elevation="0" class="bg-transparent" data-aos="fade-left">
+                                <router-link to="#">
+                                    <the-short-bottom-left-inverted-card
+                                        class="mx-auto"></the-short-bottom-left-inverted-card>
+                                </router-link>
+                            </v-card>
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </div>
+
+            <div class="mb-16">
+                <v-col cols="12"
+                    class="flex flex-col align-center gap-y-6 min-[600px]:flex min-[600px]:flex-row min-[600px]:justify-between"
+                    data-aos="fade-down">
+                    <the-featured-in-card class="bg-gray-100" v-for="featuredInItem in featuredInItems"
+                        :key="featuredInItem.title" :title="featuredInItem.title"
+                        :description="featuredInItem.description">
+                        <template v-slot:default>
+                            <v-btn :size="75" :ripple="false" :elevation="0" :rounded="true">
+                                <v-icon size="50">{{ featuredInItem.icon }}</v-icon>
+                            </v-btn>
+                        </template>
+                    </the-featured-in-card>
+                </v-col>
+            </div>
+
+            <div class="mb-12">
+                <v-col cols="12">
+                    <h2 data-aos="fade-down"
+                        class="mb-4 font-bold text-center min-[600px]:text-left text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
+                        ផលិតផលប្រចាំខែ</h2>
+                    <the-slide-group :tab-items="tabItems"></the-slide-group>
+                </v-col>
+            </div>
+
+
+            <div class="mb-24">
+                <v-container fluid>
+                    <h2 data-aos="fade-down" data-aos-delay="300"
+                        class="text-center  text-gray-700 mb-2 font-bold text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
+                        សម្ភារៈពេញនិយម</h2>
+                    <v-row>
+                        <v-col cols="12" md="4" data-aos="fade-right" class="-mb-10">
+                            <v-card :elevation="0">
+                                <router-link :to="{ name: 'details' }">
+                                    <div class="flex justify-center">
+                                        <the-short-bottom-right-inverted-card href="chair.png" title="Tottori"
+                                            :price="79.99">
+                                            <template #top-right>
+                                                <heart-svg class="absolute top-12 right-2"></heart-svg>
+                                            </template>
+
+                                            <template #bottom-right>
+                                                <cart-svg></cart-svg>
+                                            </template>
+                                        </the-short-bottom-right-inverted-card>
+                                    </div>
+
+                                </router-link>
+                            </v-card>
+                        </v-col>
+                        <v-col cols="12" md="4" data-aos="fade-down" class="-mb-10">
+                            <v-card :elevation="0">
+                                <div class="flex justify-center">
+                                    <router-link to="#">
+                                        <the-short-bottom-right-inverted-card href="lamp.png" title="អំពូល Edysse"
+                                            :price="49.99">
+                                            <template #top-right>
+                                                <heart-svg class="absolute top-12 right-2"></heart-svg>
+                                            </template>
+
+                                            <template #bottom-right>
+                                                <cart-svg></cart-svg>
+                                            </template>
+                                        </the-short-bottom-right-inverted-card>
+                                    </router-link>
+                                </div>
+                            </v-card>
+                        </v-col>
+                        <v-col cols="12" md="4" data-aos="fade-left">
+                            <v-card :elevation="0">
+                                <div class="flex justify-center">
+                                    <router-link to="#" class="relative">
+                                        <the-short-bottom-right-inverted-card href="small_chair.png"
+                                            title="ឈុតតុកៅអីក្មេង" :price="89.99">
+                                            <template #top-right>
+                                                <heart-svg class="absolute top-12 right-2"></heart-svg>
+                                            </template>
+
+                                            <template #bottom-right>
+                                                <cart-svg></cart-svg>
+                                            </template>
+                                        </the-short-bottom-right-inverted-card>
+                                    </router-link>
+                                </div>
+                            </v-card>
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </div>
+            <div class="-mb-32">
+                <v-container fluid>
+                    <v-row>
+                        <v-col cols="12" md="12">
+                            <v-card :elevation="0" class="-mt-20">
+                                <p data-aos="fade-down"
+                                    class="flex justify-center -mb-36 text-gray-700 text-[1rem] font-bold">
+                                    Timeless Design</p>
+                                <the-middle-top-inverted-card data-aos="fade-up"></the-middle-top-inverted-card>
+                            </v-card>
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </div>
+            <div>
+                <v-container fluid>
+                    <v-row>
+                        <v-col cols="12" md="12">
+                            <v-card :elevation="0">
+                                <div class="flex flex-col align-center">
+                                    <the-small-slide-group></the-small-slide-group>
+                                    <v-img class="w-80 h-80" src="lamp_with_flower.png" alt="Lamp with flower"></v-img>
+                                </div>
+                            </v-card>
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </div>
+            <div class="mb-0">
+                <v-container>
+                    <h2 data-aos="fade-down" data-aos-delay="300"
+                        class="text-center font-bold text-gray-700 text-[1rem] mb-10">
+                        សំណួរតែងត្រូវបានសួរ</h2>
+                    <v-row class="flex">
+                        <v-col cols="12" md="6" class="flex flex-col justify-center" data-aos="fade-right">
+                            <v-expansion-panels :elevation="0">
+                                <v-expansion-panel v-for="(expansionItem, i) in expansionItems" :key="i">
+                                    <v-expansion-panel-title class="py-4" :style="{ fontSize: '0.9rem' }">
+                                        {{ expansionItem.title }}
+                                    </v-expansion-panel-title>
+                                    <v-expansion-panel-text class="text-[0.8rem]">
+                                        {{ expansionItem.text }}
+                                    </v-expansion-panel-text>
+                                </v-expansion-panel>
+                            </v-expansion-panels>
+                        </v-col>
+                        <v-col cols="12" md="6" class="align-self-start" data-aos="fade-left">
+                            <v-img class="w-full h-full" src="desk.png" alt="Desk" />
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </div>
+        </v-container>
     </v-container>
 </template>
 
