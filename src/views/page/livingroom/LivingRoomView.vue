@@ -76,7 +76,7 @@ const carouselItems = ref([
 // Sidebar filter items
 const sidebarItems = ref([
   { id: 1, title: "ទាំងអស់", category: "all" },
-  { id: 2, title: "តុបន្ទប់ទទួលភ្ញៀវ", category: "table" },
+  { id: 2, title: "តុឈើ", category: "table" },
   { id: 3, title: "ផ្ទាំងបិទជញ្ជាំង", category: "wall" },
   { id: 4, title: "ថូផ្កា", category: "vase" },
   { id: 5, title: "ធ្នើរជាប់ជញ្ជាំង", category: "shelf" },
