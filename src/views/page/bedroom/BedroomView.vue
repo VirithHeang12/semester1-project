@@ -138,6 +138,48 @@
             price: 999.99,
             category: 'desk'
         },
+        {
+            href: "/slide-groups/bedrooms/bedroom-5.jpg",
+            title: "បន្ទប់គេង",
+            price: 999.99,
+            category: 'desk'
+        },
+        {
+            href: "/slide-groups/bedrooms/bedroom-5.jpg",
+            title: "បន្ទប់គេង",
+            price: 999.99,
+            category: 'desk'
+        },
+        {
+            href: "/slide-groups/bedrooms/bedroom-5.jpg",
+            title: "បន្ទប់គេង",
+            price: 999.99,
+            category: 'desk'
+        },
+        {
+            href: "/slide-groups/bedrooms/bedroom-5.jpg",
+            title: "បន្ទប់គេង",
+            price: 999.99,
+            category: 'desk'
+        },
+        {
+            href: "/slide-groups/bedrooms/bedroom-5.jpg",
+            title: "បន្ទប់គេង",
+            price: 999.99,
+            category: 'desk'
+        },
+        {
+            href: "/slide-groups/bedrooms/bedroom-5.jpg",
+            title: "បន្ទប់គេង",
+            price: 999.99,
+            category: 'desk'
+        },
+        {
+            href: "/slide-groups/bedrooms/bedroom-5.jpg",
+            title: "បន្ទប់គេង",
+            price: 999.99,
+            category: 'desk'
+        },
     ]);
 
     watch(isAll, (newVal) => {
