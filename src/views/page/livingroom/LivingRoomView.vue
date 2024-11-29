@@ -5,37 +5,38 @@
         <v-row class="mb-16" data-aos="fade-up">
           <v-col cols="12">
             <v-carousel hide-delimiters class="rounded-lg">
-              <v-carousel-item v-for="(item, i) in carouselItems" :key="`carousel-item-${i}`" :src="item.src" :lazy-src="item.lazySrc" cover></v-carousel-item>
+              <v-carousel-item v-for="(item, i) in carouselItems" :key="`carousel-item-${i}`" :src="item.src"
+                :lazy-src="item.lazySrc" cover></v-carousel-item>
             </v-carousel>
           </v-col>
         </v-row>
         <v-row>
           <v-col cols="12" md="3" data-aos="fade-right">
             <v-list lines="one" select-strategy="leaf">
-              <v-list-subheader>Product Category</v-list-subheader>
-              <v-list-item v-for="item in sidebarItems" :key="`sidebar-item-${item.id}`" :title="item.title">
-                <template v-slot:prepend="{ isSelected }">
-                  <v-list-item-action start>
-                    <v-checkbox-btn :model-value="isSelected"></v-checkbox-btn>
-                  </v-list-item-action>
+              <v-list-subheader class="mt-[-20px]">ប្រភេទសម្ភារៈ ក្នុងបន្ទប់ទទួលភ្ញៀវ</v-list-subheader>
+              <v-list-item v-for="item in sidebarItems" :key="`sidebar-item-${item.id}`" :title="item.title"
+                @click="toggleCategory(item.id)">
+                <template v-slot:prepend>
+                  <v-checkbox-btn :model-value="selectedCategories.includes(item.id)"></v-checkbox-btn>
                 </template>
               </v-list-item>
             </v-list>
             <v-container>
-              <p class="mb-5">Filter By Price</p>
-              <v-range-slider class="w-full"></v-range-slider>
+              <p class="mt-[20px] mb-[30px] text-primary-800">Filter By Price</p>
+              <v-range-slider v-model="priceRange" class="w-full" thumb-label="always" :min="50" :max="800"></v-range-slider>
             </v-container>
           </v-col>
-
           <v-col cols="12" md="9">
             <v-row>
-              <v-col cols="12" sm="6" md="4" v-for="(card, index) in productCards" :key="`product-card-${index}`" data-aos="fade-up" :data-aos-delay="index * 100">
+              <v-col cols="12" sm="6" md="4" v-for="(card, index) in filteredProducts" :key="`product-card-${index}`"
+                data-aos="fade-up" :data-aos-delay="index * 100">
                 <a href="#!">
                   <the-category-card :title="card.title" :price="card.price" :href="card.href"></the-category-card>
                 </a>
               </v-col>
             </v-row>
           </v-col>
+
         </v-row>
       </v-container>
     </div>
@@ -54,7 +55,7 @@
 import TheCategoryCard from "@/components/cards/TheCategoryCard.vue";
 import TheRecommendationCard from "@/components/cards/TheRecommendationCard.vue";
 
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
 // Data for carousel
 const carouselItems = ref([
@@ -63,77 +64,32 @@ const carouselItems = ref([
     lazySrc: "/thumbnails/bedroom-6.jpg",
   },
   {
-    src: "/slide-groups/livingrooms/livingroom-10.jpg",
+    src: "/slide-groups/livingrooms/livingroom-11.jpg",
     lazySrc: "/thumbnails/bedroom-1.jpg",
   },
   {
-    src: "/slide-groups/livingrooms/livingroom-9.jpg",
+    src: "/slide-groups/livingrooms/livingroom-12.jpg",
     lazySrc: "/thumbnails/bedroom-2.jpg",
   },
 ]);
 
 // Sidebar filter items
 const sidebarItems = ref([
-  { id: 1, title: "All", checked: false },
-  { id: 2, title: "Mattresses", checked: false },
-  { id: 3, title: "Bedside Tables", checked: false },
-  { id: 3, title: "Headbord", checked: false },
-]);
-
-// Product cards
-const productCards = ref([
-  {
-    href: "/slide-groups/livingrooms/livingroom-1.jpg",
-    title: "បន្ទប់ទទួលភ្ញៀវ",
-    price: 109.99,
-  },
-  {
-    href: "/slide-groups/livingrooms/livingroom-2.jpg",
-    title: "បន្ទប់ទទួលភ្ញៀវ",
-    price: 119.99,
-  },
-  {
-    href: "/slide-groups/livingrooms/livingroom-3.jpg",
-    price: 30.99,
-    title: "បន្ទប់ទទួលភ្ញៀវ",
-  },
-  {
-    href: "/slide-groups/livingrooms/livingroom-4.jpg",
-    title: "បន្ទប់ទទួលភ្ញៀវ",
-    price: 999.99,
-  },
-  {
-    href: "/slide-groups/livingrooms/livingroom-5.jpg",
-    price: 25.99,
-    title: "បន្ទប់ទទួលភ្ញៀវ",
-  },
-  {
-    href: "/slide-groups/livingrooms/livingroom-6.jpg",
-    title: "បន្ទប់ទទួលភ្ញៀវ",
-    price: 999.99,
-  },
+  { id: 1, title: "ទាំងអស់", category: "all" },
+  { id: 2, title: "តុបន្ទប់ទទួលភ្ញៀវ", category: "table" },
+  { id: 3, title: "ផ្ទាំងបិទជញ្ជាំង", category: "wall" },
+  { id: 4, title: "ថូផ្កា", category: "vase" },
+  { id: 5, title: "ធ្នើរជាប់ជញ្ជាំង", category: "shelf" },
 ]);
 
 // Recommendations
 const cartRecom = ref([
   {
-    src: "/slide-groups/livingrooms/livingroom-6.jpg",
-    title: "បន្ទប់ទទួលភ្ញៀវ",
-  },
-  {
-    src: "/slide-groups/livingrooms/livingroom-5.jpg",
-    title: "បន្ទប់ទទួលភ្ញៀវ",
-  },
-  {
-    src: "/slide-groups/livingrooms/livingroom-7.jpg",
-    title: "បន្ទប់ទទួលភ្ញៀវ",
-  },
-  {
     src: "/slide-groups/livingrooms/livingroom-1.jpg",
     title: "បន្ទប់ទទួលភ្ញៀវ",
   },
   {
-    src: "/slide-groups/livingrooms/livingroom-3.jpg",
+    src: "/slide-groups/livingrooms/livingroom-2.jpg",
     title: "បន្ទប់ទទួលភ្ញៀវ",
   },
   {
@@ -141,31 +97,171 @@ const cartRecom = ref([
     title: "បន្ទប់ទទួលភ្ញៀវ",
   },
   {
-    src: "/bedrooms/Headborad.jpg",
+    src: "/slide-groups/livingrooms/livingroom-5.jpg",
     title: "បន្ទប់ទទួលភ្ញៀវ",
   },
   {
-    src: "/slide-groups/bedrooms/bedroom-3.jpg",
+    src: "/slide-groups/livingrooms/livingroom-6.jpg",
     title: "បន្ទប់ទទួលភ្ញៀវ",
   },
   {
-    src: "/slide-groups/bedrooms/bedroom-4.jpg",
-    title: "បន្ទប់ទទួលភ្ញៀវ",
+    src: "/Living room Category/Living room (Original)/Table/l-table4.jpg",
+    title: "តុឈើ",
   },
   {
-    src: "/slide-groups/livingrooms/livingroom-8.jpg",
-    title: "Headbord",
+    src: "/Living room Category/Living room (Original)/Table/l-table11.jpg",
+    title: "តុឈើ",
   },
   {
-    src: "/slide-groups/bedrooms/bedroom-3.jpg",
-    title: "Mattresses",
+    src: "/Living room Category/Living room (Original)/Wall/pic-3.jpg",
+    title: "ផ្ទាំងលំអ",
   },
   {
-    src: "/slide-groups/livingrooms/livingroom-8.jpg",
-    title: "Bedside Tables",
+    src: "/Living room Category/Living room (Original)/Wall/pic-14.jpg",
+    title: "ផ្ទាំងលំអ",
+  },
+  {
+    src: "/Living room Category/Living room (Original)/Vase/d-vase9.jpg",
+    title: "ថូផ្កា",
+  },
+  {
+    src: "/Living room Category/Living room (Original)/Vase/d-vase6.jpg",
+    title: "ថូផ្កា",
+  },
+  {
+    src: "/Living room Category/Living room (Original)/Shelf/pic-3.jpg",
+    title: "ធ្នើរជាប់ជញ្ជាំង",
+  },
+  {
+    src: "/Living room Category/Living room (Original)/Shelf/pic-4.jpg",
+    title: "ធ្នើរជាប់ជញ្ជាំង",
+  },
+
+]);
+
+
+// Product cards
+const productCards = ref([
+  // Tables
+  {
+    href: "/Living room Category/Living room (Original)/Table/l-table1.jpg",
+    title: "តុឈើ",
+    price: 309.99,
+    category: "table",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Table/l-table2.jpg",
+    title: "តុឈើ",
+    price: 209.99,
+    category: "table",
+  },
+
+  // Wall
+  {
+    href: "/Living room Category/Living room (Original)/Wall/pic-1.jpg",
+    title: "ផ្ទាំងលំអ",
+    price: 120.99,
+    category: "wall",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Wall/pic-10.jpg",
+    title: "ផ្ទាំងលំអ",
+    price: 119.99,
+    category: "wall",
+  },
+  //vase
+  {
+    href: "/Living room Category/Living room (Original)/Vase/d-vase9.jpg",
+    title: "ថូផ្កា",
+    price: 99.99,
+    category: "vase",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Vase/d-vase3.jpg",
+    title: "ថូផ្កា",
+    price: 89.99,
+    category: "vase",
+  },
+  //shelf
+  {
+    href: "/Living room Category/Living room (Original)/Shelf/pic-2.jpg",
+    title: "ធ្នើរជាប់ជញ្ជាំង",
+    price: 105.99,
+    category: "shelf",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Shelf/pic-6.jpg",
+    title: "ធ្នើរជាប់ជញ្ជាំង",
+    price: 219.99,
+    category: "shelf",
   },
 ]);
+// State for selected categories and price range
+const selectedCategories = ref([1]);
+const priceRange = ref([50, 800]);
+
+
+const toggleCategory = (id) => {
+  if (id === 1) {
+    // If "All" is clicked, always select or deselect all
+    if (selectedCategories.value.includes(1)) {
+      selectedCategories.value = sidebarItems.value.map((item) => item.id); // Select all
+    } else {
+      selectedCategories.value = []; // Clear all selections
+    }
+  } else {
+    // Handle individual category selection
+    const index = selectedCategories.value.indexOf(id);
+    if (index === -1) {
+      selectedCategories.value.push(id);
+    } else {
+      selectedCategories.value.splice(index, 1);
+    }
+
+    // Automatically handle "All" selection or deselection
+    if (
+      selectedCategories.value.length === sidebarItems.value.length - 1 &&
+      !selectedCategories.value.includes(1)
+    ) {
+      selectedCategories.value.push(1); // Select "All" when all other categories are selected
+    } else if (selectedCategories.value.length < sidebarItems.value.length - 1) {
+      selectedCategories.value = selectedCategories.value.filter((cat) => cat !== 1); // Deselect "All"
+    }
+  }
+  // Ensure there’s always at least one category selected (default to "All")
+  if (selectedCategories.value.length === 0) {
+    selectedCategories.value = [1]; // Fallback to "All" if no category is selected
+  }
+};
+
+// Filter on Category and Price
+
+const filteredProducts = computed(() => {
+  let filtered = productCards.value;
+
+  // Filter by selected categories if "All" is not selected
+  if (!selectedCategories.value.includes(1)) {
+    filtered = filtered.filter((card) =>
+      selectedCategories.value.includes(
+        sidebarItems.value.find((item) => item.category === card.category)?.id
+      )
+    );
+  }
+
+  // Filter by price range
+  if (priceRange.value && priceRange.value.length === 2) {
+    filtered = filtered.filter(
+      (card) =>
+        card.price >= priceRange.value[0] && card.price <= priceRange.value[1]
+    );
+  }
+
+  return filtered;
+});
+
 </script>
+
+
 
 <style scoped>
 .bg-white {
