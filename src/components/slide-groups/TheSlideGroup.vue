@@ -15,7 +15,7 @@
                     <v-tabs-window-item class="h-full" v-for="tabItem in tabItems" :value="tabItem.value"
                         :key="tabItem.value">
                         <v-sheet class="h-full" elevation="0">
-                            <v-slide-group class="h-full flex" :show-arrows="true">
+                            <v-slide-group class="h-full flex">
                                 <v-slide-group-item v-for="(tabItemImage, index) in tabItemImages" :key="index">
                                     <v-card class="h-full px-4" width="200" :elevation="0">
                                         <div class="w-full h-full relative">
@@ -68,9 +68,9 @@
                         <v-tabs-window v-model="tab">
                             <v-tabs-window-item v-for="tabItem in tabItems" :value="tabItem.value" :key="tabItem.value">
                                 <v-sheet elevation="0">
-                                    <v-slide-group :show-arrows="true" :center-active="true">
+                                    <v-slide-group :center-active="true">
                                         <v-slide-group-item v-for="(tabItemImage, index) in tabItemImages" :key="index">
-                                            <v-card class="px-4" width="200" :elevation="0">
+                                            <v-card class="px-4" width="300" :elevation="0">
                                                 <div class="relative">
                                                     <img :src="tabItemImage.url" alt="tabItemImage"
                                                         class="w-full h-60 object-cover rounded-lg">
@@ -79,15 +79,15 @@
                                                         <div class="flex-grow-1">
                                                             <p class="pl-2">
                                                                 <span
-                                                                    class="text-[0.6rem] text-gray-600 rounded-lg bg-gray-200 p-1">${{
+                                                                    class="text-[1rem] text-gray-600 rounded-lg bg-gray-200 p-1">${{
                                                                         tabItemImage.price
                                                                     }}</span>
                                                             </p>
                                                         </div>
-                                                        <v-btn :rounded="true" :color="'grey-darken-3'" :size="20"
+                                                        <v-btn :rounded="true" :color="'grey-darken-3'" :size="24"
                                                             :ripple="false">
                                                             <template #prepend>
-                                                                <v-icon :size="16">mdi-arrow-right</v-icon>
+                                                                <v-icon :size="20">mdi-arrow-right</v-icon>
                                                             </template>
                                                         </v-btn>
                                                     </div>

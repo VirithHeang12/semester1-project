@@ -166,6 +166,21 @@
                         </v-row>
                     </v-container>
                 </div>
+                <div>
+                    <v-container fluid>
+                        <v-row>
+                            <v-col cols="12" md="12">
+                                <v-card :elevation="0">
+                                    <div class="flex flex-col align-center">
+                                        <the-small-slide-group></the-small-slide-group>
+                                        <v-img class="w-80 h-80" src="lamp_with_flower.png"
+                                            alt="Lamp with flower"></v-img>
+                                    </div>
+                                </v-card>
+                            </v-col>
+                        </v-row>
+                    </v-container>
+                </div>
                 <div class="mb-0">
                     <v-container>
                         <h2 data-aos="fade-down" data-aos-delay="300"
@@ -205,6 +220,7 @@
     import TheShortBottomLeftInvertedCard from '@/components/cards/TheShortBottomLeftInvertedCard.vue';
     import TheShortBottomRightInvertedCard from '@/components/cards/TheShortBottomRightInvertedCard.vue';
     import TheMiddleTopInvertedCard from '@/components/cards/TheMiddleTopInvertedCard.vue';
+    import TheSmallSlideGroup from '@/components/slide-groups/TheSmallSlideGroup.vue';
     import TheSlideGroup from '@/components/slide-groups/TheSlideGroup.vue';
     import TheFeaturedInCard from '@/components/cards/TheFeaturedInCard.vue';
 
