@@ -133,14 +133,14 @@
                 </v-row>
             </v-container>
         </div>
-        <div class="">
+        <div class="my-9">
                 <v-row>
                     <v-col cols="12" md="12">
-                        <v-card :elevation="0" class="">
-                            <p data-aos="fade-down" class="flex justify-center -mb-36 text-gray-700 text-[1rem] font-bold">
-                                Timeless Design</p>
-                            <the-middle-top-inverted-card data-aos="fade-up"></the-middle-top-inverted-card>
-                        </v-card>
+                        <div class="relative">
+                            <!-- <p class=" text-gray-700 text-2xl text-nowrap font-bold absolute top-0 left-[50%]">
+                                Timeless Design</p> -->
+                            <the-middle-top-inverted-card ></the-middle-top-inverted-card>
+                        </div>
                     </v-col>
                 </v-row>
         </div>
