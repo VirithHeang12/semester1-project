@@ -1,5 +1,5 @@
 <template>
-    <div class="py-24 bg-primary-50">
+    <div class="py-12 px-4">
         <v-container>
             <div class="flex flex-col lg:flex-row gap-6">
                 <div class="flex-1 bg-white p-4 rounded">
@@ -162,4 +162,7 @@ export default {
         },
     },
 };
+
+const mainElement = document.querySelector('main.v-main.container');
+   mainElement.classList.add('bg-primary-50');
 </script>
