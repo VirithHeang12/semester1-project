@@ -8,7 +8,7 @@
                         <v-sheet elevation="0">
                             <v-slide-group :center-active="true">
                                 <v-slide-group-item v-for="(tabItemImage, index) in images" :key="index">
-                                    <v-card width="300" class="px-4" :elevation="0">
+                                    <v-card width="300" class="px-6" :elevation="0">
                                         <div class="relative">
                                             <img :src="tabItemImage.url" alt="tabItemImage"
                                                 class="w-full h-60 object-cover rounded-lg">

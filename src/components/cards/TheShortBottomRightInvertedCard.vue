@@ -1,6 +1,6 @@
 <template>
     <figure class="flex flex-col align-center justify-center max-w-fit max-h-fit relative">
-        <svg width="270" height="310" viewBox="0 0 347 310" fill="none" xmlns="http://www.w3.org/2000/svg"
+        <svg width="255" height="310" viewBox="0 0 347 310" fill="none" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>
                 <clipPath id="chair">
@@ -17,7 +17,7 @@
         </slot>
 
         <p
-            class="w-[2.8rem] h-[2.8rem] absolute bottom-[4.6rem] right-2 min-[380px]:right-1 bg-stone-600 rounded-[1rem] flex justify-center align-center">
+            class="w-[2.8rem] h-[2.8rem] absolute bottom-[4.8rem] right-[2px] min-[380px]:right-1 bg-stone-600 rounded-[1rem] flex justify-center align-center">
             <slot name="bottom-right">
                 <cart-svg></cart-svg>
             </slot>
@@ -41,7 +41,6 @@
 
 <script setup>
     import { defineProps } from 'vue';
-
 
     import HeartSvg from '@/assets/svgs/general/heart.svg';
     import CartSvg from '@/assets/svgs/general/cart.svg';
