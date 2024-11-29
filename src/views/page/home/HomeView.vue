@@ -98,56 +98,28 @@
                     <v-row>
                         <v-col cols="12" md="4" data-aos="fade-right" class="-mb-10">
                             <v-card :elevation="0">
-                                <router-link :to="{ name: 'details' }">
-                                    <div class="flex justify-center">
-                                        <the-short-bottom-right-inverted-card href="chair.png" title="Tottori"
-                                            :price="79.99">
-                                            <template #top-right>
-                                                <heart-svg class="absolute top-12 right-2"></heart-svg>
-                                            </template>
-
-                                            <template #bottom-right>
-                                                <cart-svg></cart-svg>
-                                            </template>
-                                        </the-short-bottom-right-inverted-card>
-                                    </div>
-
-                                </router-link>
+                                <div class="flex justify-center">
+                                    <the-short-bottom-right-inverted-card href="chair.png" title="Tottori"
+                                        :price="79.99">
+                                    </the-short-bottom-right-inverted-card>
+                                </div>
                             </v-card>
                         </v-col>
                         <v-col cols="12" md="4" data-aos="fade-down" class="-mb-10">
                             <v-card :elevation="0">
                                 <div class="flex justify-center">
-                                    <router-link to="#">
-                                        <the-short-bottom-right-inverted-card href="lamp.png" title="អំពូល Edysse"
-                                            :price="49.99">
-                                            <template #top-right>
-                                                <heart-svg class="absolute top-12 right-2"></heart-svg>
-                                            </template>
-
-                                            <template #bottom-right>
-                                                <cart-svg></cart-svg>
-                                            </template>
-                                        </the-short-bottom-right-inverted-card>
-                                    </router-link>
+                                    <the-short-bottom-right-inverted-card href="lamp.png" title="អំពូល Edysse"
+                                        :price="49.99">
+                                    </the-short-bottom-right-inverted-card>
                                 </div>
                             </v-card>
                         </v-col>
                         <v-col cols="12" md="4" data-aos="fade-left">
                             <v-card :elevation="0">
                                 <div class="flex justify-center">
-                                    <router-link to="#" class="relative">
-                                        <the-short-bottom-right-inverted-card href="small_chair.png"
-                                            title="ឈុតតុកៅអីក្មេង" :price="89.99">
-                                            <template #top-right>
-                                                <heart-svg class="absolute top-12 right-2"></heart-svg>
-                                            </template>
-
-                                            <template #bottom-right>
-                                                <cart-svg></cart-svg>
-                                            </template>
-                                        </the-short-bottom-right-inverted-card>
-                                    </router-link>
+                                    <the-short-bottom-right-inverted-card href="small_chair.png" title="ឈុតតុកៅអីក្មេង"
+                                        :price="89.99">
+                                    </the-short-bottom-right-inverted-card>
                                 </div>
                             </v-card>
                         </v-col>
@@ -169,18 +141,12 @@
                 </v-container>
             </div>
             <div>
-                <v-container fluid>
-                    <v-row>
-                        <v-col cols="12" md="12">
-                            <v-card :elevation="0">
-                                <div class="flex flex-col align-center">
-                                    <the-small-slide-group></the-small-slide-group>
-                                    <v-img class="w-80 h-80" src="lamp_with_flower.png" alt="Lamp with flower"></v-img>
-                                </div>
-                            </v-card>
-                        </v-col>
-                    </v-row>
-                </v-container>
+                <v-card :elevation="0" class="mx-0">
+                    <div class="flex flex-col align-center gap-y-40">
+                        <the-small-slide-group></the-small-slide-group>
+                        <v-img class="w-80 h-80" src="lamp_with_flower.png" alt="Lamp with flower"></v-img>
+                    </div>
+                </v-card>
             </div>
             <div class="mb-0">
                 <v-container>
@@ -223,10 +189,6 @@
     import TheSmallSlideGroup from '@/components/slide-groups/TheSmallSlideGroup.vue';
     import TheSlideGroup from '@/components/slide-groups/TheSlideGroup.vue';
     import TheFeaturedInCard from '@/components/cards/TheFeaturedInCard.vue';
-
-
-    import HeartSvg from '@/assets/svgs/general/heart.svg';
-    import CartSvg from '@/assets/svgs/general/cart.svg';
 
     const expansionItems = [
         {

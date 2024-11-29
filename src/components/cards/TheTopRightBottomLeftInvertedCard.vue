@@ -16,13 +16,13 @@
 
         <slot name="bottom-left">
             <p
-                class="absolute text-[1rem] bottom-14 left-1 min-[350px]:bottom-12 min-[350px]:left-2 min-[380px]:bottom-10 min-[410px]:bottom-7 lg:bottom-11 lg:left-1 min-[1100px]:bottom-9 min-[1100px]:left-1 xl:bottom-6 xl:left-2 text-gray-700 min-[380px]:text-[1.1rem] lg:text-[1.2rem] xl:text-[1.4rem] font-bold">
+                class="absolute text-[0.9rem] bottom-[4.2rem] left-1 min-[350px]:bottom-12 min-[350px]:left-2 min-[380px]:bottom-10 min-[410px]:bottom-7 lg:bottom-11 lg:left-1 min-[1100px]:bottom-9 min-[1100px]:left-1 xl:bottom-6 xl:left-2 text-gray-700 min-[380px]:text-[1.1rem] lg:text-[1.2rem] xl:text-[1.4rem] font-bold">
                 {{ title }}</p>
         </slot>
 
         <slot name="top-right">
             <the-detail-link
-                class="absolute top-16 right-2 min-[350px]:top-14 min-[380px]:top-12 min-[410px]:top-10 lg:top-12 lg:right-2 min-[1100px]:top-11 min-[1100px]:right-2 xl:top-7 xl:right-2"></the-detail-link>
+                class="absolute top-[4.8rem] right-2 min-[350px]:top-14 min-[380px]:top-12 min-[410px]:top-10 lg:top-12 lg:right-2 min-[1100px]:top-11 min-[1100px]:right-2 xl:top-7 xl:right-2"></the-detail-link>
         </slot>
     </figure>
 </template>
