@@ -24,7 +24,7 @@
     <v-card elevation="0" rounded="3">
         <v-row class="flex items-center justify-between bg-gray-100 p-3">
             <v-col cols="6">
-                <h3 class="text-left font-medium text-gray-700">{{ title }}</h3>
+                <h3 class="text-left text-nowrap font-medium text-gray-700">{{ title }}</h3>
             </v-col>
             <v-col cols="6">
                 <h4 class="text-right font-medium text-gray-700">${{ price }}</h4>

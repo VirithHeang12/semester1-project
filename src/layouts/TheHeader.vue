@@ -184,8 +184,8 @@
             to: "outdoor"
         },
         {
-            title: 'សូរិយា',
-            to: "soriya"
+            title: 'អំពូលភ្លើង',
+            to: "lighting"
         },
         {
             title: 'ផ្ទះបាយ',

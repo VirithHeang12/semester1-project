@@ -49,9 +49,9 @@ const router = createRouter({
                 component: () => import('../views/page/outdoor/OutdoorView.vue')
             },
             {
-                path: 'soriya',
-                name: 'soriya',
-                component: () => import('../views/page/soriya/SoriyaView.vue')
+                path: 'lighting',
+                name: 'lighting',
+                component: () => import('../views/page/lighting/LightingView.vue')
             },
             {
                 path: 'add-to-cart',
