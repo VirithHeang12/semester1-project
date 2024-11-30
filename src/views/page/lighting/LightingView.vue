@@ -1,4 +1,11 @@
 <template class="bg-primary-50" >
+    <!-- Link to payment modal -->
+    <!-- <div class="row">
+        <div>
+            <a role="button" href="#payModal" data-bs-toggle="modal" @click.prevent="openPaymentModal">ទិញឥឡូវនេះ</a>
+            <ThePaymentForm ref="paymentModalRef" />
+        </div>
+    </div> -->
     <v-container>
         <div data-aos="fade-up">
             <v-container>
@@ -80,11 +87,14 @@
             </v-slide-group>
         </v-sheet>
     </v-container>
+    
+    
 </template>
 
 <script setup>
     import TheCategoryCard from "@/components/cards/TheCategoryCard.vue";
     import TheRecommendationCard from "@/components/cards/TheRecommendationCard.vue";
+    import ThePaymentForm from "@/components/modals/ThePaymentForm.vue";
 
     import { computed, ref, watch } from "vue";
 
@@ -95,46 +105,33 @@
     const isWallLighting = ref(false);
     const price = ref([0, 1000]);
 
+    // Call modal to use
+    // const paymentModalRef = ref(null);
+
+    // const openPaymentModal = () => {
+    //     paymentModalRef.value.openModal();
+    // };
+
     // Data for carousel
     const carouselItems = ref([
         {
-            src: "/Slide Hero Banner/Lighting/lighting-2.jpg",
-            lazySrc: "/thumbnails/lighting-1.jpg",
+            src: "/Slide Hero Banner/Lighting/lighting1.png",
+            lazySrc: "/thumbnails/lighting-1.png",
         },
         {
-            src: "/slide-groups/lightings/lighting-2.jpg",
-            lazySrc: "/thumbnails/lighting-2.jpg",
+            src: "/Slide Hero Banner/Lighting/lighting2.png",
+            lazySrc: "/thumbnails/lighting-2.png",
         },
         {
-            src: "/slide-groups/lightings/lighting-3.jpg",
-            lazySrc: "/thumbnails/lighting-3.jpg",
-        },
-        {
-            src: "/slide-groups/lightings/lighting-4.jpg",
-            lazySrc: "/thumbnails/lighting-4.jpg",
-        },
-        {
-            src: "/slide-groups/lightings/lighting-5.jpg",
-            lazySrc: "/thumbnails/lighting-5.jpg",
-        },
-        {
-            src: "/slide-groups/lightings/lighting-6.jpg",
-            lazySrc: "/thumbnails/lighting-6.jpg",
-        },
-        {
-            src: "/slide-groups/lightings/lighting-7.jpg",
-            lazySrc: "/thumbnails/lighting-7.jpg",
-        },
-        {
-            src: "/slide-groups/lightings/lighting-8.jpg",
-            lazySrc: "/thumbnails/lighting-8.jpg",
+            src: "/Slide Hero Banner/Lighting/lighting3.png",
+            lazySrc: "/thumbnails/lighting-3.png",
         },
     ]);
 
     // Product cards
     const productCards = ref([
         {
-            href: "/Lighting Category/Lighting (Shape)/Kitchen/Mask group (1).png",
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen1.jpg",
             title: "អំពូលផ្ទះបាយ",
             price: 19.99,
             category: 'kitchenLighting'
@@ -164,7 +161,7 @@
             category: 'LivingLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Kitchen/Mask group (2).png",
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen2.jpg",
             title: "អំពូលផ្ទះបាយ",
             price: 19.99,
             category: 'kitchenLighting'
@@ -182,109 +179,121 @@
             category: 'WallLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Kitchen/Mask group (3).png",
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen3.jpg",
             title: "អំពូលផ្ទះបាយ",
             price: 19.99,
             category: 'kitchenLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Kitchen/Mask group (4).png",
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen4.jpg",
             title: "អំពូលផ្ទះបាយ",
             price: 19.99,
             category: 'kitchenLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Kitchen/Mask group (5).png",
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen5.jpg",
             title: "អំពូលផ្ទះបាយ",
             price: 19.99,
             category: 'kitchenLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Kitchen/Mask group (6).png",
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen6.jpg",
             title: "អំពូលផ្ទះបាយ",
             price: 19.99,
             category: 'kitchenLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Kitchen/Mask group (7).png",
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen7.jpg",
             title: "អំពូលផ្ទះបាយ",
             price: 19.99,
             category: 'kitchenLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Kitchen/Mask group (8).png",
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen8.jpg",
             title: "អំពូលផ្ទះបាយ",
             price: 19.99,
             category: 'kitchenLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Kitchen/Mask group (9).png",
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen9.jpg",
             title: "អំពូលផ្ទះបាយ",
             price: 19.99,
             category: 'kitchenLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Kitchen/Mask group (10).png",
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen10.jpg",
             title: "អំពូលផ្ទះបាយ",
             price: 19.99,
             category: 'kitchenLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Kitchen/Mask group (11).png",
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen12.jpg",
             title: "អំពូលផ្ទះបាយ",
             price: 19.99,
             category: 'kitchenLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Kitchen/Mask group (12).png",
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen14.jpg",
             title: "អំពូលផ្ទះបាយ",
             price: 19.99,
             category: 'kitchenLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Living room/Mask group (1).png",
+            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom1.jpg",
             title: "បន្ទប់ទទួលភ្ញៀវ",
             price: 99.99,
             category: 'LivingLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Living room/Mask group (2).png",
+            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom2.jpg",
             title: "បន្ទប់ទទួលភ្ញៀវ",
             price: 99.99,
             category: 'LivingLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Living room/Mask group (3).png",
+            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom3.jpg",
             title: "បន្ទប់ទទួលភ្ញៀវ",
             price: 99.99,
             category: 'LivingLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Living room/Mask group (4).png",
+            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom4.jpg",
             title: "បន្ទប់ទទួលភ្ញៀវ",
             price: 99.99,
             category: 'LivingLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Living room/Mask group (5).png",
+            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom5.jpg",
             title: "បន្ទប់ទទួលភ្ញៀវ",
             price: 99.99,
             category: 'LivingLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Living room/Mask group (6).png",
+            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom6.jpg",
             title: "បន្ទប់ទទួលភ្ញៀវ",
             price: 99.99,
             category: 'LivingLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Living room/Mask group (7).png",
+            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom7.jpg",
             title: "បន្ទប់ទទួលភ្ញៀវ",
             price: 99.99,
             category: 'LivingLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Living room/Mask group (8).png",
+            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom8.jpg",
+            title: "បន្ទប់ទទួលភ្ញៀវ",
+            price: 99.99,
+            category: 'LivingLighting'
+        },
+        {
+            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom9.jpg",
+            title: "បន្ទប់ទទួលភ្ញៀវ",
+            price: 99.99,
+            category: 'LivingLighting'
+        },
+        {
+            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom10.jpg",
             title: "បន្ទប់ទទួលភ្ញៀវ",
             price: 99.99,
             category: 'LivingLighting'
@@ -296,163 +305,175 @@
             category: 'TableLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/On Table/Mask group (2).png",
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table1.jpg",
             title: "អំពូលលើតុ",
             price: 100.99,
             category: 'TableLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/On Table/Mask group (3).png",
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table2.jpg",
             title: "អំពូលលើតុ",
             price: 100.99,
             category: 'TableLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/On Table/Mask group (4).png",
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table3.jpg",
             title: "អំពូលលើតុ",
             price: 100.99,
             category: 'TableLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/On Table/Mask group (5).png",
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table4.jpg",
             title: "អំពូលលើតុ",
             price: 100.99,
             category: 'TableLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/On Table/Mask group (6).png",
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table5.jpg",
             title: "អំពូលលើតុ",
             price: 100.99,
             category: 'TableLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/On Table/Mask group (7).png",
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table6.jpg",
             title: "អំពូលលើតុ",
             price: 100.99,
             category: 'TableLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/On Table/Mask group (8).png",
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table7.jpg",
             title: "អំពូលលើតុ",
             price: 100.99,
             category: 'TableLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/On Table/Mask group (9).png",
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table8.jpg",
             title: "អំពូលលើតុ",
             price: 100.99,
             category: 'TableLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/On Table/Mask group (10).png",
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table9.jpg",
             title: "អំពូលលើតុ",
             price: 100.99,
             category: 'TableLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/On Table/Mask group (11).png",
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table10.jpg",
             title: "អំពូលលើតុ",
             price: 100.99,
             category: 'TableLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/On Table/Mask group (12).png",
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table11.jpg",
             title: "អំពូលលើតុ",
             price: 100.99,
             category: 'TableLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/On Table/Mask group (13).png",
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table12.jpg",
             title: "អំពូលលើតុ",
             price: 100.99,
             category: 'TableLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Wall/Mask group (1).png",
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table13.jpg",
+            title: "អំពូលលើតុ",
+            price: 100.99,
+            category: 'TableLighting'
+        },
+        {
+            href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 99.99,
             category: 'WallLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Wall/Mask group (2).png",
+            href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall1.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 99.99,
             category: 'WallLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Wall/Mask group (3).png",
+            href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall2.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 99.99,
             category: 'WallLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Wall/Mask group (4).png",
+            href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall3.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
             category: 'WallLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Wall/Mask group (5).png",
+            href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall4.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
             category: 'WallLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Wall/Mask group (6).png",
+            href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall5.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
             category: 'WallLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Wall/Mask group (7).png",
+            href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall6.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
             category: 'WallLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Wall/Mask group (8).png",
+            href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall7.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
             category: 'WallLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Wall/Mask group (9).png",
+            href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall8.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
             category: 'WallLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Wall/Mask group (10).png",
+            href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall9.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
             category: 'WallLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Wall/Mask group (11).png",
+            href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall10.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
             category: 'WallLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Wall/Mask group (12).png",
+            href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall11.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
             category: 'WallLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Wall/Mask group (13).png",
+            href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall12.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
             category: 'WallLighting'
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Wall/Mask group (14).png",
+            href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall13.jpg",
+            title: "អំពូលតាមជញ្ជាំង",
+            price: 159.99,
+            category: 'WallLighting'
+        },
+        {
+            href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall14.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
             category: 'WallLighting'
         },
     ]);
-    
+
     watch([isKitchen, isLivingRoom, isTableLighting, isWallLighting], () => {
         isAll.value = !isKitchen.value && !isLivingRoom.value && !isTableLighting.value && !isWallLighting.value;
         currentPage.value = 1;
