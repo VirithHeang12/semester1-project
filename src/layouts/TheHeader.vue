@@ -168,10 +168,6 @@
 
     const items = [
         {
-            title: 'ទំព័រដើម',
-            to: 'home'
-        },
-        {
             title: 'បន្ទប់គេង',
             to: "bedroom"
         },
