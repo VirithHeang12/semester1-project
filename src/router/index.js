@@ -20,6 +20,11 @@ const router = createRouter({
 		component: () => import('../views/page/contact/ContactView.vue')
 	},
     {
+        path: '/wishlist',
+        name: 'wishlist',
+        component: () => import('../views/page/wishlist/WishListView.vue')
+    },
+    {
         path: '/categories',
         name: 'categories',
         children: [
@@ -58,6 +63,7 @@ const router = createRouter({
                 name: 'add to cart',
                 component: () => import('../views/page/addToCart/AddToCartView.vue')
             }
+
         ],
     },
 	{
@@ -71,11 +77,6 @@ const router = createRouter({
 				name: 'login',
 				component: () => import('../views/page/authentication/LoginView.vue')
 			},
-			{
-				path: 'register',
-				name: 'register',
-				component: () => import('../views/page/authentication/RegisterView.vue')
-			}
 		]	
 	},
     {

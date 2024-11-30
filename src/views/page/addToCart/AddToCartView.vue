@@ -1,5 +1,5 @@
 <template>
-    <div class="py-12 px-4">
+    <div class="py-8 px-4">
         <v-container>
             <div class="flex flex-col lg:flex-row gap-6">
                 <div class="flex-1 bg-white p-4 rounded">
@@ -126,26 +126,31 @@ export default {
                 {
                     name: "ផើងផ្កា",
                     description: "កំណត់ៈ ពណ៌ត្នោត",
-                    price: 20.00,
+                    price: 20.0,
                     quantity: 1,
-                    imagePath: "https://i.pinimg.com/474x/80/e1/e4/80e1e4e666b3f3035531d4c79d584faa.jpg"
+                    imagePath:
+                        "https://i.pinimg.com/474x/80/e1/e4/80e1e4e666b3f3035531d4c79d584faa.jpg",
                 },
                 {
                     name: "អំពូល",
                     description: "កំណត់ៈ ពណ៌ផ្កាឈូក",
-                    price: 15.00,
+                    price: 15.0,
                     quantity: 1,
-                    imagePath: "https://i.pinimg.com/736x/0d/ae/0a/0dae0a9c97cc66e845e4dd1c49395462.jpg"
+                    imagePath:
+                        "https://i.pinimg.com/736x/0d/ae/0a/0dae0a9c97cc66e845e4dd1c49395462.jpg",
                 },
             ],
-            shipping: 10.00,
+            shipping: 10.0,
             tax: 0,
             discount: 0,
         };
     },
     computed: {
         subtotal() {
-            return this.cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+            return this.cartItems.reduce(
+                (acc, item) => acc + item.price * item.quantity,
+                0
+            );
         },
         total() {
             return this.subtotal + this.shipping + this.tax - this.discount;
@@ -162,7 +167,6 @@ export default {
         },
     },
 };
-
-const mainElement = document.querySelector('main.v-main.container');
+const mainElement = document.querySelector('main.v-main.mt-4');
    mainElement.classList.add('bg-primary-50');
 </script>
