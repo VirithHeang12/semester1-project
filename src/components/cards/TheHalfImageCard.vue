@@ -1,26 +1,35 @@
 <template>
-    <figure class="grid grid-cols-1 min-w-[280px]">
-        <div class="w-fit relative">
-            <img :src="href" :alt="title">
+    <figure class="grid grid-cols-1 bg-primary-50 pb-2 min-[960px]:grid-cols-10">
+        <div class="relative mb-2 min-[960px]:col-span-6">
+            <img :src="href" :alt="title" class="w-[240px]">
             <slot name="top-right">
-                <the-detail-link
-                    class="absolute top-11 right-2 min-[350px]:top-11 min-[380px]:top-6 min-[410px]:top-4 lg:top-8 lg:right-2 min-[1100px]:top-6 min-[1100px]:right-2 xl:top-2 xl:right-2"></the-detail-link>
+                <heart-svg class="absolute top-2 right-2"></heart-svg>
             </slot>
         </div>
 
-        <div class="flex flex-col">
+        <div class="flex flex-col mx-2 min-[960px]:col-span-4">
             <slot name="title">
-                <p class="">
+                <p class="-mb-1 min-[960px]:mt-2">
                     {{ title }}</p>
             </slot>
 
             <slot name="subtitle">
-                <p class="">
-                    {{ price }}</p>
+                <p class="text-[0.6rem]">
+                    ${{ price }}</p>
             </slot>
 
+            <p class="flex flex-col gap-y-[1.5px] mb-2">
+                <span class="h-1 bg-primary-100 rounded-lg"></span>
+                <span class="h-1 bg-primary-100 rounded-lg"></span>
+                <span class="h-1 bg-primary-100 rounded-lg"></span>
+                <span class="h-1 bg-primary-100 rounded-lg"></span>
+                <span class="h-1 w-1/2 bg-primary-100 rounded-lg"></span>
+            </p>
+
             <slot name="button">
-                <the-detail-link class=""></the-detail-link>
+                <button class="bg-primary-800 text-white text-[0.6rem] rounded-lg min-[960px]:mt-auto min-[960px]:mb-3">
+                    {{ action }}
+                </button>
             </slot>
         </div>
     </figure>
@@ -28,6 +37,8 @@
 
 <script setup>
     import { defineProps } from 'vue';
+
+    import HeartSvg from '@/assets/svgs/general/heart.svg';
 
     defineProps({
         href: {
@@ -41,6 +52,10 @@
         price: {
             type: Number,
             default: 40.99,
+        },
+        action: {
+            type: String,
+            default: 'ចូលកន្រ្តក',
         },
     });
 </script>
