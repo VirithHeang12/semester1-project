@@ -135,7 +135,7 @@
                     </v-card-actions>
                     <v-card-text>
                         <v-list class="grid grid-cols-2">
-                            <v-list-item v-for="(item, i) in items" :key="i">
+                            <v-list-item v-for="(item, i) in itemsMobile" :key="i">
                                 <v-btn @click="clickCallback(item.to)" elevation="0" class="w-full flex justify-start">
                                     <v-list-item-title class="flex justify-start text-left">
                                         <span class="tracking-tighter">{{ item.title }}</span>
@@ -167,6 +167,37 @@
     const themeStore = useThemeStore();
 
     const items = [
+        {
+            title: 'ទំព័រដើម',
+            to: 'home'
+        },
+        {
+            title: 'បន្ទប់គេង',
+            to: "bedroom"
+        },
+        {
+            title: 'បន្ទប់ទទួលភ្ញៀវ',
+            to: "livingroom"
+        },
+        {
+            title: 'ការិយាល័យ',
+            to: "office"
+        },
+        {
+            title: 'ផ្នែកខាងក្រៅ',
+            to: "outdoor"
+        },
+        {
+            title: 'អំពូលភ្លើង',
+            to: "lighting"
+        },
+        {
+            title: 'ផ្ទះបាយ',
+            to: "kitchen"
+        },
+    ];
+
+    const itemsMobile = [
         {
             title: 'ទំព័រដើម',
             to: 'home'
