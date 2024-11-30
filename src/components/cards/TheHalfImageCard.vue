@@ -1,15 +1,15 @@
 <template>
-    <figure class="grid grid-cols-1 bg-primary-50 pb-2">
-        <div class="relative mb-2">
+    <figure class="grid grid-cols-1 bg-primary-50 pb-2 min-[960px]:grid-cols-10">
+        <div class="relative mb-2 min-[960px]:col-span-6">
             <img :src="href" :alt="title" class="w-[240px]">
             <slot name="top-right">
                 <heart-svg class="absolute top-2 right-2"></heart-svg>
             </slot>
         </div>
 
-        <div class="flex flex-col mx-2">
+        <div class="flex flex-col mx-2 min-[960px]:col-span-4">
             <slot name="title">
-                <p class="-mb-1">
+                <p class="-mb-1 min-[960px]:mt-2">
                     {{ title }}</p>
             </slot>
 
@@ -27,7 +27,7 @@
             </p>
 
             <slot name="button">
-                <button class="bg-primary-800 text-white text-[0.6rem] rounded-lg">
+                <button class="bg-primary-800 text-white text-[0.6rem] rounded-lg min-[960px]:mt-auto min-[960px]:mb-3">
                     {{ action }}
                 </button>
             </slot>

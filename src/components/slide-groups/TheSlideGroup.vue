@@ -1,7 +1,8 @@
 <template>
     <v-row v-if="!displayStore.isMobile">
-        <v-container fluid class="flex justify-between">
-            <v-card cols="12" md="3" elevation="0" data-aos="fade-right">
+        <v-container fluid class="grid grid-cols-10 gap-x-2">
+            <v-card class="col-span-3 min-[900px]:col-span-3 min-[1000px]:col-span-2" cols="12" md="3" elevation="0"
+                data-aos="fade-right">
                 <v-tabs v-model="tab" color="black" direction="vertical">
                     <v-tab v-for="tab in tabItems" :prepend-icon="tab.icon" :value="tab.value" :key="tab.value"
                         :selected-class="'bg-grey-darken-1 text-white'">
@@ -10,7 +11,8 @@
                 </v-tabs>
             </v-card>
 
-            <v-card cols="12" md="9" elevation="0" class="flex-grow-1" :max-width="950" data-aos="fade-left">
+            <v-card cols="12" md="9" elevation="0" class="col-span-7 min-[900px]:col-span-7 min-[1000px]:col-span-8"
+                :max-width="950" data-aos="fade-left">
                 <v-tabs-window v-model="tab" class="h-full w-full">
                     <v-tabs-window-item class="h-full" v-for="tabItem in tabItems" :value="tabItem.value"
                         :key="tabItem.value">

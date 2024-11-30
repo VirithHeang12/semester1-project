@@ -1,6 +1,7 @@
 <template>
-    <figure class="flex flex-col align-center justify-center max-w-fit max-h-fit relative">
-        <svg width="220" height="310" viewBox="0 0 347 310" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <figure class="flex flex-col align-center justify-center relative">
+        <svg class="w-[220px] min-[360px]:w-[260px] min-[500px]:w-[280px] min-[600px]:w-[300px] min-[960px]:w-[270px]"
+            height="310" viewBox="0 0 347 310" fill="none" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>
                 <clipPath id="chair">
@@ -13,16 +14,17 @@
         </svg>
 
         <slot name="top-right">
-            <heart-svg class="absolute top-16 right-2"></heart-svg>
+            <heart-svg
+                class="absolute top-16 right-2 min-[360px]:top-12 min-[500px]:top-10 min-[600px]:top-8 min-[960px]:top-10"></heart-svg>
         </slot>
 
         <p
-            class="w-[2.5rem] h-[2.5rem] absolute bottom-[5.7rem] right-[2px] min-[380px]:right-1 bg-stone-600 rounded-[1rem] flex justify-center align-center">
+            class="w-[2.5rem] h-[2.5rem] min-[500px]:w-[2.8rem] min-[500px]:h-[2.8rem] min-[960px]:w-[3rem] min-[960px]:h-[3rem] absolute bottom-[5.7rem] right-[2px] min-[360px]:bottom-[5rem] min-[360px]:right-2 min-[500px]:bottom-[4.4rem] min-[600px]:bottom-[4.2rem] min-[960px]:bottom-[4.5rem] min-[960px]:right-1 bg-stone-600 rounded-[1rem] flex justify-center align-center">
             <slot name="bottom-right">
                 <cart-svg></cart-svg>
             </slot>
         </p>
-        <v-card class="absolute w-full bottom-6 flex justify-between px-3" :elevation="0">
+        <v-card class="absolute w-full bottom-6 min-[570px]:bottom-3 flex justify-between px-3" :elevation="0">
             <v-row class="flex items-center justify-between bg-gray-100 p-2 rounded-3xl">
                 <v-col cols="6">
                     <h3 class="text-center font-medium text-gray-700 text-[0.8rem]">
