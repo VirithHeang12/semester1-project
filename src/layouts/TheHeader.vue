@@ -162,7 +162,7 @@
     const router = useRouter();
     const display = useDisplay();
 
-    const isMobile = computed(() => display.xs.value);
+    const isMobile = computed(() => display.width.value < 800);
 
     const themeStore = useThemeStore();
 

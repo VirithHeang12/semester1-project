@@ -4,7 +4,7 @@ import { useDisplay } from 'vuetify/lib/framework.mjs';
 
 export const useDisplayStore = defineStore('display', () => {
     const display = useDisplay();
-    const isMobile = computed(() => display.xs.value);
+    const isMobile = computed(() => display.width.value < 800);
 
     return { isMobile };
 })

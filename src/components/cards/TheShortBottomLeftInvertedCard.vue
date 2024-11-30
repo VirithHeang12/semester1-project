@@ -15,13 +15,13 @@
 
         <slot name="bottom-left">
             <p
-                class="absolute text-[0.9rem] bottom-12 left-2 min-[350px]:bottom-8 min-[350px]:left-2 min-[380px]:bottom-6 min-[410px]:bottom-4 min-[410px]:left-5 lg:bottom-6 lg:left-1 xl:bottom-3 xl:left-3 text-gray-700 min-[350px]:text-[1.2rem] lg:text-[1.3rem] xl:text-[1.4rem] font-bold">
+                class="absolute text-[0.9rem] bottom-12 left-2 min-[350px]:bottom-8 min-[350px]:left-2 min-[380px]:bottom-6 min-[410px]:bottom-4 min-[410px]:left-5 lg:bottom-6 lg:left-1 min-[960px]:bottom-9 min-[960px]:left-0 min-[1180px]:bottom-2 xl:bottom-3 xl:left-3 text-gray-700 min-[350px]:text-[1.2rem] lg:text-[1.3rem] xl:text-[1.4rem] font-bold">
                 {{ title }}</p>
         </slot>
 
         <slot name="top-right">
             <the-detail-link
-                class="absolute top-14 right-3 min-[350px]:top-10 min-[380px]:top-8 min-[410px]:top-6 lg:top-8 lg:right-3 min-[1100px]:top-6 min-[1100px]:right-3 xl:top-3 xl:right-3"></the-detail-link>
+                class="absolute top-14 right-3 min-[350px]:top-10 min-[380px]:top-8 min-[410px]:top-6 lg:top-8 lg:right-3 min-[960px]:top-10 min-[960px]:right-2 min-[1100px]:top-6 min-[1100px]:right-3 xl:top-3 xl:right-3"></the-detail-link>
         </slot>
     </figure>
 </template>

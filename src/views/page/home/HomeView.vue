@@ -9,15 +9,14 @@
         </v-container>
 
         <v-container class="mt-5 px-0 py-0" :max-width="1200">
-
             <div class="mb-24 min-[350px]:mb-32 xl:mb-28">
                 <h2 data-aos="fade-down" data-aos-delay="300"
                     class="text-center mb-0 font-bold  text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem] min-[380px]:mb-20 lg:mb-8 xl:mb-16 lg:mt-20 xl:mt-24">
                     ប្រភេទគ្រឿងសង្ហារឹម</h2>
                 <v-container fluid>
                     <v-row>
-                        <v-col cols="12" md="4"
-                            class="-mb-20 min-[350px]:-mb-10 min-[380px]:-mb-6 flex flex-col min-[350px]:gap-y-1 min-[380px]:gap-y-10">
+                        <v-col cols="12" :md="4"
+                            class="-mb-20 min-[350px]:-mb-10 min-[380px]:-mb-6 flex flex-col min-[350px]:gap-y-1 min-[380px]:gap-y-10 min-[960px]:gap-y-0 min-[1100px]:gap-y-14">
                             <v-card :elevation="0" class="bg-transparent -mb-8 min-[350px]:-mb-4" data-aos="fade-right">
                                 <router-link to="#">
                                     <the-long-top-left-inverted-card class="mx-auto"></the-long-top-left-inverted-card>
@@ -32,7 +31,8 @@
                             </v-card>
                         </v-col>
                         <v-col cols="12" md="4" class="-mb-20 flex flex-col min-[350px]:-mb-16 min-[380px]:-mb-6">
-                            <v-card elevation="0" class="bg-transparent -mb-24 min-[350px]:-mb-20 min-[380px]:-mb-12"
+                            <v-card elevation="0"
+                                class="bg-transparent -mb-24 min-[350px]:-mb-20 min-[380px]:-mb-12 min-[960px]:-mb-24 min-[1100px]:-mb-12"
                                 data-aos="fade-down">
                                 <router-link to="#">
                                     <the-top-left-bottom-right-inverted-card
@@ -47,7 +47,9 @@
                             </v-card>
                         </v-col>
                         <v-col cols="12" md="4" class="-mb-20 flex flex-col">
-                            <v-card elevation="0" class="bg-transparent -mb-8 min-[380px]:mb-6" data-aos="fade-left">
+                            <v-card elevation="0"
+                                class="bg-transparent -mb-8 min-[380px]:mb-6 min-[960px]:-mb-6 min-[1100px]:mb-10"
+                                data-aos="fade-left">
                                 <router-link to="#">
                                     <the-short-top-left-inverted-card
                                         class="mx-auto"></the-short-top-left-inverted-card>
@@ -66,11 +68,11 @@
 
             <div class="mb-16">
                 <v-col cols="12"
-                    class="flex flex-col align-center gap-y-6 min-[600px]:flex min-[600px]:flex-row min-[600px]:justify-between"
+                    class="grid grid-cols-1 justify-items-center gap-y-10 gap-x-5 min-[620px]:grid-cols-2 min-[870px]:grid-cols-3"
                     data-aos="fade-down">
                     <the-featured-in-card class="bg-gray-100" v-for="featuredInItem in featuredInItems"
                         :key="featuredInItem.title" :title="featuredInItem.title"
-                        :description="featuredInItem.description">
+                        :description="featuredInItem.description" :class="featuredInItem.class">
                         <template v-slot:default>
                             <v-btn :size="75" :ripple="false" :elevation="0" :rounded="true">
                                 <v-icon size="50">{{ featuredInItem.icon }}</v-icon>
@@ -83,14 +85,14 @@
             <div class="mb-12">
                 <v-col cols="12">
                     <h2 data-aos="fade-down"
-                        class="mb-4 font-bold text-center min-[600px]:text-left text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
+                        class="mb-4 font-bold text-center min-[800px]:text-left text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
                         ផលិតផលប្រចាំខែ</h2>
                     <the-slide-group :tab-items="tabItems"></the-slide-group>
                 </v-col>
             </div>
 
 
-            <div class="mb-24">
+            <div class="mb-4">
                 <v-container fluid>
                     <h2 data-aos="fade-down" data-aos-delay="300"
                         class="text-center  text-gray-700 mb-2 font-bold text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
@@ -126,13 +128,13 @@
                     </v-row>
                 </v-container>
             </div>
-            <div class="-mb-32">
+            <div class="mb-20">
                 <v-container fluid>
                     <v-row>
                         <v-col cols="12" md="12">
-                            <v-card :elevation="0" class="-mt-20">
+                            <v-card :elevation="0">
                                 <p data-aos="fade-down"
-                                    class="flex justify-center -mb-36 text-gray-700 text-[1rem] font-bold">
+                                    class="flex justify-center text-gray-700 text-[1rem] min-[600px]:text-[1.3rem] min-[870px]:text-[1.8rem] min-[600px]:-mb-4 font-bold">
                                     Timeless Design</p>
                                 <the-middle-top-inverted-card data-aos="fade-up"></the-middle-top-inverted-card>
                             </v-card>
@@ -140,24 +142,25 @@
                     </v-row>
                 </v-container>
             </div>
-            <div>
+            <div class="mb-20">
                 <v-card :elevation="0" class="mx-0">
-                    <div class="flex flex-col align-center gap-y-40">
-                        <the-small-slide-group></the-small-slide-group>
-                        <v-img class="w-80 h-80" src="lamp_with_flower.png" alt="Lamp with flower"></v-img>
+                    <div class="grid grid-cols-1 justify-items-center gap-y-24 gap-x-4 min-[960px]:grid-cols-10">
+                        <the-small-slide-group class="min-[960px]:col-span-7"></the-small-slide-group>
+                        <v-img class="w-80 h-80 min-[960px]:col-span-3" src="lamp_with_flower.png"
+                            alt="Lamp with flower"></v-img>
                     </div>
                 </v-card>
             </div>
             <div class="mb-0">
                 <v-container>
                     <h2 data-aos="fade-down" data-aos-delay="300"
-                        class="text-center font-bold text-gray-700 text-[1rem] mb-10">
+                        class="text-center mb-10 font-bold  text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem] min-[380px]:mb-20 lg:mb-8 xl:mb-16 lg:mt-20 xl:mt-24">
                         សំណួរតែងត្រូវបានសួរ</h2>
                     <v-row class="flex">
                         <v-col cols="12" md="6" class="flex flex-col justify-center" data-aos="fade-right">
                             <v-expansion-panels :elevation="0">
                                 <v-expansion-panel v-for="(expansionItem, i) in expansionItems" :key="i">
-                                    <v-expansion-panel-title class="py-4" :style="{ fontSize: '0.9rem' }">
+                                    <v-expansion-panel-title class="py-4 expansion-panel-title-style">
                                         {{ expansionItem.title }}
                                     </v-expansion-panel-title>
                                     <v-expansion-panel-text class="text-[0.8rem]">
@@ -437,20 +440,52 @@
         {
             title: 'រចនាស្របតាមតម្រូវការ',
             description: 'គ្រឿងសង្ហារឹមដែលស្របតាមតម្រូវការរបស់អ្នក',
-            icon: 'mdi-table-furniture'
+            icon: 'mdi-table-furniture',
+            class: 'first'
         },
         {
             title: 'ប្រើប្រាស់បានរយៈពេលយូរ',
             description: 'គ្រឿងសង្ហារឹមដែលមានវត្ថុធាតុដើមគុណភាពខ្ពស់',
-            icon: 'mdi-all-inclusive'
+            icon: 'mdi-all-inclusive',
+            class: 'second'
         },
         {
             title: 'ស្នាដែកូនខ្មែរ',
             description: 'គ្រឿងសង្ហារឹមដែលកើតចេញពីស្នាដែកូនខ្មែរ១០០%',
-            icon: 'mdi-account-group'
+            icon: 'mdi-account-group',
+            class: 'third'
         }
     ]
 
 </script>
 
-<style scoped></style>
+<style scoped>
+    @media (min-width: 620px) {
+        .third {
+            grid-column: span 2;
+            justify-self: center;
+        }
+    }
+
+    @media (min-width: 870px) {
+        .third {
+            grid-column: span 1;
+        }
+    }
+
+    @media (min-width: 620px) {
+        .expansion-panel-title-style {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+
+    @media (min-width: 870px) {
+        .expansion-panel-title-style {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+    }
+
+
+</style>
