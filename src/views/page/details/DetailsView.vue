@@ -66,8 +66,9 @@
 
                 <!-- Buttons -->
                 <div class="flex gap-4 flex-col sm:flex-row">
-                    <button
-                        class="btn btn-dark bg-primary-800 rounded-[10px] text-primary-50 px-9 py-2">បញ្ជាទិញ</button>
+                    <button class="btn btn-dark bg-primary-800 rounded-[10px] text-primary-50 px-9 py-2"
+                        @click="toggleModal"><a role="button" href="#payModal" data-bs-toggle="modal"
+                            @click.prevent="openPaymentModal">បញ្ជាទិញ</a></button>
                     <button id="btn-add-to-cart"
                         class="btn flex gap-2 border-primary-800 hover:bg-primary-800 hover:text-primary-50 outline-primary-700 rounded-[10px] text-primary-700 px-6 py-2">
                         <svg width="19" height="19" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -180,6 +181,9 @@
             </v-col>
         </v-row>
     </v-container>
+
+    <ThePaymentForm ref="paymentModalRef" />
+
 </template>
 
 <script setup>
@@ -189,7 +193,15 @@
     import { initFlowbite } from 'flowbite';
     import { useRoute } from 'vue-router';
 
+    import ThePaymentForm from '@/components/modals/ThePaymentForm.vue';
+
     const route = useRoute();
+
+    const paymentModalRef = ref(null);
+
+    const openPaymentModal = () => {
+        paymentModalRef.value.openModal();
+    };
 
     onMounted(() => {
         initFlowbite();
@@ -211,6 +223,10 @@
             title: "Sofa",
         },
     ];
+
+    const show = ref(false);
+
+    const toggleModal = () => show.value = !show.value;
 
     // handle color selection
     const colors = ['#AC9C8C', '#97AC8C', '#8C99AC', '#887E7E'];
