@@ -11,9 +11,9 @@
           </v-col>
         </v-row>
         <v-row>
-          <v-col cols="12" md="3" data-aos="fade-right">
+          <v-col cols="12" md="4" lg="3" data-aos="fade-right">
             <v-list lines="one" select-strategy="leaf">
-              <v-list-subheader class="mt-[-20px]">ប្រភេទសម្ភារៈ ក្នុងបន្ទប់ទទួលភ្ញៀវ</v-list-subheader>
+              <v-list-subheader class="!text-[20px] !font-semibold mb-4">ប្រភេទសម្ភារៈ </v-list-subheader>
               <v-list-item v-for="item in sidebarItems" :key="`sidebar-item-${item.id}`" :title="item.title"
                 @click="toggleCategory(item.id)">
                 <template v-slot:prepend>
@@ -23,17 +23,23 @@
             </v-list>
             <v-container>
               <p class="mt-[20px] mb-[30px] text-primary-800">Filter By Price</p>
-              <v-range-slider v-model="priceRange" class="w-full" thumb-label="always" :min="50" :max="800"></v-range-slider>
+              <v-range-slider v-model="priceRange" class="w-full" thumb-label="always" :min="20"
+                :max="800"></v-range-slider>
             </v-container>
           </v-col>
-          <v-col cols="12" md="9">
+          <v-col cols="12" md="8" lg="9">
             <v-row>
-              <v-col cols="12" sm="6" md="4" v-for="(card, index) in filteredProducts" :key="`product-card-${index}`"
+              <v-col cols="12" sm="6" md="4" v-for="(card, index) in paginatedProductCards" :key="`product-card-${index}`"
                 data-aos="fade-up" :data-aos-delay="index * 100">
-                <a href="#!">
+                <a href="#">
                   <the-category-card :title="card.title" :price="card.price" :href="card.href"></the-category-card>
                 </a>
               </v-col>
+            </v-row>
+            <v-row class="justify-content-center">
+              <!-- Pagination Controls -->
+              <v-pagination v-model="currentPage" :length="totalPages" total-visible="5" color="primary-800"
+                class="mt-4" />
             </v-row>
           </v-col>
 
@@ -41,7 +47,7 @@
       </v-container>
     </div>
     <v-sheet class="mx-auto" elevation="0" data-aos="fade-in">
-      <h2 class="text-lg font-bold">អ្នកប្រហែលជាចូលចិត្ត</h2>
+      <h2 class=" font-bold text-[32px] text-primary-700">អ្នកប្រហែលជាចូលចិត្ត</h2>
       <v-slide-group class="pa-4" selected-class="bg-success" show-arrows>
         <v-slide-group-item v-for="(cartrecom, n) in cartRecom" :key="`cart-recom-${n}`">
           <the-recommendation-card :src="cartrecom.src" :title="cartrecom.title"></the-recommendation-card>
@@ -60,15 +66,15 @@ import { ref, computed } from "vue";
 // Data for carousel
 const carouselItems = ref([
   {
-    src: "/slide-groups/livingrooms/livingroom-9.jpg",
+    src: "/slide-groups/livingrooms/livingroom-10.png",
     lazySrc: "/thumbnails/bedroom-6.jpg",
   },
   {
-    src: "/slide-groups/livingrooms/livingroom-11.jpg",
+    src: "/slide-groups/livingrooms/livingroom-11.png",
     lazySrc: "/thumbnails/bedroom-1.jpg",
   },
   {
-    src: "/slide-groups/livingrooms/livingroom-12.jpg",
+    src: "/slide-groups/livingrooms/living-room-banner.png",
     lazySrc: "/thumbnails/bedroom-2.jpg",
   },
 ]);
@@ -142,7 +148,6 @@ const cartRecom = ref([
 
 // Product cards
 const productCards = ref([
-  // Tables
   {
     href: "/Living room Category/Living room (Original)/Table/l-table1.jpg",
     title: "តុឈើ",
@@ -150,18 +155,10 @@ const productCards = ref([
     category: "table",
   },
   {
-    href: "/Living room Category/Living room (Original)/Table/l-table2.jpg",
-    title: "តុឈើ",
-    price: 209.99,
-    category: "table",
-  },
-
-  // Wall
-  {
-    href: "/Living room Category/Living room (Original)/Wall/pic-1.jpg",
-    title: "ផ្ទាំងលំអ",
-    price: 120.99,
-    category: "wall",
+    href: "/Living room Category/Living room (Original)/Vase/d-vase9.jpg",
+    title: "ថូផ្កា",
+    price: 99.99,
+    category: "vase",
   },
   {
     href: "/Living room Category/Living room (Original)/Wall/pic-10.jpg",
@@ -169,12 +166,17 @@ const productCards = ref([
     price: 119.99,
     category: "wall",
   },
-  //vase
   {
-    href: "/Living room Category/Living room (Original)/Vase/d-vase9.jpg",
-    title: "ថូផ្កា",
-    price: 99.99,
-    category: "vase",
+    href: "/Living room Category/Living room (Original)/Table/l-table2.jpg",
+    title: "តុឈើ",
+    price: 209.99,
+    category: "table",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Wall/pic-1.jpg",
+    title: "ផ្ទាំងលំអ",
+    price: 120.99,
+    category: "wall",
   },
   {
     href: "/Living room Category/Living room (Original)/Vase/d-vase3.jpg",
@@ -182,7 +184,6 @@ const productCards = ref([
     price: 89.99,
     category: "vase",
   },
-  //shelf
   {
     href: "/Living room Category/Living room (Original)/Shelf/pic-2.jpg",
     title: "ធ្នើរជាប់ជញ្ជាំង",
@@ -190,18 +191,169 @@ const productCards = ref([
     category: "shelf",
   },
   {
+    href: "/Living room Category/Living room (Original)/Table/l-table11.jpg",
+    title: "តុឈើ",
+    price: 339.99,
+    category: "table",
+  },
+  {
     href: "/Living room Category/Living room (Original)/Shelf/pic-6.jpg",
     title: "ធ្នើរជាប់ជញ្ជាំង",
     price: 219.99,
     category: "shelf",
   },
+  {
+    href: "/Living room Category/Living room (Original)/Table/l-table3.jpg",
+    title: "តុឈើ",
+    price: 339.99,
+    category: "table",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Table/l-table4.jpg",
+    title: "តុឈើ",
+    price: 369.99,
+    category: "table",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Wall/pic-2.jpg",
+    title: "ផ្ទាំងលំអ",
+    price: 160.99,
+    category: "wall",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Vase/d-vase1.jpg",
+    title: "ថូផ្កា",
+    price: 59.99,
+    category: "vase",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Vase/d-vase2.jpg",
+    title: "ថូផ្កា",
+    price: 79.99,
+    category: "vase",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Shelf/pic-1.jpg",
+    title: "ធ្នើរជាប់ជញ្ជាំង",
+    price: 105.99,
+    category: "shelf",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Wall/pic-3.jpg",
+    title: "ផ្ទាំងលំអ",
+    price: 130.99,
+    category: "wall",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Wall/pic-4.jpg",
+    title: "ផ្ទាំងលំអ",
+    price: 166.99,
+    category: "wall",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Wall/pic-5.jpg",
+    title: "ផ្ទាំងលំអ",
+    price: 126.99,
+    category: "wall",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Vase/d-vase4.jpg",
+    title: "ថូផ្កា",
+    price: 69.99,
+    category: "vase",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Vase/d-vase5.jpg",
+    title: "ថូផ្កា",
+    price: 89.99,
+    category: "vase",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Shelf/pic-3.jpg",
+    title: "ធ្នើរជាប់ជញ្ជាំង",
+    price: 305.55,
+    category: "shelf",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Shelf/pic-4.jpg",
+    title: "ធ្នើរជាប់ជញ្ជាំង",
+    price: 205.98,
+    category: "shelf",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Wall/pic-7.jpg",
+    title: "ផ្ទាំងលំអ",
+    price: 176.99,
+    category: "wall",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Wall/pic-8.png",
+    title: "ផ្ទាំងលំអ",
+    price: 166.99,
+    category: "wall",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Wall/pic-9.jpg",
+    title: "ផ្ទាំងលំអ",
+    price: 136.99,
+    category: "wall",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Vase/d-vase7.jpg",
+    title: "ថូផ្កា",
+    price: 69.99,
+    category: "vase",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Vase/d-vase8.jpg",
+    title: "ថូផ្កា",
+    price: 79.99,
+    category: "vase",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Wall/pic-11.jpg",
+    title: "ផ្ទាំងលំអ",
+    price: 176.99,
+    category: "wall",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Wall/pic-14.jpg",
+    title: "ផ្ទាំងលំអ",
+    price: 226.99,
+    category: "wall",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Wall/pic-15.jpg",
+    title: "ផ្ទាំងលំអ",
+    price: 236.99,
+    category: "wall",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Shelf/pic-4.jpg",
+    title: "ធ្នើរជាប់ជញ្ជាំង",
+    price: 205.98,
+    category: "shelf",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Vase/d-vase11.jpg",
+    title: "ថូផ្កា",
+    price: 69.99,
+    category: "vase",
+  },
+  {
+    href: "/Living room Category/Living room (Original)/Vase/d-vase12.jpg",
+    title: "ថូផ្កា",
+    price: 59.99,
+    category: "vase",
+  },
 ]);
 // State for selected categories and price range
 const selectedCategories = ref([1]);
-const priceRange = ref([50, 800]);
+const priceRange = ref([20, 800]);
 
 
 const toggleCategory = (id) => {
+  currentPage.value = 1;
   if (id === 1) {
     // If "All" is clicked, always select or deselect all
     if (selectedCategories.value.includes(1)) {
@@ -258,6 +410,18 @@ const filteredProducts = computed(() => {
 
   return filtered;
 });
+
+const currentPage = ref(1);
+const itemsPerPage = 6;
+
+const paginatedProductCards = computed(() => {
+  const start = (currentPage.value - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  return filteredProducts.value.slice(start, end); // Use filteredProducts here
+});
+
+const totalPages = computed(() => Math.ceil(filteredProducts.value.length / itemsPerPage));
+
 
 </script>
 
