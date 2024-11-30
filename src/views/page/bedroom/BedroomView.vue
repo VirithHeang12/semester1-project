@@ -26,7 +26,7 @@
           <v-col cols="12" md="4" lg="3" data-aos="fade-right">
             <v-list lines="one" select-strategy="leaf" class="overflow-hidden">
               <v-list-subheader class="mb-4 !text-[20px] !font-semibold"
-                >ប្រភេទអំពូល</v-list-subheader
+                >ប្រភេទសម្ភារៈ</v-list-subheader
               >
               <v-list-item height="30px">
                 <v-list-item-action>
@@ -153,337 +153,261 @@ const carouselItems = ref([
 
 // Product cards
 const productCards = ref([
+ 
   {
-    href: "/bedrooms/Bed/pic-1.png",
-    title: "គ្រែគេង",
-    price: 19.99,
-    category: "bed",
-  },
-  {
-    href: "/bedrooms/Desk/pic-1.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Desk/pic-1.jpg",
     title: "តុ",
     price: 199.99,
     category: "desk",
   },
   {
-    href: "/bedrooms/Closet/pic-3.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Closet/pic-1.jpg",
     title: "ទូ",
     price: 100.99,
     category: "closet",
   },
   {
-    href: "/bedrooms/Mirror/pic-2.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Mirror/pic-2.jpg",
     title: "កញ្ចក់",
     price: 999.99,
     category: "mirror",
   },
   {
-    href: "/bedrooms/badside table.jpg",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Desk/pic-2.jpg",
     title: "តុ",
     price: 299.99,
     category: "desk",
   },
   {
-    href: "/bedrooms/Bed/pic-5.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Bed/pic-2.jpg",
     title: "គ្រែគេង",
     price: 219.99,
     category: "bed",
   },
   {
-    href: "/bedrooms/Closet/pic-9.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Closet/pic-2.jpg",
     title: "ទូ",
     price: 99.99,
     category: "closet",
   },
 
   {
-    href: "/bedrooms/Bed/pic-10.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Bed/pic-3.jpg",
     title: "គ្រែគេង",
     price: 219.99,
     category: "bed",
   },
   {
-    href: "/bedrooms/Desk/pic-8.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Desk/pic-3.jpg",
     title: "តុ",
     price: 88.99,
     category: "desk",
   },
   {
-    href: "/bedrooms/Closet/pic-4.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Closet/pic-3.jpg",
     title: "ទូ",
     price: 199.99,
     category: "closet",
   },
   {
-    href: "/bedrooms/Mirror/pic-3.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Mirror/pic-2.jpg",
     title: "កញ្ចក់",
     price: 199.99,
     category: "mirror",
   },
   {
-    href: "/bedrooms/Bed/pic-9.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Bed/pic-4.jpg",
     title: "គ្រែគេង",
     price: 209.99,
     category: "bed",
   },
   {
-    href: "/bedrooms/Desk/pic-7.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Desk/pic-4.jpg",
     title: "តុ",
     price: 25.99,
     category: "desk",
   },
   {
-    href: "/bedrooms/Closet/pic-5.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Closet/pic-4.jpg",
     title: "ទូ",
     price: 99.99,
     category: "closet",
   },
   {
-    href: "/bedrooms/Mirror/pic-4.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Mirror/pic-3.jpg",
     title: "កញ្ចក់",
     price: 23.99,
     category: "mirror",
   },
   {
-    href: "/bedrooms/Bed/pic-4.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Bed/pic-5.jpg",
     title: "គ្រែគេង",
     price: 1000.99,
     category: "bed",
   },
   {
-    href: "/bedrooms/Desk/pic-4.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Desk/pic-5.jpg",
     title: "តុ",
     price: 233.99,
     category: "desk",
   },
   {
-    href: "/bedrooms/Closet/pic-4.png",
+    href:  "/Bedroom Category/Bedroom ( Orignal)/Closet/pic-5.jpg",
     title: "ទូ",
     price: 100.99,
     category: "closet",
   },
   {
-    href: "/bedrooms/Mirror/pic-5.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Mirror/pic-4.jpg",
     title: "កញ្ចក់",
     price: 45.99,
     category: "mirror",
   },
   {
-    href: "/bedrooms/Bed/pic-5.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Bed/pic-6.jpg",
     title: "គ្រែគេង",
     price: 555.99,
     category: "bed",
   },
   {
-    href: "/bedrooms/Desk/pic-5.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Desk/pic-6.jpg",
     title: "តុ",
     price: 64.99,
     category: "desk",
   },
   {
-    href: "/bedrooms/Closet/pic-5.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Closet/pic-6.jpg",
     title: "ទូ",
     price: 78.99,
     category: "closet",
   },
   {
-    href: "/bedrooms/Mirror/pic-6.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Mirror/pic-5.jpg",
     title: "កញ្ចក់",
     price: 87.99,
     category: "mirror",
   },
   {
-    href: "/bedrooms/Bed/pic-6.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Bed/pic-7.jpg",
     title: "គ្រែគេង",
     price: 535.99,
     category: "bed",
   },
   {
-    href: "/bedrooms/Desk/pic-6.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Desk/pic-7.jpg",
     title: "តុ",
     price: 342.99,
     category: "desk",
   },
   {
-    href: "/bedrooms/Closet/pic-6.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Closet/pic-7.jpg",
     title: "ទូ",
     price: 333.99,
     category: "closet",
   },
   {
-    href: "/bedrooms/Mirror/pic-7.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Mirror/pic-6.jpg",
     title: "កញ្ចក់",
     price: 222.99,
     category: "mirror",
   },
   {
-    href: "/bedrooms/Bed/pic-7.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Bed/pic-8.jpg",
     title: "គ្រែគេង",
     price: 888.99,
     category: "bed",
   },
   {
-    href: "/bedrooms/Desk/pic-7.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Desk/pic-8.jpg",
     title: "តុ",
     price: 66.99,
     category: "desk",
   },
   {
-    href: "/bedrooms/Closet/pic-7.png",
+    href:  "/Bedroom Category/Bedroom ( Orignal)/Closet/pic-8.jpg",
     title: "ទូ",
     price: 333.99,
     category: "closet",
   },
   {
-    href: "/bedrooms/Mirror/pic-8.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Mirror/pic-7.jpg",
     title: "កញ្ចក់",
     price: 111.99,
     category: "mirror",
   },
   {
-    href: "/bedrooms/Bed/pic-8.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Bed/pic-9.jpg",
     title: "គ្រែគេង",
     price: 124.99,
     category: "bed",
   },
   {
-    href: "/bedrooms/Desk/pic-8.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Desk/pic-9.jpg",
     title: "តុ",
     price: 77.99,
     category: "desk",
   },
   {
-    href: "/bedrooms/Closet/pic-8.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Closet/pic-9.jpg",
     title: "ទូ",
     price: 111.99,
     category: "closet",
   },
   {
-    href: "/bedrooms/Mirror/pic-9.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Mirror/pic-8.jpg",
     title: "កញ្ចក់",
     price: 333.99,
     category: "mirror",
   },
   {
-    href: "/bedrooms/Bed/pic-9.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Bed/pic-10.jpg",
     title: "គ្រែគេង",
     price: 352.99,
     category: "bed",
   },
   {
-    href: "/bedrooms/Desk/pic-9.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Desk/pic-10.jpg",
     title: "តុ",
     price: 62.99,
     category: "desk",
   },
   {
-    href: "/bedrooms/Closet/pic-9.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Closet/pic-10.jpg",
     title: "ទូ",
     price: 145.99,
     category: "closet",
   },
   {
-    href: "/bedrooms/Mirror/pic-10.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Mirror/pic-9.jpg",
     title: "កញ្ចក់",
     price: 123.99,
     category: "mirror",
   },
   {
-    href: "/bedrooms/Bed/pic-10.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Bed/pic-11.jpg",
     title: "គ្រែគេង",
     price: 345.99,
     category: "bed",
   },
   {
-    href: "/bedrooms/Desk/pic-10.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Desk/pic-11.jpg",
     title: "តុ",
     price: 111.99,
     category: "desk",
   },
   {
-    href: "/bedrooms/Closet/pic-10.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Closet/pic-11.jpg",
     title: "ទូ",
     price: 533.99,
     category: "closet",
   },
   {
-    href: "/bedrooms/Mirror/pic-2.png",
+    href: "/Bedroom Category/Bedroom ( Orignal)/Mirror/pic-10.jpg",
     title: "កញ្ចក់",
     price: 233.99,
     category: "mirror",
   },
-  {
-    href: "/bedrooms/Bed/pic-2.png",
-    title: "គ្រែគេង",
-    price: 342.99,
-    category: "bed",
-  },
-  {
-    href: "/bedrooms/Desk/pic-2.png",
-    title: "តុ",
-    price: 34.99,
-    category: "desk",
-  },
-  {
-    href: "/bedrooms/Closet/pic-2.png",
-    title: "ទូ",
-    price: 35.99,
-    category: "closet",
-  },
-  {
-    href: "/bedrooms/Mirror/pic-3.png",
-    title: "កញ្ចក់",
-    price: 53.99,
-    category: "mirror",
-  },
-  {
-    href: "/bedrooms/Bed/pic-3.png",
-    title: "គ្រែគេង",
-    price: 666.99,
-    category: "bed",
-  },
-  {
-    href: "/bedrooms/Desk/pic-3.png",
-    title: "តុ",
-    price: 244.99,
-    category: "desk",
-  },
-  {
-    href: "/bedrooms/Closet/pic-3.png",
-    title: "ទូ",
-    price: 423.99,
-    category: "closet",
-  },
-  {
-    href: "/bedrooms/Mirror/pic-4.png",
-    title: "កញ្ចក់",
-    price: 234.99,
-    category: "mirror",
-  },
-  {
-    href: "/bedrooms/Bed/pic-4.png",
-    title: "គ្រែគេង",
-    price: 555.99,
-    category: "bed",
-  },
-  {
-    href: "/bedrooms/Desk/pic-4.png",
-    title: "តុ",
-    price: 56.99,
-    category: "desk",
-  },
-  {
-    href: "/bedrooms/Closet/pic-4.png",
-    title: "ទូ",
-    price: 34.99,
-    category: "closet",
-  },
-  {
-    href: "/bedrooms/Desk/pic-5.png",
-    title: "តុ",
-    price: 244.99,
-    category: "desk",
-  },
+  
 ]);
 
 watch([isBed, isCloset, isDesk, isMirror], () => {
@@ -504,56 +428,31 @@ const computedProductCards = computed(() => {
     return matchesCategory && matchesPrice;
   });
 });
-
 // Recommendations
 const cartRecom = ref([
   {
-    src: "/bedrooms/Closet/pic-4.png",
-    title: "ទូ",
-  },
-  {
-    src: "/bedrooms/Bed/pic-1.png",
+    src: "/slide-groups/bedrooms/bedroom-1.jpg",
     title: "គ្រែគេង",
   },
   {
-    src: "/bedrooms/Desk/pic-4.png",
-    title: "តុ",
-  },
-  {
-    src: "/bedrooms/Mirror/pic-4.png",
-    title: "កញ្ចក់",
-  },
-  {
-    src: "/bedrooms/Bed/pic-2.png",
+    src: "/slide-groups/bedrooms/bedroom-2.jpg",
     title: "គ្រែគេង",
   },
   {
-    src: "/bedrooms/Mirror/pic-5.png",
-    title: "កញ្ចក់",
-  },
-  {
-    src: "/bedrooms/Closet/pic-5.png",
-    title: "ទូ",
-  },
-  {
-    src: "/bedrooms/Desk/pic-6.png",
-    title: "តុ",
-  },
-  {
-    src: "/bedrooms/Mirror/pic-6.png",
-    title: "កញ្ចក់",
-  },
-  {
-    src: "/bedrooms/Bed/pic-4.png",
+    src: "/slide-groups/bedrooms/bedroom-3.jpg",
     title: "គ្រែគេង",
   },
   {
-    src: "/bedrooms/Desk/pic-7.png",
-    title: "តុ",
+    src: "/slide-groups/bedrooms/bedroom-4.jpg",
+    title: "គ្រែគេង",
   },
   {
-    src: "/bedrooms/Closet/pic-6.png",
-    title: "ទូ",
+    src: "/slide-groups/bedrooms/bedroom-5.jpg",
+    title: "គ្រែគេង",
+  },
+  {
+    src: "/slide-groups/bedrooms/bedroom-6.jpg",
+    title: "គ្រែគេង",
   },
 ]);
 
