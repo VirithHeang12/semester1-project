@@ -74,16 +74,24 @@ const router = createRouter({
 			{
 				path: 'login',
 				name: 'login',
-				component: () => import('../views/page/authentication/LoginView.vue')
+				component: () => import('../views/page/authentication/LoginView.vue'),
 			},
 		]	
 	},
     {
-        path: '/details/{category}/{id}/{name}',
+        path: '/details/:category/:id/:slug',
         name: 'details',
-        component: () => import('../views/page/details/DetailsView.vue')
+        component: () => import('../views/page/details/DetailsView.vue'),
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  },
+
 })
 
 export default router

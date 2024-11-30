@@ -226,32 +226,53 @@
             icon: 'mdi-sofa',
             images: [
                 {
-                    url: 'slide-groups/livingrooms/livingroom-1.jpg',
-                    price: 79.99
+                    id: 1,
+                    url: '/slide-groups/livingrooms/livingroom-1.jpg',
+                    price: 79.99,
+                    name: 'Amet Consectetur Adipiscing Elit',
+                    slug: 'amet-consectetur-adipiscing-elit'
                 },
                 {
-                    url: 'slide-groups/livingrooms/livingroom-2.jpg',
-                    price: 89.99
+                    id: 2,
+                    url: '/slide-groups/livingrooms/livingroom-2.jpg',
+                    price: 89.99,
+                    name: 'Pellentesque Habitant Morbi Tristique Senectus',
+                    slug: 'pellentesque-habitant-morbi-tristique-senectus'
                 },
                 {
-                    url: 'slide-groups/livingrooms/livingroom-3.jpg',
-                    price: 99.99
+                    id: 3,
+                    url: '/slide-groups/livingrooms/livingroom-3.jpg',
+                    price: 99.99,
+                    name: 'Duis Aute Irure Dolor In Reprehenderit',
+                    slug: 'duis-aute-irure-dolor-in-reprehenderit'
                 },
                 {
-                    url: 'slide-groups/livingrooms/livingroom-4.jpg',
-                    price: 109.99
+                    id: 4,
+                    url: '/slide-groups/livingrooms/livingroom-4.jpg',
+                    price: 109.99,
+                    name: 'Blandit Praesent Luptatum Zzril Delenit Augue',
+                    slug: 'blandit-praesent-luptatum-zzril-delenit-augue'
                 },
                 {
-                    url: 'slide-groups/livingrooms/livingroom-5.jpg',
-                    price: 119.99
+                    id: 5,
+                    url: '/slide-groups/livingrooms/livingroom-5.jpg',
+                    price: 119.99,
+                    name: 'Ridiculus Mus Donec Dignissim',
+                    slug: 'ridiculus-mus-donec-dignissim'
                 },
                 {
-                    url: 'slide-groups/livingrooms/livingroom-6.jpg',
-                    price: 129.99
+                    id: 6,
+                    url: '/slide-groups/livingrooms/livingroom-6.jpg',
+                    price: 129.99,
+                    name: 'Orci Luctus Et Ultrices Posuere Cubilia',
+                    slug: 'orci-luctus-et-ultrices-posuere-cubilia'
                 },
                 {
-                    url: 'slide-groups/livingrooms/livingroom-7.jpg',
-                    price: 139.99
+                    id: 7,
+                    url: '/slide-groups/livingrooms/livingroom-7.jpg',
+                    price: 139.99,
+                    name: 'Kurabitur Quis Nostrud Exercitation Ullamco',
+                    slug: 'kurabitur-quis-nostrud-exercitation-ullamco'
                 },
             ]
         },
@@ -261,32 +282,53 @@
             icon: 'mdi-silverware-fork-knife',
             images: [
                 {
-                    url: 'slide-groups/diningrooms/diningroom-1.jpg',
-                    price: 79.99
+                    id: 1,
+                    url: '/slide-groups/diningrooms/diningroom-1.jpg',
+                    price: 79.99,
+                    name: 'Illum Dolore Eu Feugiat Nulla',
+                    slug: 'illum-dolore-eu-feugiat-nulla'
                 },
                 {
-                    url: 'slide-groups/diningrooms/diningroom-2.jpg',
-                    price: 89.99
+                    id: 2,
+                    url: '/slide-groups/diningrooms/diningroom-2.jpg',
+                    price: 89.99,
+                    name: 'Lobortis Nisi Ut Aliquip Ex Ea Commodo',
+                    slug: 'lobortis-nisi-ut-aliquip-ex-ea-commodo'
                 },
                 {
-                    url: 'slide-groups/diningrooms/diningroom-3.jpg',
-                    price: 99.99
+                    id: 3,
+                    url: '/slide-groups/diningrooms/diningroom-3.jpg',
+                    price: 99.99,
+                    name: 'Quis Nostrud Exercitation Ullamco',
+                    slug: 'quis-nostrud-exercitation-ullamco'
                 },
                 {
-                    url: 'slide-groups/diningrooms/diningroom-4.jpg',
-                    price: 109.99
+                    id: 4,
+                    url: '/slide-groups/diningrooms/diningroom-4.jpg',
+                    price: 109.99,
+                    name: 'Fugiat Nulla Pariatur Excepteur Sint',
+                    slug: 'fugiat-nulla-pariatur-excepteur-sint'
                 },
                 {
-                    url: 'slide-groups/diningrooms/diningroom-5.jpg',
-                    price: 119.99
+                    id: 5,
+                    url: '/slide-groups/diningrooms/diningroom-5.jpg',
+                    price: 119.99,
+                    name: 'Eiusmod Tempor Incididunt Ut Labore',
+                    slug: 'eiusmod-tempor-incididunt-ut-labore'
                 },
                 {
-                    url: 'slide-groups/diningrooms/diningroom-6.jpg',
-                    price: 129.99
+                    id: 6,
+                    url: '/slide-groups/diningrooms/diningroom-6.jpg',
+                    price: 129.99,
+                    name: 'Habent Claritatem Insitam Est Usus Legentis',
+                    slug: 'habent-claritatem-insitam-est-usus-legentis'
                 },
                 {
-                    url: 'slide-groups/diningrooms/diningroom-7.jpg',
-                    price: 139.99
+                    id: 7,
+                    url: '/slide-groups/diningrooms/diningroom-7.jpg',
+                    price: 139.99,
+                    name: 'Wisi Enim Ad Minim Veniam',
+                    slug: 'wisi-enim-ad-minim-veniam'
                 },
             ]
         },
@@ -296,32 +338,53 @@
             icon: 'mdi-chair-rolling',
             images: [
                 {
-                    url: 'slide-groups/offices/office-1.jpg',
-                    price: 79.99
+                    id: 1,
+                    url: '/slide-groups/offices/office-1.jpg',
+                    price: 79.99,
+                    name: 'Xerci Tation Ullamcorper Suscipit Lobortis',
+                    slug: 'xerci-tation-ullamcorper-suscipit-lobortis'
                 },
                 {
-                    url: 'slide-groups/offices/office-2.jpg',
-                    price: 89.99
+                    id: 2,
+                    url: '/slide-groups/offices/office-2.jpg',
+                    price: 89.99,
+                    name: 'Eodem Modo Typi Qui Nunc Nobis Videntur',
+                    slug: 'eodem-modo-typi-qui-nunc-nobis-videntur'
                 },
                 {
-                    url: 'slide-groups/offices/office-3.jpg',
-                    price: 99.99
+                    id: 3,
+                    url: '/slide-groups/offices/office-3.jpg',
+                    price: 99.99,
+                    name: 'Claritas Est Etiam Processus Dynamicus',
+                    slug: 'claritas-est-etiam-processus-dynamicus'
                 },
                 {
-                    url: 'slide-groups/offices/office-4.jpg',
-                    price: 109.99
+                    id: 4,
+                    url: '/slide-groups/offices/office-4.jpg',
+                    price: 109.99,
+                    name: 'Habent Claritatem Insitam Est Usus Legentis',
+                    slug: 'habent-claritatem-insitam-est-usus-legentis'
                 },
                 {
-                    url: 'slide-groups/offices/office-5.jpg',
-                    price: 119.99
+                    id: 5,
+                    url: '/slide-groups/offices/office-5.jpg',
+                    price: 119.99,
+                    name: 'Iriure Dolor In Hendrerit In Vulputate',
+                    slug: 'iriure-dolor-in-hendrerit-in-vulputate'
                 },
                 {
-                    url: 'slide-groups/offices/office-6.jpg',
-                    price: 129.99
+                    id: 6,
+                    url: '/slide-groups/offices/office-6.jpg',
+                    price: 129.99,
+                    name: 'Velit Esse Molestie Consequat Vel',
+                    slug: 'velit-esse-molestie-consequat-vel'
                 },
                 {
-                    url: 'slide-groups/offices/office-7.jpg',
-                    price: 139.99
+                    id: 7,
+                    url: '/slide-groups/offices/office-7.jpg',
+                    price: 139.99,
+                    name: 'Feugait Nulla Facilisi Nam Liber Tempor',
+                    slug: 'feugait-nulla-facilisi-nam-liber-tempor'
                 }
             ]
         },
@@ -331,36 +394,60 @@
             icon: 'mdi-bench',
             images: [
                 {
-                    url: 'slide-groups/outdoors/outdoor-1.jpg',
-                    price: 79.99
+                    id: 1,
+                    url: '/slide-groups/outdoors/outdoor-1.jpg',
+                    price: 79.99,
+                    name: 'Ridiculus Mus Donec Dignissim',
+                    slug: 'ridiculus-mus-donec-dignissim'
                 },
                 {
-                    url: 'slide-groups/outdoors/outdoor-2.jpg',
-                    price: 89.99
+                    id: 2,
+                    url: '/slide-groups/outdoors/outdoor-2.jpg',
+                    price: 89.99,
+                    name: 'Eiusmod Tempor Incididunt Ut Labore',
+                    slug: 'eiusmod-tempor-incididunt-ut-labore'
                 },
                 {
-                    url: 'slide-groups/outdoors/outdoor-3.jpg',
-                    price: 99.99
+                    id: 3,
+                    url: '/slide-groups/outdoors/outdoor-3.jpg',
+                    price: 99.99,
+                    name: 'Habent Claritatem Insitam Est Usus Legentis',
+                    slug: 'habent-claritatem-insitam-est-usus-legentis'
                 },
                 {
-                    url: 'slide-groups/outdoors/outdoor-4.jpg',
-                    price: 109.99
+                    id: 4,
+                    url: '/slide-groups/outdoors/outdoor-4.jpg',
+                    price: 109.99,
+                    name: 'Wisi Enim Ad Minim Veniam Lorem',
+                    slug: 'wisi-enim-ad-minim-veniam-lorem'
                 },
                 {
-                    url: 'slide-groups/outdoors/outdoor-5.jpg',
-                    price: 119.99
+                    id: 5,
+                    url: '/slide-groups/outdoors/outdoor-5.jpg',
+                    price: 119.99,
+                    name: 'Xerci Tation Ullamcorper Suscipit Lobortis',
+                    slug: 'xerci-tation-ullamcorper-suscipit-lobortis'
                 },
                 {
-                    url: 'slide-groups/outdoors/outdoor-6.jpg',
-                    price: 129.99
+                    id: 6,
+                    url: '/slide-groups/outdoors/outdoor-6.jpg',
+                    price: 129.99,
+                    name: 'Eodem Modo Typi Qui Nunc Nobis Videntur',
+                    slug: 'eodem-modo-typi-qui-nunc-nobis-videntur'
                 },
                 {
-                    url: 'slide-groups/outdoors/outdoor-7.jpg',
-                    price: 139.99
+                    id: 7,
+                    url: '/slide-groups/outdoors/outdoor-7.jpg',
+                    price: 139.99,
+                    name: 'Claritas Est Etiam Processus Dynamicus',
+                    slug: 'claritas-est-etiam-processus-dynamicus'
                 },
                 {
-                    url: 'slide-groups/outdoors/outdoor-8.jpg',
-                    price: 149.99
+                    id: 8,
+                    url: '/slide-groups/outdoors/outdoor-8.jpg',
+                    price: 149.99,
+                    name: 'Habent Claritatem Insitam Est Usus Legentis',
+                    slug: 'habent-claritatem-insitam-est-usus-legentis'
                 }
             ]
         },
@@ -370,36 +457,60 @@
             icon: 'mdi-lamp',
             images: [
                 {
-                    url: 'slide-groups/lightings/lighting-1.jpg',
-                    price: 79.99
+                    id: 1,
+                    url: '/slide-groups/lightings/lighting-1.jpg',
+                    price: 79.99,
+                    name: 'Pellentesque Habitant Morbi Tristique Senectus',
+                    slug: 'pellentesque-habitant-morbi-tristique-senectus'
                 },
                 {
-                    url: 'slide-groups/lightings/lighting-2.jpg',
-                    price: 89.99
+                    id: 2,
+                    url: '/slide-groups/lightings/lighting-2.jpg',
+                    price: 89.99,
+                    name: 'Duis Aute Irure Dolor In Reprehenderit',
+                    slug: 'duis-aute-irure-dolor-in-reprehenderit'
                 },
                 {
-                    url: 'slide-groups/lightings/lighting-3.jpg',
-                    price: 99.99
+                    id: 3,
+                    url: '/slide-groups/lightings/lighting-3.jpg',
+                    price: 99.99,
+                    name: 'Blandit Praesent Luptatum Zzril Delenit Augue',
+                    slug: 'blandit-praesent-luptatum-zzril-delenit-augue'
                 },
                 {
-                    url: 'slide-groups/lightings/lighting-4.jpg',
-                    price: 109.99
+                    id: 4,
+                    url: '/slide-groups/lightings/lighting-4.jpg',
+                    price: 109.99,
+                    name: 'Reprehenderit In Voluptate Velit Esse Cillum',
+                    slug: 'reprehenderit-in-voluptate-velit-esse-cillum'
                 },
                 {
-                    url: 'slide-groups/lightings/lighting-5.jpg',
-                    price: 119.99
+                    id: 5,
+                    url: '/slide-groups/lightings/lighting-5.jpg',
+                    price: 119.99,
+                    name: 'Dolore Eu Fe ugiat Nulla Facilisi',
+                    slug: 'dolore-eu-fe-ugiat-nulla-facilisi'
                 },
                 {
-                    url: 'slide-groups/lightings/lighting-6.jpg',
-                    price: 129.99
+                    id: 6,
+                    url: '/slide-groups/lightings/lighting-6.jpg',
+                    price: 129.99,
+                    name: 'Nam Liber Tempor Cum Soluta Nobis Eleifend',
+                    slug: 'nam-liber-tempor-cum-soluta-nobis-eleifend'
                 },
                 {
-                    url: 'slide-groups/lightings/lighting-7.jpg',
-                    price: 139.99
+                    id: 7,
+                    url: '/slide-groups/lightings/lighting-7.jpg',
+                    price: 139.99,
+                    name: 'Option Conr Adipiscing Elit',
+                    slug: 'option-conr-adipiscing-elit'
                 },
                 {
-                    url: 'slide-groups/lightings/lighting-8.jpg',
-                    price: 149.99
+                    id: 8,
+                    url: '/slide-groups/lightings/lighting-8.jpg',
+                    price: 149.99,
+                    name: 'Option Conr Adipiscing Elit et',
+                    slug: 'option-conr-adipiscing-elit-et'
                 }
             ]
         },
@@ -409,28 +520,46 @@
             icon: 'mdi-bed',
             images: [
                 {
-                    url: 'slide-groups/bedrooms/bedroom-1.jpg',
-                    price: 79.99
+                    id: 1,
+                    url: '/slide-groups/bedrooms/bedroom-1.jpg',
+                    price: 79.99,
+                    name: 'Orci Luctus Et Ultrices Posuere Cubilia',
+                    slug: 'orci-luctus-et-ultrices-posuere-cubilia'
                 },
                 {
-                    url: 'slide-groups/bedrooms/bedroom-2.jpg',
-                    price: 89.99
+                    id: 2,
+                    url: '/slide-groups/bedrooms/bedroom-2.jpg',
+                    price: 89.99,
+                    name: 'Pellentesque Habitant Morbi Tristique Senectus',
+                    slug: 'pellentesque-habitant-morbi-tristique-senectus'
                 },
                 {
-                    url: 'slide-groups/bedrooms/bedroom-3.jpg',
-                    price: 99.99
+                    id: 3,
+                    url: '/slide-groups/bedrooms/bedroom-3.jpg',
+                    price: 99.99,
+                    name: 'Lobortis Nisi Ut Aliquip Ex Ea Commodo',
+                    slug: 'lobortis-nisi-ut-aliquip-ex-ea-commodo'
                 },
                 {
-                    url: 'slide-groups/bedrooms/bedroom-4.jpg',
-                    price: 109.99
+                    id: 4,
+                    url: '/slide-groups/bedrooms/bedroom-4.jpg',
+                    price: 109.99,
+                    name: 'Ridiculus Mus Donec Dignissim',
+                    slug: 'ridiculus-mus-donec-dignissim'
                 },
                 {
-                    url: 'slide-groups/bedrooms/bedroom-5.jpg',
-                    price: 119.99
+                    id: 5,
+                    url: '/slide-groups/bedrooms/bedroom-5.jpg',
+                    price: 119.99,
+                    name: 'Tottori Atque Corrupti Quos Dolores',
+                    slug: 'tottori-atque-corrupti-quos-dolores'
                 },
                 {
-                    url: 'slide-groups/bedrooms/bedroom-6.jpg',
-                    price: 129.99
+                    id: 6,
+                    url: '/slide-groups/bedrooms/bedroom-6.jpg',
+                    price: 129.99,
+                    name: 'Molestie Consequat Vel Illum Dolore Eu',
+                    slug: 'molestie-consequat-vel-illum-dolore-eu'
                 },
             ]
         }

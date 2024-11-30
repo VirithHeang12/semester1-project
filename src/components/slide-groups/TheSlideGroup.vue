@@ -29,11 +29,14 @@
                                                     <p class="pl-2">
                                                         <span class="text-gray-600 rounded-lg bg-gray-200 p-1">${{
                                                             tabItemImage.price
-                                                            }}</span>
+                                                        }}</span>
                                                     </p>
                                                 </div>
-                                                <v-btn :color="'grey-darken-3'" :size="25" :ripple="false"
+                                                <v-btn
+                                                    :to="{ name: 'details', params: { category: tabItem.value, id: tabItemImage.id, slug: tabItemImage.slug }, query: { image: tabItemImage.url, name: tabItemImage.name, price: tabItemImage.price } }"
+                                                    :color="'grey-darken-3'" :size="25" :ripple="false"
                                                     :icon="'mdi-arrow-right'"></v-btn>
+
                                             </div>
                                         </div>
                                     </v-card>
