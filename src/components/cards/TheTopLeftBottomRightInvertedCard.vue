@@ -16,7 +16,7 @@
 
         <slot name="top-left">
             <p
-                class="absolute text-[0.85rem] top-[4.2rem] left-1 min-[350px]:top-12 min-[350px]:left-2 min-[380px]:top-10 min-[410px]:top-8 min-[380px]:left-2 lg:top-11 lg:left-1 min-[960px]:top-14 min-[960px]:left-0 min-[1100px]:top-9 min-[1100px]:left-1 xl:top-7 xl:left-1 text-gray-700 min-[350px]:text-[1.1rem] lg:text-[1.2rem] xl:text-[1.4rem] font-bold">
+                class="absolute text-[0.85rem] top-[4.2rem] left-1 min-[350px]:top-12 min-[350px]:left-2 min-[380px]:top-10 min-[410px]:top-8 min-[380px]:left-2 lg:top-11 lg:left-1 min-[960px]:top-14 min-[960px]:left-0 min-[1100px]:top-9 min-[1100px]:left-1 xl:top-7 xl:left-1 text-gray-700 min-[350px]:text-[1.1rem] min-[1180px]:text-[1.4rem] lg:text-[1.2rem] xl:text-[1.4rem] font-bold">
                 {{ title }}</p>
         </slot>
 

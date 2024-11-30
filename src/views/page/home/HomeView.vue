@@ -16,7 +16,7 @@
                 <v-container fluid>
                     <v-row>
                         <v-col cols="12" :md="4"
-                            class="-mb-20 min-[350px]:-mb-10 min-[380px]:-mb-6 flex flex-col min-[350px]:gap-y-1 min-[380px]:gap-y-10 min-[960px]:gap-y-0">
+                            class="-mb-20 min-[350px]:-mb-10 min-[380px]:-mb-6 flex flex-col min-[350px]:gap-y-1 min-[380px]:gap-y-10 min-[960px]:gap-y-0 min-[1100px]:gap-y-14">
                             <v-card :elevation="0" class="bg-transparent -mb-8 min-[350px]:-mb-4" data-aos="fade-right">
                                 <router-link to="#">
                                     <the-long-top-left-inverted-card class="mx-auto"></the-long-top-left-inverted-card>
@@ -32,7 +32,7 @@
                         </v-col>
                         <v-col cols="12" md="4" class="-mb-20 flex flex-col min-[350px]:-mb-16 min-[380px]:-mb-6">
                             <v-card elevation="0"
-                                class="bg-transparent -mb-24 min-[350px]:-mb-20 min-[380px]:-mb-12 min-[960px]:-mb-24"
+                                class="bg-transparent -mb-24 min-[350px]:-mb-20 min-[380px]:-mb-12 min-[960px]:-mb-24 min-[1100px]:-mb-12"
                                 data-aos="fade-down">
                                 <router-link to="#">
                                     <the-top-left-bottom-right-inverted-card
@@ -47,7 +47,8 @@
                             </v-card>
                         </v-col>
                         <v-col cols="12" md="4" class="-mb-20 flex flex-col">
-                            <v-card elevation="0" class="bg-transparent -mb-8 min-[380px]:mb-6 min-[960px]:-mb-6"
+                            <v-card elevation="0"
+                                class="bg-transparent -mb-8 min-[380px]:mb-6 min-[960px]:-mb-6 min-[1100px]:mb-10"
                                 data-aos="fade-left">
                                 <router-link to="#">
                                     <the-short-top-left-inverted-card
@@ -133,7 +134,7 @@
                         <v-col cols="12" md="12">
                             <v-card :elevation="0">
                                 <p data-aos="fade-down"
-                                    class="flex justify-center text-gray-700 text-[1rem] min-[600px]:text-[1.3rem] min-[600px]:-mb-4 font-bold">
+                                    class="flex justify-center text-gray-700 text-[1rem] min-[600px]:text-[1.3rem] min-[870px]:text-[1.8rem] min-[600px]:-mb-4 font-bold">
                                     Timeless Design</p>
                                 <the-middle-top-inverted-card data-aos="fade-up"></the-middle-top-inverted-card>
                             </v-card>
@@ -141,7 +142,7 @@
                     </v-row>
                 </v-container>
             </div>
-            <div>
+            <div class="mb-20">
                 <v-card :elevation="0" class="mx-0">
                     <div class="grid grid-cols-1 justify-items-center gap-y-24 gap-x-4 min-[960px]:grid-cols-10">
                         <the-small-slide-group class="min-[960px]:col-span-7"></the-small-slide-group>
@@ -153,13 +154,13 @@
             <div class="mb-0">
                 <v-container>
                     <h2 data-aos="fade-down" data-aos-delay="300"
-                        class="text-center font-bold text-gray-700 text-[1rem] mb-10">
+                        class="text-center mb-10 font-bold  text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem] min-[380px]:mb-20 lg:mb-8 xl:mb-16 lg:mt-20 xl:mt-24">
                         សំណួរតែងត្រូវបានសួរ</h2>
                     <v-row class="flex">
                         <v-col cols="12" md="6" class="flex flex-col justify-center" data-aos="fade-right">
                             <v-expansion-panels :elevation="0">
                                 <v-expansion-panel v-for="(expansionItem, i) in expansionItems" :key="i">
-                                    <v-expansion-panel-title class="py-4" :style="{ fontSize: '0.9rem' }">
+                                    <v-expansion-panel-title class="py-4 expansion-panel-title-style">
                                         {{ expansionItem.title }}
                                     </v-expansion-panel-title>
                                     <v-expansion-panel-text class="text-[0.8rem]">
@@ -471,4 +472,20 @@
             grid-column: span 1;
         }
     }
+
+    @media (min-width: 620px) {
+        .expansion-panel-title-style {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+
+    @media (min-width: 870px) {
+        .expansion-panel-title-style {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+    }
+
+
 </style>

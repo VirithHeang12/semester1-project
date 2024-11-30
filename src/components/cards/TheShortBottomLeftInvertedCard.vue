@@ -15,7 +15,7 @@
 
         <slot name="bottom-left">
             <p
-                class="absolute text-[0.9rem] bottom-12 left-2 min-[350px]:bottom-8 min-[350px]:left-2 min-[380px]:bottom-6 min-[410px]:bottom-4 min-[410px]:left-5 lg:bottom-6 lg:left-1 min-[960px]:bottom-9 min-[960px]:left-0 xl:bottom-3 xl:left-3 text-gray-700 min-[350px]:text-[1.2rem] lg:text-[1.3rem] xl:text-[1.4rem] font-bold">
+                class="absolute text-[0.9rem] bottom-12 left-2 min-[350px]:bottom-8 min-[350px]:left-2 min-[380px]:bottom-6 min-[410px]:bottom-4 min-[410px]:left-5 lg:bottom-6 lg:left-1 min-[960px]:bottom-9 min-[960px]:left-0 min-[1180px]:bottom-2 xl:bottom-3 xl:left-3 text-gray-700 min-[350px]:text-[1.2rem] lg:text-[1.3rem] xl:text-[1.4rem] font-bold">
                 {{ title }}</p>
         </slot>
 
