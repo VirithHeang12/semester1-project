@@ -134,7 +134,7 @@
                         </v-btn>
                     </v-card-actions>
                     <v-card-text>
-                        <v-list>
+                        <v-list class="grid grid-cols-2">
                             <v-list-item v-for="(item, i) in items" :key="i">
                                 <v-btn @click="clickCallback(item.to)" elevation="0" class="w-full flex justify-start">
                                     <v-list-item-title class="flex justify-start text-left">
@@ -168,6 +168,10 @@
 
     const items = [
         {
+            title: 'ទំព័រដើម',
+            to: 'home'
+        },
+        {
             title: 'បន្ទប់គេង',
             to: "bedroom"
         },
@@ -190,6 +194,26 @@
         {
             title: 'ផ្ទះបាយ',
             to: "kitchen"
+        },
+        {
+            title: 'អំពីយើង',
+            to: "about"
+        },
+        {
+            title: 'ទំនាក់ទំនង',
+            to: "contact"
+        },
+        {
+            title: 'កន្ត្រក',
+            to: "login"
+        },
+        {
+            title: 'ចូលគណនី',
+            to: "login"
+        },
+        {
+            title: 'ចំណូលចិត្ត',
+            to: "wishlist"
         }
     ];
 
