@@ -45,8 +45,8 @@
                                 <v-icon color="primary-900" size="36">{{ value.icon }}</v-icon>
                             </v-avatar>
                         </div>
-                        <h2 class="text-[14px] text-sm-[18px] text-primary-700 font-semibold mb-4 mt-15">{{ value.title }}</h2>
-                        <p class="text-[12px] text-sm text-primary-600">{{ value.description }}</p>
+                        <h2 class="text-[14px] sm:text-[16px] md:text-[16px] text-primary-700 font-semibold mb-4 mt-15">{{ value.title }}</h2>
+                        <p class="text-[12px] sm:text-[14px] text-primary-600">{{ value.description }}</p>
                     </v-card>
                 </v-col>
             </v-row>

@@ -25,6 +25,11 @@ const router = createRouter({
         component: () => import('../views/page/wishlist/WishListView.vue')
     },
     {
+        path: '/cart',
+        name: 'cart',
+        component: () => import('../views/page/addToCart/AddToCartView.vue')
+    },
+    {
         path: '/categories',
         name: 'categories',
         children: [
@@ -58,12 +63,6 @@ const router = createRouter({
                 name: 'lighting',
                 component: () => import('../views/page/lighting/LightingView.vue')
             },
-            {
-                path: 'add-to-cart',
-                name: 'add to cart',
-                component: () => import('../views/page/addToCart/AddToCartView.vue')
-            }
-
         ],
     },
 	{
@@ -80,7 +79,7 @@ const router = createRouter({
 		]	
 	},
     {
-        path: '/details',
+        path: '/details/{category}/{id}/{name}',
         name: 'details',
         component: () => import('../views/page/details/DetailsView.vue')
     }
