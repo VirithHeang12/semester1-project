@@ -4,16 +4,16 @@
             <v-row>
                 <!-- Left Section: Image -->
                 <v-col cols="12" md="6">
-                    <v-card class="shadow-none !rounded-[16px]">
-                        <v-img src="/details/sample.png" alt="Furniture" class="h-[430px]" cover />
+                    <v-card class="shadow-none !rounded-[16px] h-[250px] md:h-[430px]">
+                        <v-img src="/details/sample.png" alt="Furniture" class="" cover />
                     </v-card>
                 </v-col>
 
                 <!-- Right Section: Text -->
                 <v-col cols="12" md="6">
                     <v-card class="!p-10 shadow-none h-full bg-transparent">
-                        <h1 class="text-[45px] md:text-[55px] font-bold  text-primary-800 mb-4">About Our Website</h1>
-                        <p class="!text-primary-600 leading-relaxed text-[18px] indent-8 pt-5 text-justify">
+                        <h1 class="text-[40px] md:text-[55px] font-bold  text-primary-800 mb-4">About Our Website</h1>
+                        <p class="!text-primary-600 leading-relaxed text-[14px] sm:text-[18px] indent-8 pt-5 text-justify">
                             នាគហារឹម គឺជា E-Commerce Website ដែលពួកយើងបង្កើតឡើងក្នុងគោលបំណងក្នុងការផ្តល់នូវ
                             គ្រឿងសង្ហារឹម​ដែល​ស្រស់ស្អាត និង
                             គ្រឿងសង្ហារឹមដែលមានមុខងារ​ដែលសាកសម​នឹងតម្រូវការរបស់អតិថិជន។
@@ -27,7 +27,7 @@
             <!-- Core Values Section -->
             <v-row justify="center" class="text-center my-14">
                 <v-col cols="12" md="7" lg="5">
-                    <h1 class="text-[45px] md:text-[55px] font-bold text-primary-800">Our Core Values</h1>
+                    <h1 class="text-[40px] md:text-[55px] font-bold text-primary-800">Our Core Values</h1>
                     <p class="text-primary-600 text-sm mt-4">
                         Our values shape the culture of our organization and define the chapter of our company.
                     </p>
@@ -45,9 +45,8 @@
                                 <v-icon color="primary-900" size="36">{{ value.icon }}</v-icon>
                             </v-avatar>
                         </div>
-                        <h2 class="text-[16px] text-sm-[18px] text-primary-700 font-semibold mb-4 mt-15">{{ value.title
-                            }}</h2>
-                        <p class="text-sm text-primary-600">{{ value.description }}</p>
+                        <h2 class="text-[14px] text-sm-[18px] text-primary-700 font-semibold mb-4 mt-15">{{ value.title }}</h2>
+                        <p class="text-[12px] text-sm text-primary-600">{{ value.description }}</p>
                     </v-card>
                 </v-col>
             </v-row>
