@@ -57,7 +57,7 @@
                             </svg>
                             <template #prepend>
                                 <span class="relative">
-                                    <span v-if="cartItemCount > 0"
+                                    <span v-if="cartItemCount > 0 && auth.isLoggedIn"
                                         class="absolute -top-6 -left-1 bg-red-700 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">
                                         {{ cartItemCount }}
                                     </span>
@@ -109,9 +109,17 @@
                             </template>
 
                             <v-list elevation="3" class="rounded-lg flex flex-col py-0" variant="plain">
-                                <v-list-item v-for="(item, i) in accountItems" :key="i"
-                                    class="px-7 py-1 hover:bg-gray-100" @click="clickCallback(item.to)">
-                                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                                <v-list-item v-if="auth.isLoggedIn" @click="logoutCallback"
+                                    class="px-7 py-1 hover:bg-gray-100">
+                                    <v-list-item-title>ចាកចេញ</v-list-item-title>
+                                </v-list-item>
+                                <v-list-item v-if="!auth.isLoggedIn" @click="clickCallback('login')"
+                                    class="px-7 py-1 hover:bg-gray-100">
+                                    <v-list-item-title>ចូលគណនី</v-list-item-title>
+                                </v-list-item>
+                                <v-list-item v-if="auth.isLoggedIn" @click="clickCallback('wishlist')"
+                                    class="px-7 py-1 hover:bg-gray-100">
+                                    <v-list-item-title>ចំណូលចិត្ត</v-list-item-title>
                                 </v-list-item>
                             </v-list>
                         </v-menu>
@@ -165,11 +173,13 @@
     import { useRouter } from 'vue-router';
     import { useDisplay } from 'vuetify/lib/framework.mjs';
     import { useCartStore } from '@/stores/cart';
+    import { useAuthStore } from '@/stores/auth';
 
     const dialog = ref(false);
 
     const router = useRouter();
     const display = useDisplay();
+    const auth = useAuthStore();
 
     const isMobile = computed(() => display.width.value < 800);
 
@@ -258,16 +268,9 @@
         }
     ];
 
-    const accountItems = [
-        {
-            title: 'ចូលគណនី',
-            to: 'login'
-        },
-        {
-            title: 'ចំណូលចិត្ត',
-            to: 'wishlist'
-        },
-    ];
+    const logoutCallback = async () => {
+        await auth.logout();
+    }
 
     const toggleDarkMode = () => {
         themeStore.toggleTheme()
