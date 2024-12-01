@@ -65,6 +65,33 @@
                     </v-row>
                 </v-container>
             </div>
+            
+            <div>
+                <div class="flex flex-col lg:flex-row items-center gap-6 p-6 mb-12">
+                <div class="w-full lg:w-1/2 h-[350px] bg-gray-300 rounded-[20px]">
+                    <img src="/slide-groups/outdoors/outdoor-slide-1.jpg" alt=""
+                        class="w-full h-full object-cover rounded-[20px]" />
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <h2 data-aos="fade-down"
+                        class="mb-8 font-bold text-center min-[800px]:text-left text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
+                        ឈុតតុបតែងផ្នែកខាងក្រៅ</h2>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700 mt-4">
+                        <li>លោកអ្នកអាចធ្វើការជ្រើសរើសនូវប្រភេទនៃគ្រឿងសង្ហារឹមសម្រាប់ធ្វើការរៀបចំតុបតែង
+                            ដែលសាកសមទៅតាមតម្រូវការរបស់លោកអ្នក</li>
+                        <li>គ្រប់ប្រភេទនៃគ្រឿងសង្ហារឹមរបស់ពួកយើង គឺលោកអ្នកអាចទុកចិត្តបានទាំងគុណភាពនិងតម្លៃ
+                            នៃផលិតផលនីមួយៗ</li>
+                        <li>រាល់ផលិតផលទាំងអស់សុទ្ធតែប្រើប្រាស់នូវវត្ថុធាតុដើមដែលមានគុណភាពល្អ មិនងាយពុកភុយ ឬ ហើរពណ៌
+                            សាកសមនឹងតម្លៃ ដែលជាទីពេញចិត្តរបស់អតិថិជន</li>
+                    </ul>
+                    <button data-aos="fade-up"
+                        class="btn btn-dark mt-12 bg-primary-800 round-[10px] text-primary-50 px-9 py-2 hover:bg-gray-800">
+                        ព័ត៌មានបន្ថែម
+                    </button>
+                </div>
+            </div>
+
+            </div>
 
             <div class="mb-16">
                 <v-col cols="12"
@@ -141,10 +168,11 @@
                 <v-card :elevation="0" class="mx-0">
                     <div class="grid grid-cols-1 justify-items-center gap-y-24 gap-x-4 min-[960px]:grid-cols-10">
                         <the-small-slide-group class="min-[960px]:col-span-7 mt-[20px]"></the-small-slide-group>
-                        <v-img class="w-80 h-80 min-[960px]:col-span-3" src="/Outdoor Cateogry/Outdoor (Original)/Plant/pic-18 (2).png" alt="Lamp with flower"></v-img>
+                        <v-img class="w-80 h-80 min-[960px]:col-span-3" src="/Outdoor Cateogry/Outdoor (Original)/Plant/pic-18 (2).png" alt="Lamp with flower" data-aos="fade-right"></v-img>
                     </div>
                 </v-card>
             </div>
+          
             <div class="mb-0">
                 <v-container>
                     <h2 data-aos="fade-down" data-aos-delay="300"
