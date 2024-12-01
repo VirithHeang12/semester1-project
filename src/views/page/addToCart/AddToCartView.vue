@@ -38,7 +38,7 @@
 
                                 <!-- Quantity Input -->
                                 <input type="text" id="quantity-input" :value="item.quantity" readonly
-                                    class="bg-gray-50 outline-none border-t border-b border-gray-300 h-8 w-8 text-center text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    class="bg-gray-50 outline-none border-t border-b border-gray-300 h-8 w-10 text-center text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     aria-describedby="helper-text-explanation" required />
                                 <!-- Increment Button -->
                                 <button type="button" id="increment-button" @click="updateQuantity(index, 1)"
