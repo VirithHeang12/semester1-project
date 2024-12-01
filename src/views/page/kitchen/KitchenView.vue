@@ -32,9 +32,7 @@
                         <v-row>
                             <v-col cols="12" sm="6" md="4" v-for="(card, index) in paginatedProductCards"
                                 :key="`product-card-${index}`" data-aos="fade-up" :data-aos-delay="index * 100">
-                                <a href="#">
-                                    <the-category-card :card="card"></the-category-card>
-                                </a>
+                                <the-category-card :card="card"></the-category-card>
                             </v-col>
                         </v-row>
                         <v-row class="justify-content-center">
@@ -127,7 +125,6 @@
 
     ]);
 
-
     // Product cards
     const productCards = ref([
         {
@@ -136,7 +133,7 @@
             title: "ទូរ",
             price: 309.99,
             category: "cabinet",
-            slug: "cabinet",
+            slug: "kitchen-cabinet-1",
             description: 'Modern cabinet with a sleek design, offering ample storage and style for any dining room or kitchen. Perfect for organizing and enhancing your space.',
         },
         {
@@ -145,7 +142,7 @@
             title: "តុ",
             price: 99.99,
             category: "islandTable",
-            slug: "islandTable",
+            slug: "island-table-2",
             description: 'Modern island table with a functional design, perfect for adding extra workspace and style to your kitchen. Ideal for meal prep or casual dining.',
         },
         {
@@ -154,7 +151,7 @@
             title: "ធ្នើរ",
             price: 119.99,
             category: "shelf",
-            slug: "shelf",
+            slug: "kitchen-shelf-3",
             description: 'Stylish shelf with a sleek design, perfect for organizing and displaying items in any room. Combines practicality with a modern touch.',
         },
         {
@@ -163,6 +160,7 @@
             title: "តុបាយ",
             price: 209.99,
             category: "table",
+            slug: "kitchen-table-4",
             description: 'Elegant dining table with a sleek design, perfect for family meals or gatherings. Combines style and functionality to enhance any dining space.',
         },
         {
@@ -171,7 +169,7 @@
             title: "ទូរ",
             price: 409.99,
             category: "cabinet",
-            slug: "cabinet",
+            slug: "kitchen-cabinet-5",
             description: 'Modern cabinet with a sleek design, offering ample storage and style for any dining room or kitchen. Perfect for organizing and enhancing your space.',
         },
         {
@@ -180,7 +178,7 @@
             title: "តុ",
             price: 359.99,
             category: "islandTable",
-            slug: "islandTable",
+            slug: "island-table-6",
             description: 'Modern island table with a functional design, perfect for adding extra workspace and style to your kitchen. Ideal for meal prep or casual dining.',
         },
         {
@@ -189,7 +187,7 @@
             title: "ធ្នើរ",
             price: 99.99,
             category: "shelf",
-            slug: "shelf",
+            slug: "kitchen-shelf-7",
             description: 'Stylish shelf with a sleek design, perfect for organizing and displaying items in any room. Combines practicality with a modern touch.',
         },
         {
@@ -198,6 +196,7 @@
             title: "តុបាយ",
             price: 259.99,
             category: "table",
+            slug: "kitchen-table-8",
             description: 'Elegant dining table with a sleek design, perfect for family meals or gatherings. Combines style and functionality to enhance any dining space.',
         },
         {
@@ -206,7 +205,7 @@
             title: "ទូរ",
             price: 409.99,
             category: "cabinet",
-            slug: "cabinet",
+            slug: "kitchen-cabinet-9",
             description: 'Modern cabinet with a sleek design, offering ample storage and style for any dining room or kitchen. Perfect for organizing and enhancing your space.',
         },
         {
@@ -215,7 +214,7 @@
             title: "តុ",
             price: 699.99,
             category: "islandTable",
-            slug: "islandTable",
+            slug: "island-table-10",
             description: 'Modern island table with a functional design, perfect for adding extra workspace and style to your kitchen. Ideal for meal prep or casual dining.',
         },
         {
@@ -224,7 +223,7 @@
             title: "ធ្នើរ",
             price: 139.99,
             category: "shelf",
-            slug: "shelf",
+            slug: "kitchen-shelf-11",
             description: 'Stylish shelf with a sleek design, perfect for organizing and displaying items in any room. Combines practicality with a modern touch.',
         },
         {
@@ -233,6 +232,7 @@
             title: "តុបាយ",
             price: 449.99,
             category: "table",
+            slug: "kitchen-table-12",
             description: 'Elegant dining table with a sleek design, perfect for family meals or gatherings. Combines style and functionality to enhance any dining space.',
         },
         {
@@ -241,7 +241,7 @@
             title: "ទូរ",
             price: 339.99,
             category: "cabinet",
-            slug: "cabinet",
+            slug: "kitchen-cabinet-13",
             description: 'Modern cabinet with a sleek design, offering ample storage and style for any dining room or kitchen. Perfect for organizing and enhancing your space.',
         },
         {
@@ -250,7 +250,7 @@
             title: "តុ",
             price: 499.99,
             category: "islandTable",
-            slug: "islandTable",
+            slug: "island-table-14",
             description: 'Modern island table with a functional design, perfect for adding extra workspace and style to your kitchen. Ideal for meal prep or casual dining.',
         },
         {
@@ -259,7 +259,7 @@
             title: "ធ្នើរ",
             price: 139.99,
             category: "shelf",
-            slug: "shelf",
+            slug: "kitchen-shelf-15",
             description: 'Stylish shelf with a sleek design, perfect for organizing and displaying items in any room. Combines practicality with a modern touch.',
         },
         {
@@ -268,6 +268,7 @@
             title: "តុបាយ",
             price: 239.99,
             category: "table",
+            slug: "kitchen-table-16",
             description: 'Elegant dining table with a sleek design, perfect for family meals or gatherings. Combines style and functionality to enhance any dining space.',
         },
         {
@@ -276,7 +277,7 @@
             title: "ទូរ",
             price: 109.99,
             category: "cabinet",
-            slug: "cabinet",
+            slug: "kitchen-cabinet-17",
             description: 'Modern cabinet with a sleek design, offering ample storage and style for any dining room or kitchen. Perfect for organizing and enhancing your space.',
         },
         {
@@ -285,7 +286,7 @@
             title: "តុ",
             price: 299.99,
             category: "islandTable",
-            slug: "islandTable",
+            slug: "island-table-18",
             description: 'Modern island table with a functional design, perfect for adding extra workspace and style to your kitchen. Ideal for meal prep or casual dining.',
         },
         {
@@ -294,7 +295,7 @@
             title: "ធ្នើរ",
             price: 119.99,
             category: "shelf",
-            slug: "shelf",
+            slug: "kitchen-shelf-19",
             description: 'Stylish shelf with a sleek design, perfect for organizing and displaying items in any room. Combines practicality with a modern touch.',
         },
         {
@@ -303,6 +304,7 @@
             title: "តុបាយ",
             price: 209.99,
             category: "table",
+            slug: "kitchen-table-20",
             description: 'Elegant dining table with a sleek design, perfect for family meals or gatherings. Combines style and functionality to enhance any dining space.',
         },
         {
@@ -311,7 +313,7 @@
             title: "ទូរ",
             price: 309.99,
             category: "cabinet",
-            slug: "cabinet",
+            slug: "kitchen-cabinet-21",
             description: 'Modern cabinet with a sleek design, offering ample storage and style for any dining room or kitchen. Perfect for organizing and enhancing your space.',
         },
         {
@@ -320,7 +322,7 @@
             title: "តុ",
             price: 99.99,
             category: "islandTable",
-            slug: "islandTable",
+            slug: "island-table-22",
             description: 'Modern island table with a functional design, perfect for adding extra workspace and style to your kitchen. Ideal for meal prep or casual dining.',
         },
         {
@@ -329,7 +331,7 @@
             title: "ធ្នើរ",
             price: 119.99,
             category: "shelf",
-            slug: "shelf",
+            slug: "kitchen-shelf-23",
             description: 'Stylish shelf with a sleek design, perfect for organizing and displaying items in any room. Combines practicality with a modern touch.',
         },
         {
@@ -338,6 +340,7 @@
             title: "តុបាយ",
             price: 209.99,
             category: "table",
+            slug: "kitchen-table-24",
             description: 'Elegant dining table with a sleek design, perfect for family meals or gatherings. Combines style and functionality to enhance any dining space.',
         },
         {
@@ -346,7 +349,7 @@
             title: "ទូរ",
             price: 309.99,
             category: "cabinet",
-            slug: "cabinet",
+            slug: "kitchen-cabinet-25",
             description: 'Modern cabinet with a sleek design, offering ample storage and style for any dining room or kitchen. Perfect for organizing and enhancing your space.',
         },
         {
@@ -355,7 +358,7 @@
             title: "តុ",
             price: 99.99,
             category: "islandTable",
-            slug: "islandTable",
+            slug: "island-table-26",
             description: 'Modern island table with a functional design, perfect for adding extra workspace and style to your kitchen. Ideal for meal prep or casual dining.',
         },
         {
@@ -364,7 +367,7 @@
             title: "ធ្នើរ",
             price: 119.99,
             category: "shelf",
-            slug: "shelf",
+            slug: "kitchen-shelf-27",
             description: 'Stylish shelf with a sleek design, perfect for organizing and displaying items in any room. Combines practicality with a modern touch.',
         },
         {
@@ -373,6 +376,7 @@
             title: "តុបាយ",
             price: 209.99,
             category: "table",
+            slug: "kitchen-table-28",
             description: 'Elegant dining table with a sleek design, perfect for family meals or gatherings. Combines style and functionality to enhance any dining space.',
         },
         {
@@ -381,7 +385,7 @@
             title: "ទូរ",
             price: 309.99,
             category: "cabinet",
-            slug: "cabinet",
+            slug: "kitchen-cabinet-29",
             description: 'Modern cabinet with a sleek design, offering ample storage and style for any dining room or kitchen. Perfect for organizing and enhancing your space.',
         },
         {
@@ -390,7 +394,7 @@
             title: "តុ",
             price: 99.99,
             category: "islandTable",
-            slug: "islandTable",
+            slug: "island-table-30",
             description: 'Modern island table with a functional design, perfect for adding extra workspace and style to your kitchen. Ideal for meal prep or casual dining.',
         },
         {
@@ -399,7 +403,7 @@
             title: "ធ្នើរ",
             price: 119.99,
             category: "shelf",
-            slug: "shelf",
+            slug: "kitchen-shelf-31",
             description: 'Stylish shelf with a sleek design, perfect for organizing and displaying items in any room. Combines practicality with a modern touch.',
         },
         {
@@ -408,7 +412,7 @@
             title: "តុបាយ",
             price: 209.99,
             category: "table",
-            slug: "table",
+            slug: "kitchen-table-32",
             description: 'Elegant dining table with a sleek design, perfect for family meals or gatherings. Combines style and functionality to enhance any dining space.',
         },
 
