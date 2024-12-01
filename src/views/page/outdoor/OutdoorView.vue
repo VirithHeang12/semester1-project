@@ -54,10 +54,7 @@
                         <v-row>
                             <v-col cols="12" sm="6" md="4" v-for="(card, index) in paginatedProductCards"
                                 :key="`product-card-${index}`" data-aos="fade-up" :data-aos-delay="index * 100">
-                                <a href="#">
-                                    <the-category-card :title="card.title" :price="card.price"
-                                        :href="card.href"></the-category-card>
-                                </a>
+                                <the-category-card :card="card"></the-category-card>
                             </v-col>
                         </v-row>
                         <!-- Pagination Controls -->
@@ -111,208 +108,270 @@
 
     // Product cards
     const productCards = ref([
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (8).png",
-            title: "កៅអី",
-            price: 50.50,
-            category: 'chair'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (9).png",
-            title: "កៅអី",
-            price: 50.50,
-            category: 'chair'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (10).png",
-            title: "កៅអី",
-            price: 50.50,
-            category: 'chair'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Plant/plant-1.jpg",
-            title: "រុក្ខជាតិ",
-            price: 20.20,
-            category: 'plant'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Plant/plant-2.jpg",
-            title: "រុក្ខជាតិ",
-            price: 20.20,
-            category: 'plant'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Plant/pic-3.png",
-            title: "រុក្ខជាតិ",
-            price: 20.20,
-            category: 'plant'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Plant/pic-4.png",
-            title: "រុក្ខជាតិ",
-            price: 20.20,
-            category: 'plant'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Plant/pic-5.png",
-            title: "រុក្ខជាតិ",
-            price: 20.20,
-            category: 'plant'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Plant/pic-10.png",
-            title: "រុក្ខជាតិ",
-            price: 20.20,
-            category: 'plant'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Plant/pic-11.jpg",
-            title: "រុក្ខជាតិ",
-            price: 20.20,
-            category: 'plant'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Plant/pic-8.png",
-            title: "រុក្ខជាតិ",
-            price: 20.20,
-            category: 'plant'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Plant/pic-12.jpg",
-            title: "រុក្ខជាតិ",
-            price: 20.20,
-            category: 'plant'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (8).png",
-            title: "តុ",
-            price: 88.88,
-            category: 'table'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (9).png",
-            title: "តុ",
-            price: 88.88,
-            category: 'table'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (10).png",
-            title: "តុ",
-            price: 88.88,
-            category: 'table'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (1).png",
-            title: "តុ",
-            price: 88.88,
-            category: 'table'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (1).png",
-            title: "កៅអី",
-            price: 50.50,
-            category: 'chair'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (2).png",
-            title: "កៅអី",
-            price: 50.50,
-            category: 'chair'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (3).png",
-            title: "កៅអី",
-            price: 50.50,
-            category: 'chair'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (4).png",
-            title: "កៅអី",
-            price: 50.50,
-            category: 'chair'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (5).png",
-            title: "កៅអី",
-            price: 50.50,
-            category: 'chair'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (6).png",
-            title: "កៅអី",
-            price: 50.50,
-            category: 'chair'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (7).png",
-            title: "កៅអី",
-            price: 50.50,
-            category: 'chair'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (2).png",
-            title: "តុ",
-            price: 88.88,
-            category: 'table'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (3).png",
-            title: "តុ",
-            price: 88.88,
-            category: 'table'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (4).png",
-            title: "តុ",
-            price: 88.88,
-            category: 'table'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (5).png",
-            title: "តុ",
-            price: 88.88,
-            category: 'table'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (6).png",
-            title: "តុ",
-            price: 88.88,
-            category: 'table'
-        },
-        {
-            href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (7).png",
-            title: "តុ",
-            price: 88.88,
-            category: 'table'
-        },
+    {
+        id: 1,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (8).png",
+        title: "កៅអី",
+        price: 60.00,
+        category: 'chair',
+        slug: "chair-1",
+        description: 'This chair is designed for comfort with a sleek modern finish, perfect for any outdoor setting.',
+    },
+    {
+        id: 2,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (9).png",
+        title: "កៅអី",
+        price: 55.75,
+        category: 'chair',
+        slug: "chair-2",
+        description: 'Stylish chair made of premium wood, ideal for patio or garden spaces.',
+    },
+    {
+        id: 3,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (10).png",
+        title: "កៅអី",
+        price: 70.25,
+        category: 'chair',
+        slug: "chair-3",
+        description: 'A luxurious chair crafted with wood, offering both comfort and elegance for your outdoor area.',
+    },
+    {
+        id: 4,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Plant/plant-1.jpg",
+        title: "ផើងរុក្ខជាតិ",
+        price: 25.30,
+        category: 'plant',
+        slug: "plant-1",
+        description: 'This elegant vase, made of stone, complements any garden with its unique design.',
+    },
+    {
+        id: 5,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Plant/plant-2.jpg",
+        title: "ផើងរុក្ខជាតិ",
+        price: 22.40,
+        category: 'plant',
+        slug: "plant-2",
+        description: 'A modern stone vase that brings a touch of nature and style to your outdoor decor.',
+    },
+    {
+        id: 6,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Plant/pic-3.png",
+        title: "ផើងរុក្ខជាតិ",
+        price: 28.00,
+        category: 'plant',
+        slug: "plant-3",
+        description: 'Beautiful stone vase with a contemporary design, perfect for all types of plants.',
+    },
+    {
+        id: 7,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Plant/pic-4.png",
+        title: "ផើងរុក្ខជាតិ",
+        price: 23.50,
+        category: 'plant',
+        slug: "plant-4",
+        description: 'Decorative stone vase with a clean design that enhances your garden or balcony.',
+    },
+    {
+        id: 8,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Plant/pic-5.png",
+        title: "ផើងរុក្ខជាតិ",
+        price: 26.10,
+        category: 'plant',
+        slug: "plant-5",
+        description: 'Elegant stone vase with a minimalist design, perfect for adding greenery to your space.',
+    },
+    {
+        id: 9,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Plant/pic-10.png",
+        title: "ផើងរុក្ខជាតិ",
+        price: 24.50,
+        category: 'plant',
+        slug: "plant-6",
+        description: 'A stylish stone vase to brighten up your outdoor spaces with vibrant plants.',
+    },
+    {
+        id: 10,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Plant/pic-11.jpg",
+        title: "ផើងរុក្ខជាតិ",
+        price: 27.00,
+        category: 'plant',
+        slug: "plant-7",
+        description: 'This stone vase will complement your garden with its simple yet sophisticated design.',
+    },
+    {
+        id: 11,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Plant/pic-8.png",
+        title: "ផើងរុក្ខជាតិ",
+        price: 22.80,
+        category: 'plant',
+        slug: "plant-8",
+        description: 'Stone vase with a chic design, great for all your favorite plants.',
+    },
+    {
+        id: 12,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Plant/pic-12.jpg",
+        title: "ផើងរុក្ខជាតិ",
+        price: 21.90,
+        category: 'plant',
+        slug: "plant-9",
+        description: 'A stone vase with an elegant appearance, ideal for decorating your balcony or garden.',
+    },
+    {
+        id: 13,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (8).png",
+        title: "តុ",
+        price: 98.75,
+        category: 'table',
+        slug: "table-1",
+        description: 'A modern wooden table, designed for both style and functionality, perfect for outdoor dining.',
+    },
+    {
+        id: 14,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (9).png",
+        title: "តុ",
+        price: 93.50,
+        category: 'table',
+        slug: "table-2",
+        description: 'Elegant wooden table, ideal for family gatherings or outdoor events.',
+    },
+    {
+        id: 15,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (10).png",
+        title: "តុ",
+        price: 105.60,
+        category: 'table',
+        slug: "table-3",
+        description: 'This wooden table offers both a functional and fashionable design for your garden.',
+    },
+    {
+        id: 16,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (1).png",
+        title: "តុ",
+        price: 100.20,
+        category: 'table',
+        slug: "table-4",
+        description: 'Sophisticated wooden table, perfect for a wide range of outdoor settings.',
+    },
+    {
+        id: 17,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (1).png",
+        title: "កៅអី",
+        price: 60.00,
+        category: 'chair',
+        slug: "chair-4",
+        description: 'A modern chair with a strong wooden frame and comfortable seating.',
+    },
+    {
+        id: 18,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (2).png",
+        title: "កៅអី",
+        price: 55.00,
+        category: 'chair',
+        slug: "chair-5",
+        description: 'A sturdy wooden chair designed to add elegance to any outdoor area.',
+    },
+    {
+        id: 19,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (3).png",
+        title: "កៅអី",
+        price: 62.50,
+        category: 'chair',
+        slug: "chair-6",
+        description: 'Comfortable wooden chair, crafted to offer relaxation and style.',
+    },
+    {
+        id: 20,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (4).png",
+        title: "កៅអី",
+        price: 58.00,
+        category: 'chair',
+        slug: "chair-7",
+        description: 'Beautifully crafted wooden chair that combines elegance with comfort.',
+    },
+    {
+        id: 21,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (5).png",
+        title: "កៅអី",
+        price: 65.00,
+        category: 'chair',
+        slug: "chair-8",
+        description: 'Stylish and durable wooden chair, designed for long-lasting comfort.',
+    },
+    {
+        id: 22,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (6).png",
+        title: "កៅអី",
+        price: 66.00,
+        category: 'chair',
+        slug: "chair-9",
+        description: 'Wooden chair that features a modern design, perfect for any outdoor area.',
+    },
+    {
+        id: 23,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (7).png",
+        title: "កៅអី",
+        price: 67.50,
+        category: 'chair',
+        slug: "chair-10",
+        description: 'Comfortable outdoor chair made of premium wood, designed for relaxation.',
+    },
+    {
+        id: 24,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (2).png",
+        title: "តុ",
+        price: 101.50,
+        category: 'table',
+        slug: "table-5",
+        description: 'Sturdy wooden table for your patio, combining functionality and design.',
+    },
+    {
+        id: 25,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (3).png",
+        title: "តុ",
+        price: 104.00,
+        category: 'table',
+        slug: "table-6",
+        description: 'Wooden table designed to enhance your outdoor dining experience.',
+    },
+    {
+        id: 26,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (4).png",
+        title: "តុ",
+        price: 110.00,
+        category: 'table',
+        slug: "table-7",
+        description: 'Elegant wooden table designed for modern outdoor spaces.',
+    },
+    {
+        id: 27,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (5).png",
+        title: "តុ",
+        price: 107.00,
+        category: 'table',
+        slug: "table-8",
+        description: 'Modern outdoor table, perfect for family gatherings and outdoor events.',
+    },
+    {
+        id: 28,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (6).png",
+        title: "តុ",
+        price: 99.00,
+        category: 'table',
+        slug: "table-9",
+        description: 'Wooden table with a simple design, perfect for outdoor spaces.',
+    },
+    {
+        id: 29,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (7).png",
+        title: "តុ",
+        price: 102.50,
+        category: 'table',
+        slug: "table-10",
+        description: 'Wooden table designed for outdoor dining, combining elegance and durability.',
+    },
+]);
 
-    ]);
 
-    // watch(isAll, (newVal) => {
-    //     if (newVal) {
-    //         isTable.value = false;
-    //         isChair.value = false;
-    //         isPlant.value = false;
-    //     }
-    // })
-
-    // watch(isChair, (newVal) => {
-    //     if (newVal) {
-    //         isAll.value = false;
-    //     }
-    // })
-
-    // watch(isTable, (newVal) => {
-    //     if (newVal) {
-    //         isAll.value = false;
-    //     }
-    // })
-
-    // watch(isPlant, (newVal) => {
-    //     if (newVal) {
-    //         isAll.value = false;
-    //     }
-    // })
 
     watch([isChair, isTable, isPlant], () => {
         isAll.value = !isChair.value && !isTable.value && !isPlant.value;
@@ -335,52 +394,36 @@
 
     const cartRecom = ref([
         {
-            src: "/bedrooms/Headborad.jpg",
-            title: "Headbord",
+            src: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (15).png",
+            title: "Table",
         },
         {
-            src: "/slide-groups/bedrooms/bedroom-3.jpg",
-            title: "Mattresses",
+            src: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (16).png",
+            title: "Table",
         },
         {
-            src: "/slide-groups/bedrooms/bedroom-4.jpg",
-            title: "Bedside Tables",
+            src: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (17).png",
+            title: "Table",
         },
         {
-            src: "/bedrooms/Headborad.jpg",
-            title: "Headbord",
+            src: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (18).png",
+            title: "Table",
         },
         {
-            src: "/slide-groups/bedrooms/bedroom-3.jpg",
-            title: "Mattresses",
+            src: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (30).png",
+            title: "Chair",
         },
         {
-            src: "/slide-groups/bedrooms/bedroom-4.jpg",
-            title: "Bedside Tables",
+            src: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (32).png",
+            title: "Chair",
         },
         {
-            src: "/bedrooms/Headborad.jpg",
-            title: "Headbord",
+            src: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (33).png",
+            title: "Chair",
         },
         {
-            src: "/slide-groups/bedrooms/bedroom-3.jpg",
-            title: "Mattresses",
-        },
-        {
-            src: "/slide-groups/bedrooms/bedroom-4.jpg",
-            title: "Bedside Tables",
-        },
-        {
-            src: "/bedrooms/Headborad.jpg",
-            title: "Headbord",
-        },
-        {
-            src: "/slide-groups/bedrooms/bedroom-3.jpg",
-            title: "Mattresses",
-        },
-        {
-            src: "/slide-groups/bedrooms/bedroom-4.jpg",
-            title: "Bedside Tables",
+            src: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (34).png",
+            title: "Chair",
         },
     ]);
 
