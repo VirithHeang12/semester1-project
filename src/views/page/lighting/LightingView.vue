@@ -67,8 +67,8 @@
             <h2 class="text-lg font-bold min-[500px]:text-[1.5rem] min-[600px]:text-[2rem]">អ្នកប្រហែលជាចូលចិត្ត</h2>
             <v-slide-group class="pa-4" selected-class="bg-success" show-arrows>
                 <v-slide-group-item v-for="(cartrecom, n) in cartRecom" :key="`cart-recom-${n}`">
-                    <the-recommendation-card data-aos="zoom-in" :src="cartrecom.src"
-                        :title="cartrecom.title"></the-recommendation-card>
+                    <the-recommendation-card data-aos="zoom-in" :src="cartrecom.href"
+                        :title="cartrecom.title" :cartrecom="cartrecom"></the-recommendation-card>
                 </v-slide-group-item>
             </v-slide-group>
         </v-sheet>
@@ -644,55 +644,116 @@
 
     // Recommendations
     const cartRecom = ref([
-        {
-            src: "/slide-groups/lightings/lighting-1.jpg",
-            title: "អំពូល",
-        },
-        {
-            src: "/slide-groups/lightings/lighting-2.jpg",
-            title: "អំពូល",
-        },
-        {
-            src: "/slide-groups/lightings/lighting-3.jpg",
-            title: "អំពូល",
-        },
-        {
-            src: "/slide-groups/lightings/lighting-4.jpg",
-            title: "អំពូល",
-        },
-        {
-            src: "/slide-groups/lightings/lighting-5.jpg",
-            title: "អំពូល",
-        },
-        {
-            src: "/slide-groups/bedrooms/bedroom-6.jpg",
-            title: "អំពូល",
-        },
-        {
-            src: "/slide-groups/lightings/lighting-7.jpg",
-            title: "អំពូល",
-        },
-        {
-            src: "/slide-groups/lightings/lighting-8.jpg",
-            title: "អំពូល",
-        },
-        {
-            src: "/slide-groups/lightings/lighting-2.jpg",
-            title: "អំពូល",
-        },
-        {
-            src: "/slide-groups/lightings/lighting-5.jpg",
-            title: "អំពូល",
-        },
-        {
-            src: "/slide-groups/lightings/lighting-7.jpg",
-            title: "អំពូល",
-        },
-        {
-            src: "/slide-groups/lightings/lighting-1.jpg",
-            title: "អំពូល",
-        },
-    ]);
+    {
+        id: 1,
+        href: "/slide-groups/lightings/lighting-1.jpg",
+        title: "អំពូល",
+        price: 79.99,
+        category: 'lighting',
+        slug: 'modern-light-1',
+        description: 'A modern lighting fixture to brighten up your space.',
+    },
+    {
+        id: 2,
+        href: "/slide-groups/lightings/lighting-2.jpg",
+        title: "អំពូល",
+        price: 89.99,
+        category: 'lighting',
+        slug: 'modern-light-2',
+        description: 'Sleek and stylish lighting that fits any room.',
+    },
+    {
+        id: 3,
+        href: "/slide-groups/lightings/lighting-3.jpg",
+        title: "អំពូល",
+        price: 99.99,
+        category: 'lighting',
+        slug: 'modern-light-3',
+        description: 'Brighten up your home with this contemporary lighting design.',
+    },
+    {
+        id: 4,
+        href: "/slide-groups/lightings/lighting-4.jpg",
+        title: "អំពូល",
+        price: 109.99,
+        category: 'lighting',
+        slug: 'modern-light-4',
+        description: 'Elegant lighting that enhances your home’s atmosphere.',
+    },
+    {
+        id: 5,
+        href: "/slide-groups/lightings/lighting-5.jpg",
+        title: "អំពូល",
+        price: 119.99,
+        category: 'lighting',
+        slug: 'modern-light-5',
+        description: 'A versatile lighting fixture with a minimalist design.',
+    },
+    {
+        id: 6,
+        href: "/slide-groups/bedrooms/bedroom-6.jpg",
+        title: "អំពូល",
+        price: 129.99,
+        category: 'lighting',
+        slug: 'modern-light-6',
+        description: 'Sophisticated lighting perfect for bedroom decor.',
+    },
+    {
+        id: 7,
+        href: "/slide-groups/lightings/lighting-7.jpg",
+        title: "អំពូល",
+        price: 139.99,
+        category: 'lighting',
+        slug: 'modern-light-7',
+        description: 'A stunning light fixture that creates a cozy atmosphere.',
+    },
+    {
+        id: 8,
+        href: "/slide-groups/lightings/lighting-8.jpg",
+        title: "អំពូល",
+        price: 149.99,
+        category: 'lighting',
+        slug: 'modern-light-8',
+        description: 'An exquisite lighting piece that brings elegance to your room.',
+    },
+    {
+        id: 9,
+        href: "/slide-groups/lightings/lighting-2.jpg",
+        title: "អំពូល",
+        price: 159.99,
+        category: 'lighting',
+        slug: 'modern-light-9',
+        description: 'Energy-efficient and stylish lighting for modern homes.',
+    },
+    {
+        id: 10,
+        href: "/slide-groups/lightings/lighting-5.jpg",
+        title: "អំពូល",
+        price: 169.99,
+        category: 'lighting',
+        slug: 'modern-light-10',
+        description: 'Functional and chic lighting that complements any interior.',
+    },
+    {
+        id: 11,
+        href: "/slide-groups/lightings/lighting-7.jpg",
+        title: "អំពូល",
+        price: 179.99,
+        category: 'lighting',
+        slug: 'modern-light-11',
+        description: 'Sculptural lighting that serves as both a functional and decorative piece.',
+    },
+    {
+        id: 12,
+        href: "/slide-groups/lightings/lighting-1.jpg",
+        title: "អំពូល",
+        price: 189.99,
+        category: 'lighting',
+        slug: 'modern-light-12',
+        description: 'A bold lighting fixture that adds character to any space.',
+    },
+]);
+
 
     // Pagination state
     const currentPage = ref(1);

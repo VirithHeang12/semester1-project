@@ -49,8 +49,8 @@
             <h2 class=" font-bold text-[32px] text-primary-700">អ្នកប្រហែលជាចូលចិត្ត</h2>
             <v-slide-group class="pa-4" selected-class="bg-success" show-arrows>
                 <v-slide-group-item v-for="(cartrecom, n) in cartRecom" :key="`cart-recom-${n}`">
-                    <the-recommendation-card data-aos="zoom-in" :src="cartrecom.src"
-                        :title="cartrecom.title"></the-recommendation-card>
+                    <the-recommendation-card data-aos="zoom-in" :src="cartrecom.href"
+                        :title="cartrecom.title" :cartrecom="cartrecom"></the-recommendation-card>
                 </v-slide-group-item>
             </v-slide-group>
         </v-sheet>
@@ -91,39 +91,72 @@
     ]);
 
     // Recommendations
-    const cartRecom = ref([
-        {
-            src: "/slide-groups/kitchens/diningroom-1.jpg",
-            title: "តុបាយ",
-        },
-        {
-            src: "/slide-groups/kitchens/diningroom-2.jpg",
-            title: "តុបាយ",
-        },
-        {
-            src: "/slide-groups/kitchens/diningroom-3.jpg",
-            title: "តុបាយ",
-        },
-        {
-            src: "/slide-groups/kitchens/diningroom-4.jpg",
-            title: "តុបាយ",
-        },
-        {
-            src: "/slide-groups/kitchens/diningroom-5.jpg",
-            title: "តុបាយ",
-        },
-        {
-            src: "/slide-groups/kitchens/diningroom-6.jpg",
-            title: "តុបាយ",
-        },
-        {
-            src: "/slide-groups/kitchens/diningroom-7.jpg",
-            title: "តុបាយ",
-        },
+   const cartRecom = ref([
+    {
+        id: 1,
+        href: "/slide-groups/kitchens/diningroom-1.jpg",
+        title: "តុបាយ",
+        price: 199.99,
+        category: 'Table',
+        slug: 'modern-dining-1',
+        description: 'A modern dining table that adds a touch of elegance to your kitchen.',
+    },
+    {
+        id: 2,
+        href: "/slide-groups/kitchens/diningroom-2.jpg",
+        title: "តុបាយ",
+        price: 209.99,
+        category: 'Table',
+        slug: 'modern-dining-2',
+        description: 'Sleek and spacious dining table perfect for family gatherings.',
+    },
+    {
+        id: 3,
+        href: "/slide-groups/kitchens/diningroom-3.jpg",
+        title: "តុបាយ",
+        price: 219.99,
+        category: 'Table',
+        slug: 'modern-dining-3',
+        description: 'Stylish dining table with contemporary design and comfort.',
+    },
+    {
+        id: 4,
+        href: "/slide-groups/kitchens/diningroom-4.jpg",
+        title: "តុបាយ",
+        price: 229.99,
+        category: 'Table',
+        slug: 'modern-dining-4',
+        description: 'Elegant dining table with wooden texture for a cozy feel.',
+    },
+    {
+        id: 5,
+        href: "/slide-groups/kitchens/diningroom-5.jpg",
+        title: "តុបាយ",
+        price: 239.99,
+        category: 'Table',
+        slug: 'modern-dining-5',
+        description: 'A minimalistic dining table perfect for small apartments.',
+    },
+    {
+        id: 6,
+        href: "/slide-groups/kitchens/diningroom-6.jpg",
+        title: "តុបាយ",
+        price: 249.99,
+        category: 'Table',
+        slug: 'modern-dining-6',
+        description: 'Modern dining table with a chic design and comfortable seating.',
+    },
+    {
+        id: 7,
+        href: "/slide-groups/kitchens/diningroom-7.jpg",
+        title: "តុបាយ",
+        price: 259.99,
+        category: 'Table',
+        slug: 'modern-dining-7',
+        description: 'Spacious dining table designed for large family meals.',
+    },
+]);
 
-
-
-    ]);
 
     // Product cards
     const productCards = ref([

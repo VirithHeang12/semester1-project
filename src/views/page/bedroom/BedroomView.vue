@@ -69,8 +69,8 @@
             </h2>
             <v-slide-group class="pa-4" selected-class="bg-success" show-arrows>
                 <v-slide-group-item v-for="(cartrecom, n) in cartRecom" :key="`cart-recom-${n}`">
-                    <the-recommendation-card data-aos="zoom-in" :src="cartrecom.src"
-                        :title="cartrecom.title"></the-recommendation-card>
+                    <the-recommendation-card data-aos="zoom-in" :src="cartrecom.href"
+                        :title="cartrecom.title" :cartrecom="cartrecom"></the-recommendation-card>
                 </v-slide-group-item>
             </v-slide-group>
         </v-sheet>
@@ -504,34 +504,65 @@
                 product.price >= price.value[0] && product.price <= price.value[1];
             return matchesCategory && matchesPrice;
         });
-    });
+    });      
     // Recommendations
-    const cartRecom = ref([
-        {
-            src: "/slide-groups/bedrooms/bedroom-1.jpg",
-            title: "គ្រែគេង",
-        },
-        {
-            src: "/slide-groups/bedrooms/bedroom-2.jpg",
-            title: "គ្រែគេង",
-        },
-        {
-            src: "/slide-groups/bedrooms/bedroom-3.jpg",
-            title: "គ្រែគេង",
-        },
-        {
-            src: "/slide-groups/bedrooms/bedroom-4.jpg",
-            title: "គ្រែគេង",
-        },
-        {
-            src: "/slide-groups/bedrooms/bedroom-5.jpg",
-            title: "គ្រែគេង",
-        },
-        {
-            src: "/slide-groups/bedrooms/bedroom-6.jpg",
-            title: "គ្រែគេង",
-        },
-    ]);
+    const cartRecom = [
+    {
+        id: 1,
+        href: "/slide-groups/bedrooms/bedroom-1.jpg",
+        title: "គ្រែគេង",
+        price: 109.99,
+        category: 'bed',
+        slug: 'modern-one',
+        description: 'Modern one m dolore eu feugiat nulla facilisis',
+    },
+    {
+        id: 2,
+        href: "/slide-groups/bedrooms/bedroom-2.jpg",
+        title: "គ្រែគេង",
+        price: 129.99,
+        category: 'bed',
+        slug: 'modern-two',
+        description: 'Modern two m dolore eu feugiat nulla facilisis',
+    },
+    {
+        id: 3,
+        href: "/slide-groups/bedrooms/bedroom-3.jpg",
+        title: "គ្រែគេង",
+        price: 139.99,
+        category: 'bed',
+        slug: 'modern-three',
+        description: 'Modern three m dolore eu feugiat nulla facilisis',
+    },
+    {
+        id: 4,
+        href: "/slide-groups/bedrooms/bedroom-4.jpg",
+        title: "គ្រែគេង",
+        price: 149.99,
+        category: 'bed',
+        slug: 'modern-four',
+        description: 'Modern four m dolore eu feugiat nulla facilisis',
+    },
+    {
+        id: 5,
+        href: "/slide-groups/bedrooms/bedroom-5.jpg",
+        title: "គ្រែគេង",
+        price: 159.99,
+        category: 'bed',
+        slug: 'modern-five',
+        description: 'Modern five m dolore eu feugiat nulla facilisis',
+    },
+    {
+        id: 6,
+        href: "/slide-groups/bedrooms/bedroom-6.jpg",
+        title: "គ្រែគេង",
+        price: 169.99,
+        category: 'bed',
+        slug: 'modern-six',
+        description: 'Modern six m dolore eu feugiat nulla facilisis',
+    },
+];
+
 
     // Pagination state
     const currentPage = ref(1);
