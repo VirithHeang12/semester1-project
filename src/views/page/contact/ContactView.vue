@@ -1,8 +1,8 @@
 <template>
-    <div class="bg-slate-100 min-h-screen">
+    <div class="bg-primary-50  min-h-screen mt-0">
         <div class="container px-3 py-3 mx-auto" style="max-width: 1200px;">
             <div class="row gx-3">
-                <div class="col-12 col-md-6 mt-[32px] px-5 py-4 bg-slate-50 rounded-[16px]">
+                <div class="col-12 col-sm-12 col-md-6 mt-[32px] px-5 py-4 bg-slate-50 rounded-[16px]">
                     <div class="inline-block bg-slate-100 px-3 py-2 rounded-[8px]">
                         <p class="text-orange-400 text-[24px] md:text-[20px]">Get in Touch</p>
                     </div>
@@ -17,7 +17,7 @@
                             <div class="col-12 col-md-6">
                                 <div class="form-floating mb-[24px] ">
                                     <input type="text"
-                                        class="form-control rounded-[8px] bg-slate-200 border-none focus:bg-slate-200 focus:outline-none"
+                                        class="form-control rounded-[8px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none"
                                         id="floatingInput" placeholder="firstName">
                                     <label for="floatingInput" class="text-primary-600">នាមត្រកូល</label>
                                 </div>
@@ -25,7 +25,7 @@
                             <div class="col-12 col-md-6">
                                 <div class="form-floating mb-[24px]">
                                     <input type="text"
-                                        class="form-control rounded-[8px] bg-slate-200 border-none focus:bg-slate-200 focus:outline-none"
+                                        class="form-control rounded-[8px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none"
                                         id="floatingInput" placeholder="lastName">
                                     <label for="floatingInput" class="text-primary-600">នាមខ្លួន</label>
                                 </div>
@@ -33,13 +33,13 @@
                         </div>
                         <div class="form-floating mb-[24px]">
                             <input type="email"
-                                class="form-control rounded-[8px] bg-slate-200 border-none focus:bg-slate-200 focus:outline-none"
+                                class="form-control rounded-[8px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none"
                                 id="floatingPassword" placeholder="email">
                             <label for="floatingPassword" class="text-primary-600">អាសយដ្ឋានអុីម៉ែល</label>
                         </div>
                         <div class="form-floating mb-4">
                             <textarea
-                                class="form-control rounded-[8px] bg-slate-200 border-none focus:bg-slate-200 focus:outline-none"
+                                class="form-control rounded-[8px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none"
                                 placeholder="Leave a comment here" id="floatingTextarea2"
                                 style="height: 120px"></textarea>
                             <label for="floatingTextarea2" class="text-primary-600">មតិយោបល់</label>
@@ -57,7 +57,7 @@
                     <div class="bg-slate-50 mt-4 rounded-[16px] px-3 py-[32px]">
                         <div class="row">
                             <div class="col-12 d-flex align-items-start px-[32px]">
-                                <div class="inline-block bg-slate-200 p-[14px] rounded-[32px] flex-shrink-0">
+                                <div class="inline-block bg-slate-100 p-[14px] rounded-[32px] flex-shrink-0">
                                     <svg width="28px" height="28px" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" stroke="#2e2d48">
                                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -78,7 +78,7 @@
                                 </div>
                             </div>
                             <div class="col-12 d-flex align-items-start px-[32px] mt-[24px]">
-                                <div class="inline-block bg-slate-200 p-[14px] rounded-[32px] flex-shrink-0">
+                                <div class="inline-block bg-slate-100 p-[14px] rounded-[32px] flex-shrink-0">
                                     <svg width="28px" height="28px" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -103,7 +103,7 @@
                                 </div>
                             </div>
                             <div class="col-12 d-flex align-items-start px-[32px] mt-[24px]">
-                                <div class="inline-block bg-slate-200 p-[14px] rounded-[32px] flex-shrink-0">
+                                <div class="inline-block bg-slate-100 p-[14px] rounded-[32px] flex-shrink-0">
                                     <svg width="28px" height="28px" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -128,19 +128,43 @@
                     </div>
                 </div>
             </div>
+            <div class="row mt-[32px]">
+                <div class="col-12">
+                    <div class="custom-ratio">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3906.5717373571354!2d104.87281551516487!3d11.59829309176892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109511b874c29f5%3A0xb3a0aef65fd1d921!2sSen%20Sok%20District%2C%20Phnom%20Penh!5e0!3m2!1sen!2skh!4v1698756445827!5m2!1sen!2skh"
+                            style="border:0;" loading="lazy" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
 <style scoped>
+.form-control {
+    box-shadow: none;
+}
 
-    .form-control {
-        box-shadow: none;
-    }
+.form-control:focus {
+    border-color: #374151;
+    outline: none;
+}
 
-    .form-control:focus {
-        border-color: #374151;
-        outline: none;
-    }
+.custom-ratio {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 aspect ratio (height = width * 9 / 16) */
+}
 
+.custom-ratio iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    /* Add rounded corners */
+}
 </style>
