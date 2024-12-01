@@ -1,33 +1,29 @@
 <template>
-    <figure class="grid grid-cols-1 bg-primary-50 pb-2 min-[960px]:grid-cols-10">
+    <figure class="grid grid-cols-1 border-1 bg-white pb-2 min-[960px]:grid-cols-10">
         <div class="relative mb-2 min-[960px]:col-span-6">
-            <img :src="href" :alt="title" class="w-[240px]">
+            <img :src="href" :alt="title" class="w-[250px] p-[25px] mt-[15px] rounded-[40px]">
             <slot name="top-right">
-                <heart-svg class="absolute top-2 right-2"></heart-svg>
+                <heart-svg class="absolute top-[50px] right-[40px]"></heart-svg>
             </slot>
         </div>
 
-        <div class="flex flex-col mx-2 min-[960px]:col-span-4">
+        <div class="flex flex-col mx-2 min-[960px]:col-span-4 mt-[30px] px-[10px]">
             <slot name="title">
-                <p class="-mb-1 min-[960px]:mt-2">
+                <p class="-mb-1 min-[960px]:mt-2 text-primary-800 font-semibold">
                     {{ title }}</p>
+            </slot>
+            <slot name="des">
+                <p class="text-[15px] mt-[11px] text-primary-800">
+                    {{ des }}</p>
             </slot>
 
             <slot name="subtitle">
-                <p class="text-[0.6rem]">
+                <p class="text-[1rem] mt-[20px] text-red-600">
                     ${{ price }}</p>
             </slot>
 
-            <p class="flex flex-col gap-y-[1.5px] mb-2">
-                <span class="h-1 bg-primary-100 rounded-lg"></span>
-                <span class="h-1 bg-primary-100 rounded-lg"></span>
-                <span class="h-1 bg-primary-100 rounded-lg"></span>
-                <span class="h-1 bg-primary-100 rounded-lg"></span>
-                <span class="h-1 w-1/2 bg-primary-100 rounded-lg"></span>
-            </p>
-
             <slot name="button">
-                <button class="bg-primary-800 text-white text-[0.6rem] rounded-lg min-[960px]:mt-auto min-[960px]:mb-3">
+                <button class="!mt-[50px] px-[4px] py-[7px] bg-primary-800 hover:bg-primary-900 text-white text-[14px] rounded-[12px] min-[960px]:mt-auto min-[960px]:mb-3 ">
                     {{ action }}
                 </button>
             </slot>
@@ -43,7 +39,7 @@
     defineProps({
         href: {
             type: String,
-            default: 'flower_pot_1.png',
+            default: '/Outdoor Cateogry/Outdoor (Original)/Plant/plant-1.jpg',
         },
         title: {
             type: String,
@@ -52,6 +48,10 @@
         price: {
             type: Number,
             default: 40.99,
+        },
+        des:{
+            type: String,
+            default: 'ផើងផ្កា'
         },
         action: {
             type: String,
