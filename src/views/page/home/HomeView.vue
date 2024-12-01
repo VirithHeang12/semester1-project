@@ -106,7 +106,7 @@
                     </v-row>
                 </v-container>
             </div>
-            <div class="mb-20">
+            <div class="mb-15">
                 <v-container fluid>
                     <v-row>
                         <v-col cols="12" md="12">
@@ -117,11 +117,11 @@
                     </v-row>
                 </v-container>
             </div>
-            <div class="mb-20">
+            <div class="mb-4">
                 <v-card :elevation="0" class="mx-0">
                     <div class="grid grid-cols-1 justify-items-center gap-y-24 gap-x-4 min-[960px]:grid-cols-10">
-                        <the-small-slide-group class="min-[960px]:col-span-7"></the-small-slide-group>
-                        <v-img class="w-80 h-80 min-[960px]:col-span-3" src="lamp_with_flower.png" alt="Lamp with flower"></v-img>
+                        <the-small-slide-group class="min-[960px]:col-span-7 mt-[20px]"></the-small-slide-group>
+                        <v-img class="w-80 h-80 min-[960px]:col-span-3" src="/Outdoor Cateogry/Outdoor (Original)/Plant/pic-18 (2).png" alt="Lamp with flower"></v-img>
                     </div>
                 </v-card>
             </div>
@@ -143,7 +143,7 @@
                             </v-expansion-panels>
                         </v-col>
                         <v-col cols="12" md="6" class="align-self-start" data-aos="fade-left">
-                            <v-img class="w-full h-full" src="desk.png" alt="Desk" />
+                            <v-img class="w-full h-full rounded-[30px]  " src="/Living room Category/Living room (Original)/Vase/d-vase5(copy).jpg" alt="Desk" />
                         </v-col>
                     </v-row>
                 </v-container>
