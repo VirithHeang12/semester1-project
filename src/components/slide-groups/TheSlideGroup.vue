@@ -5,8 +5,8 @@
                 data-aos="fade-right">
                 <v-tabs v-model="tab" color="black" direction="vertical">
                     <v-tab v-for="tab in tabItems" :prepend-icon="tab.icon" :value="tab.value" :key="tab.value"
-                        :selected-class="'bg-grey-darken-1 text-white'">
-                        <p class="text-[1rem]">{{ tab.title }}</p>
+                        :selected-class="'bg-grey-lighten-3 text-primary-700'">
+                        <p class="text-[1rem] tracking-normal text-primary-700" >{{ tab.title }}</p>
                     </v-tab>
                 </v-tabs>
             </v-card>
@@ -19,23 +19,23 @@
                         <v-sheet class="h-full" elevation="0">
                             <v-slide-group class="h-full flex">
                                 <v-slide-group-item v-for="(tabItemImage, index) in tabItemImages" :key="index">
-                                    <v-card class="h-full px-4" width="200" :elevation="0">
+                                    <v-card class="px-4" width="300" height="300" :elevation="0">
                                         <div class="w-full h-full relative">
                                             <img :src="tabItemImage.url" alt="tabItemImage"
                                                 class="w-full h-full object-cover rounded-lg">
                                             <div
                                                 class="flex justify-around gap-x-3 absolute left-0 bottom-2 w-full px-2">
                                                 <div class="w-full flex-grow-1">
-                                                    <p class="pl-2">
-                                                        <span class="text-gray-600 rounded-lg bg-gray-200 p-1">${{
+                                                    <p>
+                                                        <span class="text-primary-700 rounded-lg bg-gray-200 px-[60px] py-[6px]">${{
                                                             tabItemImage.price
                                                             }}</span>
                                                     </p>
                                                 </div>
                                                 <v-btn
                                                     :to="{ name: 'details', params: { category: tabItem.value, id: tabItemImage.id, slug: tabItemImage.slug }, query: { image: tabItemImage.url, name: tabItemImage.name, price: tabItemImage.price, description: tabItemImage.description, category: tabItemImage.category } }"
-                                                    :color="'grey-darken-3'" :size="25" :ripple="false"
-                                                    :icon="'mdi-arrow-right'"></v-btn>
+                                                    :color="'grey-darken-3'" :size="30" :ripple="false"
+                                                    :icon="'mdi-arrow-right'" class="text-[12px] mt-[-5px]"></v-btn>
 
                                             </div>
                                         </div>
@@ -84,17 +84,17 @@
                                                         <div class="flex-grow-1">
                                                             <p class="pl-2">
                                                                 <span
-                                                                    class="text-[1rem] text-gray-600 rounded-lg bg-gray-200 p-1">${{
+                                                                    class="text-[1rem] text-gray-600 rounded-lg bg-gray-200 px-[60px] py-[6px]">${{
                                                                         tabItemImage.price
                                                                     }}</span>
                                                             </p>
                                                         </div>
                                                         <v-btn
                                                             :to="{ name: 'details', params: { category: tabItem.value, id: tabItemImage.id, slug: tabItemImage.slug }, query: { image: tabItemImage.url, name: tabItemImage.name, price: tabItemImage.price, description: tabItemImage.description, category: tabItemImage.category } }"
-                                                            :rounded="true" :color="'grey-darken-3'" :size="24"
-                                                            :ripple="false">
+                                                            :rounded="true" :color="'grey-darken-3'" :size="30"
+                                                            :ripple="false" >
                                                             <template #prepend>
-                                                                <v-icon :size="20">mdi-arrow-right</v-icon>
+                                                                <v-icon :size="24">mdi-arrow-right</v-icon>
                                                             </template>
                                                         </v-btn>
                                                     </div>

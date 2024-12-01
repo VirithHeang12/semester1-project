@@ -82,7 +82,7 @@
                         <v-col cols="12" md="4" data-aos="fade-right" class="-mb-10">
                             <v-card :elevation="0">
                                 <div class="flex justify-center">
-                                    <the-short-bottom-right-inverted-card href="chair.png" title="Tottori" :price="79.99">
+                                    <the-short-bottom-right-inverted-card href="chair.png" title="កៅអី Tottori" :price="79.99">
                                     </the-short-bottom-right-inverted-card>
                                 </div>
                             </v-card>
@@ -133,10 +133,10 @@
                         <v-col cols="12" md="6" class="flex flex-col justify-center" data-aos="fade-right">
                             <v-expansion-panels :elevation="0">
                                 <v-expansion-panel v-for="(expansionItem, i) in expansionItems" :key="i">
-                                    <v-expansion-panel-title class="py-4 expansion-panel-title-style">
+                                    <v-expansion-panel-title class="py-4 !text-primary-800 expansion-panel-title-style">
                                         {{ expansionItem.title }}
                                     </v-expansion-panel-title>
-                                    <v-expansion-panel-text class="text-[0.8rem]">
+                                    <v-expansion-panel-text class="text-[1rem] text-primary-600">
                                         {{ expansionItem.text }}
                                     </v-expansion-panel-text>
                                 </v-expansion-panel>
