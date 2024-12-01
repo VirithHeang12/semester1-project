@@ -1,11 +1,4 @@
 <template class="bg-primary-50">
-    <!-- Link to payment modal -->
-    <!-- <div class="row">
-        <div>
-            <a role="button" href="#payModal" data-bs-toggle="modal" @click.prevent="openPaymentModal">ទិញឥឡូវនេះ</a>
-            <ThePaymentForm ref="paymentModalRef" />
-        </div>
-    </div> -->
     <v-container>
         <div data-aos="fade-up">
             <v-container>
@@ -58,10 +51,11 @@
                         <v-row>
                             <v-col cols="12" sm="6" lg="4" v-for="(card, index) in paginatedProductCards"
                                 :key="`product-card-${index}`" data-aos="fade-up" :data-aos-delay="index * 100">
-                                <a href="#">
+                                <the-category-card :card="card"></the-category-card>
+                                <!-- <a href="#">
                                     <the-category-card :title="card.title" :price="card.price"
                                         :href="card.href"></the-category-card>
-                                </a>
+                                </a> -->
                             </v-col>
                         </v-row>
                         <v-row class="justify-content-center">
@@ -90,7 +84,6 @@
 <script setup>
     import TheCategoryCard from "@/components/cards/TheCategoryCard.vue";
     import TheRecommendationCard from "@/components/cards/TheRecommendationCard.vue";
-    import ThePaymentForm from "@/components/modals/ThePaymentForm.vue";
 
     import { computed, ref, watch } from "vue";
 
@@ -100,13 +93,6 @@
     const isTableLighting = ref(false);
     const isWallLighting = ref(false);
     const price = ref([0, 1000]);
-
-    // Call modal to use
-    // const paymentModalRef = ref(null);
-
-    // const openPaymentModal = () => {
-    //     paymentModalRef.value.openModal();
-    // };
 
     // Data for carousel
     const carouselItems = ref([
@@ -127,346 +113,517 @@
     // Product cards
     const productCards = ref([
         {
+            id: 1,
             href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen1.jpg",
             title: "អំពូលផ្ទះបាយ",
             price: 19.99,
-            category: 'kitchenLighting'
+            category: "kitchenLighting",
+            slug: "kitchenLighting",
+            description: 'Modern kitchen lighting with a sleek wooden design, adding warmth and style to any space. Perfect for brightening up your kitchen with a cozy, contemporary touch.',
         },
         {
-            href: "/Lighting Category/Lighting (Shape)/Living room/Mask group (4).png",
-            title: "បន្ទប់ទទួលភ្ញៀវ",
-            price: 159.99,
-            category: 'LivingLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Shape)/On Table/Mask group (12).png",
-            title: "អំពូលលើតុ",
-            price: 100.99,
-            category: 'TableLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Shape)/Wall/Mask group (1).png",
-            title: "អំពូលតាមជញ្ជាំង",
-            price: 99.99,
-            category: 'WallLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Shape)/Living room/Mask group (5).png",
-            title: "បន្ទប់ទទួលភ្ញៀវ",
-            price: 99.99,
-            category: 'LivingLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen2.jpg",
-            title: "អំពូលផ្ទះបាយ",
-            price: 19.99,
-            category: 'kitchenLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Shape)/On Table/Mask group (10).png",
-            title: "អំពូលលើតុ",
-            price: 100.99,
-            category: 'TableLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Shape)/Wall/Mask group (10).png",
-            title: "អំពូលតាមជញ្ជាំង",
-            price: 99.99,
-            category: 'WallLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen3.jpg",
-            title: "អំពូលផ្ទះបាយ",
-            price: 19.99,
-            category: 'kitchenLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen4.jpg",
-            title: "អំពូលផ្ទះបាយ",
-            price: 19.99,
-            category: 'kitchenLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen5.jpg",
-            title: "អំពូលផ្ទះបាយ",
-            price: 19.99,
-            category: 'kitchenLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen6.jpg",
-            title: "អំពូលផ្ទះបាយ",
-            price: 19.99,
-            category: 'kitchenLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen7.jpg",
-            title: "អំពូលផ្ទះបាយ",
-            price: 19.99,
-            category: 'kitchenLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen8.jpg",
-            title: "អំពូលផ្ទះបាយ",
-            price: 19.99,
-            category: 'kitchenLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen9.jpg",
-            title: "អំពូលផ្ទះបាយ",
-            price: 19.99,
-            category: 'kitchenLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen10.jpg",
-            title: "អំពូលផ្ទះបាយ",
-            price: 19.99,
-            category: 'kitchenLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen12.jpg",
-            title: "អំពូលផ្ទះបាយ",
-            price: 19.99,
-            category: 'kitchenLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen14.jpg",
-            title: "អំពូលផ្ទះបាយ",
-            price: 19.99,
-            category: 'kitchenLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom1.jpg",
-            title: "បន្ទប់ទទួលភ្ញៀវ",
-            price: 99.99,
-            category: 'LivingLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom2.jpg",
-            title: "បន្ទប់ទទួលភ្ញៀវ",
-            price: 99.99,
-            category: 'LivingLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom3.jpg",
-            title: "បន្ទប់ទទួលភ្ញៀវ",
-            price: 99.99,
-            category: 'LivingLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom4.jpg",
-            title: "បន្ទប់ទទួលភ្ញៀវ",
-            price: 99.99,
-            category: 'LivingLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom5.jpg",
-            title: "បន្ទប់ទទួលភ្ញៀវ",
-            price: 99.99,
-            category: 'LivingLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom6.jpg",
-            title: "បន្ទប់ទទួលភ្ញៀវ",
-            price: 99.99,
-            category: 'LivingLighting'
-        },
-        {
+            id: 2,
             href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom7.jpg",
             title: "បន្ទប់ទទួលភ្ញៀវ",
-            price: 99.99,
-            category: 'LivingLighting'
+            price: 159.99,
+            category: 'LivingLighting',
+            slug: 'LivingLighting',
+            description: 'Elegant living room lighting with a sleek, modern design, perfect for enhancing any space. Provides warm, inviting illumination for a comfortable ambiance.',
         },
         {
-            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom8.jpg",
-            title: "បន្ទប់ទទួលភ្ញៀវ",
-            price: 99.99,
-            category: 'LivingLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom9.jpg",
-            title: "បន្ទប់ទទួលភ្ញៀវ",
-            price: 99.99,
-            category: 'LivingLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom10.jpg",
-            title: "បន្ទប់ទទួលភ្ញៀវ",
-            price: 99.99,
-            category: 'LivingLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Shape)/On Table/Mask group (1).png",
-            title: "អំពូលលើតុ",
-            price: 100.99,
-            category: 'TableLighting'
-        },
-        {
+            id: 3,
             href: "/Lighting Category/Lighting (Orignal)/On Table/l-table1.jpg",
             title: "អំពូលលើតុ",
             price: 100.99,
-            category: 'TableLighting'
+            category: 'TableLighting',
+            slug: "TableLighting",
+            description: 'Stylish table lamp with a modern design, perfect for adding a warm, cozy glow to any workspace or living area. Ideal for both function and décor.',
         },
         {
-            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table2.jpg",
-            title: "អំពូលលើតុ",
-            price: 100.99,
-            category: 'TableLighting'
+            id: 4,
+            href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall12.jpg",
+            title: "អំពូលតាមជញ្ជាំង",
+            price: 99.99,
+            category: 'WallLighting',
+            slug: "WallLighting",
+            description: 'Sleek wall light with a modern design, perfect for adding soft, ambient lighting to any room. Ideal for enhancing both style and functionality.',
         },
         {
-            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table3.jpg",
-            title: "អំពូលលើតុ",
-            price: 100.99,
-            category: 'TableLighting'
+            id: 5,
+            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom9.jpg",
+            title: "បន្ទប់ទទួលភ្ញៀវ",
+            price: 99.99,
+            category: 'LivingLighting',
+            slug: 'LivingLighting',
+            description: 'Elegant living room lighting with a sleek, modern design, perfect for enhancing any space. Provides warm, inviting illumination for a comfortable ambiance.',
         },
         {
-            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table4.jpg",
-            title: "អំពូលលើតុ",
-            price: 100.99,
-            category: 'TableLighting'
+            id: 6,
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen2.jpg",
+            title: "អំពូលផ្ទះបាយ",
+            price: 19.99,
+            category: 'kitchenLighting',
+            slug: "kitchenLighting",
+            description: 'Modern kitchen lighting with a sleek wooden design, adding warmth and style to any space. Perfect for brightening up your kitchen with a cozy, contemporary touch.',
         },
         {
+            id: 7,
             href: "/Lighting Category/Lighting (Orignal)/On Table/l-table5.jpg",
             title: "អំពូលលើតុ",
             price: 100.99,
-            category: 'TableLighting'
+            category: 'TableLighting',
+            slug: "TableLighting",
+            description: 'Stylish table lamp with a modern design, perfect for adding a warm, cozy glow to any workspace or living area. Ideal for both function and décor.',
         },
         {
-            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table6.jpg",
-            title: "អំពូលលើតុ",
-            price: 100.99,
-            category: 'TableLighting'
+            id: 8,
+            href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall7.jpg",
+            title: "អំពូលតាមជញ្ជាំង",
+            price: 99.99,
+            category: 'WallLighting',
+            slug: "WallLighting",
+            description: 'Sleek wall light with a modern design, perfect for adding soft, ambient lighting to any room. Ideal for enhancing both style and functionality.',
         },
         {
+            id: 9,
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen3.jpg",
+            title: "អំពូលផ្ទះបាយ",
+            price: 19.99,
+            category: 'kitchenLighting',
+            slug: "kitchenLighting",
+            description: 'Modern kitchen lighting with a sleek wooden design, adding warmth and style to any space. Perfect for brightening up your kitchen with a cozy, contemporary touch.',
+        },
+        {
+            id: 10,
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen4.jpg",
+            title: "អំពូលផ្ទះបាយ",
+            price: 19.99,
+            category: 'kitchenLighting',
+            slug: "kitchenLighting",
+            description: 'Modern kitchen lighting with a sleek wooden design, adding warmth and style to any space. Perfect for brightening up your kitchen with a cozy, contemporary touch.',
+        },
+        {
+            id: 11,
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen5.jpg",
+            title: "អំពូលផ្ទះបាយ",
+            price: 19.99,
+            category: 'kitchenLighting',
+            slug: "kitchenLighting",
+            description: 'Modern kitchen lighting with a sleek wooden design, adding warmth and style to any space. Perfect for brightening up your kitchen with a cozy, contemporary touch.',
+        },
+        {
+            id: 12,
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen6.jpg",
+            title: "អំពូលផ្ទះបាយ",
+            price: 19.99,
+            category: 'kitchenLighting',
+            slug: "kitchenLighting",
+            description: 'Modern kitchen lighting with a sleek wooden design, adding warmth and style to any space. Perfect for brightening up your kitchen with a cozy, contemporary touch.',
+        },
+        {
+            id: 13,
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen7.jpg",
+            title: "អំពូលផ្ទះបាយ",
+            price: 19.99,
+            category: 'kitchenLighting',
+            slug: "kitchenLighting",
+            description: 'Modern kitchen lighting with a sleek wooden design, adding warmth and style to any space. Perfect for brightening up your kitchen with a cozy, contemporary touch.',
+        },
+        {
+            id: 14,
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen8.jpg",
+            title: "អំពូលផ្ទះបាយ",
+            price: 19.99,
+            category: 'kitchenLighting',
+            slug: "kitchenLighting",
+            description: 'Modern kitchen lighting with a sleek wooden design, adding warmth and style to any space. Perfect for brightening up your kitchen with a cozy, contemporary touch.',
+        },
+        {
+            id: 15,
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen9.jpg",
+            title: "អំពូលផ្ទះបាយ",
+            price: 19.99,
+            category: 'kitchenLighting',
+            slug: "kitchenLighting",
+            description: 'Modern kitchen lighting with a sleek wooden design, adding warmth and style to any space. Perfect for brightening up your kitchen with a cozy, contemporary touch.',
+        },
+        {
+            id: 16,
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen10.jpg",
+            title: "អំពូលផ្ទះបាយ",
+            price: 19.99,
+            category: 'kitchenLighting',
+            slug: "kitchenLighting",
+            description: 'Modern kitchen lighting with a sleek wooden design, adding warmth and style to any space. Perfect for brightening up your kitchen with a cozy, contemporary touch.',
+        },
+        {
+            id: 17,
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen12.jpg",
+            title: "អំពូលផ្ទះបាយ",
+            price: 19.99,
+            category: 'kitchenLighting',
+            slug: "kitchenLighting",
+            description: 'Modern kitchen lighting with a sleek wooden design, adding warmth and style to any space. Perfect for brightening up your kitchen with a cozy, contemporary touch.',
+        },
+        {
+            id: 18,
+            href: "/Lighting Category/Lighting (Orignal)/Kitchen/l-kitchen14.jpg",
+            title: "អំពូលផ្ទះបាយ",
+            price: 19.99,
+            category: 'kitchenLighting',
+            slug: "kitchenLighting",
+            description: 'Modern kitchen lighting with a sleek wooden design, adding warmth and style to any space. Perfect for brightening up your kitchen with a cozy, contemporary touch.',
+        },
+        {
+            id: 19,
+            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom1.jpg",
+            title: "បន្ទប់ទទួលភ្ញៀវ",
+            price: 99.99,
+            category: 'LivingLighting',
+            slug: 'LivingLighting',
+            description: 'Elegant living room lighting with a sleek, modern design, perfect for enhancing any space. Provides warm, inviting illumination for a comfortable ambiance.',
+        },
+        {
+            id: 20,
+            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom2.jpg",
+            title: "បន្ទប់ទទួលភ្ញៀវ",
+            price: 99.99,
+            category: 'LivingLighting',
+            slug: 'LivingLighting',
+            description: 'Elegant living room lighting with a sleek, modern design, perfect for enhancing any space. Provides warm, inviting illumination for a comfortable ambiance.',
+        },
+        {
+            id: 21,
+            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom3.jpg",
+            title: "បន្ទប់ទទួលភ្ញៀវ",
+            price: 99.99,
+            category: 'LivingLighting',
+            slug: 'LivingLighting',
+            description: 'Elegant living room lighting with a sleek, modern design, perfect for enhancing any space. Provides warm, inviting illumination for a comfortable ambiance.',
+        },
+        {
+            id: 22,
+            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom4.jpg",
+            title: "បន្ទប់ទទួលភ្ញៀវ",
+            price: 99.99,
+            category: 'LivingLighting',
+            slug: 'LivingLighting',
+            description: 'Elegant living room lighting with a sleek, modern design, perfect for enhancing any space. Provides warm, inviting illumination for a comfortable ambiance.',
+        },
+        {
+            id: 23,
+            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom5.jpg",
+            title: "បន្ទប់ទទួលភ្ញៀវ",
+            price: 99.99,
+            category: 'LivingLighting',
+            slug: 'LivingLighting',
+            description: 'Elegant living room lighting with a sleek, modern design, perfect for enhancing any space. Provides warm, inviting illumination for a comfortable ambiance.',
+        },
+        {
+            id: 24,
+            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom6.jpg",
+            title: "បន្ទប់ទទួលភ្ញៀវ",
+            price: 99.99,
+            category: 'LivingLighting',
+            slug: 'LivingLighting',
+            description: 'Elegant living room lighting with a sleek, modern design, perfect for enhancing any space. Provides warm, inviting illumination for a comfortable ambiance.',
+        },
+        {
+            id: 25,
+            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom7.jpg",
+            title: "បន្ទប់ទទួលភ្ញៀវ",
+            price: 99.99,
+            category: 'LivingLighting',
+            slug: 'LivingLighting',
+            description: 'Elegant living room lighting with a sleek, modern design, perfect for enhancing any space. Provides warm, inviting illumination for a comfortable ambiance.',
+        },
+        {
+            id: 26,
+            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom8.jpg",
+            title: "បន្ទប់ទទួលភ្ញៀវ",
+            price: 99.99,
+            category: 'LivingLighting',
+            slug: 'LivingLighting',
+            description: 'Elegant living room lighting with a sleek, modern design, perfect for enhancing any space. Provides warm, inviting illumination for a comfortable ambiance.',
+        },
+        {
+            id: 27,
+            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom9.jpg",
+            title: "បន្ទប់ទទួលភ្ញៀវ",
+            price: 99.99,
+            category: 'LivingLighting',
+            slug: 'LivingLighting',
+            description: 'Elegant living room lighting with a sleek, modern design, perfect for enhancing any space. Provides warm, inviting illumination for a comfortable ambiance.',
+        },
+        {
+            id: 28,
+            href: "/Lighting Category/Lighting (Orignal)/Living room/l-livingroom10.jpg",
+            title: "បន្ទប់ទទួលភ្ញៀវ",
+            price: 99.99,
+            category: 'LivingLighting',
+            slug: 'LivingLighting',
+            description: 'Elegant living room lighting with a sleek, modern design, perfect for enhancing any space. Provides warm, inviting illumination for a comfortable ambiance.',
+        },
+        {
+            id: 29,
             href: "/Lighting Category/Lighting (Orignal)/On Table/l-table7.jpg",
             title: "អំពូលលើតុ",
             price: 100.99,
-            category: 'TableLighting'
+            category: 'TableLighting',
+            slug: "TableLighting",
+            description: 'Stylish table lamp with a modern design, perfect for adding a warm, cozy glow to any workspace or living area. Ideal for both function and décor.',
         },
         {
-            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table8.jpg",
-            title: "អំពូលលើតុ",
-            price: 100.99,
-            category: 'TableLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table9.jpg",
-            title: "អំពូលលើតុ",
-            price: 100.99,
-            category: 'TableLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table10.jpg",
-            title: "អំពូលលើតុ",
-            price: 100.99,
-            category: 'TableLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table11.jpg",
-            title: "អំពូលលើតុ",
-            price: 100.99,
-            category: 'TableLighting'
-        },
-        {
-            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table12.jpg",
-            title: "អំពូលលើតុ",
-            price: 100.99,
-            category: 'TableLighting'
-        },
-        {
+            id: 30,
             href: "/Lighting Category/Lighting (Orignal)/On Table/l-table13.jpg",
             title: "អំពូលលើតុ",
             price: 100.99,
-            category: 'TableLighting'
+            category: 'TableLighting',
+            slug: "TableLighting",
+            description: 'Stylish table lamp with a modern design, perfect for adding a warm, cozy glow to any workspace or living area. Ideal for both function and décor.',
         },
         {
+            id: 31,
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table2.jpg",
+            title: "អំពូលលើតុ",
+            price: 100.99,
+            category: 'TableLighting',
+            slug: "TableLighting",
+            description: 'Stylish table lamp with a modern design, perfect for adding a warm, cozy glow to any workspace or living area. Ideal for both function and décor.',
+        },
+        {
+            id: 32,
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table3.jpg",
+            title: "អំពូលលើតុ",
+            price: 100.99,
+            category: 'TableLighting',
+            slug: "TableLighting",
+            description: 'Stylish table lamp with a modern design, perfect for adding a warm, cozy glow to any workspace or living area. Ideal for both function and décor.',
+        },
+        {
+            id: 33,
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table4.jpg",
+            title: "អំពូលលើតុ",
+            price: 100.99,
+            category: 'TableLighting',
+            slug: "TableLighting",
+            description: 'Stylish table lamp with a modern design, perfect for adding a warm, cozy glow to any workspace or living area. Ideal for both function and décor.',
+        },
+        {
+            id: 34,
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table5.jpg",
+            title: "អំពូលលើតុ",
+            price: 100.99,
+            category: 'TableLighting',
+            slug: "TableLighting",
+            description: 'Stylish table lamp with a modern design, perfect for adding a warm, cozy glow to any workspace or living area. Ideal for both function and décor.',
+        },
+        {
+            id: 35,
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table6.jpg",
+            title: "អំពូលលើតុ",
+            price: 100.99,
+            category: 'TableLighting',
+            slug: "TableLighting",
+            description: 'Stylish table lamp with a modern design, perfect for adding a warm, cozy glow to any workspace or living area. Ideal for both function and décor.',
+        },
+        {
+            id: 36,
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table7.jpg",
+            title: "អំពូលលើតុ",
+            price: 100.99,
+            category: 'TableLighting',
+            slug: "TableLighting",
+            description: 'Stylish table lamp with a modern design, perfect for adding a warm, cozy glow to any workspace or living area. Ideal for both function and décor.',
+        },
+        {
+            id: 37,
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table8.jpg",
+            title: "អំពូលលើតុ",
+            price: 100.99,
+            category: 'TableLighting',
+            slug: "TableLighting",
+            description: 'Stylish table lamp with a modern design, perfect for adding a warm, cozy glow to any workspace or living area. Ideal for both function and décor.',
+        },
+        {
+            id: 38,
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table9.jpg",
+            title: "អំពូលលើតុ",
+            price: 100.99,
+            category: 'TableLighting',
+            slug: "TableLighting",
+            description: 'Stylish table lamp with a modern design, perfect for adding a warm, cozy glow to any workspace or living area. Ideal for both function and décor.',
+        },
+        {
+            id: 39,
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table10.jpg",
+            title: "អំពូលលើតុ",
+            price: 100.99,
+            category: 'TableLighting',
+            slug: "TableLighting",
+            description: 'Stylish table lamp with a modern design, perfect for adding a warm, cozy glow to any workspace or living area. Ideal for both function and décor.',
+        },
+        {
+            id: 40,
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table11.jpg",
+            title: "អំពូលលើតុ",
+            price: 100.99,
+            category: 'TableLighting',
+            slug: "TableLighting",
+            description: 'Stylish table lamp with a modern design, perfect for adding a warm, cozy glow to any workspace or living area. Ideal for both function and décor.',
+        },
+        {
+            id: 41,
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table12.jpg",
+            title: "អំពូលលើតុ",
+            price: 100.99,
+            category: 'TableLighting',
+            slug: "TableLighting",
+            description: 'Stylish table lamp with a modern design, perfect for adding a warm, cozy glow to any workspace or living area. Ideal for both function and décor.',
+        },
+        {
+            id: 42,
+            href: "/Lighting Category/Lighting (Orignal)/On Table/l-table13.jpg",
+            title: "អំពូលលើតុ",
+            price: 100.99,
+            category: 'TableLighting',
+            slug: "TableLighting",
+            description: 'Stylish table lamp with a modern design, perfect for adding a warm, cozy glow to any workspace or living area. Ideal for both function and décor.',
+        },
+        {
+            id: 43,
             href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 99.99,
-            category: 'WallLighting'
+            category: 'WallLighting',
+            slug: "WallLighting",
+            description: 'Sleek wall light with a modern design, perfect for adding soft, ambient lighting to any room. Ideal for enhancing both style and functionality.',
         },
         {
+            id: 44,
             href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall1.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 99.99,
-            category: 'WallLighting'
+            category: 'WallLighting',
+            slug: "WallLighting",
+            description: 'Sleek wall light with a modern design, perfect for adding soft, ambient lighting to any room. Ideal for enhancing both style and functionality.',
         },
         {
+            id: 45,
             href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall2.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 99.99,
-            category: 'WallLighting'
+            category: 'WallLighting',
+            slug: "WallLighting",
+            description: 'Sleek wall light with a modern design, perfect for adding soft, ambient lighting to any room. Ideal for enhancing both style and functionality.',
         },
         {
+            id: 46,
             href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall3.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
-            category: 'WallLighting'
+            category: 'WallLighting',
+            slug: "WallLighting",
+            description: 'Sleek wall light with a modern design, perfect for adding soft, ambient lighting to any room. Ideal for enhancing both style and functionality.',
         },
         {
+            id: 47,
             href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall4.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
-            category: 'WallLighting'
+            category: 'WallLighting',
+            slug: "WallLighting",
+            description: 'Sleek wall light with a modern design, perfect for adding soft, ambient lighting to any room. Ideal for enhancing both style and functionality.',
         },
         {
+            id: 48,
             href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall5.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
-            category: 'WallLighting'
+            category: 'WallLighting',
+            slug: "WallLighting",
+            description: 'Sleek wall light with a modern design, perfect for adding soft, ambient lighting to any room. Ideal for enhancing both style and functionality.',
         },
         {
+            id: 49,
             href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall6.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
-            category: 'WallLighting'
+            category: 'WallLighting',
+            slug: "WallLighting",
+            description: 'Sleek wall light with a modern design, perfect for adding soft, ambient lighting to any room. Ideal for enhancing both style and functionality.',
         },
         {
+            id: 50,
             href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall7.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
-            category: 'WallLighting'
+            category: 'WallLighting',
+            slug: "WallLighting",
+            description: 'Sleek wall light with a modern design, perfect for adding soft, ambient lighting to any room. Ideal for enhancing both style and functionality.',
         },
         {
+            id: 51,
             href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall8.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
-            category: 'WallLighting'
+            category: 'WallLighting',
+            slug: "WallLighting",
+            description: 'Sleek wall light with a modern design, perfect for adding soft, ambient lighting to any room. Ideal for enhancing both style and functionality.',
         },
         {
+            id: 52,
             href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall9.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
-            category: 'WallLighting'
+            category: 'WallLighting',
+            slug: "WallLighting",
+            description: 'Sleek wall light with a modern design, perfect for adding soft, ambient lighting to any room. Ideal for enhancing both style and functionality.',
         },
         {
+            id: 53,
             href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall10.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
-            category: 'WallLighting'
+            category: 'WallLighting',
+            slug: "WallLighting",
+            description: 'Sleek wall light with a modern design, perfect for adding soft, ambient lighting to any room. Ideal for enhancing both style and functionality.',
         },
         {
+            id: 54,
             href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall11.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
-            category: 'WallLighting'
+            category: 'WallLighting',
+            slug: "WallLighting",
+            description: 'Sleek wall light with a modern design, perfect for adding soft, ambient lighting to any room. Ideal for enhancing both style and functionality.',
         },
         {
+            id: 55,
             href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall12.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
-            category: 'WallLighting'
+            category: 'WallLighting',
+            slug: "WallLighting",
+            description: 'Sleek wall light with a modern design, perfect for adding soft, ambient lighting to any room. Ideal for enhancing both style and functionality.',
         },
         {
+            id: 56,
             href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall13.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
-            category: 'WallLighting'
+            category: 'WallLighting',
+            slug: "WallLighting",
+            description: 'Sleek wall light with a modern design, perfect for adding soft, ambient lighting to any room. Ideal for enhancing both style and functionality.',
         },
         {
+            id: 57,
             href: "/Lighting Category/Lighting (Orignal)/Wall/l-wall14.jpg",
             title: "អំពូលតាមជញ្ជាំង",
             price: 159.99,
-            category: 'WallLighting'
+            category: 'WallLighting',
+            slug: "WallLighting",
+            description: 'Sleek wall light with a modern design, perfect for adding soft, ambient lighting to any room. Ideal for enhancing both style and functionality.',
         },
     ]);
 
