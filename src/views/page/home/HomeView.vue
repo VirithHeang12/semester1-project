@@ -65,31 +65,34 @@
                     </v-row>
                 </v-container>
             </div>
-            
+
             <div>
                 <div class="flex flex-col lg:flex-row items-center gap-6 p-6 mb-12">
-                <div class="w-full lg:w-1/2 h-[350px] bg-gray-300 rounded-[20px]">
-                    <img src="/slide-groups/outdoors/outdoor-slide-1.jpg" alt=""
-                        class="w-full h-full object-cover rounded-[20px]" />
+                    <div class="w-full lg:w-1/2 h-[350px] bg-gray-300 rounded-[20px]">
+                        <img src="/slide-groups/outdoors/outdoor-slide-1.jpg" alt=""
+                            class="w-full h-full object-cover rounded-[20px]" />
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <h2 data-aos="fade-down"
+                            class="mb-8 font-bold text-center min-[800px]:text-left text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
+                            ឈុតតុបតែងផ្នែកខាងក្រៅ</h2>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700 mt-4">
+                            <li>លោកអ្នកអាចធ្វើការជ្រើសរើសនូវប្រភេទនៃគ្រឿងសង្ហារឹមសម្រាប់ធ្វើការរៀបចំតុបតែង
+                                ដែលសាកសមទៅតាមតម្រូវការរបស់លោកអ្នក</li>
+                            <li>គ្រប់ប្រភេទនៃគ្រឿងសង្ហារឹមរបស់ពួកយើង គឺលោកអ្នកអាចទុកចិត្តបានទាំងគុណភាពនិងតម្លៃ
+                                នៃផលិតផលនីមួយៗ</li>
+                            <li>រាល់ផលិតផលទាំងអស់សុទ្ធតែប្រើប្រាស់នូវវត្ថុធាតុដើមដែលមានគុណភាពល្អ មិនងាយពុកភុយ ឬ ហើរពណ៌
+                                សាកសមនឹងតម្លៃ ដែលជាទីពេញចិត្តរបស់អតិថិជន</li>
+                        </ul>
+                        <router-link
+                            :to="{ name: 'details', params: { category: 'outdoor', id: 1000, slug: 'elegant-door' }, query: { image: '/slide-groups/outdoors/outdoor-slide-1.jpg', name: 'Elegant Outdoor', price: 999.99, description: 'ឈុតតុបតែងផ្នែកខាងក្រៅល្អប្រណីត', category: 'outdoor' } }">
+                            <button data-aos="fade-up"
+                                class="btn btn-dark mt-12 bg-primary-800 round-[10px] text-primary-50 px-9 py-2 hover:bg-gray-800">
+                                ព័ត៌មានបន្ថែម
+                            </button>
+                        </router-link>
+                    </div>
                 </div>
-                <div class="w-full lg:w-1/2">
-                    <h2 data-aos="fade-down"
-                        class="mb-8 font-bold text-center min-[800px]:text-left text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
-                        ឈុតតុបតែងផ្នែកខាងក្រៅ</h2>
-                    <ul class="list-disc pl-5 space-y-2 text-gray-700 mt-4">
-                        <li>លោកអ្នកអាចធ្វើការជ្រើសរើសនូវប្រភេទនៃគ្រឿងសង្ហារឹមសម្រាប់ធ្វើការរៀបចំតុបតែង
-                            ដែលសាកសមទៅតាមតម្រូវការរបស់លោកអ្នក</li>
-                        <li>គ្រប់ប្រភេទនៃគ្រឿងសង្ហារឹមរបស់ពួកយើង គឺលោកអ្នកអាចទុកចិត្តបានទាំងគុណភាពនិងតម្លៃ
-                            នៃផលិតផលនីមួយៗ</li>
-                        <li>រាល់ផលិតផលទាំងអស់សុទ្ធតែប្រើប្រាស់នូវវត្ថុធាតុដើមដែលមានគុណភាពល្អ មិនងាយពុកភុយ ឬ ហើរពណ៌
-                            សាកសមនឹងតម្លៃ ដែលជាទីពេញចិត្តរបស់អតិថិជន</li>
-                    </ul>
-                    <button data-aos="fade-up"
-                        class="btn btn-dark mt-12 bg-primary-800 round-[10px] text-primary-50 px-9 py-2 hover:bg-gray-800">
-                        ព័ត៌មានបន្ថែម
-                    </button>
-                </div>
-            </div>
 
             </div>
 
@@ -126,8 +129,9 @@
                         <v-col cols="12" md="4" data-aos="fade-right" class="-mb-10">
                             <v-card :elevation="0">
                                 <div class="flex justify-center">
-                                    <the-short-bottom-right-inverted-card href="chair.png" title="កៅអី Tottori"
-                                        :price="79.99">
+                                    <the-short-bottom-right-inverted-card href="/chair.png" title="កៅអី Tottori"
+                                        :price="79.99" slug="tottori" description="កៅអី Tottori" :id="500"
+                                        category="outdoor">
                                     </the-short-bottom-right-inverted-card>
                                 </div>
                             </v-card>
@@ -135,8 +139,9 @@
                         <v-col cols="12" md="4" data-aos="fade-down" class="-mb-10">
                             <v-card :elevation="0">
                                 <div class="flex justify-center">
-                                    <the-short-bottom-right-inverted-card href="lamp.png" title="អំពូល Edysse"
-                                        :price="49.99">
+                                    <the-short-bottom-right-inverted-card href="/lamp.png" title="អំពូល Edysse"
+                                        :price="49.99" slug="edysse" description="អំពូល Edysse" :id="501"
+                                        category="lamp">
                                     </the-short-bottom-right-inverted-card>
                                 </div>
                             </v-card>
@@ -144,8 +149,9 @@
                         <v-col cols="12" md="4" data-aos="fade-left">
                             <v-card :elevation="0">
                                 <div class="flex justify-center">
-                                    <the-short-bottom-right-inverted-card href="small_chair.png" title="ឈុតតុកៅអីក្មេង"
-                                        :price="89.99">
+                                    <the-short-bottom-right-inverted-card href="/small_chair.png" title="ឈុតតុកៅអីក្មេង"
+                                        :price="89.99" slug="small-chair" description="ឈុតតុកៅអីក្មេង" :id="502"
+                                        category="outdoor">
                                     </the-short-bottom-right-inverted-card>
                                 </div>
                             </v-card>
@@ -168,11 +174,13 @@
                 <v-card :elevation="0" class="mx-0">
                     <div class="grid grid-cols-1 justify-items-center gap-y-24 gap-x-4 min-[960px]:grid-cols-10">
                         <the-small-slide-group class="min-[960px]:col-span-7 mt-[20px]"></the-small-slide-group>
-                        <v-img class="w-80 h-80 min-[960px]:col-span-3" src="/Outdoor Cateogry/Outdoor (Original)/Plant/pic-18 (2).png" alt="Lamp with flower" data-aos="fade-right"></v-img>
+                        <v-img class="w-80 h-80 min-[960px]:col-span-3"
+                            src="/Outdoor Cateogry/Outdoor (Original)/Plant/pic-18 (2).png" alt="Lamp with flower"
+                            data-aos="fade-right"></v-img>
                     </div>
                 </v-card>
             </div>
-          
+
             <div class="mb-0">
                 <v-container>
                     <h2 data-aos="fade-down" data-aos-delay="300"
@@ -192,7 +200,8 @@
                             </v-expansion-panels>
                         </v-col>
                         <v-col cols="12" md="6" class="align-self-start" data-aos="fade-left">
-                            <v-img class="w-full h-full rounded-[30px]  " src="/Living room Category/Living room (Original)/Vase/d-vase5(copy).jpg" alt="Desk" />
+                            <v-img class="w-full h-full rounded-[30px]  "
+                                src="/Living room Category/Living room (Original)/Vase/d-vase5(copy).jpg" alt="Desk" />
                         </v-col>
                     </v-row>
                 </v-container>

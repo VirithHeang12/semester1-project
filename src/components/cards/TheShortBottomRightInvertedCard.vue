@@ -19,7 +19,8 @@
         </slot>
 
 
-        <p
+        <router-link
+            :to="{ name: 'details', params: { category: category, id: id, slug: slug }, query: { image: href, name: title, price: price, description: description, category: category } }"
             class="w-[2.5rem] h-[2.5rem] min-[500px]:w-[2.8rem] 
             min-[500px]:h-[2.8rem] min-[960px]:w-[3rem] min-[960px]:h-[3rem]
              absolute bottom-[5.7rem] right-[2px] min-[360px]:bottom-[5rem]
@@ -29,7 +30,7 @@
             <slot name="bottom-right">
                 <cart-svg></cart-svg>
             </slot>
-        </p>
+        </router-link>
         <v-card class="absolute w-full bottom-6 min-[570px]:bottom-3 flex justify-between px-2" :elevation="0">
             <v-row class="flex items-center justify-between bg-gray-100 px-[16px] py-[14px] rounded-[24px]">
                 <v-col cols="6">
@@ -48,25 +49,41 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+    import { defineProps } from 'vue';
 
-import TheWishListHeart from '@/components/wishlist-heart/TheWishListHeart.vue';
-import CartSvg from '@/assets/svgs/general/cart.svg';
+    import TheWishListHeart from '@/components/wishlist-heart/TheWishListHeart.vue';
+    import CartSvg from '@/assets/svgs/general/cart.svg';
 
-defineProps({
-    href: {
-        type: String,
-        default: 'chair.png',
-    },
-    title: {
-        type: String,
-        default: 'អំពូល Edysse',
-    },
-    price: {
-        type: Number,
-        default: 49.99,
-    }
-});
+    defineProps({
+        id: {
+            type: Number,
+            default: 500,
+        },
+        href: {
+            type: String,
+            default: '/chair.png',
+        },
+        title: {
+            type: String,
+            default: 'អំពូល Edysse',
+        },
+        price: {
+            type: Number,
+            default: 49.99,
+        },
+        slug: {
+            type: String,
+            default: 'edysse',
+        },
+        description: {
+            type: String,
+            default: 'អំពូល Edysse',
+        },
+        category: {
+            type: String,
+            default: 'chair',
+        },
+    });
 </script>
 
 <style scoped></style>
