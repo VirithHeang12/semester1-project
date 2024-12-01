@@ -1,4 +1,4 @@
-<template class="bg-primary-50" >
+<template class="bg-primary-50">
     <!-- Link to payment modal -->
     <!-- <div class="row">
         <div>
@@ -66,13 +66,8 @@
                         </v-row>
                         <v-row class="justify-content-center">
                             <!-- Pagination Controls -->
-                            <v-pagination
-                                v-model="currentPage"
-                                :length="totalPages"
-                                total-visible="5"
-                                color="primary-800"
-                                class="mt-4"
-                            />
+                            <v-pagination v-model="currentPage" :length="totalPages" total-visible="5"
+                                color="primary-800" class="mt-4" />
                         </v-row>
                     </v-col>
                 </v-row>
@@ -82,13 +77,14 @@
             <h2 class="text-lg font-bold min-[500px]:text-[1.5rem] min-[600px]:text-[2rem]">អ្នកប្រហែលជាចូលចិត្ត</h2>
             <v-slide-group class="pa-4" selected-class="bg-success" show-arrows>
                 <v-slide-group-item v-for="(cartrecom, n) in cartRecom" :key="`cart-recom-${n}`">
-                    <the-recommendation-card :src="cartrecom.src" :title="cartrecom.title"></the-recommendation-card>
+                    <the-recommendation-card data-aos="zoom-in" :src="cartrecom.src"
+                        :title="cartrecom.title"></the-recommendation-card>
                 </v-slide-group-item>
             </v-slide-group>
         </v-sheet>
     </v-container>
-    
-    
+
+
 </template>
 
 <script setup>
@@ -480,9 +476,9 @@
     });
 
     const computedProductCards = computed(() => {
-            return productCards.value.filter(product => {
+        return productCards.value.filter(product => {
             const matchesCategory = (
-                isAll.value || 
+                isAll.value ||
                 (isKitchen.value && product.category === 'kitchenLighting') ||
                 (isLivingRoom.value && product.category === 'LivingLighting') ||
                 (isTableLighting.value && product.category === 'TableLighting') ||
@@ -555,7 +551,7 @@
         return computedProductCards.value.slice(start, end);
     });
     const totalPages = computed(() => Math.ceil(computedProductCards.value.length / itemsPerPage));
-    
+
 </script>
 
 <style scoped>
