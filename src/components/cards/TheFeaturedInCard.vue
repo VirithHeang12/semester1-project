@@ -1,5 +1,5 @@
 <template>
-    <figure class="flex flex-col align-center justify-center rounded-2xl w-64 h-48">
+    <figure class="flex flex-col align-center justify-center rounded-2xl px-8 h-48">
         <slot>
             <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="30" cy="30" r="30" fill="#F6F6F6" />
