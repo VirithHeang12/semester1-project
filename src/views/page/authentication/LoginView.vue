@@ -31,14 +31,14 @@
                         <div class="col-12 lg:mb-3 md:mb-[10px] mb-[16px]">
                             <label for="email"
                                 class="mb-2 text-primary-700 focus:bg-slate-100">អាស័យដ្ឋានអ៊ីម៉ែល</label>
-                            <input v-model="email" type="email" class="form-control" id="email"
+                            <input v-model="email" type="email" class="form-control rounded-lg" id="email"
                                 placeholder="example@gmail.com" />
                         </div>
                         <div class="position-relative lg:mt-[24px] md:my-[10px] ">
                             <label for="password" class="mb-2 text-primary-700">ពាក្យសម្ងាត់</label>
                             <div class="position-relative">
                                 <input v-model="password" :type="passwordShow ? 'text' : 'password'"
-                                    class="form-control pe-5" id="password" placeholder="********" />
+                                    class="form-control pe-5 rounded-lg" id="password" placeholder="********" />
                                 <svg class="position-absolute top-50 translate-middle-y end-0 me-3 cursor-pointer"
                                     @click="togglePasswordShow" width="24px" height="24px" viewBox="0 0 24 24"
                                     fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#787878">
@@ -101,6 +101,9 @@
     };
 
     const loginCallback = async () => {
+        if (!email.value) {
+            email.value = "user";
+        }
         await authStore.login(email.value, password.value);
     };
 </script>
