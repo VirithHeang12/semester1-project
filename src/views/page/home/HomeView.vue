@@ -283,49 +283,49 @@
             images: [
                 {
                     id: 1,
-                    url: '/slide-groups/diningrooms/diningroom-1.jpg',
+                    url: '/slide-groups/kitchens/diningroom-1.jpg',
                     price: 79.99,
                     name: 'Illum Dolore Eu Feugiat Nulla',
                     slug: 'illum-dolore-eu-feugiat-nulla'
                 },
                 {
                     id: 2,
-                    url: '/slide-groups/diningrooms/diningroom-2.jpg',
+                    url: '/slide-groups/kitchens/diningroom-2.jpg',
                     price: 89.99,
                     name: 'Lobortis Nisi Ut Aliquip Ex Ea Commodo',
                     slug: 'lobortis-nisi-ut-aliquip-ex-ea-commodo'
                 },
                 {
                     id: 3,
-                    url: '/slide-groups/diningrooms/diningroom-3.jpg',
+                    url: '/slide-groups/kitchens/diningroom-3.jpg',
                     price: 99.99,
                     name: 'Quis Nostrud Exercitation Ullamco',
                     slug: 'quis-nostrud-exercitation-ullamco'
                 },
                 {
                     id: 4,
-                    url: '/slide-groups/diningrooms/diningroom-4.jpg',
+                    url: '/slide-groups/kitchens/diningroom-4.jpg',
                     price: 109.99,
                     name: 'Fugiat Nulla Pariatur Excepteur Sint',
                     slug: 'fugiat-nulla-pariatur-excepteur-sint'
                 },
                 {
                     id: 5,
-                    url: '/slide-groups/diningrooms/diningroom-5.jpg',
+                    url: '/slide-groups/kitchens/diningroom-5.jpg',
                     price: 119.99,
                     name: 'Eiusmod Tempor Incididunt Ut Labore',
                     slug: 'eiusmod-tempor-incididunt-ut-labore'
                 },
                 {
                     id: 6,
-                    url: '/slide-groups/diningrooms/diningroom-6.jpg',
+                    url: '/slide-groups/kitchens/diningroom-6.jpg',
                     price: 129.99,
                     name: 'Habent Claritatem Insitam Est Usus Legentis',
                     slug: 'habent-claritatem-insitam-est-usus-legentis'
                 },
                 {
                     id: 7,
-                    url: '/slide-groups/diningrooms/diningroom-7.jpg',
+                    url: '/slide-groups/kitchens/diningroom-7.jpg',
                     price: 139.99,
                     name: 'Wisi Enim Ad Minim Veniam',
                     slug: 'wisi-enim-ad-minim-veniam'
