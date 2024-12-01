@@ -1,21 +1,24 @@
 <template>
     <div class="min-h-screen bg-slate-100">
-        <div class="d-flex align-items-center container h-[500px] w-[1000px]">
+        <div class="d-flex align-items-center container h-[500px] w-[1000px]" data-aos="flip-right"
+            data-aos-duration="1000">
             <div class="row d-flex align-items-center mt-[90px] rounded-[16px] bg-white">
                 <div class="col-12 col-sm-12 col-md-6 lg:p-[24px] md:py-[5px] md:mt-[5px] lg:m-0 mt-[16px]">
                     <div class="background-blur position-absolute rounded-end-md-4"></div>
-                    <img src="/public/bedrooms/badside table.jpg" alt="Login background"
+                    <img src="/bedrooms/badside table.jpg" alt="Login background"
                         class="img-fluid rounded-[16px] lg:w-[650px] lg:h-[450px] md:w-[600px] md:h-[370px] sm:w-[630px] sm:h-[500px] w-[400px] h-[400px] " />
                 </div>
                 <!-- Right column with Sign Up form -->
                 <div class="col-12 col-sm-12 col-md-6 lg:p-[24px]">
                     <div class="text-center ">
-                        <svg class="md:mt-[20px] lg:mt-[15px] mt-[20px]" width="25" height="45" viewBox="0 0 25 45"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M0.465843 10.3828H0V18.7188H9.16149C10.0155 18.7188 10.3261 20.0078 9.54969 20.4375L7.76398 21.3828C5.35715 22.6719 2.95032 23.3594 0.465843 23.3594H0V31.6953H8.92858C9.78261 31.6953 10.0932 32.9844 9.31678 33.4141L7.45342 34.3594C5.20187 35.5625 2.79504 36.1641 0.465843 36.1641H0V44.5H8.92858L9.93788 43.125C14.2857 37.5391 19.3323 34.6172 24.6118 34.6172H25V26.2812H16.0714C15.2174 26.2812 14.9068 24.9922 15.6832 24.5625L17.5466 23.6172C19.7982 22.4141 22.205 21.8125 24.5342 21.8125H24.9224V13.4766H15.8385C14.9845 13.4766 14.6739 12.1875 15.4503 11.7578L17.236 10.8125C19.6429 9.52343 22.0497 8.83595 24.5342 8.83595H24.9224V0.5H15.9938L14.9845 1.875C10.7919 7.46094 5.66771 10.3828 0.465843 10.3828Z"
-                                fill="#505050" />
-                        </svg>
+                        <router-link :to="{ name: 'home' }">
+                            <svg class="md:mt-[20px] lg:m-0 mt-[20px]" width="25" height="45" viewBox="0 0 25 45"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.465843 10.3828H0V18.7188H9.16149C10.0155 18.7188 10.3261 20.0078 9.54969 20.4375L7.76398 21.3828C5.35715 22.6719 2.95032 23.3594 0.465843 23.3594H0V31.6953H8.92858C9.78261 31.6953 10.0932 32.9844 9.31678 33.4141L7.45342 34.3594C5.20187 35.5625 2.79504 36.1641 0.465843 36.1641H0V44.5H8.92858L9.93788 43.125C14.2857 37.5391 19.3323 34.6172 24.6118 34.6172H25V26.2812H16.0714C15.2174 26.2812 14.9068 24.9922 15.6832 24.5625L17.5466 23.6172C19.7982 22.4141 22.205 21.8125 24.5342 21.8125H24.9224V13.4766H15.8385C14.9845 13.4766 14.6739 12.1875 15.4503 11.7578L17.236 10.8125C19.6429 9.52343 22.0497 8.83595 24.5342 8.83595H24.9224V0.5H15.9938L14.9845 1.875C10.7919 7.46094 5.66771 10.3828 0.465843 10.3828Z"
+                                    fill="#505050" />
+                            </svg>
+                        </router-link>
                         <h1 class="lg:mb-[28px] md:mb-[10px] mb-[16px] text-[32px] font-semibold text-primary-600">
                             បង្កើតគណនី
                         </h1>
@@ -25,18 +28,19 @@
                     <form method="POST">
                         <div class="col-12 lg:mb-3 md:mb-[10px] mb-[16px]">
                             <label for="name" class="mb-2 text-primary-700 focus:bg-slate-100">ឈ្មោះគណនី</label>
-                            <input type="text" class="form-control" id="name" placeholder="ឈ្មោះគណនី" />
+                            <input v-model="name" type="text" class="form-control" id="name" placeholder="ឈ្មោះគណនី" />
                         </div>
                         <div class="col-12 lg:mb-3 md:mb-[10px] mb-[16px] lg:mt-[16px]">
                             <label for="email"
                                 class="mb-2 text-primary-700 focus:bg-slate-100">អាស័យដ្ឋានអ៊ីម៉ែល</label>
-                            <input type="email" class="form-control" id="email" placeholder="example@gmail.com" />
+                            <input v-model="email" type="email" class="form-control" id="email"
+                                placeholder="example@gmail.com" />
                         </div>
                         <div class="position-relative lg:mt-[16px] md:my-[10px] ">
                             <label for="password" class="mb-2 text-primary-700">ពាក្យសម្ងាត់</label>
                             <div class="position-relative">
-                                <input :type="passwordShow ? 'text' : 'password'" class="form-control pe-5"
-                                    id="password" placeholder="********" />
+                                <input v-model="password" :type="passwordShow ? 'text' : 'password'"
+                                    class="form-control pe-5" id="password" placeholder="********" />
                                 <svg class="position-absolute top-50 translate-middle-y end-0 me-3 cursor-pointer"
                                     @click="togglePasswordShow" width="24px" height="24px" viewBox="0 0 24 24"
                                     fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#787878">
@@ -62,13 +66,13 @@
                             </div>
                         </div>
                         <!-- Submit button -->
-                        <button type="submit"
+                        <button type="submit" @click="registerCallback"
                             class="col-12 lg:mt-[20px] md:mt-[-16px] mt-[16px] rounded-[8px] bg-gray-800 p-2 text-white hover:bg-gray-900">
                             បង្កើតគណនី
                         </button>
                         <p class="text-center lg:mt-[16px] lg:mb-0 md:my-[12px] mt-[16px]"> <span
-                                class="text-primary-700">មានគណនី? </span><a href=""
-                                class="text-gray-800 font-semibold">ចូលគណនី</a></p>
+                                class="text-primary-700">មានគណនី? </span><router-link :to="{ name: 'login' }"
+                                class="text-gray-800 font-semibold">ចូលគណនី</router-link></p>
                     </form>
                 </div>
             </div>
@@ -79,8 +83,18 @@
 
 <script setup>
     import { ref } from "vue";
+    import { useAuthStore } from "@/stores/auth";
 
+    const email = ref("");
+    const password = ref("");
+    const name = ref("");
+
+    const authStore = useAuthStore();
     const passwordShow = ref(false);
+
+    const registerCallback = async () => {
+        await authStore.register();
+    };
 
     const togglePasswordShow = () => {
         passwordShow.value = !passwordShow.value;

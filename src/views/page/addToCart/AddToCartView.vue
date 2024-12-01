@@ -153,7 +153,4 @@
         cartStore.remove(index);
     };
 
-
-    const mainElement = document.querySelector('main.v-main.mt-4');
-    mainElement.classList.add('bg-primary-50');
 </script>
