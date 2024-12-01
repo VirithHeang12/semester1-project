@@ -129,6 +129,39 @@
                                     </v-list-item-title>
                                 </v-btn>
                             </v-list-item>
+                            <v-list-item v-if="auth.isLoggedIn">
+                                <v-btn elevation="0" class="w-full flex justify-start">
+                                    <v-list-item-title @click="clickCallback('cart')"
+                                        class="flex justify-start text-left">
+                                        <span class="tracking-tighter">កន្ត្រក</span>
+                                    </v-list-item-title>
+                                </v-btn>
+                            </v-list-item>
+                            <v-list-item v-if="auth.isLoggedIn">
+                                <v-btn elevation="0" class="w-full flex justify-start">
+                                    <v-list-item-title @click="clickCallback('wishlist')"
+                                        class="flex justify-start text-left">
+                                        <span class="tracking-tighter">ចំណូលចិត្ត</span>
+                                    </v-list-item-title>
+                                </v-btn>
+                            </v-list-item>
+                            <v-list-item v-if="!auth.isLoggedIn">
+                                <v-btn elevation="0" class="w-fit flex justify-start" color="green"
+                                    :append-icon="'mdi-login'">
+                                    <v-list-item-title @click="clickCallback('login')"
+                                        class="flex justify-start text-left">
+                                        <span class="tracking-tighter">ចូលគណនី</span>
+                                    </v-list-item-title>
+                                </v-btn>
+                            </v-list-item>
+                            <v-list-item v-if="auth.isLoggedIn">
+                                <v-btn elevation="0" class="flex justify-start w-fit" color="red"
+                                    :append-icon="'mdi-logout'">
+                                    <v-list-item-title @click="logoutCallback" class="flex justify-start text-left">
+                                        <span class="tracking-tighter">ចាកចេញ</span>
+                                    </v-list-item-title>
+                                </v-btn>
+                            </v-list-item>
                         </v-list>
                     </v-card-text>
                 </v-card>
@@ -191,6 +224,14 @@
             to: 'home'
         },
         {
+            title: 'អំពីយើង',
+            to: "about"
+        },
+        {
+            title: 'ទំនាក់ទំនង',
+            to: "contact"
+        },
+        {
             title: 'បន្ទប់គេង',
             to: "bedroom"
         },
@@ -214,26 +255,6 @@
             title: 'ផ្ទះបាយ',
             to: "kitchen"
         },
-        {
-            title: 'អំពីយើង',
-            to: "about"
-        },
-        {
-            title: 'ទំនាក់ទំនង',
-            to: "contact"
-        },
-        {
-            title: 'កន្ត្រក',
-            to: "login"
-        },
-        {
-            title: 'ចូលគណនី',
-            to: "login"
-        },
-        {
-            title: 'ចំណូលចិត្ត',
-            to: "wishlist"
-        }
     ];
 
     const logoutCallback = async () => {
