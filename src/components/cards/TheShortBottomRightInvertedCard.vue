@@ -14,9 +14,10 @@
         </svg>
 
         <slot name="top-right">
-            <heart-svg
-                class="absolute top-16 right-2 min-[360px]:top-12 min-[500px]:top-10 min-[600px]:top-8 min-[960px]:top-10"></heart-svg>
+            <the-wish-list-heart :title="title" :href="href" :price="price"
+                class="absolute top-14 right-0 min-[360px]:top-10 min-[500px]:top-8 min-[600px]:top-6 min-[960px]:top-8"></the-wish-list-heart>
         </slot>
+
 
         <p
             class="w-[2.5rem] h-[2.5rem] min-[500px]:w-[2.8rem] min-[500px]:h-[2.8rem] min-[960px]:w-[3rem] min-[960px]:h-[3rem] absolute bottom-[5.7rem] right-[2px] min-[360px]:bottom-[5rem] min-[360px]:right-2 min-[500px]:bottom-[4.4rem] min-[600px]:bottom-[4.2rem] min-[960px]:bottom-[4.5rem] min-[960px]:right-1 bg-stone-600 rounded-[1rem] flex justify-center align-center">
@@ -44,7 +45,7 @@
 <script setup>
     import { defineProps } from 'vue';
 
-    import HeartSvg from '@/assets/svgs/general/heart.svg';
+    import TheWishListHeart from '@/components/wishlist-heart/TheWishListHeart.vue';
     import CartSvg from '@/assets/svgs/general/cart.svg';
 
     defineProps({

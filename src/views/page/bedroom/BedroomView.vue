@@ -110,7 +110,6 @@
 
     // Product cards
     const productCards = ref([
-
         {
             href: "/Bedroom Category/Bedroom ( Orignal)/Desk/pic-1.jpg",
             title: "តុ",

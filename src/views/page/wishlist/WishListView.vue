@@ -16,24 +16,23 @@
                     </div>
 
                     <!-- Cart Items Loop -->
-                    <div v-for="(item, index) in cartItems" :key="index"
+                    <div v-for="(item, index) in wishListItems" :key="index"
                         class="border-b py-4 flex flex-col gap-4 min-[800px]:flex-row min-[800px]:items-center">
                         <!-- Product Image and Info -->
                         <div class="flex items-center w-full min-[800px]:w-1/6">
-                            <img :src="item.url" alt="Product Image"
+                            <img :src="item.href" alt="Product Image"
                                 class="w-48 h-48 min-[800px]:w-16 min-[800px]:h-16 rounded object-cover" />
                         </div>
 
                         <div class="flex items-center w-full min-[800px]:w-1/2">
-                            <h3 class="text-sm font-semibold text-primary-900">{{ item.name }}</h3>
+                            <h3 class="text-sm font-semibold text-primary-900">{{ item.title }}</h3>
                             <p class="text-sm text-gray-500">{{ item.description }}</p>
                         </div>
 
                         <!-- Item Price -->
                         <div class="flex items-center justify-between w-full min-[800px]:w-1/6">
                             <span class="min-[800px]:hidden text-sm font-semibold text-primary-900">តម្លៃ:</span>
-                            <span class="font-semibold text-primary-900">${{ (item.price *
-                                item.quantity).toFixed(2)
+                            <span class="font-semibold text-primary-900">${{ (item.price).toFixed(2)
                                 }}</span>
                         </div>
 
@@ -73,18 +72,17 @@
 
 <script setup>
     import { computed } from 'vue';
-    import { useCartStore } from '@/stores/cart';
+    import { useWishListStore } from '@/stores/wishlist';
     import { useDisplayStore } from '@/stores/display';
 
     const displayStore = useDisplayStore();
-    const cartStore = useCartStore();
+    const wishListStore = useWishListStore();
 
-    const cartItems = computed(() => cartStore.cart);
+    const wishListItems = computed(() => wishListStore.wishlist);
 
     const removeItem = (index) => {
-        cartStore.remove(index);
+        wishListStore.removeByIndex(index);
     };
-
 
     const mainElement = document.querySelector('main.v-main.mt-4');
     mainElement.classList.add('bg-primary-50');
