@@ -6,7 +6,7 @@
                     <v-col cols="12">
                         <v-carousel :min-height="100" :max-height="100" hide-delimiters class="rounded-lg">
                             <v-carousel-item ass="item" v-for="(item, i) in carouselItems" :key="`carousel-item-${i}`"
-                                :src="item.src" :lazy-src="item.lazySrc" cover>
+                                :src="item.src" cover>
                             </v-carousel-item>
                         </v-carousel>
                     </v-col>
@@ -96,18 +96,15 @@
     // Data for carousel
     const carouselItems = ref([
         {
-            src: "/bedrooms/bedroom1.jpg",
-            lazySrc: "/thumbnails/bedroom1.jpg",
+            src: "/slide-groups/bedrooms/bedroom-slide-1.jpg",
         },
 
         {
-            src: "/bedrooms/badside table.jpg",
-            lazySrc: "/thumbnails/badside table.jpg",
+            src: "/slide-groups/bedrooms/bedroom-slide-2.jpg",
         },
 
         {
-            src: "/bedrooms/garden-room-bedroom-3-scaled.jpg",
-            lazySrc: "/thumbnails/garden-room-bedroom-3-scaled.jpg",
+            src: "/slide-groups/bedrooms/bedroom-slide-3.png",
         },
     ]);
 
