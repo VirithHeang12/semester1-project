@@ -71,7 +71,7 @@
 </template>
 
 <script setup>
-    import { computed } from 'vue';
+    import { computed, onMounted } from 'vue';
     import { useWishListStore } from '@/stores/wishlist';
     import { useDisplayStore } from '@/stores/display';
 
@@ -92,4 +92,8 @@
             title: 'ចំណូលចិត្ត',
         },
     ];
+
+    onMounted(() => {
+        document.querySelector('main.v-main.mt-4')?.classList?.add('bg-primary-50');
+    });
 </script>

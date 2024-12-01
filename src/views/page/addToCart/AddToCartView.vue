@@ -121,7 +121,7 @@
 </template>
 
 <script setup>
-    import { computed, ref } from 'vue';
+    import { computed, onMounted, ref } from 'vue';
     import { useCartStore } from '@/stores/cart';
 
     const cartStore = useCartStore();
@@ -152,5 +152,9 @@
     const removeItem = (index) => {
         cartStore.remove(index);
     };
+
+    onMounted(() => {
+        document.querySelector('main.v-main.mt-4')?.classList?.add('bg-primary-50');
+    });
 
 </script>
