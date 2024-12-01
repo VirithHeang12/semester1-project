@@ -22,7 +22,7 @@
                     </template>
                 </v-breadcrumbs>
                 <h1 class="text-[45px] py-2 font-semibold uppercase sm:text-[30px]">{{ productDetails.title }}</h1>
-                <h2 class="h2 font-semibold py-2">{{ productDetails.price }}</h2>
+                <h2 class="h2 font-semibold py-2">${{ productDetails.price }}</h2>
 
                 <div class="flex flex-col gap-2">
                     <p class="text-[16px]">Color</p>
