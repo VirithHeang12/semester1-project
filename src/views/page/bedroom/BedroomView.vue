@@ -125,7 +125,7 @@
         {
             href: "/Bedroom Category/Bedroom ( Orignal)/Mirror/pic-2.jpg",
             title: "កញ្ចក់",
-            price: 999.99,
+            price: 99.99,
             category: "mirror",
         },
         {
