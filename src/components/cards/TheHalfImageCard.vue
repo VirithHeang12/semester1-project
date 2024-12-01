@@ -3,7 +3,8 @@
         <div class="relative mb-2 min-[960px]:col-span-6">
             <img :src="href" :alt="title" class="w-[250px] p-[25px] mt-[15px] rounded-[40px]">
             <slot name="top-right">
-                <heart-svg class="absolute top-[50px] right-[40px]"></heart-svg>
+                <the-wish-list-heart :title="title" :href="href" :price="price"
+                    class="absolute top-[40px] left-[75px]"></the-wish-list-heart>
             </slot>
         </div>
 
@@ -23,8 +24,12 @@
             </slot>
 
             <slot name="button">
-                <button class="!mt-[50px] px-[4px] py-[7px] bg-primary-800 hover:bg-primary-900 text-white text-[14px] rounded-[12px] min-[960px]:mt-auto min-[960px]:mb-3 ">
-                    {{ action }}
+                <button class="!mt-[50px] px-[4px] py-[7px] bg-primary-800 hover:bg-primary-900 text-white text-[14px]
+                        rounded-[12px] min-[960px]:mt-auto min-[960px]:mb-3 ">
+                    <router-link class="w-full h-full flex justify-center items-center"
+                        :to="{ name: 'details', params: { category: category, id: id, slug: slug }, query: { image: href, name: title, price: price, description: des, category: category } }">
+                        {{ action }}
+                    </router-link>
                 </button>
             </slot>
         </div>
@@ -34,9 +39,13 @@
 <script setup>
     import { defineProps } from 'vue';
 
-    import HeartSvg from '@/assets/svgs/general/heart.svg';
+    import TheWishListHeart from '@/components/wishlist-heart/TheWishListHeart.vue';
 
     defineProps({
+        id: {
+            type: Number,
+            default: 500,
+        },
         href: {
             type: String,
             default: '/Outdoor Cateogry/Outdoor (Original)/Plant/plant-1.jpg',
@@ -49,9 +58,17 @@
             type: Number,
             default: 40.99,
         },
-        des:{
+        des: {
             type: String,
             default: 'ផើងផ្កា'
+        },
+        slug: {
+            type: String,
+            default: 'ផើងផ្កា',
+        },
+        category: {
+            type: String,
+            default: 'ផើងផ្កា',
         },
         action: {
             type: String,

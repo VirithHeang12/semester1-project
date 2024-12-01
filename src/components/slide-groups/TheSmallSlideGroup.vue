@@ -7,9 +7,10 @@
                         <v-slide-group :center-active="true">
                             <v-slide-group-item v-for="(tabItemImage, index) in images" :key="index">
                                 <v-card class="ml-2 mr-4" :elevation="0">
-                                    <the-half-image-card :href="tabItemImage.url" :title="tabItemImage.name"
-                                        :price="tabItemImage.price" :des="tabItemImage.des" class="rounded-[20px]">
-
+                                    <the-half-image-card :id="tabItemImage.id" :href="tabItemImage.url"
+                                        :title="tabItemImage.name" :price="tabItemImage.price" :des="tabItemImage.des"
+                                        :slug="tabItemImage.slug" :category="tabItemImage.category"
+                                        class="rounded-[20px]">
                                     </the-half-image-card>
                                 </v-card>
                             </v-slide-group-item>
@@ -22,34 +23,43 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import TheHalfImageCard from '../cards/TheHalfImageCard.vue';
+    import { ref } from 'vue';
+    import TheHalfImageCard from '../cards/TheHalfImageCard.vue';
 
-const tab = ref('tab1');
+    const tab = ref('tab1');
 
-const images = [
-    {
-        url: '/Outdoor Cateogry/Outdoor (Original)/Plant/pic-3.png',
-        name: 'ផើងផ្កាជ័រ',
-        des: 'ធន់និងកម្ដៅថ្ងៃ ស្វិត',
-        price: 40.99,
-        action: ''
-    },
-    {
-        url: '/Outdoor Cateogry/Outdoor (Original)/Plant/pic-4.png',
-        name: 'ផើងផ្កា',
-        des: 'ធន់និងកម្ដៅថ្ងៃ ស្វិត',
-        price: 50.99,
-        action: ''
-    },
-    {
-        url: '/Outdoor Cateogry/Outdoor (Original)/Plant/pic-10.png',
-        name: 'ផើងផ្កា ',
-        des: 'ធន់និងកម្ដៅថ្ងៃ ស្វិត',
-        price: 60.99,
-        action: ''
-    },
-    
-]
+    const images = [
+        {
+            id: 600,
+            url: '/Outdoor Cateogry/Outdoor (Original)/Plant/pic-3.png',
+            name: 'ផើងផ្កាជ័រ',
+            des: 'ធន់នឺងកម្ដៅថ្ងៃ ស្វិតបានយូរឆ្នាំ',
+            price: 40.99,
+            slug: 'ផើងផ្កាជ័រស្វិត',
+            category: 'outdoor',
+            action: ''
+        },
+        {
+            id: 601,
+            url: '/Outdoor Cateogry/Outdoor (Original)/Plant/pic-4.png',
+            name: 'ផើងផ្កា',
+            des: 'ធន់នឺងកម្ដៅថ្ងៃ ស្វិត',
+            price: 50.99,
+            slug: 'ផើងផ្កា',
+            category: 'outdoor',
+            action: ''
+        },
+        {
+            id: 602,
+            url: '/Outdoor Cateogry/Outdoor (Original)/Plant/pic-10.png',
+            name: 'ផើងផ្កា ',
+            des: 'ធន់និងកម្ដៅថ្ងៃ ស្វិត',
+            price: 60.99,
+            slug: 'ផើងផ្កាថ្ម',
+            category: 'outdoor',
+            action: ''
+        },
+
+    ]
 
 </script>
