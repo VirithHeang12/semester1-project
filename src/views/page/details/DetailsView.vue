@@ -180,10 +180,8 @@
                 </div>
             </v-col>
         </v-row>
+        <ThePaymentForm ref="paymentModalRef" />
     </v-container>
-
-    <ThePaymentForm ref="paymentModalRef" />
-
 </template>
 
 <script setup>

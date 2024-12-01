@@ -83,11 +83,6 @@ const router = createRouter({
         name: 'details',
         component: () => import('../views/page/details/DetailsView.vue'),
     },
-    {
-        path: '/checkout',
-        name: 'checkout',
-        component: () => import('../components/modals/ThePaymentForm.vue'),
-    }
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {

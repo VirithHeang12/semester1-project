@@ -18,13 +18,13 @@
                         <v-col cols="12" :md="4"
                             class="-mb-20 min-[350px]:-mb-10 min-[380px]:-mb-6 flex flex-col min-[350px]:gap-y-1 min-[380px]:gap-y-10 min-[960px]:gap-y-0 min-[1100px]:gap-y-14">
                             <v-card :elevation="0" class="bg-transparent -mb-8 min-[350px]:-mb-4" data-aos="fade-right">
-                                <router-link to="#">
+                                <router-link :to="{ name: 'kitchen' }">
                                     <the-long-top-left-inverted-card class="mx-auto"></the-long-top-left-inverted-card>
                                 </router-link>
                             </v-card>
 
                             <v-card elevation="0" class="bg-transparent" data-aos="fade-right">
-                                <router-link to="#">
+                                <router-link :to="{ name: 'livingroom' }">
                                     <the-long-bottom-right-inverted-card
                                         class="mx-auto"></the-long-bottom-right-inverted-card>
                                 </router-link>
@@ -34,13 +34,13 @@
                             <v-card elevation="0"
                                 class="bg-transparent -mb-24 min-[350px]:-mb-20 min-[380px]:-mb-12 min-[960px]:-mb-24 min-[1100px]:-mb-12"
                                 data-aos="fade-down">
-                                <router-link to="#">
+                                <router-link :to="{ name: 'office' }">
                                     <the-top-left-bottom-right-inverted-card
                                         class="mx-auto"></the-top-left-bottom-right-inverted-card>
                                 </router-link>
                             </v-card>
                             <v-card elevation="0" class="bg-transparent" data-aos="fade-up">
-                                <router-link to="#">
+                                <router-link :to="{ name: 'bedroom' }">
                                     <the-top-right-bottom-left-inverted-card
                                         class="mx-auto"></the-top-right-bottom-left-inverted-card>
                                 </router-link>
@@ -50,13 +50,13 @@
                             <v-card elevation="0"
                                 class="bg-transparent -mb-8 min-[380px]:mb-6 min-[960px]:-mb-6 min-[1100px]:mb-10"
                                 data-aos="fade-left">
-                                <router-link to="#">
+                                <router-link :to="{ name: 'kitchen' }">
                                     <the-short-top-left-inverted-card
                                         class="mx-auto"></the-short-top-left-inverted-card>
                                 </router-link>
                             </v-card>
                             <v-card elevation="0" class="bg-transparent" data-aos="fade-left">
-                                <router-link to="#">
+                                <router-link :to="{ name: 'lighting' }">
                                     <the-short-bottom-left-inverted-card
                                         class="mx-auto"></the-short-bottom-left-inverted-card>
                                 </router-link>
