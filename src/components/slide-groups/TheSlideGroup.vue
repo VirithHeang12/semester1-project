@@ -29,11 +29,11 @@
                                                     <p class="pl-2">
                                                         <span class="text-gray-600 rounded-lg bg-gray-200 p-1">${{
                                                             tabItemImage.price
-                                                        }}</span>
+                                                            }}</span>
                                                     </p>
                                                 </div>
                                                 <v-btn
-                                                    :to="{ name: 'details', params: { category: tabItem.value, id: tabItemImage.id, slug: tabItemImage.slug }, query: { image: tabItemImage.url, name: tabItemImage.name, price: tabItemImage.price } }"
+                                                    :to="{ name: 'details', params: { category: tabItem.value, id: tabItemImage.id, slug: tabItemImage.slug }, query: { image: tabItemImage.url, name: tabItemImage.name, price: tabItemImage.price, description: tabItemImage.description, category: tabItemImage.category } }"
                                                     :color="'grey-darken-3'" :size="25" :ripple="false"
                                                     :icon="'mdi-arrow-right'"></v-btn>
 
@@ -89,7 +89,9 @@
                                                                     }}</span>
                                                             </p>
                                                         </div>
-                                                        <v-btn :rounded="true" :color="'grey-darken-3'" :size="24"
+                                                        <v-btn
+                                                            :to="{ name: 'details', params: { category: tabItem.value, id: tabItemImage.id, slug: tabItemImage.slug }, query: { image: tabItemImage.url, name: tabItemImage.name, price: tabItemImage.price, description: tabItemImage.description, category: tabItemImage.category } }"
+                                                            :rounded="true" :color="'grey-darken-3'" :size="24"
                                                             :ripple="false">
                                                             <template #prepend>
                                                                 <v-icon :size="20">mdi-arrow-right</v-icon>

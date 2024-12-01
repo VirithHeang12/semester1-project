@@ -230,49 +230,63 @@
                     url: '/slide-groups/livingrooms/livingroom-1.jpg',
                     price: 79.99,
                     name: 'Amet Consectetur Adipiscing Elit',
-                    slug: 'amet-consectetur-adipiscing-elit'
+                    slug: 'amet-consectetur-adipiscing-elit',
+                    category: 'table',
+                    description: 'Amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
                 },
                 {
                     id: 2,
                     url: '/slide-groups/livingrooms/livingroom-2.jpg',
                     price: 89.99,
                     name: 'Pellentesque Habitant Morbi Tristique Senectus',
-                    slug: 'pellentesque-habitant-morbi-tristique-senectus'
+                    slug: 'pellentesque-habitant-morbi-tristique-senectus',
+                    category: 'chair',
+                    description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.'
                 },
                 {
                     id: 3,
                     url: '/slide-groups/livingrooms/livingroom-3.jpg',
                     price: 99.99,
                     name: 'Duis Aute Irure Dolor In Reprehenderit',
-                    slug: 'duis-aute-irure-dolor-in-reprehenderit'
+                    slug: 'duis-aute-irure-dolor-in-reprehenderit',
+                    category: 'sofa',
+                    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
                 },
                 {
                     id: 4,
                     url: '/slide-groups/livingrooms/livingroom-4.jpg',
                     price: 109.99,
                     name: 'Blandit Praesent Luptatum Zzril Delenit Augue',
-                    slug: 'blandit-praesent-luptatum-zzril-delenit-augue'
+                    slug: 'blandit-praesent-luptatum-zzril-delenit-augue',
+                    category: 'sofa',
+                    description: 'Blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.'
                 },
                 {
                     id: 5,
                     url: '/slide-groups/livingrooms/livingroom-5.jpg',
                     price: 119.99,
                     name: 'Ridiculus Mus Donec Dignissim',
-                    slug: 'ridiculus-mus-donec-dignissim'
+                    slug: 'ridiculus-mus-donec-dignissim',
+                    category: 'table',
+                    description: 'Ridiculus mus donec dignissim, donec dignissim, donec dignissim, donec dignissim.'
                 },
                 {
                     id: 6,
                     url: '/slide-groups/livingrooms/livingroom-6.jpg',
                     price: 129.99,
                     name: 'Orci Luctus Et Ultrices Posuere Cubilia',
-                    slug: 'orci-luctus-et-ultrices-posuere-cubilia'
+                    slug: 'orci-luctus-et-ultrices-posuere-cubilia',
+                    category: 'sofa',
+                    description: 'Orci luctus et ultrices posuere cubilia, luctus et ultrices posuere cubilia, luctus et ultrices posuere cubilia.'
                 },
                 {
                     id: 7,
                     url: '/slide-groups/livingrooms/livingroom-7.jpg',
                     price: 139.99,
                     name: 'Kurabitur Quis Nostrud Exercitation Ullamco',
-                    slug: 'kurabitur-quis-nostrud-exercitation-ullamco'
+                    slug: 'kurabitur-quis-nostrud-exercitation-ullamco',
+                    category: 'chair',
+                    description: 'Kurabitur quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                 },
             ]
         },
@@ -286,49 +300,63 @@
                     url: '/slide-groups/kitchens/diningroom-1.jpg',
                     price: 79.99,
                     name: 'Illum Dolore Eu Feugiat Nulla',
-                    slug: 'illum-dolore-eu-feugiat-nulla'
+                    slug: 'illum-dolore-eu-feugiat-nulla',
+                    category: 'table',
+                    description: 'Illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui bland'
                 },
                 {
                     id: 2,
                     url: '/slide-groups/kitchens/diningroom-2.jpg',
                     price: 89.99,
                     name: 'Lobortis Nisi Ut Aliquip Ex Ea Commodo',
-                    slug: 'lobortis-nisi-ut-aliquip-ex-ea-commodo'
+                    slug: 'lobortis-nisi-ut-aliquip-ex-ea-commodo',
+                    category: 'chair',
+                    description: 'Lobortis nisi ut aliquip ex ea commodo consequat duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.'
                 },
                 {
                     id: 3,
                     url: '/slide-groups/kitchens/diningroom-3.jpg',
                     price: 99.99,
                     name: 'Quis Nostrud Exercitation Ullamco',
-                    slug: 'quis-nostrud-exercitation-ullamco'
+                    slug: 'quis-nostrud-exercitation-ullamco',
+                    category: 'table',
+                    description: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                 },
                 {
                     id: 4,
                     url: '/slide-groups/kitchens/diningroom-4.jpg',
                     price: 109.99,
                     name: 'Fugiat Nulla Pariatur Excepteur Sint',
-                    slug: 'fugiat-nulla-pariatur-excepteur-sint'
+                    slug: 'fugiat-nulla-pariatur-excepteur-sint',
+                    category: 'table',
+                    description: 'Fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
                 },
                 {
                     id: 5,
                     url: '/slide-groups/kitchens/diningroom-5.jpg',
                     price: 119.99,
                     name: 'Eiusmod Tempor Incididunt Ut Labore',
-                    slug: 'eiusmod-tempor-incididunt-ut-labore'
+                    slug: 'eiusmod-tempor-incididunt-ut-labore',
+                    category: 'chair',
+                    description: 'Eiusmod tempor incididunt ut labore et dolore magna aliqua.'
                 },
                 {
                     id: 6,
                     url: '/slide-groups/kitchens/diningroom-6.jpg',
                     price: 129.99,
                     name: 'Habent Claritatem Insitam Est Usus Legentis',
-                    slug: 'habent-claritatem-insitam-est-usus-legentis'
+                    slug: 'habent-claritatem-insitam-est-usus-legentis',
+                    category: 'table',
+                    description: 'Habent claritatem insitam est usus legentis in iis qui facit eorum claritatem.'
                 },
                 {
                     id: 7,
                     url: '/slide-groups/kitchens/diningroom-7.jpg',
                     price: 139.99,
                     name: 'Wisi Enim Ad Minim Veniam',
-                    slug: 'wisi-enim-ad-minim-veniam'
+                    slug: 'wisi-enim-ad-minim-veniam',
+                    category: 'chair',
+                    description: 'Wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'
                 },
             ]
         },
@@ -342,49 +370,63 @@
                     url: '/slide-groups/offices/office-1.jpg',
                     price: 79.99,
                     name: 'Xerci Tation Ullamcorper Suscipit Lobortis',
-                    slug: 'xerci-tation-ullamcorper-suscipit-lobortis'
+                    slug: 'xerci-tation-ullamcorper-suscipit-lobortis',
+                    category: 'desk',
+                    description: 'Xerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'
                 },
                 {
                     id: 2,
                     url: '/slide-groups/offices/office-2.jpg',
                     price: 89.99,
                     name: 'Eodem Modo Typi Qui Nunc Nobis Videntur',
-                    slug: 'eodem-modo-typi-qui-nunc-nobis-videntur'
+                    slug: 'eodem-modo-typi-qui-nunc-nobis-videntur',
+                    category: 'chair',
+                    description: 'Eodem modo typi qui nunc nobis videntur parum clari fiant sollemnes in futurum.'
                 },
                 {
                     id: 3,
                     url: '/slide-groups/offices/office-3.jpg',
                     price: 99.99,
                     name: 'Claritas Est Etiam Processus Dynamicus',
-                    slug: 'claritas-est-etiam-processus-dynamicus'
+                    slug: 'claritas-est-etiam-processus-dynamicus',
+                    category: 'table',
+                    description: 'Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.'
                 },
                 {
                     id: 4,
                     url: '/slide-groups/offices/office-4.jpg',
                     price: 109.99,
                     name: 'Habent Claritatem Insitam Est Usus Legentis',
-                    slug: 'habent-claritatem-insitam-est-usus-legentis'
+                    slug: 'habent-claritatem-insitam-est-usus-legentis',
+                    category: 'desk',
+                    description: 'Habent claritatem insitam est usus legentis in iis qui facit eorum claritatem.'
                 },
                 {
                     id: 5,
                     url: '/slide-groups/offices/office-5.jpg',
                     price: 119.99,
                     name: 'Iriure Dolor In Hendrerit In Vulputate',
-                    slug: 'iriure-dolor-in-hendrerit-in-vulputate'
+                    slug: 'iriure-dolor-in-hendrerit-in-vulputate',
+                    category: 'chair',
+                    description: 'Iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui bland'
                 },
                 {
                     id: 6,
                     url: '/slide-groups/offices/office-6.jpg',
                     price: 129.99,
                     name: 'Velit Esse Molestie Consequat Vel',
-                    slug: 'velit-esse-molestie-consequat-vel'
+                    slug: 'velit-esse-molestie-consequat-vel',
+                    category: 'table',
+                    description: 'Velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui bland'
                 },
                 {
                     id: 7,
                     url: '/slide-groups/offices/office-7.jpg',
                     price: 139.99,
                     name: 'Feugait Nulla Facilisi Nam Liber Tempor',
-                    slug: 'feugait-nulla-facilisi-nam-liber-tempor'
+                    slug: 'feugait-nulla-facilisi-nam-liber-tempor',
+                    category: 'chair',
+                    description: 'Feugait nulla facilisi nam liber tempor cum soluta nobis eleifend option con'
                 }
             ]
         },
@@ -398,56 +440,72 @@
                     url: '/slide-groups/outdoors/outdoor-1.jpg',
                     price: 79.99,
                     name: 'Ridiculus Mus Donec Dignissim',
-                    slug: 'ridiculus-mus-donec-dignissim'
+                    slug: 'ridiculus-mus-donec-dignissim',
+                    category: 'chair',
+                    description: 'Ridiculus mus donec dignissim, donec dignissim, donec dignissim, donec dignissim.'
                 },
                 {
                     id: 2,
                     url: '/slide-groups/outdoors/outdoor-2.jpg',
                     price: 89.99,
                     name: 'Eiusmod Tempor Incididunt Ut Labore',
-                    slug: 'eiusmod-tempor-incididunt-ut-labore'
+                    slug: 'eiusmod-tempor-incididunt-ut-labore',
+                    category: 'sofa',
+                    description: 'Eiusmod tempor incididunt ut labore et dolore magna aliqua.'
                 },
                 {
                     id: 3,
                     url: '/slide-groups/outdoors/outdoor-3.jpg',
                     price: 99.99,
                     name: 'Habent Claritatem Insitam Est Usus Legentis',
-                    slug: 'habent-claritatem-insitam-est-usus-legentis'
+                    slug: 'habent-claritatem-insitam-est-usus-legentis',
+                    category: 'table',
+                    description: 'Habent claritatem insitam est usus legentis in iis qui facit eorum claritatem.'
                 },
                 {
                     id: 4,
                     url: '/slide-groups/outdoors/outdoor-4.jpg',
                     price: 109.99,
                     name: 'Wisi Enim Ad Minim Veniam Lorem',
-                    slug: 'wisi-enim-ad-minim-veniam-lorem'
+                    slug: 'wisi-enim-ad-minim-veniam-lorem',
+                    category: 'table',
+                    description: 'Wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'
                 },
                 {
                     id: 5,
                     url: '/slide-groups/outdoors/outdoor-5.jpg',
                     price: 119.99,
                     name: 'Xerci Tation Ullamcorper Suscipit Lobortis',
-                    slug: 'xerci-tation-ullamcorper-suscipit-lobortis'
+                    slug: 'xerci-tation-ullamcorper-suscipit-lobortis',
+                    category: 'chair',
+                    description: 'Xerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'
                 },
                 {
                     id: 6,
                     url: '/slide-groups/outdoors/outdoor-6.jpg',
                     price: 129.99,
                     name: 'Eodem Modo Typi Qui Nunc Nobis Videntur',
-                    slug: 'eodem-modo-typi-qui-nunc-nobis-videntur'
+                    slug: 'eodem-modo-typi-qui-nunc-nobis-videntur',
+                    category: 'sofa',
+                    description: 'Eodem modo typi qui nunc nobis videntur parum clari fiant sollemnes in futurum.'
                 },
                 {
                     id: 7,
                     url: '/slide-groups/outdoors/outdoor-7.jpg',
                     price: 139.99,
                     name: 'Claritas Est Etiam Processus Dynamicus',
-                    slug: 'claritas-est-etiam-processus-dynamicus'
+                    slug: 'claritas-est-etiam-processus-dynamicus',
+                    category: 'sofa',
+                    description: 'Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.'
                 },
                 {
                     id: 8,
                     url: '/slide-groups/outdoors/outdoor-8.jpg',
                     price: 149.99,
                     name: 'Habent Claritatem Insitam Est Usus Legentis',
-                    slug: 'habent-claritatem-insitam-est-usus-legentis'
+                    slug: 'habent-claritatem-insitam-est-usus-legentis',
+                    category: 'sofa',
+                    description: 'Habent claritatem insitam est usus legentis in iis qui facit eorum claritatem.'
                 }
             ]
         },
@@ -461,56 +519,72 @@
                     url: '/slide-groups/lightings/lighting-1.jpg',
                     price: 79.99,
                     name: 'Pellentesque Habitant Morbi Tristique Senectus',
-                    slug: 'pellentesque-habitant-morbi-tristique-senectus'
+                    slug: 'pellentesque-habitant-morbi-tristique-senectus',
+                    category: 'lamp',
+                    description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.'
                 },
                 {
                     id: 2,
                     url: '/slide-groups/lightings/lighting-2.jpg',
                     price: 89.99,
                     name: 'Duis Aute Irure Dolor In Reprehenderit',
-                    slug: 'duis-aute-irure-dolor-in-reprehenderit'
+                    slug: 'duis-aute-irure-dolor-in-reprehenderit',
+                    category: 'lamp',
+                    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
                 },
                 {
                     id: 3,
                     url: '/slide-groups/lightings/lighting-3.jpg',
                     price: 99.99,
                     name: 'Blandit Praesent Luptatum Zzril Delenit Augue',
-                    slug: 'blandit-praesent-luptatum-zzril-delenit-augue'
+                    slug: 'blandit-praesent-luptatum-zzril-delenit-augue',
+                    category: 'lamp',
+                    description: 'Blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.'
                 },
                 {
                     id: 4,
                     url: '/slide-groups/lightings/lighting-4.jpg',
                     price: 109.99,
                     name: 'Reprehenderit In Voluptate Velit Esse Cillum',
-                    slug: 'reprehenderit-in-voluptate-velit-esse-cillum'
+                    slug: 'reprehenderit-in-voluptate-velit-esse-cillum',
+                    category: 'lamp',
+                    description: 'Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
                 },
                 {
                     id: 5,
                     url: '/slide-groups/lightings/lighting-5.jpg',
                     price: 119.99,
                     name: 'Dolore Eu Fe ugiat Nulla Facilisi',
-                    slug: 'dolore-eu-fe-ugiat-nulla-facilisi'
+                    slug: 'dolore-eu-fe-ugiat-nulla-facilisi',
+                    category: 'lamp',
+                    description: 'Dolore eu feugiat nulla facilisi at vero eros et accumsan et iusto odio dignissim qui blandit pra'
                 },
                 {
                     id: 6,
                     url: '/slide-groups/lightings/lighting-6.jpg',
                     price: 129.99,
                     name: 'Nam Liber Tempor Cum Soluta Nobis Eleifend',
-                    slug: 'nam-liber-tempor-cum-soluta-nobis-eleifend'
+                    slug: 'nam-liber-tempor-cum-soluta-nobis-eleifend',
+                    category: 'lamp',
+                    description: 'Nam liber tempor cum soluta nobis eleifend option con'
                 },
                 {
                     id: 7,
                     url: '/slide-groups/lightings/lighting-7.jpg',
                     price: 139.99,
                     name: 'Option Conr Adipiscing Elit',
-                    slug: 'option-conr-adipiscing-elit'
+                    slug: 'option-conr-adipiscing-elit',
+                    category: 'lamp',
+                    description: 'Option congue nihil imperdiet doming id quod mazim placerat facer possim assum.'
                 },
                 {
                     id: 8,
                     url: '/slide-groups/lightings/lighting-8.jpg',
                     price: 149.99,
                     name: 'Option Conr Adipiscing Elit et',
-                    slug: 'option-conr-adipiscing-elit-et'
+                    slug: 'option-conr-adipiscing-elit-et',
+                    category: 'lamp',
+                    description: 'Option congue nihil imperdiet doming id quod mazim placerat facer possim assum.'
                 }
             ]
         },
@@ -524,42 +598,54 @@
                     url: '/slide-groups/bedrooms/bedroom-1.jpg',
                     price: 79.99,
                     name: 'Orci Luctus Et Ultrices Posuere Cubilia',
-                    slug: 'orci-luctus-et-ultrices-posuere-cubilia'
+                    slug: 'orci-luctus-et-ultrices-posuere-cubilia',
+                    category: 'bed',
+                    description: 'Orci luctus et ultrices posuere cubilia, luctus et ultrices posuere cubilia, luctus et ultrices posuere cubilia.'
                 },
                 {
                     id: 2,
                     url: '/slide-groups/bedrooms/bedroom-2.jpg',
                     price: 89.99,
                     name: 'Pellentesque Habitant Morbi Tristique Senectus',
-                    slug: 'pellentesque-habitant-morbi-tristique-senectus'
+                    slug: 'pellentesque-habitant-morbi-tristique-senectus',
+                    category: 'bed',
+                    description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.'
                 },
                 {
                     id: 3,
                     url: '/slide-groups/bedrooms/bedroom-3.jpg',
                     price: 99.99,
                     name: 'Lobortis Nisi Ut Aliquip Ex Ea Commodo',
-                    slug: 'lobortis-nisi-ut-aliquip-ex-ea-commodo'
+                    slug: 'lobortis-nisi-ut-aliquip-ex-ea-commodo',
+                    category: 'bed',
+                    description: 'Lobortis nisi ut aliquip ex ea commodo consequat duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.'
                 },
                 {
                     id: 4,
                     url: '/slide-groups/bedrooms/bedroom-4.jpg',
                     price: 109.99,
                     name: 'Ridiculus Mus Donec Dignissim',
-                    slug: 'ridiculus-mus-donec-dignissim'
+                    slug: 'ridiculus-mus-donec-dignissim',
+                    category: 'bed',
+                    description: 'Ridiculus mus donec dignissim, donec dignissim, donec dignissim, donec dignissim.'
                 },
                 {
                     id: 5,
                     url: '/slide-groups/bedrooms/bedroom-5.jpg',
                     price: 119.99,
                     name: 'Tottori Atque Corrupti Quos Dolores',
-                    slug: 'tottori-atque-corrupti-quos-dolores'
+                    slug: 'tottori-atque-corrupti-quos-dolores',
+                    category: 'bed',
+                    description: 'Tottori atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.'
                 },
                 {
                     id: 6,
                     url: '/slide-groups/bedrooms/bedroom-6.jpg',
                     price: 129.99,
                     name: 'Molestie Consequat Vel Illum Dolore Eu',
-                    slug: 'molestie-consequat-vel-illum-dolore-eu'
+                    slug: 'molestie-consequat-vel-illum-dolore-eu',
+                    category: 'bed',
+                    description: 'Molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui bland'
                 },
             ]
         }
