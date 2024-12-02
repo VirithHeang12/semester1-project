@@ -1,16 +1,16 @@
 <template>
-    <div class="min-h-screen bg-slate-100">
-        <div class="d-flex align-items-center container h-[500px] w-[1000px]" data-aos="flip-right"
+    <div class="min-h-screen bg-slate-100 py-10">
+        <div class="container max-w-5xl p-5 bg-white rounded-[16px]" data-aos="flip-right"
             data-aos-duration="1000">
-            <div class="row d-flex align-items-center mt-[90px] rounded-[16px] bg-white">
-                <div class="col-12 col-sm-12 col-md-6 lg:p-[24px] md:py-[5px] md:mt-[5px] lg:m-0 mt-[16px]">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 rounded-[16px]">
+                <div class="flex justify-center items-center">
                     <div class="background-blur position-absolute rounded-end-md-4"></div>
                     <img src="/bedrooms/badside table.jpg" alt="Login background"
-                        class="img-fluid rounded-[16px] lg:w-[650px] lg:h-[450px] md:w-[600px] md:h-[370px] sm:w-[630px] sm:h-[500px] w-[400px] h-[400px] " />
+                        class="w-full h-auto max-w-lg rounded-lg" />
                 </div>
                 <!-- Right column with Sign Up form -->
-                <div class="col-12 col-sm-12 col-md-6 lg:p-[24px]">
-                    <div class="text-center ">
+                <div class="flex flex-col justify-center">
+                    <div class="text-center mb-6">
                         <router-link :to="{ name: 'home' }">
                             <svg class="md:mt-[20px] lg:m-0 mt-[20px]" width="25" height="45" viewBox="0 0 25 45"
                                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,22 +26,22 @@
 
                     <!-- Username Email and Password Form -->
                     <form method="POST">
-                        <div class="col-12 lg:mb-3 md:mb-[10px] mb-[16px]">
-                            <label for="name" class="mb-2 text-primary-700 focus:bg-slate-100">ឈ្មោះគណនី</label>
-                            <input v-model="name" type="text" class="form-control rounded-lg" id="name"
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm mb-1 text-primary-700 focus:bg-slate-100">ឈ្មោះគណនី</label>
+                            <input v-model="name" type="text" class="form-control form-input w-full border-gray-300 rounded-lg p-2" id="name"
                                 placeholder="ឈ្មោះគណនី" />
                         </div>
-                        <div class="col-12 lg:mb-3 md:mb-[10px] mb-[16px] lg:mt-[16px]">
+                        <div class="mb-4">
                             <label for="email"
-                                class="mb-2 text-primary-700 focus:bg-slate-100">អាស័យដ្ឋានអ៊ីម៉ែល</label>
-                            <input v-model="email" type="email" class="form-control rounded-lg" id="email"
+                                class="block text-sm mb-1 text-primary-700 focus:bg-slate-100">អាស័យដ្ឋានអ៊ីម៉ែល</label>
+                            <input v-model="email" type="email" class="form-control form-input w-full border-gray-300 rounded-lg p-2" id="email"
                                 placeholder="example@gmail.com" />
                         </div>
-                        <div class="position-relative lg:mt-[16px] md:my-[10px] ">
-                            <label for="password" class="mb-2 text-primary-700">ពាក្យសម្ងាត់</label>
+                        <div class="position-relative mb-6 ">
+                            <label for="password" class="block text-sm mb-1 text-primary-700">ពាក្យសម្ងាត់</label>
                             <div class="position-relative">
                                 <input v-model="password" :type="passwordShow ? 'text' : 'password'"
-                                    class="form-control pe-5 rounded-lg" id="password" placeholder="********" />
+                                    class="form-control form-input w-full border-gray-300 rounded-lg p-2 pr-10" id="password" placeholder="********" />
                                 <svg class="position-absolute top-50 translate-middle-y end-0 me-3 cursor-pointer"
                                     @click="togglePasswordShow" width="24px" height="24px" viewBox="0 0 24 24"
                                     fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#787878">
@@ -68,7 +68,7 @@
                         </div>
                         <!-- Submit button -->
                         <button type="submit" @click="registerCallback"
-                            class="col-12 lg:mt-[20px] md:mt-[-16px] mt-[16px] rounded-[8px] bg-gray-800 p-2 text-white hover:bg-gray-900">
+                            class="w-full bg-gray-800 text-white py-2 rounded-lg hover:bg-gray-900">
                             បង្កើតគណនី
                         </button>
                         <p class="text-center lg:mt-[16px] lg:mb-0 md:my-[12px] mt-[16px]"> <span

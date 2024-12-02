@@ -70,8 +70,8 @@
             <h2 class="text-lg font-bold min-[500px]:text-[1.5rem] min-[600px]:text-[2rem]">អ្នកប្រហែលជាចូលចិត្ត</h2>
             <v-slide-group class="pa-4" selected-class="bg-success" show-arrows>
                 <v-slide-group-item v-for="(cartrecom, n) in cartRecom" :key="`cart-recom-${n}`">
-                    <the-recommendation-card data-aos="zoom-in" :src="cartrecom.src"
-                        :title="cartrecom.title"></the-recommendation-card>
+                    <the-recommendation-card data-aos="zoom-in" :src="cartrecom.href"
+                        :title="cartrecom.title" :cartrecom="cartrecom"></the-recommendation-card>
                 </v-slide-group-item>
             </v-slide-group>
         </v-sheet>
@@ -393,40 +393,79 @@
 
 
     const cartRecom = ref([
-        {
-            src: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (15).png",
-            title: "Table",
-        },
-        {
-            src: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (16).png",
-            title: "Table",
-        },
-        {
-            src: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (17).png",
-            title: "Table",
-        },
-        {
-            src: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (18).png",
-            title: "Table",
-        },
-        {
-            src: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (30).png",
-            title: "Chair",
-        },
-        {
-            src: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (32).png",
-            title: "Chair",
-        },
-        {
-            src: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (33).png",
-            title: "Chair",
-        },
-        {
-            src: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (34).png",
-            title: "Chair",
-        },
-    ]);
-
+    {
+        id: 1,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (15).png",
+        title: "Table",
+        price: 129.99,
+        category: 'outdoor',
+        slug: 'table-15',
+        description: 'Stylish outdoor table perfect for your garden or patio.',
+    },
+    {
+        id: 2,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (16).png",
+        title: "Table",
+        price: 139.99,
+        category: 'outdoor',
+        slug: 'table-16',
+        description: 'Modern outdoor table with a sleek design for any space.',
+    },
+    {
+        id: 3,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (17).png",
+        title: "Table",
+        price: 119.99,
+        category: 'outdoor',
+        slug: 'table-17',
+        description: 'Durable outdoor table built for comfort and style.',
+    },
+    {
+        id: 4,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Table/Tables (18).png",
+        title: "Table",
+        price: 149.99,
+        category: 'outdoor',
+        slug: 'table-18',
+        description: 'Spacious outdoor table with a robust design.',
+    },
+    {
+        id: 5,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (30).png",
+        title: "Chair",
+        price: 79.99,
+        category: 'outdoor',
+        slug: 'chair-30',
+        description: 'Comfortable and stylish outdoor chair for relaxation.',
+    },
+    {
+        id: 6,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (32).png",
+        title: "Chair",
+        price: 89.99,
+        category: 'outdoor',
+        slug: 'chair-32',
+        description: 'Ergonomically designed outdoor chair with a modern feel.',
+    },
+    {
+        id: 7,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (33).png",
+        title: "Chair",
+        price: 99.99,
+        category: 'outdoor',
+        slug: 'chair-33',
+        description: 'Stylish outdoor chair with sturdy construction and comfort.',
+    },
+    {
+        id: 8,
+        href: "/Outdoor Cateogry/Outdoor (Original)/Chair/Chair (34).png",
+        title: "Chair",
+        price: 89.99,
+        category: 'outdoor',
+        slug: 'chair-34',
+        description: 'Modern outdoor chair perfect for your garden or patio.',
+    },
+]);
 
     const currentPage = ref(1);
     const itemsPerPage = 6;

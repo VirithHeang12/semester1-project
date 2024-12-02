@@ -49,8 +49,8 @@
             <h2 class=" font-bold text-[32px] text-primary-700">អ្នកប្រហែលជាចូលចិត្ត</h2>
             <v-slide-group class="pa-4" selected-class="bg-success" show-arrows>
                 <v-slide-group-item v-for="(cartrecom, n) in cartRecom" :key="`cart-recom-${n}`">
-                    <the-recommendation-card data-aos="zoom-in" :src="cartrecom.src"
-                        :title="cartrecom.title"></the-recommendation-card>
+                    <the-recommendation-card data-aos="zoom-in" :src="cartrecom.href"
+                        :title="cartrecom.title" :cartrecom="cartrecom"></the-recommendation-card>
                 </v-slide-group-item>
             </v-slide-group>
         </v-sheet>
@@ -90,61 +90,124 @@
 
     // Recommendations
     const cartRecom = ref([
-        {
-            src: "/slide-groups/livingrooms/livingroom-1.jpg",
-            title: "បន្ទប់ទទួលភ្ញៀវ",
-        },
-        {
-            src: "/slide-groups/livingrooms/livingroom-2.jpg",
-            title: "បន្ទប់ទទួលភ្ញៀវ",
-        },
-        {
-            src: "/slide-groups/livingrooms/livingroom-4.jpg",
-            title: "បន្ទប់ទទួលភ្ញៀវ",
-        },
-        {
-            src: "/slide-groups/livingrooms/livingroom-5.jpg",
-            title: "បន្ទប់ទទួលភ្ញៀវ",
-        },
-        {
-            src: "/slide-groups/livingrooms/livingroom-6.jpg",
-            title: "បន្ទប់ទទួលភ្ញៀវ",
-        },
-        {
-            src: "/Living room Category/Living room (Original)/Table/l-table4.jpg",
-            title: "តុឈើ",
-        },
-        {
-            src: "/Living room Category/Living room (Original)/Table/l-table11.jpg",
-            title: "តុឈើ",
-        },
-        {
-            src: "/Living room Category/Living room (Original)/Wall/pic-3.jpg",
-            title: "ផ្ទាំងលំអ",
-        },
-        {
-            src: "/Living room Category/Living room (Original)/Wall/pic-14.jpg",
-            title: "ផ្ទាំងលំអ",
-        },
-        {
-            src: "/Living room Category/Living room (Original)/Vase/d-vase9.jpg",
-            title: "ថូផ្កា",
-        },
-        {
-            src: "/Living room Category/Living room (Original)/Vase/d-vase6.jpg",
-            title: "ថូផ្កា",
-        },
-        {
-            src: "/Living room Category/Living room (Original)/Shelf/pic-3.jpg",
-            title: "ធ្នើរជាប់ជញ្ជាំង",
-        },
-        {
-            src: "/Living room Category/Living room (Original)/Shelf/pic-4.jpg",
-            title: "ធ្នើរជាប់ជញ្ជាំង",
-        },
-
-    ]);
-
+    {
+        id: 1,
+        href: "/slide-groups/livingrooms/livingroom-1.jpg",
+        title: "បន្ទប់ទទួលភ្ញៀវ",
+        price: 109.99,
+        category: 'living-room',
+        slug: 'livingroom-1',
+        description: 'A comfortable and elegant living room with modern furnishings.',
+    },
+    {
+        id: 2,
+        href: "/slide-groups/livingrooms/livingroom-2.jpg",
+        title: "បន្ទប់ទទួលភ្ញៀវ",
+        price: 109.99,
+        category: 'living-room',
+        slug: 'livingroom-2',
+        description: 'Stylish living room set perfect for your home decor.',
+    },
+    {
+        id: 3,
+        href: "/slide-groups/livingrooms/livingroom-4.jpg",
+        title: "បន្ទប់ទទួលភ្ញៀវ",
+        price: 109.99,
+        category: 'living-room',
+        slug: 'livingroom-4',
+        description: 'A spacious and inviting living room with minimalist design.',
+    },
+    {
+        id: 4,
+        href: "/slide-groups/livingrooms/livingroom-5.jpg",
+        title: "បន្ទប់ទទួលភ្ញៀវ",
+        price: 109.99,
+        category: 'living-room',
+        slug: 'livingroom-5',
+        description: 'Modern and stylish living room with ample seating space.',
+    },
+    {
+        id: 5,
+        href: "/slide-groups/livingrooms/livingroom-6.jpg",
+        title: "បន្ទប់ទទួលភ្ញៀវ",
+        price: 109.99,
+        category: 'living-room',
+        slug: 'livingroom-6',
+        description: 'Chic and elegant living room with a cozy ambiance.',
+    },
+    {
+        id: 6,
+        href: "/Living room Category/Living room (Original)/Table/l-table4.jpg",
+        title: "តុឈើ",
+        price: 89.99,
+        category: 'furniture',
+        slug: 'table-4',
+        description: 'A beautifully crafted wooden table, ideal for living rooms.',
+    },
+    {
+        id: 7,
+        href: "/Living room Category/Living room (Original)/Table/l-table11.jpg",
+        title: "តុឈើ",
+        price: 89.99,
+        category: 'furniture',
+        slug: 'table-11',
+        description: 'Elegant and modern table to enhance your living space.',
+    },
+    {
+        id: 8,
+        href: "/Living room Category/Living room (Original)/Wall/pic-3.jpg",
+        title: "ផ្ទាំងលំអ",
+        price: 49.99,
+        category: 'decor',
+        slug: 'wall-decor-3',
+        description: 'Sophisticated wall art to add character to your living room.',
+    },
+    {
+        id: 9,
+        href: "/Living room Category/Living room (Original)/Wall/pic-14.jpg",
+        title: "ផ្ទាំងលំអ",
+        price: 49.99,
+        category: 'decor',
+        slug: 'wall-decor-14',
+        description: 'Charming wall decoration to enhance your interior design.',
+    },
+    {
+        id: 10,
+        href: "/Living room Category/Living room (Original)/Vase/d-vase9.jpg",
+        title: "ថូផ្កា",
+        price: 29.99,
+        category: 'decor',
+        slug: 'vase-9',
+        description: 'Beautiful vase perfect for any living room or space.',
+    },
+    {
+        id: 11,
+        href: "/Living room Category/Living room (Original)/Vase/d-vase6.jpg",
+        title: "ថូផ្កា",
+        price: 29.99,
+        category: 'decor',
+        slug: 'vase-6',
+        description: 'Stylish vase ideal for home decor and flower arrangements.',
+    },
+    {
+        id: 12,
+        href: "/Living room Category/Living room (Original)/Shelf/pic-3.jpg",
+        title: "ធ្នើរជាប់ជញ្ជាំង",
+        price: 69.99,
+        category: 'furniture',
+        slug: 'shelf-3',
+        description: 'A sleek and modern wall-mounted shelf for any room.',
+    },
+    {
+        id: 13,
+        href: "/Living room Category/Living room (Original)/Shelf/pic-4.jpg",
+        title: "ធ្នើរជាប់ជញ្ជាំង",
+        price: 69.99,
+        category: 'furniture',
+        slug: 'shelf-4',
+        description: 'Functional and stylish wall shelf for your living room.',
+    }
+]);
 
     // Product cards
     const productCards = ref([

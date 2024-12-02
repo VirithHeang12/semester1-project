@@ -48,8 +48,8 @@
             <h2 class=" font-bold text-[32px] text-primary-700">អ្នកប្រហែលជាចូលចិត្ត</h2>
             <v-slide-group class="pa-4" selected-class="bg-success" show-arrows>
                 <v-slide-group-item v-for="(cartrecom, n) in cartRecom" :key="`cart-recom-${n}`">
-                    <the-recommendation-card data-aos="zoom-in" :src="cartrecom.src"
-                        :title="cartrecom.title"></the-recommendation-card>
+                    <the-recommendation-card data-aos="zoom-in" :src="cartrecom.href"
+                        :title="cartrecom.title" :cartrecom="cartrecom"></the-recommendation-card>
                 </v-slide-group-item>
             </v-slide-group>
         </v-sheet>
@@ -89,46 +89,88 @@
 
     // Recommendations
     const cartRecom = ref([
-        {
-            src: "/slide-groups/offices/office-1.jpg",
-            title: "បន្ទប់ការិយាល័យ",
-        },
-        {
-            src: "/slide-groups/offices/office-2.jpg",
-            title: "បន្ទប់ការិយាល័យ",
-        },
-        {
-            src: "/slide-groups/offices/office-3.jpg",
-            title: "បន្ទប់ការិយាល័យ",
-        },
-        {
-            src: "/slide-groups/offices/office-4.jpg",
-            title: "បន្ទប់ការិយាល័យ",
-        },
-        {
-            src: "/slide-groups/offices/office-5.jpg",
-            title: "បន្ទប់ការិយាល័យ",
-        },
-        {
-            src: "/slide-groups/offices/office-6.jpg",
-            title: "បន្ទប់ការិយាល័យ",
-        },
-        {
-            src: "/slide-groups/offices/office-7.jpg",
-            title: "បន្ទប់ការិយាល័យ",
-        },
-        {
-            src: "/Office Category/Office Category (Original)/Desks/office-desk-2.jpg",
-            title: "បន្ទប់ការិយាល័យ",
-        },
-        {
-            src: "/Office Category/Office Category (Original)/Desks/office-desk-3.jpg",
-            title: "បន្ទប់ការិយាល័យ",
-        },
-
-
-    ]);
-
+    {
+        id: 1,
+        href: "/slide-groups/offices/office-1.jpg",
+        title: "បន្ទប់ការិយាល័យ",
+        price: 109.99,
+        category: 'office',
+        slug: 'office-1',
+        description: 'Modern and functional office space with ergonomic furniture.',
+    },
+    {
+        id: 2,
+        href: "/slide-groups/offices/office-2.jpg",
+        title: "បន្ទប់ការិយាល័យ",
+        price: 109.99,
+        category: 'office',
+        slug: 'office-2',
+        description: 'A stylish office layout with ample desk space.',
+    },
+    {
+        id: 3,
+        href: "/slide-groups/offices/office-3.jpg",
+        title: "បន្ទប់ការិយាល័យ",
+        price: 109.99,
+        category: 'office',
+        slug: 'office-3',
+        description: 'Functional and sleek office environment for productivity.',
+    },
+    {
+        id: 4,
+        href: "/slide-groups/offices/office-4.jpg",
+        title: "បន្ទប់ការិយាល័យ",
+        price: 109.99,
+        category: 'office',
+        slug: 'office-4',
+        description: 'Elegant office setup designed for efficiency and comfort.',
+    },
+    {
+        id: 5,
+        href: "/slide-groups/offices/office-5.jpg",
+        title: "បន្ទប់ការិយាល័យ",
+        price: 109.99,
+        category: 'office',
+        slug: 'office-5',
+        description: 'Contemporary office design with a minimalist approach.',
+    },
+    {
+        id: 6,
+        href: "/slide-groups/offices/office-6.jpg",
+        title: "បន្ទប់ការិយាល័យ",
+        price: 109.99,
+        category: 'office',
+        slug: 'office-6',
+        description: 'Spacious and well-lit office space for optimal workflow.',
+    },
+    {
+        id: 7,
+        href: "/slide-groups/offices/office-7.jpg",
+        title: "បន្ទប់ការិយាល័យ",
+        price: 109.99,
+        category: 'office',
+        slug: 'office-7',
+        description: 'Bright and inspiring office with modern decor.',
+    },
+    {
+        id: 8,
+        href: "/Office Category/Office Category (Original)/Desks/office-desk-2.jpg",
+        title: "បន្ទប់ការិយាល័យ",
+        price: 89.99,
+        category: 'furniture',
+        slug: 'office-desk-2',
+        description: 'Sleek office desk with ample storage and workspace.',
+    },
+    {
+        id: 9,
+        href: "/Office Category/Office Category (Original)/Desks/office-desk-3.jpg",
+        title: "បន្ទប់ការិយាល័យ",
+        price: 89.99,
+        category: 'furniture',
+        slug: 'office-desk-3',
+        description: 'Ergonomic office desk designed for comfort and style.',
+    },
+]);
     // Product cards
     const productCards = ref([
     {
