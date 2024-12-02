@@ -1,5 +1,5 @@
 <template>
-    <div class="py-8 px-4">
+    <div class="bg-primary-50 py-8 px-4">
         <v-container>
             <div class="flex flex-col lg:flex-row gap-6">
                 <div class="flex-1 bg-white p-4 rounded">
@@ -162,8 +162,8 @@
         cartStore.remove(index);
     };
 
-    onMounted(() => {
-        document.querySelector('main.v-main.mt-4')?.classList?.add('bg-primary-50');
-    });
+    // onMounted(() => {
+    //     document.querySelector('main.v-main.mt-4')?.classList?.add('bg-primary-50');
+    // });
 
 </script>

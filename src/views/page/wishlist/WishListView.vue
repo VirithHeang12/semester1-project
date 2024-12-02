@@ -93,7 +93,7 @@
         },
     ];
 
-    onMounted(() => {
-        document.querySelector('main.v-main.mt-4')?.classList?.add('bg-primary-50');
-    });
+    // onMounted(() => {
+    //     document.querySelector('main.v-main.mt-4')?.classList?.add('bg-primary-50');
+    // });
 </script>
