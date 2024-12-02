@@ -31,8 +31,10 @@
 <script setup>
     import { computed, defineProps } from 'vue';
     import { useWishListStore } from '@/stores/wishlist';
+    import { useAuthStore } from '@/stores/auth';
 
     const wishListStore = useWishListStore();
+    const authStore = useAuthStore();
 
     const props = defineProps({
         title: {
@@ -53,7 +55,12 @@
         title: props.title, href: props.href, price: props.price
     }));
 
-    const added = computed(() => wishListStore.productInWishlist(product.value));
+    const added = computed(() => {
+        if (!authStore.isLoggedIn) {
+            return false;
+        }
+        return wishListStore.productInWishlist(product.value)
+    });
 
     const fillHeart = computed(() => {
         return added.value ? 'red' : '#D04E4E';
@@ -77,6 +84,9 @@
     });
 
     const toggleClick = () => {
+        if (!authStore.isLoggedIn) {
+            return;
+        }
         if (!added.value) {
             wishListStore.add(product.value);
         } else {
