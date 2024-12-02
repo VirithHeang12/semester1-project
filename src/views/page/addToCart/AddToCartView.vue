@@ -109,7 +109,8 @@
                     </div>
                     <button
                         class="btn btn-dark w-full mt-4 bg-primary-800 round-[10px] text-primary-50 px-9 py-2 hover:bg-gray-800">
-                        បព្ជាទិញ
+                        <a role="button" href="#payModal" data-bs-toggle="modal"
+                            @click.prevent="openPaymentModal">បញ្ជាទិញ</a>
                     </button>
                     <p class="text-sm text-gray-500 text-center mt-2">
                         ធ្វើការដឹកជញ្ជូននៅថ្ងៃទី 24, June 2025
@@ -117,12 +118,15 @@
                 </div>
             </div>
         </v-container>
+        <ThePaymentForm ref="paymentModalRef" />
     </div>
 </template>
 
 <script setup>
     import { computed, onMounted, ref } from 'vue';
     import { useCartStore } from '@/stores/cart';
+
+    import ThePaymentForm from '@/components/modals/ThePaymentForm.vue';
 
     const cartStore = useCartStore();
 
@@ -131,6 +135,12 @@
     const shipping = ref(0);
     const tax = ref(0);
     const discount = ref(0);
+
+    const paymentModalRef = ref(null);
+
+    const openPaymentModal = () => {
+        paymentModalRef.value.openModal();
+    };
 
     const subtotal = computed(() => {
         return cartItems.value.reduce(
