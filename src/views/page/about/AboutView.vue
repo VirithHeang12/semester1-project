@@ -13,8 +13,9 @@
                 <v-col cols="12" md="6">
                     <v-card class="!p-10 shadow-none h-full bg-transparent">
                         <h1 class="text-[40px] md:text-[55px] font-bold  text-primary-800 mb-4">About Our Website</h1>
-                        <p class="!text-primary-600 leading-relaxed text-[14px] sm:text-[18px] indent-8 pt-5 text-justify">
-                            នាគហារឹម គឺជា E-Commerce Website ដែលពួកយើងបង្កើតឡើងក្នុងគោលបំណងក្នុងការផ្តល់នូវ
+                        <p
+                            class="!text-primary-600 leading-relaxed text-[14px] sm:text-[18px] indent-8 pt-5 text-justify">
+                            Le Décor គឺជា E-Commerce Website ដែលពួកយើងបង្កើតឡើងក្នុងគោលបំណងក្នុងការផ្តល់នូវ
                             គ្រឿងសង្ហារឹម​ដែល​ស្រស់ស្អាត និង
                             គ្រឿងសង្ហារឹមដែលមានមុខងារ​ដែលសាកសម​នឹងតម្រូវការរបស់អតិថិជន។
                             ពួកយើងធ្វើការផ្តល់ជូន​នូវសម្ភារៈដែលមានគុណភាពខ្ពស់ជាមួយនឹងវត្ថុធាតុដើមល្អៗ
@@ -45,7 +46,8 @@
                                 <v-icon color="primary-900" size="36">{{ value.icon }}</v-icon>
                             </v-avatar>
                         </div>
-                        <h2 class="text-[14px] sm:text-[16px] md:text-[16px] text-primary-700 font-semibold mb-4 mt-15">{{ value.title }}</h2>
+                        <h2 class="text-[14px] sm:text-[16px] md:text-[16px] text-primary-700 font-semibold mb-4 mt-15">
+                            {{ value.title }}</h2>
                         <p class="text-[12px] sm:text-[14px] text-primary-600">{{ value.description }}</p>
                     </v-card>
                 </v-col>
