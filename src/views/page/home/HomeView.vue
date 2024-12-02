@@ -74,7 +74,7 @@
                     </div>
                     <div class="w-full lg:w-1/2">
                         <h2 data-aos="fade-down"
-                            class="mb-8 font-bold text-center min-[800px]:text-left text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
+                            class="mb-8 font-bold min-[800px]:text-left text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
                             ឈុតតុបតែងផ្នែកខាងក្រៅ</h2>
                         <ul class="list-disc pl-5 space-y-2 text-gray-700 mt-4">
                             <li>លោកអ្នកអាចធ្វើការជ្រើសរើសនូវប្រភេទនៃគ្រឿងសង្ហារឹមសម្រាប់ធ្វើការរៀបចំតុបតែង
