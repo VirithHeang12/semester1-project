@@ -31,7 +31,7 @@
     defineProps({
         href: {
             type: String,
-            default: 'living_room.png',
+            default: '/slide-groups/livingrooms/livingroom-6.jpg',
         },
         title: {
             type: String,
