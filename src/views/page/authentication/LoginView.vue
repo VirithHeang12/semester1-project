@@ -1,16 +1,16 @@
 <template>
     <div class="min-h-screen bg-slate-100">
-        <div class="d-flex align-items-center container h-[500px] w-[1000px]" data-aos="flip-left"
+        <div class="d-flex align-items-center container" data-aos="flip-left"
             data-aos-duration="1000">
-            <div class="row d-flex align-items-center mt-[90px] rounded-[16px] bg-white">
-                <div class="col-12 col-sm-12 col-md-6 lg:p-[24px] md:py-[5px] md:mt-[5px] lg:m-0 mt-[16px]">
+            <div class="row d-flex flex-column-reverse flex-sm-row align-items-center my-[50px] md:my-[90px] rounded-[16px] bg-white mx-auto">
+                <div class="col-12 col-sm-12 col-md-6 lg:p-[24px] md:py-[5px] md:mt-[5px] lg:m-0 mt-[16px] px-[24px] pb-[24px]">
                     <div class="background-blur position-absolute rounded-end-md-4"></div>
                     <img src="/bedrooms/badside table.jpg" alt="Login background"
-                        class="img-fluid rounded-[16px] lg:w-[650px] lg:h-[450px] md:w-[600px] md:h-[370px] sm:w-[630px] sm:h-[500px] w-[400px] h-[400px] " />
+                        class="img-fluid rounded-[16px] w-100 lg:h-[450px] md:h-[370px] sm:h-[500px] h-[400px] " />
 
                 </div>
                 <!-- Right column with login form -->
-                <div class="col-12 col-sm-12 col-md-6 lg:p-[24px]">
+                <div class="col-12 col-sm-12 col-md-6 p-[24px]">
                     <div class="text-center ">
                         <router-link :to="{ name: 'home' }">
                             <svg class="md:mt-[20px] lg:m-0 mt-[20px]" width="25" height="45" viewBox="0 0 25 45"
@@ -21,7 +21,7 @@
                             </svg>
                         </router-link>
 
-                        <h1 class="lg:mb-[32px] md:mb-[10px] mb-[16px] text-[32px] font-semibold text-primary-600">
+                        <h1 class="lg:mb-[32px] md:mb-[10px] mb-[16px] text-[26px] sm:text-[32px] font-semibold text-primary-600">
                             ចូលប្រើប្រាស់
                         </h1>
                     </div>
