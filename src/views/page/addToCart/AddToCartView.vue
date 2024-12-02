@@ -107,10 +107,9 @@
                             <span class="font-semibold text-primary-900">${{ total.toFixed(2) }}</span>
                         </div>
                     </div>
-                    <button
+                    <button href="#payModal" data-bs-toggle="modal" @click="openPaymentModal"
                         class="btn btn-dark w-full mt-4 bg-primary-800 round-[10px] text-primary-50 px-9 py-2 hover:bg-gray-800">
-                        <a role="button" href="#payModal" data-bs-toggle="modal"
-                            @click.prevent="openPaymentModal">បញ្ជាទិញ</a>
+                        បញ្ជាទិញ
                     </button>
                     <p class="text-sm text-gray-500 text-center mt-2">
                         ធ្វើការដឹកជញ្ជូននៅថ្ងៃទី 24, June 2025
