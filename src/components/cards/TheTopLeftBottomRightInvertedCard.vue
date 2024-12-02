@@ -33,7 +33,7 @@
     defineProps({
         href: {
             type: String,
-            default: 'office.png',
+            default: '/slide-groups/offices/office-6.jpg',
         },
         title: {
             type: String,
