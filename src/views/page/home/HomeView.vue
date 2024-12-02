@@ -18,7 +18,7 @@
                         <v-col cols="12" :md="4"
                             class="-mb-20 min-[350px]:-mb-10 min-[380px]:-mb-6 flex flex-col min-[350px]:gap-y-1 min-[380px]:gap-y-10 min-[960px]:gap-y-0 min-[1100px]:gap-y-14">
                             <v-card :elevation="0" class="bg-transparent -mb-8 min-[350px]:-mb-4" data-aos="fade-right">
-                                <router-link :to="{ name: 'kitchen' }">
+                                <router-link :to="{ name: 'outdoor' }">
                                     <the-long-top-left-inverted-card class="mx-auto"></the-long-top-left-inverted-card>
                                 </router-link>
                             </v-card>
