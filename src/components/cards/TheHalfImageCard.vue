@@ -4,11 +4,11 @@
             <img :src="href" :alt="title" class="w-[250px] p-[25px] mt-[15px] rounded-[40px]">
             <slot name="top-right">
                 <the-wish-list-heart :title="title" :href="href" :price="price"
-                    class="absolute top-[40px] left-[75px]"></the-wish-list-heart>
+                    class="absolute top-[40px] right-[30px]"></the-wish-list-heart>
             </slot>
         </div>
 
-        <div class="flex flex-col mx-2 min-[960px]:col-span-4 mt-[30px] px-[10px]">
+        <div class="flex flex-col mx-2 min-[960px]:col-span-4 mt-[30px] px-[8px]">
             <slot name="title">
                 <p class="-mb-1 min-[960px]:mt-2 text-primary-800 font-semibold">
                     {{ title }}</p>
