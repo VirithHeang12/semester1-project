@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-primary-50 py-8 px-4">
+    <div class="py-8 px-4">
         <v-container>
             <div class="flex flex-col lg:flex-row gap-6">
                 <div class="flex-1 bg-white p-4 rounded">
@@ -122,7 +122,7 @@
 </template>
 
 <script setup>
-    import { computed, onMounted, ref } from 'vue';
+    import { computed, ref } from 'vue';
     import { useCartStore } from '@/stores/cart';
 
     import ThePaymentForm from '@/components/modals/ThePaymentForm.vue';

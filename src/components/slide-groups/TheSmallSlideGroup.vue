@@ -33,7 +33,7 @@
             id: 600,
             url: '/Outdoor Cateogry/Outdoor (Original)/Plant/pic-3.png',
             name: 'ផើងផ្កាជ័រ',
-            des: 'ធន់នឺងកម្ដៅថ្ងៃ ស្វិត',
+            des: 'ស្វិត ធន់នឹងកម្ដៅថ្ងៃ',
             price: 40.99,
             slug: 'ផើងផ្កាជ័រស្វិត',
             category: 'outdoor',

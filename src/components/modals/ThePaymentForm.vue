@@ -13,34 +13,25 @@
                             <div class="col-6">
                                 <label for="Fname" class="form-label text-primary-800 font-weight-semibold">នាមត្រកូល
                                 </label>
-                                <input type="text"
-                                    class="form-control rounded-[6px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none"
-                                    id="Fname" placeholder="" required>
+                                <input type="text" class="form-control rounded-[6px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none" id="Fname" placeholder="" required>
                             </div>
                             <div class="col-6">
                                 <label for="Lname" class="form-label text-primary-800 font-weight-semibold">នាមខ្លួន
                                 </label>
-                                <input type="text"
-                                    class="form-control rounded-[6px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none"
-                                    id="Lname" placeholder="" required>
+                                <input type="text" class="form-control rounded-[6px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none" id="Lname" placeholder="" required>
                             </div>
                         </div>
                         <div class="row !mt-5">
                             <div class="col-12">
                                 <label for="Email" class="form-label text-primary-800 font-weight-semibold">Email
                                     Address : </label>
-                                <input type="email"
-                                    class="form-control  rounded-[6px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none"
-                                    id="Email" placeholder="Enter your email address" required>
+                                <input type="email" class="form-control  rounded-[6px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none" id="Email" placeholder="Enter your email address" required>
                             </div>
                         </div>
                         <div class="row !mt-5">
                             <div class="col-4">
-                                <label for="country"
-                                    class="form-label text-primary-800 font-weight-semibold">ប្រទេស</label>
-                                <select
-                                    class="form-select form-control rounded-[6px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none"
-                                    aria-label="Default select example">
+                                <label for="country" class="form-label text-primary-800 font-weight-semibold">ប្រទេស</label>
+                                <select class="form-select form-control rounded-[6px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none" aria-label="Default select example">
                                     <option selected>កម្ពុជា</option>
                                     <option value="Australia">អូស្ត្រាលី</option>
                                     <option value="China">ចិន</option>
@@ -50,18 +41,13 @@
                                 </select>
                             </div>
                             <div class="col-4">
-                                <label for="city"
-                                    class="form-label text-primary-800 font-weight-semibold">ទីក្រុង</label>
-                                <input type="text"
-                                    class="form-control rounded-[6px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none"
-                                    id="city">
+                                <label for="city" class="form-label text-primary-800 font-weight-semibold">ទីក្រុង</label>
+                                <input type="text" class="form-control rounded-[6px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none" id="city">
                             </div>
                             <div class="col-4">
                                 <label for="postalCode" class="form-label text-primary-800 font-weight-semibold">Postal
                                     Code</label>
-                                <input type="number"
-                                    class="form-control rounded-[6px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none"
-                                    id="postalCode">
+                                <input type="number" class="form-control rounded-[6px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none" id="postalCode">
                             </div>
                         </div>
                         <div class="form-check !mt-5">
@@ -77,9 +63,7 @@
                             </div>
                             <div class="row align-items-center">
                                 <div class="col-5">
-                                    <input type="number"
-                                        class="form-control rounded-[6px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none"
-                                        id="card" required>
+                                    <input type="number" class="form-control rounded-[6px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none" id="card" required>
                                 </div>
                                 <div class="col-7">
                                     <div class="row g-2">
@@ -101,12 +85,9 @@
                         </div>
                         <div class="col-12 !mt-5">
                             <div class="row mb-4">
-                                <label for="expires"
-                                    class="form-label text-primary-800 font-weight-semibold">ថ្ងៃផុតកំណត់</label>
+                                <label for="expires" class="form-label text-primary-800 font-weight-semibold">ថ្ងៃផុតកំណត់</label>
                                 <div class="col-5">
-                                    <select
-                                        class="form-select form-control rounded-[6px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none"
-                                        aria-label="Default select example">
+                                    <select class="form-select form-control rounded-[6px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none" aria-label="Default select example">
                                         <option selected>2016</option>
                                         <option value="1">2018</option>
                                         <option value="2">2019</option>
@@ -116,9 +97,7 @@
                                     </select>
                                 </div>
                                 <div class="col-7">
-                                    <select
-                                        class="form-select form-control rounded-[6px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none"
-                                        aria-label="Default select example">
+                                    <select class="form-select form-control rounded-[6px] bg-slate-100 border-none focus:bg-slate-100 focus:outline-none" aria-label="Default select example">
                                         <option selected>7 - កក្កដា</option>
                                         <option value="1">29 - ឧសភា</option>
                                         <option value="2">12 - វិច្ឆិកា</option>
@@ -130,26 +109,35 @@
                             </div>
                         </div>
                         <div class="row px-5 !mt-6">
-                            <a data-bs-dismiss="modal" aria-label="Close" href="#"
-                                class="btn btn-dark border-0 bg-primary-500 pay w-100 ms-0 text-primary-50 font-medium">បង់ឥឡូវនេះ</a>
+                            <button type="submit" data-bs-dismiss="modal" aria-label="Close" id="btnPay" @click="alertToast" class="btn btn-dark border-0 py-2 bg-primary-700 pay w-100 ms-0 text-white font-medium">បង់ឥឡូវនេះ</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <TheOrderSuccessToast />
 </template>
 
+
+<script setup>
+import TheOrderSuccessToast from '../toast/TheOrderSuccessToast.vue';
+import * as bootstrap from 'bootstrap';
+
+const alertToast = () => {
+    const toastElement = document.getElementById('liveToast');
+    const toast = new bootstrap.Toast(toastElement);
+    toast.show();
+};
+</script>
+
 <style scoped>
-    .form-control {
-        box-shadow: none;
-    }
+.form-control {
+    box-shadow: none;
+}
 
-    .form-control:focus {
-        border-color: #374151;
-        outline: none;
-    }
-
-
-
+.form-control:focus {
+    border-color: #374151;
+    outline: none;
+}
 </style>

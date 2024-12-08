@@ -10,13 +10,11 @@
 
         <v-container class="mt-5 px-0 py-0" :max-width="1200">
             <div class="mb-24 min-[350px]:mb-32 xl:mb-28">
-                <h2 data-aos="fade-down" data-aos-delay="300"
-                    class="text-center mb-0 font-bold  text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem] min-[380px]:mb-20 lg:mb-8 xl:mb-16 lg:mt-20 xl:mt-24">
+                <h2 data-aos="fade-down" data-aos-delay="300" class="text-center mb-0 font-bold  text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem] min-[380px]:mb-20 lg:mb-8 xl:mb-16 lg:mt-20 xl:mt-24">
                     ប្រភេទគ្រឿងសង្ហារឹម</h2>
                 <v-container fluid>
                     <v-row>
-                        <v-col cols="12" :md="4"
-                            class="-mb-20 min-[350px]:-mb-10 min-[380px]:-mb-6 flex flex-col min-[350px]:gap-y-1 min-[380px]:gap-y-10 min-[960px]:gap-y-0 min-[1100px]:gap-y-14">
+                        <v-col cols="12" :md="4" class="-mb-20 min-[350px]:-mb-10 min-[380px]:-mb-6 flex flex-col min-[350px]:gap-y-1 min-[380px]:gap-y-10 min-[960px]:gap-y-0 min-[1100px]:gap-y-14">
                             <v-card :elevation="0" class="bg-transparent -mb-8 min-[350px]:-mb-4" data-aos="fade-right">
                                 <router-link :to="{ name: 'outdoor' }">
                                     <the-long-top-left-inverted-card class="mx-auto"></the-long-top-left-inverted-card>
@@ -25,40 +23,31 @@
 
                             <v-card elevation="0" class="bg-transparent" data-aos="fade-right">
                                 <router-link :to="{ name: 'livingroom' }">
-                                    <the-long-bottom-right-inverted-card
-                                        class="mx-auto"></the-long-bottom-right-inverted-card>
+                                    <the-long-bottom-right-inverted-card class="mx-auto"></the-long-bottom-right-inverted-card>
                                 </router-link>
                             </v-card>
                         </v-col>
                         <v-col cols="12" md="4" class="-mb-20 flex flex-col min-[350px]:-mb-16 min-[380px]:-mb-6">
-                            <v-card elevation="0"
-                                class="bg-transparent -mb-24 min-[350px]:-mb-20 min-[380px]:-mb-12 min-[960px]:-mb-24 min-[1100px]:-mb-12"
-                                data-aos="fade-down">
+                            <v-card elevation="0" class="bg-transparent -mb-24 min-[350px]:-mb-20 min-[380px]:-mb-12 min-[960px]:-mb-24 min-[1100px]:-mb-12" data-aos="fade-down">
                                 <router-link :to="{ name: 'office' }">
-                                    <the-top-left-bottom-right-inverted-card
-                                        class="mx-auto"></the-top-left-bottom-right-inverted-card>
+                                    <the-top-left-bottom-right-inverted-card class="mx-auto"></the-top-left-bottom-right-inverted-card>
                                 </router-link>
                             </v-card>
                             <v-card elevation="0" class="bg-transparent" data-aos="fade-up">
                                 <router-link :to="{ name: 'bedroom' }">
-                                    <the-top-right-bottom-left-inverted-card
-                                        class="mx-auto"></the-top-right-bottom-left-inverted-card>
+                                    <the-top-right-bottom-left-inverted-card class="mx-auto"></the-top-right-bottom-left-inverted-card>
                                 </router-link>
                             </v-card>
                         </v-col>
                         <v-col cols="12" md="4" class="-mb-20 flex flex-col">
-                            <v-card elevation="0"
-                                class="bg-transparent -mb-8 min-[380px]:mb-6 min-[960px]:-mb-6 min-[1100px]:mb-10"
-                                data-aos="fade-left">
+                            <v-card elevation="0" class="bg-transparent -mb-8 min-[380px]:mb-6 min-[960px]:-mb-6 min-[1100px]:mb-10" data-aos="fade-left">
                                 <router-link :to="{ name: 'kitchen' }">
-                                    <the-short-top-left-inverted-card
-                                        class="mx-auto"></the-short-top-left-inverted-card>
+                                    <the-short-top-left-inverted-card class="mx-auto"></the-short-top-left-inverted-card>
                                 </router-link>
                             </v-card>
                             <v-card elevation="0" class="bg-transparent" data-aos="fade-left">
                                 <router-link :to="{ name: 'lighting' }">
-                                    <the-short-bottom-left-inverted-card
-                                        class="mx-auto"></the-short-bottom-left-inverted-card>
+                                    <the-short-bottom-left-inverted-card class="mx-auto"></the-short-bottom-left-inverted-card>
                                 </router-link>
                             </v-card>
                         </v-col>
@@ -69,12 +58,10 @@
             <div>
                 <div class="flex flex-col lg:flex-row items-center gap-6 p-6 mb-12">
                     <div class="w-full lg:w-1/2 h-[350px] bg-gray-300 rounded-[20px]">
-                        <img src="/slide-groups/outdoors/outdoor-slide-1.jpg" alt=""
-                            class="w-full h-full object-cover rounded-[20px]" />
+                        <img src="/slide-groups/outdoors/outdoor-slide-1.jpg" alt="" class="w-full h-full object-cover rounded-[20px]" />
                     </div>
                     <div class="w-full lg:w-1/2">
-                        <h2 data-aos="fade-down"
-                            class="mb-8 font-bold min-[800px]:text-left text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
+                        <h2 data-aos="fade-down" class="mb-8 font-bold min-[800px]:text-left text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
                             ឈុតតុបតែងផ្នែកខាងក្រៅ</h2>
                         <ul class="list-disc pl-5 space-y-2 text-gray-700 mt-4">
                             <li>លោកអ្នកអាចធ្វើការជ្រើសរើសនូវប្រភេទនៃគ្រឿងសង្ហារឹមសម្រាប់ធ្វើការរៀបចំតុបតែង
@@ -84,10 +71,8 @@
                             <li>រាល់ផលិតផលទាំងអស់សុទ្ធតែប្រើប្រាស់នូវវត្ថុធាតុដើមដែលមានគុណភាពល្អ មិនងាយពុកភុយ ឬ ហើរពណ៌
                                 សាកសមនឹងតម្លៃ ដែលជាទីពេញចិត្តរបស់អតិថិជន</li>
                         </ul>
-                        <router-link
-                            :to="{ name: 'details', params: { category: 'outdoor', id: 1000, slug: 'elegant-door' }, query: { image: '/slide-groups/outdoors/outdoor-slide-1.jpg', name: 'Elegant Outdoor', price: 999.99, description: 'ឈុតតុបតែងផ្នែកខាងក្រៅល្អប្រណីត', category: 'outdoor' } }">
-                            <button data-aos="fade-up"
-                                class="btn btn-dark mt-12 bg-primary-800 round-[10px] text-primary-50 px-9 py-2 hover:bg-gray-800">
+                        <router-link :to="{ name: 'details', params: { category: 'outdoor', id: 1000, slug: 'elegant-door' }, query: { image: '/slide-groups/outdoors/outdoor-slide-1.jpg', name: 'Elegant Outdoor', price: 999.99, description: 'ឈុតតុបតែងផ្នែកខាងក្រៅល្អប្រណីត', category: 'outdoor' } }">
+                            <button data-aos="fade-up" class="btn btn-dark mt-12 bg-primary-800 round-[10px] text-primary-50 px-9 py-2 hover:bg-gray-800">
                                 ព័ត៌មានបន្ថែម
                             </button>
                         </router-link>
@@ -97,12 +82,8 @@
             </div>
 
             <div class="mb-16">
-                <v-col cols="12"
-                    class="grid grid-cols-1 justify-items-center gap-y-10 gap-x-5 min-[620px]:grid-cols-2 min-[870px]:grid-cols-3"
-                    data-aos="fade-down">
-                    <the-featured-in-card class="bg-gray-100" v-for="featuredInItem in featuredInItems"
-                        :key="featuredInItem.title" :title="featuredInItem.title"
-                        :description="featuredInItem.description" :class="featuredInItem.class">
+                <v-col cols="12" class="grid grid-cols-1 justify-items-center gap-y-10 gap-x-5 min-[620px]:grid-cols-2 min-[870px]:grid-cols-3" data-aos="fade-down">
+                    <the-featured-in-card class="bg-gray-100" v-for="featuredInItem in featuredInItems" :key="featuredInItem.title" :title="featuredInItem.title" :description="featuredInItem.description" :class="featuredInItem.class">
                         <template v-slot:default>
                             <div class="border-1 bg-white p-3 rounded-full" v-html="featuredInItem.svg"></div>
                         </template>
@@ -112,8 +93,7 @@
 
             <div class="mb-12">
                 <v-col cols="12">
-                    <h2 data-aos="fade-down"
-                        class="mb-4 font-bold text-center min-[800px]:text-left text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
+                    <h2 data-aos="fade-down" class="mb-4 font-bold text-center min-[800px]:text-left text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
                         ផលិតផលប្រចាំខែ</h2>
                     <the-slide-group :tab-items="tabItems"></the-slide-group>
                 </v-col>
@@ -122,16 +102,13 @@
 
             <div class="mb-4">
                 <v-container fluid>
-                    <h2 data-aos="fade-down" data-aos-delay="300"
-                        class="text-center  text-gray-700 mb-2 font-bold text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
+                    <h2 data-aos="fade-down" data-aos-delay="300" class="text-center  text-gray-700 mb-2 font-bold text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
                         សម្ភារៈពេញនិយម</h2>
                     <v-row>
                         <v-col cols="12" md="4" data-aos="fade-right" class="-mb-10">
                             <v-card :elevation="0">
                                 <div class="flex justify-center">
-                                    <the-short-bottom-right-inverted-card href="/chair.png" title="កៅអី Tottori"
-                                        :price="79.99" slug="tottori" description="កៅអី Tottori" :id="500"
-                                        category="outdoor">
+                                    <the-short-bottom-right-inverted-card href="/chair.png" title="កៅអី Tottori" :price="79.99" slug="tottori" description="កៅអី Tottori" :id="500" category="outdoor">
                                     </the-short-bottom-right-inverted-card>
                                 </div>
                             </v-card>
@@ -139,9 +116,7 @@
                         <v-col cols="12" md="4" data-aos="fade-down" class="-mb-10">
                             <v-card :elevation="0">
                                 <div class="flex justify-center">
-                                    <the-short-bottom-right-inverted-card href="/lamp.png" title="អំពូល Edysse"
-                                        :price="49.99" slug="edysse" description="អំពូល Edysse" :id="501"
-                                        category="lamp">
+                                    <the-short-bottom-right-inverted-card href="/lamp.png" title="អំពូល Edysse" :price="49.99" slug="edysse" description="អំពូល Edysse" :id="501" category="lamp">
                                     </the-short-bottom-right-inverted-card>
                                 </div>
                             </v-card>
@@ -149,9 +124,7 @@
                         <v-col cols="12" md="4" data-aos="fade-left">
                             <v-card :elevation="0">
                                 <div class="flex justify-center">
-                                    <the-short-bottom-right-inverted-card href="/small_chair.png" title="ឈុតតុកៅអីក្មេង"
-                                        :price="89.99" slug="small-chair" description="ឈុតតុកៅអីក្មេង" :id="502"
-                                        category="outdoor">
+                                    <the-short-bottom-right-inverted-card href="/small_chair.png" title="ឈុតតុកៅអីក្មេង" :price="89.99" slug="small-chair" description="ឈុតតុកៅអីក្មេង" :id="502" category="outdoor">
                                     </the-short-bottom-right-inverted-card>
                                 </div>
                             </v-card>
@@ -172,19 +145,16 @@
             </div>
             <div class="mb-4">
                 <v-card :elevation="0" class="mx-0">
-                    <div class="grid grid-cols-1 justify-items-center gap-y-24 gap-x-4 min-[960px]:grid-cols-10">
-                        <the-small-slide-group class="min-[960px]:col-span-7 mt-[20px]"></the-small-slide-group>
-                        <v-img class="w-80 h-80 min-[960px]:col-span-3"
-                            src="/Outdoor Cateogry/Outdoor (Original)/Plant/pic-18 (2).png" alt="Lamp with flower"
-                            data-aos="fade-right"></v-img>
+                    <div class="grid grid-cols-1 align-center justify-items-center gap-y-24 gap-x-4 min-[960px]:grid-cols-10">
+                        <the-small-slide-group class="min-[960px]:col-span-7"></the-small-slide-group>
+                        <v-img class="w-80 h-80 min-[960px]:col-span-3" src="/Outdoor Cateogry/Outdoor (Original)/Plant/pic-18 (2).png" alt="Lamp with flower" data-aos="fade-right"></v-img>
                     </div>
                 </v-card>
             </div>
 
             <div class="mb-0">
                 <v-container>
-                    <h2 data-aos="fade-down" data-aos-delay="300"
-                        class="text-center mb-10 font-bold  text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem] min-[380px]:mb-20 lg:mb-8 xl:mb-16 lg:mt-20 xl:mt-24">
+                    <h2 data-aos="fade-down" data-aos-delay="300" class="text-center mb-10 font-bold  text-gray-700 text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem] min-[380px]:mb-20 lg:mb-8 xl:mb-16 lg:mt-20 xl:mt-24">
                         សំណួរតែងត្រូវបានសួរ</h2>
                     <v-row class="flex">
                         <v-col cols="12" md="6" class="flex flex-col justify-center" data-aos="fade-right">
@@ -200,8 +170,7 @@
                             </v-expansion-panels>
                         </v-col>
                         <v-col cols="12" md="6" class="align-self-start" data-aos="fade-left">
-                            <v-img class="w-full h-full rounded-[30px]  "
-                                src="/Living room Category/Living room (Original)/Vase/d-vase5(copy).jpg" alt="Desk" />
+                            <v-img class="w-full h-full rounded-[15px] md:rounded-[30px]" src="/q_pic.jpg" alt="Desk" />
                         </v-col>
                     </v-row>
                 </v-container>

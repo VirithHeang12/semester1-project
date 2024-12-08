@@ -16,8 +16,8 @@
         </figcaption>
 
         <div class="absolute right-[2%] bottom-[4%] flex flex-col gap-2">
-            <p class="text-[5px] sm:text-xs text-primary-50 font-normal px-1 py-0 leading-3 sm:px-3 sm:py-1 sm:leading-loose border-[0.8px] border-[rgba(255,255,255,0.5)] rounded-full bg-[rgba(255,255,255,0.16)] backdrop-blur-md self-end">Eco-Friendly</p>
-            <p class="text-[5px] sm:text-xs text-primary-50 font-normal px-1 py-0 leading-3 sm:px-3 sm:py-1 sm:leading-loose border-[0.8px] border-[rgba(255,255,255,0.5)] rounded-full bg-[rgba(255,255,255,0.16)] backdrop-blur-md self-end">Contemporary Design</p>
+            <p class="text-[5px] min-[450px]:text-[10px] min-[900px]:text-[16px] text-primary-50 font-normal px-[4px] py-[0.01px] min-[450px]:px-[6px] min-[900px]:px-[16px] min-[450px]:py-[3px] min-[900px]:py-[10px] leading-3 border-[0.8px] border-[rgba(255,255,255,0.5)] rounded-full bg-[rgba(255,255,255,0.16)] backdrop-blur-md self-end">Eco-Friendly</p>
+            <p class="text-[5px] min-[450px]:text-[10px] min-[900px]:text-[16px] text-primary-50 font-normal px-[4px] py-[0.01px] min-[450px]:px-[6px] min-[900px]:px-[16px] min-[450px]:py-[3px] min-[900px]:py-[10px] leading-3 border-[0.8px] border-[rgba(255,255,255,0.5)] rounded-full bg-[rgba(255,255,255,0.16)] backdrop-blur-md self-end">Contemporary Design</p>
         </div>
     </figure>
 </template>
