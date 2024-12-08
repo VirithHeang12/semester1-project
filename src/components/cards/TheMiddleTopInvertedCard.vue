@@ -4,7 +4,9 @@
             Timeless Design</p>
         <img :src="href" class="img-fluid" alt="" />
         <slot name="top-right">
+           <router-link :to="{ name: 'details', params: { category: 'living room', id: 1000, slug: 'elegant-door' }, query: { image: '/slide-groups/livingrooms/timeless_design.png', name: 'Elegant Living room', price: 999.99, description: 'កន្លែងទទួលភ្ញៀវដ៏ល្អប្រណីត', category: 'living room' } }">
             <the-detail-link class="absolute bottom-[3%] right-[1%] w-[18px] min-[500px]:w-auto"></the-detail-link>
+           </router-link>
         </slot>
     </figure>
 
@@ -12,6 +14,7 @@
 
 <script setup>
     import { defineProps } from 'vue';
+    import TheDetailLink from "@/components/links/TheDetailLink.vue";
 
     defineProps({
         href: {
