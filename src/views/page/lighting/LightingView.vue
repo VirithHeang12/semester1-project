@@ -4,9 +4,8 @@
             <v-container>
                 <v-row class="mb-16" data-aos="fade-up">
                     <v-col cols="12">
-                        <v-carousel :min-height="100" :max-height="100" hide-delimiters class="rounded-lg">
-                            <v-carousel-item ass="item" v-for="(item, i) in carouselItems" :key="`carousel-item-${i}`"
-                                :src="item.src" :lazy-src="item.lazySrc" cover>
+                        <v-carousel :min-height="100" :max-height="100" hide-delimiter-background show-arrows="hover" color="#c9c9c9" cycle interval="5000" class="rounded-lg">
+                            <v-carousel-item ass="item" v-for="(item, i) in carouselItems" :key="`carousel-item-${i}`" :src="item.src" :lazy-src="item.lazySrc" cover>
                             </v-carousel-item>
                         </v-carousel>
                     </v-col>
@@ -43,21 +42,18 @@
                         </v-list>
                         <v-container>
                             <p class="mb-5">Filter By Price</p>
-                            <v-range-slider thumb-label="always" :min="0" :max="1000" v-model="price"
-                                class="w-full"></v-range-slider>
+                            <v-range-slider thumb-label="always" :min="0" :max="1000" v-model="price" class="w-full"></v-range-slider>
                         </v-container>
                     </v-col>
                     <v-col cols="12" md="8" lg="9">
                         <v-row>
-                            <v-col cols="12" sm="6" lg="4" v-for="(card, index) in paginatedProductCards"
-                                :key="`product-card-${index}`" data-aos="fade-up" :data-aos-delay="index * 100">
+                            <v-col cols="12" sm="6" lg="4" v-for="(card, index) in paginatedProductCards" :key="`product-card-${index}`" data-aos="fade-up" :data-aos-delay="index * 100">
                                 <the-category-card :card="card"></the-category-card>
                             </v-col>
                         </v-row>
                         <v-row class="justify-content-center">
                             <!-- Pagination Controls -->
-                            <v-pagination v-model="currentPage" :length="totalPages" total-visible="5"
-                                color="primary-800" class="mt-4" />
+                            <v-pagination v-model="currentPage" :length="totalPages" total-visible="5" color="primary-800" class="mt-4" />
                         </v-row>
                     </v-col>
                 </v-row>
@@ -65,10 +61,9 @@
         </div>
         <v-sheet class="!py-10 mx-auto" elevation="0" data-aos="fade-in">
             <h2 class="text-lg font-bold min-[500px]:text-[1.5rem] min-[600px]:text-[2rem]">អ្នកប្រហែលជាចូលចិត្ត</h2>
-            <v-slide-group class="pa-4" selected-class="bg-success" show-arrows>
+            <v-slide-group class="py-4" selected-class="bg-success">
                 <v-slide-group-item v-for="(cartrecom, n) in cartRecom" :key="`cart-recom-${n}`">
-                    <the-recommendation-card data-aos="zoom-in" :src="cartrecom.href"
-                        :title="cartrecom.title" :cartrecom="cartrecom"></the-recommendation-card>
+                    <the-recommendation-card data-aos="zoom-in" :src="cartrecom.href" :title="cartrecom.title" :cartrecom="cartrecom"></the-recommendation-card>
                 </v-slide-group-item>
             </v-slide-group>
         </v-sheet>

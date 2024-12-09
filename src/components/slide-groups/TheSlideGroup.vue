@@ -2,8 +2,8 @@
     <v-row v-if="!displayStore.isMobile">
         <v-container fluid class="grid grid-cols-10 gap-x-2">
             <v-card class="col-span-3 min-[900px]:col-span-3 min-[1000px]:col-span-2" cols="12" md="3" elevation="0" data-aos="fade-right">
-                <v-tabs v-model="tab" color="black" direction="vertical">
-                    <v-tab v-for="tab in tabItems" :prepend-icon="tab.icon" :value="tab.value" :key="tab.value" :selected-class="'bg-grey-lighten-3 text-primary-700'">
+                <v-tabs v-model="tab" direction="vertical" class="text-primary-700">
+                    <v-tab v-for="tab in tabItems" :prepend-icon="tab.icon" color="grey-darken-3" :value="tab.value" :key="tab.value" :selected-class="'bg-grey-lighten-3 text-primary-700'">
                         <p class="text-[1rem] tracking-normal text-primary-700">{{ tab.title }}</p>
                     </v-tab>
                 </v-tabs>
@@ -45,7 +45,7 @@
             <v-card cols="12" md="12" elevation="0" data-aos="fade-right" class="mb-10">
                 <div class="flex justify-center">
                     <v-tabs v-model="tab" color="grey-darken-1" :rounded="true">
-                        <v-tab :base-color="'grey-darken-1'" :color="'grey-darken-4'" :ripple="false" :max-width="40" :min-width="40" class="px-0 min-[350px]:mx-1 flex justify-center" v-for="tab in tabItems" :value="tab.value" :key="tab.value">
+                        <v-tab :base-color="'grey-darken-1'" :color="'grey-darken-3'" :ripple="false" :max-width="40" :min-width="40" class="px-0 min-[350px]:mx-1 flex justify-center" v-for="tab in tabItems" :value="tab.value" :key="tab.value">
                             <template #prepend>
                                 <v-icon class="ml-4" :size="24">{{ tab.icon }}</v-icon>
                             </template>

@@ -10,7 +10,7 @@
             </defs>
 
             <image :href="href" width="419" height="292" clip-path="url(#office)"
-                preserveAspectRatio="xMidYMid slice" />
+                preserveAspectRatio="xMidYMax slice" />
         </svg>
 
 

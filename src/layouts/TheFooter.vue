@@ -1,7 +1,7 @@
 <template>
     <footer class="bg-gray-50">
         <v-container>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-44">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-44 sm:gap-x-20">
                 <v-col class="flex flex-col gap-y-3">
                     <router-link :to="{ name: 'home' }">
                         <svg width="25" height="45" viewBox="0 0 25 45" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -82,8 +82,8 @@
             </div>
 
             <div class="mb-16">
-                <v-col cols="12" class="grid grid-cols-1 justify-items-center gap-y-10 gap-x-5 min-[620px]:grid-cols-2 min-[870px]:grid-cols-3" data-aos="fade-down">
-                    <the-featured-in-card class="bg-gray-100" v-for="featuredInItem in featuredInItems" :key="featuredInItem.title" :title="featuredInItem.title" :description="featuredInItem.description" :class="featuredInItem.class">
+                <v-col cols="12" class="grid grid-cols-1 justify-items-center gap-y-10 gap-x-10 min-[620px]:grid-cols-2 min-[870px]:grid-cols-3" data-aos="fade-down">
+                    <the-featured-in-card class="bg-gray-100 w-[80%] min-[620px]:w-auto" v-for="featuredInItem in featuredInItems" :key="featuredInItem.title" :title="featuredInItem.title" :description="featuredInItem.description" :class="featuredInItem.class">
                         <template v-slot:default>
                             <div class="border-1 bg-white p-3 rounded-full" v-html="featuredInItem.svg"></div>
                         </template>
@@ -105,34 +105,9 @@
                     <h2 data-aos="fade-down" data-aos-delay="300" class="text-center  text-gray-700 mb-2 font-bold text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
                         សម្ភារៈពេញនិយម</h2>
                     <v-row class="mt-4">
-                        <!-- <v-col cols="12" md="4" data-aos="fade-right" class="-mb-10">
-                            <v-card :elevation="0">
-                                <div class="flex justify-center">
-
-                                    <the-short-bottom-right-inverted-card href="/chair.png" title="កៅអី Tottori" :price="79.99" slug="tottori" description="កៅអី Tottori" :id="500" category="outdoor">
-                                    </the-short-bottom-right-inverted-card>
-                                </div>
-                            </v-card>
-                        </v-col> -->
                         <v-col class="!p-[40px]" cols="12" md="4" v-for="(card, index) in popularItems" :key="`product-card-${index}`" :data-aos="`${card.animation}`" :data-aos-delay="index * 100">
                             <the-category-card :card="card"></the-category-card>
                         </v-col>
-                        <!-- <v-col cols="12" md="4" data-aos="fade-down" class="-mb-10">
-                            <v-card :elevation="0">
-                                <div class="flex justify-center">
-                                    <the-short-bottom-right-inverted-card href="/lamp.png" title="អំពូល Edysse" :price="49.99" slug="edysse" description="អំពូល Edysse" :id="501" category="lamp">
-                                    </the-short-bottom-right-inverted-card>
-                                </div>
-                            </v-card>
-                        </v-col>
-                        <v-col cols="12" md="4" data-aos="fade-left">
-                            <v-card :elevation="0">
-                                <div class="flex justify-center">
-                                    <the-short-bottom-right-inverted-card href="/small_chair.png" title="ឈុតតុកៅអីក្មេង" :price="89.99" slug="small-chair" description="ឈុតតុកៅអីក្មេង" :id="502" category="outdoor">
-                                    </the-short-bottom-right-inverted-card>
-                                </div>
-                            </v-card>
-                        </v-col> -->
                     </v-row>
                 </v-container>
             </div>
@@ -191,7 +166,6 @@
     import TheLongBottomRightInvertedCard from '@/components/cards/TheLongBottomRightInvertedCard.vue';
     import TheTopRightBottomLeftInvertedCard from '@/components/cards/TheTopRightBottomLeftInvertedCard.vue';
     import TheShortBottomLeftInvertedCard from '@/components/cards/TheShortBottomLeftInvertedCard.vue';
-    // import TheShortBottomRightInvertedCard from '@/components/cards/TheShortBottomRightInvertedCard.vue';
     import TheMiddleTopInvertedCard from '@/components/cards/TheMiddleTopInvertedCard.vue';
     import TheSmallSlideGroup from '@/components/slide-groups/TheSmallSlideGroup.vue';
     import TheSlideGroup from '@/components/slide-groups/TheSlideGroup.vue';
