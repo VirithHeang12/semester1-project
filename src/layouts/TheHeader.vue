@@ -1,5 +1,5 @@
 <template>
-    <v-container>
+    <v-container class="bg-transparent">
         <v-app-bar :rounded="true" elevation="0" color="grey-lighten-3" absolute class="mt-4 rounded-lg flex justify-between">
             <v-app-bar-title v-if="!isMobile" class="mx-0">
                 <v-container fluid class="flex justify-between text-primary-900">
@@ -16,7 +16,7 @@
                         </v-btn>
                         <v-menu open-on-hover>
                             <template v-slot:activator="{ props }">
-                                <v-btn v-bind="props" class="rounded-lg hover:bg-white">
+                                <v-btn v-bind="props" class="rounded-lg">
                                     <span class="font-lg tracking-tight text-[1.2rem]">ប្រភេទសម្ភារៈ</span>
                                 </v-btn>
                             </template>

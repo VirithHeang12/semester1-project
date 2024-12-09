@@ -55,7 +55,7 @@
                 <!-- Buttons -->
                 <div class="flex gap-4 flex-col sm:flex-row">
                     <button href="#payModal" data-bs-toggle="modal" @click="openPaymentModal" class="btn btn-dark bg-primary-800 rounded-[10px] text-primary-50 px-9 py-2">បញ្ជាទិញ</button>
-                    <button  @click="addToCartCallback" id="btn-add-to-cart" class="btn flex gap-2 border-primary-800 hover:bg-primary-800 hover:text-primary-50 outline-primary-700 rounded-[10px] text-primary-700 px-6 py-2">
+                    <button :disabled="productExists" @click="addToCartCallback" id="btn-add-to-cart" class="btn flex gap-2 border-primary-800 hover:bg-primary-800 hover:text-primary-50 outline-primary-700 rounded-[10px] text-primary-700 px-6 py-2">
                         <svg width="19" height="19" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M1.01324 7.55024L1.90729 18.0821C1.9837 19.2651 2.95364 20.1924 4.13888 20.2154H14.253C15.4378 20.1918 16.4071 19.2646 16.4834 18.0821L17.3775 7.55024C17.4464 6.91068 17.2445 6.27148 16.8208 5.7875C16.3971 5.30352 15.7901 5.01894 15.147 5.00269H3.24367C2.60061 5.01894 1.99371 5.30352 1.56997 5.7875C1.14624 6.27148 0.944366 6.91068 1.01324 7.55024Z" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             <mask id="path-2-inside-1_149_464" fill="white">
@@ -96,7 +96,7 @@
                         <button class="nav-link px-6" id="warranty-tab" data-bs-toggle="tab" data-bs-target="#warranty-tab-pane" type="button" role="tab" aria-controls="warranty-tab-pane" aria-selected="false">លក្ខខណ្ឌនៃការធានា</button>
                     </li>
                 </ul>
-                <div class="tab-content font-light py-3 font-weight-regular leading-7" id="myTabContent">
+                <div class="tab-content font-light py-3 font-weight-regular leading-7 min-h-[280px]" id="myTabContent">
                     <div class="tab-pane fade show active" id="description-tab-pane" role="tabpanel" aria-labelledby="description-tab" tabindex="0">
                         <div class="flex justify-center">
                             <p class="text-center col-12 col-md-8 col-lg-6">

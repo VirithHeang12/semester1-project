@@ -100,20 +100,24 @@
             </div>
 
 
-            <div class="mb-4">
+            <div class="mb-10">
                 <v-container fluid>
                     <h2 data-aos="fade-down" data-aos-delay="300" class="text-center  text-gray-700 mb-2 font-bold text-[1.5rem] lg:text-[2.2rem] xl:text-[2.5rem]">
                         សម្ភារៈពេញនិយម</h2>
-                    <v-row>
-                        <v-col cols="12" md="4" data-aos="fade-right" class="-mb-10">
+                    <v-row class="mt-4">
+                        <!-- <v-col cols="12" md="4" data-aos="fade-right" class="-mb-10">
                             <v-card :elevation="0">
                                 <div class="flex justify-center">
+
                                     <the-short-bottom-right-inverted-card href="/chair.png" title="កៅអី Tottori" :price="79.99" slug="tottori" description="កៅអី Tottori" :id="500" category="outdoor">
                                     </the-short-bottom-right-inverted-card>
                                 </div>
                             </v-card>
+                        </v-col> -->
+                        <v-col class="!p-[40px]" cols="12" md="4" v-for="(card, index) in popularItems" :key="`product-card-${index}`" :data-aos="`${card.animation}`" :data-aos-delay="index * 100">
+                            <the-category-card :card="card"></the-category-card>
                         </v-col>
-                        <v-col cols="12" md="4" data-aos="fade-down" class="-mb-10">
+                        <!-- <v-col cols="12" md="4" data-aos="fade-down" class="-mb-10">
                             <v-card :elevation="0">
                                 <div class="flex justify-center">
                                     <the-short-bottom-right-inverted-card href="/lamp.png" title="អំពូល Edysse" :price="49.99" slug="edysse" description="អំពូល Edysse" :id="501" category="lamp">
@@ -128,7 +132,7 @@
                                     </the-short-bottom-right-inverted-card>
                                 </div>
                             </v-card>
-                        </v-col>
+                        </v-col> -->
                     </v-row>
                 </v-container>
             </div>
@@ -187,11 +191,45 @@
     import TheLongBottomRightInvertedCard from '@/components/cards/TheLongBottomRightInvertedCard.vue';
     import TheTopRightBottomLeftInvertedCard from '@/components/cards/TheTopRightBottomLeftInvertedCard.vue';
     import TheShortBottomLeftInvertedCard from '@/components/cards/TheShortBottomLeftInvertedCard.vue';
-    import TheShortBottomRightInvertedCard from '@/components/cards/TheShortBottomRightInvertedCard.vue';
+    // import TheShortBottomRightInvertedCard from '@/components/cards/TheShortBottomRightInvertedCard.vue';
     import TheMiddleTopInvertedCard from '@/components/cards/TheMiddleTopInvertedCard.vue';
     import TheSmallSlideGroup from '@/components/slide-groups/TheSmallSlideGroup.vue';
     import TheSlideGroup from '@/components/slide-groups/TheSlideGroup.vue';
     import TheFeaturedInCard from '@/components/cards/TheFeaturedInCard.vue';
+    import TheCategoryCard from '@/components/cards/TheCategoryCard.vue';
+
+    const popularItems = [
+        {
+            id: 500,
+            href: "/chair.png",
+            title: "កៅអី Tottori",
+            price: 79.99,
+            category: "outdoor",
+            slug: "tottori",
+            animation: "fade-right",
+            description: 'កៅអី Tottori',
+        },
+        {
+            id: 501,
+            href: "/lamp.png",
+            title: "អំពូល Edyss",
+            price: 49.99,
+            category: "lamp",
+            slug: "edysse",
+            animation: "fade-down",
+            description: 'អំពូល Edyss',
+        },
+        {
+            id: 502,
+            href: "/small_chair.png",
+            title: "ឈុតតុកៅអីក្មេង",
+            price: 89.99,
+            category: "outdoor",
+            slug: "small-chair",
+            animation: "fade-left",
+            description: 'ឈុតតុកៅអីក្មេង',
+        },
+    ];
 
     const expansionItems = [
         {

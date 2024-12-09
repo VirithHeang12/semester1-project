@@ -25,7 +25,7 @@
             min-[500px]:h-[2.8rem] min-[960px]:w-[3rem] min-[960px]:h-[3rem]
              absolute bottom-[5.7rem] right-[2px] min-[360px]:bottom-[5rem]
               min-[360px]:right-2 min-[500px]:bottom-[4.4rem] min-[600px]:bottom-[4.2rem]
-               min-[960px]:bottom-[4.5rem] min-[960px]:right-1 bg-stone-600 rounded-[1rem]
+               min-[960px]:bottom-[4.5rem] min-[960px]:right-1 bg-stone-600 rounded-[25%]
                 flex justify-center align-center mb-[10px]">
             <slot name="bottom-right">
                 <cart-svg></cart-svg>
