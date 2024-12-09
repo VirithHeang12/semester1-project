@@ -63,11 +63,13 @@
             </div>
         </v-container>
         <v-container>
-            <div class="flex justify-between">
+            <div class="grid grid-cols-1">
                 <p class="text-xs font-light mb-5">Copyright © 2024
                     Le Décor. All rights reserved.</p>
-                <p class="text-xs font-light">Terms & Conditions</p>
-                <p class="text-xs font-light">Privacy Policy</p>
+                <div class="flex justify-between">
+                    <p class="text-xs font-light">Terms & Conditions</p>
+                    <p class="text-xs font-light">Privacy Policy</p>
+                </div>
             </div>
         </v-container>
     </footer>
