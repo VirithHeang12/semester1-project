@@ -1,6 +1,6 @@
 <template>
     <li>
-        <a class="flex gap-x-4 align-center" href="#">
+        <a class="flex gap-x-4 align-center" :href="href" target="_blank">
             <slot>
                 <svg width="20" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -8,7 +8,7 @@
                         fill="#1E2833" />
                 </svg>
             </slot>
-            <span class="font-normal text-start">{{ text }}</span>
+            <span class="font-normal text-start text-[15px]">{{ text }}</span>
         </a>
     </li>
 </template>
@@ -18,6 +18,10 @@ defineProps({
     text: {
         type: String,
         required: true,
+    },
+    href: {
+        type: String,
+        required: true
     }
 })
 </script>

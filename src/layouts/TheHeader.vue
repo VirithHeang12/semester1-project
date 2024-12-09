@@ -1,5 +1,5 @@
 <template>
-    <v-container class="bg-transparent">
+    <v-container fluid id="header-container">
         <v-app-bar :rounded="true" elevation="0" color="grey-lighten-3" absolute class="mt-4 rounded-lg flex justify-between">
             <v-app-bar-title v-if="!isMobile" class="mx-0">
                 <v-container fluid class="flex justify-between text-primary-900">

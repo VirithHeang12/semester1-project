@@ -1,8 +1,8 @@
 <template>
-    <div class="bg-neutral-50 py-8 px-4">
+    <div class="bg-primary-50 h-100 py-8 px-4">
         <v-container>
-            <div class="flex flex-col lg:flex-row gap-6">
-                <div class="flex-1 bg-white p-4 rounded">
+            <div class="flex flex-col align-start align-sub lg:flex-row gap-6">
+                <div class="flex-1 bg-white p-4 rounded-lg">
                     <div class="hidden lg:flex font-semibold text-primary-900 border-b pb-3">
                         <div class="w-1/2">ផលិតផល</div>
                         <div class="w-1/6">បរិមាណ</div>
@@ -69,7 +69,7 @@
                 </div>
 
                 <!-- Total Cart-->
-                <div class="w-full lg:w-1/3 bg-white p-4 rounded">
+                <div class="w-full lg:w-1/3 bg-white p-4 rounded-lg">
                     <h2 class="text-lg font-semibold mb-4 text-primary-900">សរុបការបញ្ជាទិញ</h2>
                     <div class="space-y-2">
                         <div class="flex justify-between text-primary-900">
@@ -108,10 +108,20 @@
 </template>
 
 <script setup>
-    import { computed, ref } from 'vue';
+    import { computed, ref, onMounted, onBeforeUnmount } from 'vue';
     import { useCartStore } from '@/stores/cart';
 
     import ThePaymentForm from '@/components/modals/ThePaymentForm.vue';
+
+    onMounted(() => {
+        document.body.classList.add('bg-primary-50');
+        document.querySelector('#header-container').classList.add('bg-primary-50');
+    });
+
+    onBeforeUnmount(() => {
+        document.body.classList.remove('bg-primary-50');
+        document.querySelector('#header-container').classList.remove('bg-primary-50');
+    });
 
     const cartStore = useCartStore();
 
@@ -149,7 +159,7 @@
     };
 
     // onMounted(() => {
-    //     document.querySelector('main.v-main.mt-4')?.classList?.add('bg-primary-50');
+        // document.querySelector('body').classList.add('bg-primary-50');
     // });
 
 </script>

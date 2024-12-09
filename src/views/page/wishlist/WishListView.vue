@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-neutral-50 h-100 pt-8 px-4">
+    <div class="bg-primary-50 h-100 pt-8 px-4">
         <v-container>
             <h2 class="text-primary-800 p-0 mb-5 font-bold text-[24px]">ចំណូលចិត្ត</h2>
             <div class="flex flex-col min-[800px]:flex-row gap-6">
@@ -61,7 +61,7 @@
 </template>
 
 <script setup>
-    import { computed } from 'vue';
+    import { computed, onMounted, onBeforeUnmount } from 'vue';
     import { useWishListStore } from '@/stores/wishlist';
     import { useDisplayStore } from '@/stores/display';
 
@@ -74,10 +74,13 @@
         wishListStore.removeByIndex(index);
     };
 
-    // const mainElement = document.querySelector('main.v-main.mt-4');
-    // mainElement.classList.add('bg-primary-50');
+    onMounted(() => {
+        document.body.classList.add('bg-primary-50');
+        document.querySelector('#header-container').classList.add('bg-primary-50');
+    });
 
-    // onMounted(() => {
-    //     document.querySelector('main.v-main.mt-4')?.classList?.add('bg-primary-50');
-    // });
+    onBeforeUnmount(() => {
+        document.body.classList.remove('bg-primary-50');
+        document.querySelector('#header-container').classList.remove('bg-primary-50');
+    });
 </script>

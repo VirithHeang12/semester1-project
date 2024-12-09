@@ -1,7 +1,7 @@
 <template>
     <v-responsive class="mx-4">
         <v-app v-if="!displayLoginView" :theme="theme">
-            <TheHeader />
+            <TheHeader/>
             <v-main class="mt-4 pt-5">
                 <router-view v-slot="{ Component, route }">
                     <transition name="slide" mode="out-in">

@@ -6,7 +6,7 @@
                 <div class="col-12 col-sm-12 col-md-6 lg:p-[24px] md:py-[5px] md:mt-[5px] lg:m-0 mt-[16px] px-[24px] pb-[24px]">
                     <div class="background-blur position-absolute rounded-end-md-4"></div>
                     <img src="/bedrooms/badside table.jpg" alt="Login background"
-                        class="img-fluid rounded-[16px] w-100 lg:h-[450px] md:h-[370px] sm:h-[500px] h-[400px] " />
+                        class="img-fluid object-cover rounded-[16px] w-100 lg:h-[450px] md:h-[370px] sm:h-[500px] h-[400px] " />
 
                 </div>
                 <!-- Right column with login form -->
